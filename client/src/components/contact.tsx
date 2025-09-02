@@ -198,7 +198,7 @@ export default function Contact() {
                   <SelectTrigger data-testid="select-service">
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
-                  <SelectContent className="bg-background border border-border shadow-lg">
+                  <SelectContent className="bg-background border border-border shadow-xl z-50" position="popper" sideOffset={5}>
                     <SelectItem value="web-design">Web Design</SelectItem>
                     <SelectItem value="seo">SEO Services</SelectItem>
                     <SelectItem value="digital-marketing">Digital Marketing</SelectItem>
