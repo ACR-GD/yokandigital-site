@@ -58,6 +58,9 @@ export interface IStorage {
   // Schedule management
   createReportSchedule(schedule: InsertReportSchedule): Promise<ReportSchedule>;
   getClientSchedules(clientId: string): Promise<ReportSchedule[]>;
+  
+  // Client deletion
+  deleteClient(id: string): Promise<boolean>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -230,6 +233,12 @@ export class DatabaseStorage implements IStorage {
 
   async getClientSchedules(clientId: string): Promise<ReportSchedule[]> {
     return await db.select().from(reportSchedules).where(eq(reportSchedules.clientId, clientId));
+  }
+
+  // Client deletion method
+  async deleteClient(id: string): Promise<boolean> {
+    const result = await db.delete(clients).where(eq(clients.id, id));
+    return result.rowCount > 0;
   }
 }
 

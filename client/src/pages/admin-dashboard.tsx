@@ -15,13 +15,16 @@ import {
   BarChart3,
   Settings,
   Eye,
-  LogOut
+  LogOut,
+  Edit,
+  Trash2
 } from "lucide-react";
 import Header from "@/components/header";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { useLocation } from "wouter";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 interface Client {
   id: string;
@@ -46,6 +49,7 @@ export default function AdminDashboard() {
   const [, navigate] = useLocation();
   const { isAuthenticated, isLoading, logout } = useAdminAuth();
   const [selectedClient, setSelectedClient] = useState<string>("");
+  const [editingClient, setEditingClient] = useState<Client | null>(null);
   const [newClient, setNewClient] = useState({
     name: "",
     email: "",
@@ -54,6 +58,7 @@ export default function AdminDashboard() {
     package: "starter",
     monthlyFee: 2500
   });
+  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
 
   const queryClient = useQueryClient();
 
@@ -109,6 +114,38 @@ export default function AdminDashboard() {
       apiRequest('POST', `/api/reports/clients/${clientId}/reports/send`, { reportType }),
     onSuccess: () => {
       alert('Report sent successfully!');
+    }
+  });
+
+  // Edit client mutation
+  const editClientMutation = useMutation({
+    mutationFn: ({ id, data }: { id: string; data: Partial<Client> }) =>
+      apiRequest('PUT', `/api/reports/clients/${id}`, data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['/api/reports/clients'] });
+      queryClient.invalidateQueries({ queryKey: ['/api/reports/analytics/dashboard'] });
+      setEditingClient(null);
+      setIsEditDialogOpen(false);
+      alert('Client updated successfully!');
+    },
+    onError: (error) => {
+      console.error('Error updating client:', error);
+      alert('Failed to update client: ' + error.message);
+    }
+  });
+
+  // Delete client mutation
+  const deleteClientMutation = useMutation({
+    mutationFn: (clientId: string) =>
+      apiRequest('DELETE', `/api/reports/clients/${clientId}`),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['/api/reports/clients'] });
+      queryClient.invalidateQueries({ queryKey: ['/api/reports/analytics/dashboard'] });
+      alert('Client deleted successfully!');
+    },
+    onError: (error) => {
+      console.error('Error deleting client:', error);
+      alert('Failed to delete client: ' + error.message);
     }
   });
 
@@ -168,6 +205,34 @@ export default function AdminDashboard() {
       return;
     }
     sendReportMutation.mutate({ clientId: selectedClient, reportType });
+  };
+
+  const handleEditClient = (client: Client) => {
+    setEditingClient(client);
+    setIsEditDialogOpen(true);
+  };
+
+  const handleUpdateClient = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editingClient) return;
+    
+    editClientMutation.mutate({
+      id: editingClient.id,
+      data: {
+        name: editingClient.name,
+        email: editingClient.email,
+        website: editingClient.website,
+        businessType: editingClient.businessType,
+        package: editingClient.package,
+        monthlyFee: editingClient.monthlyFee
+      }
+    });
+  };
+
+  const handleDeleteClient = (clientId: string, clientName: string) => {
+    if (confirm(`Are you sure you want to delete client "${clientName}"? This action cannot be undone.`)) {
+      deleteClientMutation.mutate(clientId);
+    }
   };
 
   const clients = clientsData?.clients || [];
@@ -330,15 +395,17 @@ export default function AdminDashboard() {
                     {clients.map((client) => (
                       <div 
                         key={client.id}
-                        className={`p-3 border rounded-lg cursor-pointer transition-colors ${
+                        className={`p-3 border rounded-lg transition-colors ${
                           selectedClient === client.id 
                             ? 'border-primary bg-primary/5' 
                             : 'border-border hover:border-primary/50'
                         }`}
-                        onClick={() => setSelectedClient(client.id)}
                       >
                         <div className="flex justify-between items-start">
-                          <div>
+                          <div 
+                            className="flex-1 cursor-pointer" 
+                            onClick={() => setSelectedClient(client.id)}
+                          >
                             <h4 className="font-semibold">{client.name}</h4>
                             <p className="text-sm text-muted-foreground">{client.email}</p>
                             {client.package && (
@@ -347,17 +414,44 @@ export default function AdminDashboard() {
                               </Badge>
                             )}
                           </div>
-                          <div className="text-right">
-                            <Badge 
-                              variant={client.status === 'active' ? 'default' : 'secondary'}
-                            >
-                              {client.status}
-                            </Badge>
-                            {client.monthlyFee && (
-                              <p className="text-sm text-muted-foreground mt-1">
-                                RM {client.monthlyFee.toLocaleString()}/mo
-                              </p>
-                            )}
+                          <div className="flex items-start gap-2">
+                            <div className="text-right mr-2">
+                              <Badge 
+                                variant={client.status === 'active' ? 'default' : 'secondary'}
+                              >
+                                {client.status}
+                              </Badge>
+                              {client.monthlyFee && (
+                                <p className="text-sm text-muted-foreground mt-1">
+                                  RM {client.monthlyFee.toLocaleString()}/mo
+                                </p>
+                              )}
+                            </div>
+                            <div className="flex flex-col gap-1">
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleEditClient(client);
+                                }}
+                                data-testid={`button-edit-${client.id}`}
+                              >
+                                <Edit className="w-3 h-3" />
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleDeleteClient(client.id, client.name);
+                                }}
+                                className="text-red-600 hover:text-red-700 hover:border-red-300"
+                                data-testid={`button-delete-${client.id}`}
+                              >
+                                <Trash2 className="w-3 h-3" />
+                              </Button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -516,6 +610,85 @@ export default function AdminDashboard() {
           </TabsContent>
         </Tabs>
       </div>
+
+      {/* Edit Client Dialog */}
+      <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>Edit Client</DialogTitle>
+            <DialogDescription>
+              Update client information and settings.
+            </DialogDescription>
+          </DialogHeader>
+          {editingClient && (
+            <form onSubmit={handleUpdateClient} className="space-y-4">
+              <Input
+                placeholder="Client Name"
+                value={editingClient.name}
+                onChange={(e) => setEditingClient({ ...editingClient, name: e.target.value })}
+                required
+                data-testid="input-edit-name"
+              />
+              <Input
+                type="email"
+                placeholder="Email Address"
+                value={editingClient.email}
+                onChange={(e) => setEditingClient({ ...editingClient, email: e.target.value })}
+                required
+                data-testid="input-edit-email"
+              />
+              <Input
+                placeholder="Website URL"
+                value={editingClient.website || ""}
+                onChange={(e) => setEditingClient({ ...editingClient, website: e.target.value })}
+                data-testid="input-edit-website"
+              />
+              <Input
+                placeholder="Business Type"
+                value={editingClient.businessType || ""}
+                onChange={(e) => setEditingClient({ ...editingClient, businessType: e.target.value })}
+                data-testid="input-edit-business-type"
+              />
+              <div className="grid grid-cols-2 gap-4">
+                <select
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  value={editingClient.package || "starter"}
+                  onChange={(e) => setEditingClient({ ...editingClient, package: e.target.value })}
+                  data-testid="select-edit-package"
+                >
+                  <option value="starter">Starter Package</option>
+                  <option value="business">Business Package</option>
+                  <option value="enterprise">Enterprise Package</option>
+                </select>
+                <Input
+                  type="number"
+                  placeholder="Monthly Fee (RM)"
+                  value={editingClient.monthlyFee || 0}
+                  onChange={(e) => setEditingClient({ ...editingClient, monthlyFee: parseInt(e.target.value) })}
+                  data-testid="input-edit-monthly-fee"
+                />
+              </div>
+              <div className="flex justify-end gap-2">
+                <Button 
+                  type="button" 
+                  variant="outline" 
+                  onClick={() => setIsEditDialogOpen(false)}
+                  data-testid="button-cancel-edit"
+                >
+                  Cancel
+                </Button>
+                <Button 
+                  type="submit"
+                  disabled={editClientMutation.isPending}
+                  data-testid="button-save-edit"
+                >
+                  {editClientMutation.isPending ? 'Saving...' : 'Save Changes'}
+                </Button>
+              </div>
+            </form>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

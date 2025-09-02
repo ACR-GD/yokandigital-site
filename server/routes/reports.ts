@@ -59,6 +59,23 @@ router.put("/clients/:id", async (req, res) => {
   }
 });
 
+// Delete client
+router.delete("/clients/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleted = await storage.deleteClient(id);
+    
+    if (!deleted) {
+      return res.status(404).json({ success: false, error: "Client not found" });
+    }
+    
+    res.json({ success: true, message: "Client deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting client:", error);
+    res.status(500).json({ success: false, error: "Failed to delete client" });
+  }
+});
+
 // Generate report manually
 router.post("/clients/:id/reports", async (req, res) => {
   try {
@@ -106,16 +123,7 @@ router.post("/clients/:id/reports/send", async (req, res) => {
 router.get("/clients/:id/reports", async (req, res) => {
   try {
     const { id } = req.params;
-    const { limit = 10, offset = 0 } = req.query;
-
-    const clientReports = await db
-      .select()
-      .from(reports)
-      .where(eq(reports.clientId, id))
-      .orderBy(desc(reports.generatedAt))
-      .limit(Number(limit))
-      .offset(Number(offset));
-
+    const clientReports = await storage.getClientReports(id);
     res.json({ success: true, reports: clientReports });
   } catch (error) {
     console.error("Error fetching reports:", error);
@@ -128,12 +136,8 @@ router.post("/clients/:id/metrics", async (req, res) => {
   try {
     const { id } = req.params;
     const metricsData = z.array(insertMetricSchema).parse(req.body);
-
-    const newMetrics = await db
-      .insert(metrics)
-      .values(metricsData.map(metric => ({ ...metric, clientId: id })))
-      .returning();
-
+    const metricsWithClientId = metricsData.map(metric => ({ ...metric, clientId: id }));
+    const newMetrics = await storage.addMetrics(metricsWithClientId);
     res.json({ success: true, metrics: newMetrics });
   } catch (error) {
     console.error("Error adding metrics:", error);
