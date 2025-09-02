@@ -14,11 +14,14 @@ import {
   Calendar,
   BarChart3,
   Settings,
-  Eye
+  Eye,
+  LogOut
 } from "lucide-react";
 import Header from "@/components/header";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+import { useAdminAuth } from "@/hooks/useAdminAuth";
+import { useLocation } from "wouter";
 
 interface Client {
   id: string;
@@ -40,6 +43,8 @@ interface Analytics {
 }
 
 export default function AdminDashboard() {
+  const [, navigate] = useLocation();
+  const { isAuthenticated, isLoading, logout } = useAdminAuth();
   const [selectedClient, setSelectedClient] = useState<string>("");
   const [newClient, setNewClient] = useState({
     name: "",
@@ -51,6 +56,35 @@ export default function AdminDashboard() {
   });
 
   const queryClient = useQueryClient();
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!isLoading && !isAuthenticated) {
+      navigate("/admin/login");
+    }
+  }, [isAuthenticated, isLoading, navigate]);
+
+  const handleLogout = () => {
+    logout();
+    navigate("/admin/login");
+  };
+
+  // Show loading while checking auth
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p>Checking authentication...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Don't render content if not authenticated
+  if (!isAuthenticated) {
+    return null;
+  }
 
   // Fetch analytics
   const { data: analytics } = useQuery<{ success: boolean; analytics: Analytics }>({
@@ -135,12 +169,20 @@ export default function AdminDashboard() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-24">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-foreground mb-2">
-            Reporting System Dashboard
-          </h1>
-          <p className="text-muted-foreground">
-            Manage clients, generate reports, and track performance metrics
-          </p>
+          <div className="flex justify-between items-start">
+            <div>
+              <h1 className="text-3xl font-bold text-foreground mb-2">
+                Reporting System Dashboard
+              </h1>
+              <p className="text-muted-foreground">
+                Manage clients, generate reports, and track performance metrics
+              </p>
+            </div>
+            <Button variant="outline" onClick={handleLogout} className="text-red-600 hover:text-red-700">
+              <LogOut className="w-4 h-4 mr-2" />
+              Logout
+            </Button>
+          </div>
         </div>
 
         {/* Analytics Cards */}
