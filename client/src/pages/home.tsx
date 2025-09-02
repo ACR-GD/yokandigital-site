@@ -23,7 +23,7 @@ export default function Home() {
             Ready to Transform Your Digital Presence?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join hundreds of Malaysian businesses that trust Yokan Digital for their online growth. Start your journey today.
+            Join hundreds of Malaysian and Singaporean businesses that trust Yokan Digital for their online growth. Start your journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 shadow-lg transition-all transform hover:scale-105">

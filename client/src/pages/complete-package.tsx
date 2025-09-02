@@ -96,7 +96,7 @@ export default function CompletePackagePage() {
       price: "RM 8,000",
       setupFee: "One-time setup",
       monthlyFee: "RM 3,000/month",
-      description: "Perfect for new Malaysian businesses launching online",
+      description: "Perfect for new Malaysian and Singaporean businesses launching online",
       features: [
         "5-page professional website",
         "Basic SEO optimization (50 keywords)",
@@ -114,7 +114,7 @@ export default function CompletePackagePage() {
       price: "RM 15,000",
       setupFee: "One-time setup", 
       monthlyFee: "RM 5,000/month",
-      description: "Comprehensive solution for growing Malaysian businesses",
+      description: "Comprehensive solution for growing Malaysian and Singaporean businesses",
       features: [
         "10-page custom website with CMS",
         "Advanced SEO optimization (200 keywords)",
@@ -215,7 +215,7 @@ export default function CompletePackagePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-primary-foreground">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6" data-testid="hero-title">
-              Complete Digital Solution for Malaysian Businesses
+              Complete Digital Solution for Malaysian and Singaporean Businesses
             </h1>
             <p className="text-xl mb-8 text-primary-foreground/90 max-w-4xl mx-auto" data-testid="hero-subtitle">
               Everything you need to dominate online: Professional website + SEO + Digital marketing + Ongoing support. 
@@ -245,7 +245,7 @@ export default function CompletePackagePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title">
-              Proven Results for Malaysian Businesses
+              Proven Results for Malaysian and Singaporean Businesses
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Our complete package delivers measurable results that transform businesses
@@ -494,7 +494,7 @@ export default function CompletePackagePage() {
             Ready for Complete Digital Transformation?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
-            Stop managing multiple vendors. Get everything you need in one complete package designed for Malaysian businesses.
+            Stop managing multiple vendors. Get everything you need in one complete package designed for Malaysian and Singaporean businesses.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

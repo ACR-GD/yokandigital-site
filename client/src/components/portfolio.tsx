@@ -43,7 +43,7 @@ export default function Portfolio() {
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
       name: "David Lim",
       position: "Director, KL Logistics",
-      quote: "Their SEO expertise got us to page 1 of Google for our main keywords. Highly recommend for Malaysian businesses."
+      quote: "Their SEO expertise got us to page 1 of Google for our main keywords. Highly recommend for Malaysian and Singaporean businesses."
     }
   ];
 

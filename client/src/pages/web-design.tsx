@@ -39,7 +39,7 @@ export default function WebDesignPage() {
     {
       name: "Starter Website",
       price: "RM 2,500",
-      description: "Perfect for small Malaysian businesses getting started online",
+      description: "Perfect for small Malaysian and Singaporean businesses getting started online",
       features: [
         "5-page responsive website",
         "Mobile-first design",
@@ -53,7 +53,7 @@ export default function WebDesignPage() {
     {
       name: "Business Website",
       price: "RM 5,000",
-      description: "Ideal for established Malaysian businesses wanting to grow online",
+      description: "Ideal for established Malaysian and Singaporean businesses wanting to grow online",
       features: [
         "10-page responsive website",
         "Custom design & branding",
@@ -114,7 +114,7 @@ export default function WebDesignPage() {
                 Professional Web Design That Converts Malaysian Visitors
               </h1>
               <p className="text-xl mb-8 text-primary-foreground/90" data-testid="hero-subtitle">
-                Custom websites designed specifically for Malaysian businesses. Mobile-responsive, fast-loading, and optimized to turn visitors into customers.
+                Custom websites designed specifically for Malaysian and Singaporean businesses. Mobile-responsive, fast-loading, and optimized to turn visitors into customers.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -149,7 +149,7 @@ export default function WebDesignPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title">
-              Why Malaysian Businesses Choose Our Web Design
+              Why Malaysian and Singaporean Businesses Choose Our Web Design
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Every website is crafted with Malaysian market insights and proven conversion strategies
@@ -273,10 +273,10 @@ export default function WebDesignPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title">
-              Real Results from Malaysian Businesses
+              Real Results from Malaysian and Singaporean Businesses
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              See how our web design transformed these Malaysian businesses
+              See how our web design transformed these Malaysian and Singaporean businesses
             </p>
           </div>
 
@@ -322,7 +322,7 @@ export default function WebDesignPage() {
             Ready to Transform Your Online Presence?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
-            Join hundreds of successful Malaysian businesses. Get a custom quote for your web design project today.
+            Join hundreds of successful Malaysian and Singaporean businesses. Get a custom quote for your web design project today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

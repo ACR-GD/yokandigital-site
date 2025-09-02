@@ -58,7 +58,7 @@ export default function SEOServicesPage() {
       name: "Local SEO",
       price: "RM 2,500",
       duration: "/month",
-      description: "Perfect for local Malaysian businesses",
+      description: "Perfect for local Malaysian and Singaporean businesses",
       features: [
         "Google My Business optimization",
         "Local keyword research (50 keywords)",
@@ -142,7 +142,7 @@ export default function SEOServicesPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-primary-foreground">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6" data-testid="hero-title">
-                SEO Services That Get Malaysian Businesses Found
+                SEO Services That Get Malaysian and Singaporean Businesses Found
               </h1>
               <p className="text-xl mb-8 text-primary-foreground/90" data-testid="hero-subtitle">
                 Dominate Google search results in Malaysia. Our proven SEO strategies help businesses get found by customers who are ready to buy.
@@ -213,7 +213,7 @@ export default function SEOServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title">
-              Comprehensive SEO Services for Malaysian Businesses
+              Comprehensive SEO Services for Malaysian and Singaporean Businesses
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From local search to national visibility, we cover all aspects of SEO to grow your business
@@ -340,7 +340,7 @@ export default function SEOServicesPage() {
               Real SEO Success Stories from Malaysia
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              See how our SEO strategies transformed these Malaysian businesses
+              See how our SEO strategies transformed these Malaysian and Singaporean businesses
             </p>
           </div>
 

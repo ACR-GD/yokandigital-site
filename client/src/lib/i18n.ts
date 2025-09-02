@@ -42,7 +42,7 @@ export const translations: Translations = {
     ms: "Kembangkan Perniagaan Anda Secara Online dengan Rakan Digital Terpercaya Malaysia"
   },
   "hero.subtitle": {
-    en: "Professional web design, SEO optimization, and digital marketing services tailored for Malaysian businesses. From RM2,500/month.",
+    en: "Professional web design, SEO optimization, and digital marketing services tailored for Malaysian and Singaporean businesses. From RM2,500/month.",
     ms: "Perkhidmatan reka bentuk web profesional, pengoptimuman SEO, dan pemasaran digital yang disesuaikan untuk perniagaan Malaysia. Dari RM2,500/bulan."
   },
   "hero.startProject": {
@@ -60,7 +60,7 @@ export const translations: Translations = {
     ms: "Penyelesaian Digital Menyeluruh"
   },
   "services.subtitle": {
-    en: "We help Malaysian businesses establish a strong online presence with professional web design, effective SEO strategies, and results-driven digital marketing.",
+    en: "We help Malaysian and Singaporean businesses establish a strong online presence with professional web design, effective SEO strategies, and results-driven digital marketing.",
     ms: "Kami membantu perniagaan Malaysia mewujudkan kehadiran online yang kuat dengan reka bentuk web profesional, strategi SEO berkesan, dan pemasaran digital yang menghasilkan keputusan."
   },
   "services.webDesign.title": {
@@ -76,7 +76,7 @@ export const translations: Translations = {
     ms: "Pengoptimuman SEO"
   },
   "services.seo.description": {
-    en: "Rank higher on Google with our proven SEO strategies. Local and national optimization for Malaysian businesses.",
+    en: "Rank higher on Google with our proven SEO strategies. Local and national optimization for Malaysian and Singaporean businesses.",
     ms: "Kedudukan lebih tinggi di Google dengan strategi SEO terbukti kami. Pengoptimuman tempatan dan nasional untuk perniagaan Malaysia."
   },
   "services.marketing.title": {
@@ -166,7 +166,7 @@ export const translations: Translations = {
     ms: "Kisah Kejayaan Kami"
   },
   "portfolio.subtitle": {
-    en: "See how we've helped Malaysian businesses achieve remarkable online growth and digital transformation.",
+    en: "See how we've helped Malaysian and Singaporean businesses achieve remarkable online growth and digital transformation.",
     ms: "Lihat bagaimana kami telah membantu perniagaan Malaysia mencapai pertumbuhan online yang luar biasa dan transformasi digital."
   },
 
@@ -266,7 +266,7 @@ export const translations: Translations = {
     ms: "Rakan Pertumbuhan Digital"
   },
   "footer.description": {
-    en: "Empowering Malaysian businesses with cutting-edge digital solutions since 2020.",
+    en: "Empowering Malaysian and Singaporean businesses with cutting-edge digital solutions since 2020.",
     ms: "Memperkasakan perniagaan Malaysia dengan penyelesaian digital terdepan sejak 2020."
   },
   "footer.services": {

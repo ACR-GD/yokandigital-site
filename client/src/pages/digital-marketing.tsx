@@ -48,7 +48,7 @@ export default function DigitalMarketingPage() {
       name: "Starter Marketing",
       price: "RM 2,500",
       duration: "/month",
-      description: "Perfect for small Malaysian businesses starting digital marketing",
+      description: "Perfect for small Malaysian and Singaporean businesses starting digital marketing",
       channels: ["Facebook", "Instagram"],
       features: [
         "2 social media platforms",
@@ -65,7 +65,7 @@ export default function DigitalMarketingPage() {
       name: "Growth Marketing",
       price: "RM 5,000", 
       duration: "/month",
-      description: "Complete digital marketing for growing Malaysian businesses",
+      description: "Complete digital marketing for growing Malaysian and Singaporean businesses",
       channels: ["Facebook", "Instagram", "WhatsApp", "Email"],
       features: [
         "4 marketing channels",
@@ -166,7 +166,7 @@ export default function DigitalMarketingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-primary-foreground">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6" data-testid="hero-title">
-                Digital Marketing That Drives Results for Malaysian Businesses
+                Digital Marketing That Drives Results for Malaysian and Singaporean Businesses
               </h1>
               <p className="text-xl mb-8 text-primary-foreground/90" data-testid="hero-subtitle">
                 Reach 32 million Malaysians across Facebook, Instagram, WhatsApp, and email. Our data-driven campaigns turn clicks into customers.
@@ -389,7 +389,7 @@ export default function DigitalMarketingPage() {
               Malaysian Success Stories
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real results from real Malaysian businesses using our digital marketing strategies
+              Real results from real Malaysian and Singaporean businesses using our digital marketing strategies
             </p>
           </div>
 
