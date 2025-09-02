@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, timestamp, jsonb, boolean } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar, timestamp, jsonb, boolean, integer } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -47,6 +47,56 @@ export const speedTests = pgTable("speed_tests", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
+export const clients = pgTable("clients", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  name: text("name").notNull(),
+  email: text("email").notNull().unique(),
+  website: text("website"),
+  businessType: text("business_type"),
+  package: text("package"), // starter, business, enterprise
+  monthlyFee: integer("monthly_fee"),
+  status: text("status").default("active"), // active, inactive, suspended
+  startDate: timestamp("start_date").defaultNow(),
+  nextReportDate: timestamp("next_report_date"),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+export const reports = pgTable("reports", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  clientId: varchar("client_id").notNull().references(() => clients.id),
+  reportType: text("report_type").notNull(), // weekly, monthly, quarterly
+  title: text("title").notNull(),
+  generatedAt: timestamp("generated_at").defaultNow(),
+  emailSent: boolean("email_sent").default(false),
+  emailSentAt: timestamp("email_sent_at"),
+  data: jsonb("data"), // Contains all the metrics and analytics data
+});
+
+export const metrics = pgTable("metrics", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  clientId: varchar("client_id").notNull().references(() => clients.id),
+  metricType: text("metric_type").notNull(), // website_traffic, seo_rankings, social_engagement, conversion_rate
+  metricName: text("metric_name").notNull(), // organic_traffic, page_views, bounce_rate, etc.
+  value: text("value").notNull(), // Can be number, percentage, or text
+  previousValue: text("previous_value"), // For comparison
+  changePercentage: text("change_percentage"), // +25%, -10%, etc.
+  recordedAt: timestamp("recorded_at").defaultNow(),
+  source: text("source"), // google_analytics, search_console, facebook, etc.
+});
+
+export const reportSchedules = pgTable("report_schedules", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  clientId: varchar("client_id").notNull().references(() => clients.id),
+  frequency: text("frequency").notNull(), // weekly, monthly, quarterly
+  dayOfWeek: integer("day_of_week"), // 0-6 for weekly reports
+  dayOfMonth: integer("day_of_month"), // 1-31 for monthly reports
+  time: text("time").default("09:00"), // HH:MM format
+  isActive: boolean("is_active").default(true),
+  lastRun: timestamp("last_run"),
+  nextRun: timestamp("next_run"),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
@@ -79,6 +129,31 @@ export const insertSpeedTestSchema = createInsertSchema(speedTests).omit({
   recommendations: true,
 });
 
+export const insertClientSchema = createInsertSchema(clients).omit({
+  id: true,
+  createdAt: true,
+  startDate: true,
+});
+
+export const insertReportSchema = createInsertSchema(reports).omit({
+  id: true,
+  generatedAt: true,
+  emailSent: true,
+  emailSentAt: true,
+});
+
+export const insertMetricSchema = createInsertSchema(metrics).omit({
+  id: true,
+  recordedAt: true,
+});
+
+export const insertReportScheduleSchema = createInsertSchema(reportSchedules).omit({
+  id: true,
+  createdAt: true,
+  lastRun: true,
+  nextRun: true,
+});
+
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type InsertContact = z.infer<typeof insertContactSchema>;
@@ -89,3 +164,11 @@ export type InsertSeoAudit = z.infer<typeof insertSeoAuditSchema>;
 export type SeoAudit = typeof seoAudits.$inferSelect;
 export type InsertSpeedTest = z.infer<typeof insertSpeedTestSchema>;
 export type SpeedTest = typeof speedTests.$inferSelect;
+export type InsertClient = z.infer<typeof insertClientSchema>;
+export type Client = typeof clients.$inferSelect;
+export type InsertReport = z.infer<typeof insertReportSchema>;
+export type Report = typeof reports.$inferSelect;
+export type InsertMetric = z.infer<typeof insertMetricSchema>;
+export type Metric = typeof metrics.$inferSelect;
+export type InsertReportSchedule = z.infer<typeof insertReportScheduleSchema>;
+export type ReportSchedule = typeof reportSchedules.$inferSelect;

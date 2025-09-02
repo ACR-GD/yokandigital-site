@@ -9,6 +9,8 @@ import WebDesignPage from "@/pages/web-design";
 import SEOServicesPage from "@/pages/seo-services";
 import DigitalMarketingPage from "@/pages/digital-marketing";
 import CompletePackagePage from "@/pages/complete-package";
+import AdminDashboard from "@/pages/admin-dashboard";
+import ClientPortal from "@/pages/client-portal";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -19,6 +21,8 @@ function Router() {
       <Route path="/services/seo" component={SEOServicesPage} />
       <Route path="/services/digital-marketing" component={DigitalMarketingPage} />
       <Route path="/services/complete-package" component={CompletePackagePage} />
+      <Route path="/admin" component={AdminDashboard} />
+      <Route path="/client-portal" component={ClientPortal} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -8,8 +8,12 @@ import {
   insertSeoAuditSchema,
   insertSpeedTestSchema
 } from "@shared/schema";
+import reportsRouter from "./routes/reports";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  
+  // Register reporting routes
+  app.use("/api/reports", reportsRouter);
   
   // Contact form submission
   app.post("/api/contact", async (req, res) => {
