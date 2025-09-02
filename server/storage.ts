@@ -4,6 +4,10 @@ import {
   consultations,
   seoAudits,
   speedTests,
+  clients,
+  reports,
+  metrics,
+  reportSchedules,
   type User, 
   type InsertUser, 
   type Contact, 
@@ -13,7 +17,15 @@ import {
   type SeoAudit,
   type InsertSeoAudit,
   type SpeedTest,
-  type InsertSpeedTest
+  type InsertSpeedTest,
+  type Client,
+  type InsertClient,
+  type Report,
+  type InsertReport,
+  type Metric,
+  type InsertMetric,
+  type ReportSchedule,
+  type InsertReportSchedule
 } from "@shared/schema";
 import { db } from "./db";
 import { eq } from "drizzle-orm";
@@ -28,6 +40,24 @@ export interface IStorage {
   createSpeedTest(test: InsertSpeedTest): Promise<SpeedTest>;
   getContacts(): Promise<Contact[]>;
   getConsultations(): Promise<Consultation[]>;
+  
+  // Client management
+  createClient(client: InsertClient): Promise<Client>;
+  getClient(id: string): Promise<Client | undefined>;
+  getClients(): Promise<Client[]>;
+  updateClient(id: string, updates: Partial<InsertClient>): Promise<Client>;
+  
+  // Report management
+  createReport(report: InsertReport): Promise<Report>;
+  getClientReports(clientId: string): Promise<Report[]>;
+  
+  // Metrics management
+  addMetrics(metrics: InsertMetric[]): Promise<Metric[]>;
+  getClientMetrics(clientId: string): Promise<Metric[]>;
+  
+  // Schedule management
+  createReportSchedule(schedule: InsertReportSchedule): Promise<ReportSchedule>;
+  getClientSchedules(clientId: string): Promise<ReportSchedule[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -116,6 +146,90 @@ export class DatabaseStorage implements IStorage {
 
   async getConsultations(): Promise<Consultation[]> {
     return await db.select().from(consultations);
+  }
+
+  // Client management methods
+  async createClient(insertClient: InsertClient): Promise<Client> {
+    const [client] = await db
+      .insert(clients)
+      .values({
+        ...insertClient,
+        status: 'active',
+        createdAt: new Date(),
+        startDate: new Date(),
+        nextReportDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) // 7 days from now
+      })
+      .returning();
+    return client;
+  }
+
+  async getClient(id: string): Promise<Client | undefined> {
+    const [client] = await db.select().from(clients).where(eq(clients.id, id));
+    return client || undefined;
+  }
+
+  async getClients(): Promise<Client[]> {
+    return await db.select().from(clients);
+  }
+
+  async updateClient(id: string, updates: Partial<InsertClient>): Promise<Client> {
+    const [client] = await db
+      .update(clients)
+      .set(updates)
+      .where(eq(clients.id, id))
+      .returning();
+    return client;
+  }
+
+  // Report management methods
+  async createReport(insertReport: InsertReport): Promise<Report> {
+    const [report] = await db
+      .insert(reports)
+      .values({
+        ...insertReport,
+        generatedAt: new Date(),
+        emailSent: false
+      })
+      .returning();
+    return report;
+  }
+
+  async getClientReports(clientId: string): Promise<Report[]> {
+    return await db.select().from(reports).where(eq(reports.clientId, clientId));
+  }
+
+  // Metrics management methods
+  async addMetrics(insertMetrics: InsertMetric[]): Promise<Metric[]> {
+    const metricsWithTimestamp = insertMetrics.map(metric => ({
+      ...metric,
+      recordedAt: new Date()
+    }));
+    
+    return await db
+      .insert(metrics)
+      .values(metricsWithTimestamp)
+      .returning();
+  }
+
+  async getClientMetrics(clientId: string): Promise<Metric[]> {
+    return await db.select().from(metrics).where(eq(metrics.clientId, clientId));
+  }
+
+  // Schedule management methods
+  async createReportSchedule(insertSchedule: InsertReportSchedule): Promise<ReportSchedule> {
+    const [schedule] = await db
+      .insert(reportSchedules)
+      .values({
+        ...insertSchedule,
+        createdAt: new Date(),
+        nextRun: new Date() // This should be calculated properly based on frequency
+      })
+      .returning();
+    return schedule;
+  }
+
+  async getClientSchedules(clientId: string): Promise<ReportSchedule[]> {
+    return await db.select().from(reportSchedules).where(eq(reportSchedules.clientId, clientId));
   }
 }
 

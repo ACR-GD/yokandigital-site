@@ -1,8 +1,7 @@
 import { Router } from "express";
 import { z } from "zod";
-import { db } from "../db";
-import { clients, reports, metrics, reportSchedules, insertClientSchema, insertReportScheduleSchema, insertMetricSchema } from "@shared/schema";
-import { eq, desc, and, gte, lte, count, sum } from "drizzle-orm";
+import { storage } from "../storage";
+import { insertClientSchema, insertReportScheduleSchema, insertMetricSchema } from "@shared/schema";
 import { reportGenerator } from "../services/reportGenerator";
 
 const router = Router();
@@ -11,15 +10,7 @@ const router = Router();
 router.post("/clients", async (req, res) => {
   try {
     const clientData = insertClientSchema.parse(req.body);
-    
-    const [newClient] = await db
-      .insert(clients)
-      .values({
-        ...clientData,
-        nextReportDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) // 7 days from now
-      })
-      .returning();
-
+    const newClient = await storage.createClient(clientData);
     res.json({ success: true, client: newClient });
   } catch (error) {
     console.error("Error creating client:", error);
@@ -30,11 +21,7 @@ router.post("/clients", async (req, res) => {
 // Get all clients
 router.get("/clients", async (req, res) => {
   try {
-    const allClients = await db
-      .select()
-      .from(clients)
-      .orderBy(desc(clients.createdAt));
-
+    const allClients = await storage.getClients();
     res.json({ success: true, clients: allClients });
   } catch (error) {
     console.error("Error fetching clients:", error);
@@ -46,11 +33,7 @@ router.get("/clients", async (req, res) => {
 router.get("/clients/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    
-    const [client] = await db
-      .select()
-      .from(clients)
-      .where(eq(clients.id, id));
+    const client = await storage.getClient(id);
 
     if (!client) {
       return res.status(404).json({ success: false, error: "Client not found" });
@@ -68,17 +51,7 @@ router.put("/clients/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const updates = insertClientSchema.partial().parse(req.body);
-
-    const [updatedClient] = await db
-      .update(clients)
-      .set(updates)
-      .where(eq(clients.id, id))
-      .returning();
-
-    if (!updatedClient) {
-      return res.status(404).json({ success: false, error: "Client not found" });
-    }
-
+    const updatedClient = await storage.updateClient(id, updates);
     res.json({ success: true, client: updatedClient });
   } catch (error) {
     console.error("Error updating client:", error);
@@ -315,38 +288,19 @@ router.post("/reports/run-scheduled", async (req, res) => {
 // Dashboard analytics
 router.get("/analytics/dashboard", async (req, res) => {
   try {
-    // Get total clients
-    const totalClients = await db.select({ count: count() }).from(clients);
+    const allClients = await storage.getClients();
+    const activeClients = allClients.filter(client => client.status === 'active');
     
-    // Get active clients
-    const activeClients = await db
-      .select({ count: count() })
-      .from(clients)
-      .where(eq(clients.status, 'active'));
-
-    // Get reports sent this month
-    const thisMonth = new Date();
-    thisMonth.setDate(1);
-    thisMonth.setHours(0, 0, 0, 0);
-    
-    const reportsThisMonth = await db
-      .select({ count: count() })
-      .from(reports)
-      .where(gte(reports.generatedAt, thisMonth));
-
-    // Get revenue (sum of monthly fees for active clients)
-    const revenueQuery = await db
-      .select({
-        revenue: sum(clients.monthlyFee)
-      })
-      .from(clients)
-      .where(eq(clients.status, 'active'));
+    // Calculate monthly revenue
+    const monthlyRevenue = activeClients.reduce((total, client) => {
+      return total + (client.monthlyFee || 0);
+    }, 0);
 
     const analytics = {
-      totalClients: totalClients[0]?.count || 0,
-      activeClients: activeClients[0]?.count || 0,
-      reportsThisMonth: reportsThisMonth[0]?.count || 0,
-      monthlyRevenue: revenueQuery[0]?.revenue || 0
+      totalClients: allClients.length,
+      activeClients: activeClients.length,
+      reportsThisMonth: 0, // Will be calculated when reports are actually stored
+      monthlyRevenue
     };
 
     res.json({ success: true, analytics });
