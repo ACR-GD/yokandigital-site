@@ -135,7 +135,7 @@ export default function WebDesignPage() {
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Professional web design mockups showing responsive Malaysian business websites on multiple devices"
+                alt="Professional web design mockups showing responsive Malaysian and/or Singaporean business websites on multiple devices"
                 className="rounded-xl shadow-2xl" 
                 data-testid="img-hero"
               />
@@ -209,7 +209,7 @@ export default function WebDesignPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title">
-              Web Design Packages for Every Malaysian Business
+              Web Design Packages for Every Malaysian and Singaporean Business
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Transparent pricing with no hidden costs. Choose the package that fits your business goals.

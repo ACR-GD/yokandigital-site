@@ -104,7 +104,7 @@ export default function Services() {
                 Need Everything? Get Our Complete Package
               </h3>
               <p className="text-lg lg:text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-                Website + SEO + Digital Marketing + Ongoing Support. One solution, maximum results for your Malaysian business.
+                Website + SEO + Digital Marketing + Ongoing Support. One solution, maximum results for your Malaysian and/or Singaporean business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/services/complete-package">

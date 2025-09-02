@@ -12,7 +12,7 @@ export default function CompletePackagePage() {
     {
       icon: <Target className="w-8 h-8" />,
       title: "Professional Web Design",
-      description: "Custom website designed specifically for your Malaysian business goals",
+      description: "Custom website designed specifically for your Malaysian and/or Singaporean business goals",
       details: [
         "Mobile-responsive design",
         "Fast loading optimization",
@@ -219,7 +219,7 @@ export default function CompletePackagePage() {
             </h1>
             <p className="text-xl mb-8 text-primary-foreground/90 max-w-4xl mx-auto" data-testid="hero-subtitle">
               Everything you need to dominate online: Professional website + SEO + Digital marketing + Ongoing support. 
-              One package, maximum results for your Malaysian business.
+              One package, maximum results for your Malaysian and/or Singaporean business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -333,7 +333,7 @@ export default function CompletePackagePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title">
-              Tailored for Every Type of Malaysian Business
+              Tailored for Every Type of Malaysian and Singaporean Business
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Our complete package adapts to your specific industry and business model

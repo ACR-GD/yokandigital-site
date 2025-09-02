@@ -190,7 +190,7 @@ export default function DigitalMarketingPage() {
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Digital marketing analytics dashboard showing successful Malaysian business campaigns with increasing ROI and engagement metrics"
+                alt="Digital marketing analytics dashboard showing successful Malaysian and Singaporean business campaigns with increasing ROI and engagement metrics"
                 className="rounded-xl shadow-2xl" 
                 data-testid="img-hero"
               />
@@ -450,7 +450,7 @@ export default function DigitalMarketingPage() {
             Ready to Reach 32 Million Malaysians?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
-            Get a custom digital marketing strategy designed specifically for your Malaysian business. Free consultation included.
+            Get a custom digital marketing strategy designed specifically for your Malaysian and/or Singaporean business. Free consultation included.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
