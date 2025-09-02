@@ -74,7 +74,7 @@ export default function AdminDashboard() {
   // Create client mutation
   const createClientMutation = useMutation({
     mutationFn: (clientData: typeof newClient) => 
-      apiRequest('/api/reports/clients', 'POST', clientData),
+      apiRequest('POST', '/api/reports/clients', clientData),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['/api/reports/clients'] });
       queryClient.invalidateQueries({ queryKey: ['/api/reports/analytics/dashboard'] });
@@ -97,7 +97,7 @@ export default function AdminDashboard() {
   // Generate report mutation
   const generateReportMutation = useMutation({
     mutationFn: ({ clientId, reportType }: { clientId: string; reportType: string }) =>
-      apiRequest(`/api/reports/clients/${clientId}/reports`, 'POST', { reportType }),
+      apiRequest('POST', `/api/reports/clients/${clientId}/reports`, { reportType }),
     onSuccess: () => {
       alert('Report generated successfully!');
     }
@@ -106,7 +106,7 @@ export default function AdminDashboard() {
   // Send report mutation
   const sendReportMutation = useMutation({
     mutationFn: ({ clientId, reportType }: { clientId: string; reportType: string }) =>
-      apiRequest(`/api/reports/clients/${clientId}/reports/send`, 'POST', { reportType }),
+      apiRequest('POST', `/api/reports/clients/${clientId}/reports/send`, { reportType }),
     onSuccess: () => {
       alert('Report sent successfully!');
     }
