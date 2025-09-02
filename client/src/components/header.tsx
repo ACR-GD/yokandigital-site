@@ -12,12 +12,12 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-card shadow-sm border-b border-border">
+    <header className="bg-gradient-to-r from-white to-purple-50/50 dark:from-gray-900 dark:to-purple-950/20 shadow-sm border-b border-border backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Rocket className="text-primary-foreground text-lg" />
+            <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg shadow-purple-500/25 rounded-lg flex items-center justify-center">
+              <Rocket className="text-white text-lg" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">Yokan Digital</h1>
@@ -64,13 +64,13 @@ export default function Header() {
           </nav>
           
           <div className="flex items-center space-x-4">
-            <div className="language-toggle flex bg-muted rounded-lg p-1">
+            <div className="language-toggle flex bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/50 dark:to-pink-900/50 rounded-lg p-1 border border-purple-200 dark:border-purple-800">
               <button
                 onClick={() => setLanguage('en')}
-                className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-1 rounded-md text-sm font-medium transition-all ${
                   language === 'en' 
-                    ? 'bg-card text-foreground shadow-sm' 
-                    : 'text-muted-foreground hover:text-foreground'
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25' 
+                    : 'text-purple-600 dark:text-purple-300 hover:text-purple-800 dark:hover:text-white'
                 }`}
                 data-testid="lang-en"
               >
@@ -78,10 +78,10 @@ export default function Header() {
               </button>
               <button
                 onClick={() => setLanguage('ms')}
-                className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-1 rounded-md text-sm font-medium transition-all ${
                   language === 'ms' 
-                    ? 'bg-card text-foreground shadow-sm' 
-                    : 'text-muted-foreground hover:text-foreground'
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25' 
+                    : 'text-purple-600 dark:text-purple-300 hover:text-purple-800 dark:hover:text-white'
                 }`}
                 data-testid="lang-ms"
               >
@@ -90,7 +90,7 @@ export default function Header() {
             </div>
             
             <button 
-              className="bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2.5 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 shadow-lg shadow-purple-500/25 transition-all"
               data-testid="button-get-started"
             >
               {t('header.getStarted')}

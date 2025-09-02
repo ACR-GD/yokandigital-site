@@ -48,10 +48,10 @@ export default function Portfolio() {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-background">
+    <section id="portfolio" className="py-20 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4" data-testid="portfolio-title">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title" data-testid="portfolio-title">
             {t('portfolio.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="portfolio-subtitle">
@@ -83,7 +83,7 @@ export default function Portfolio() {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="bg-card p-6 rounded-xl shadow-lg border border-border"
+              className="testimonial-card bg-card p-6 rounded-xl shadow-lg border border-purple-200 dark:border-purple-800 hover:shadow-xl hover:border-purple-300 dark:hover:border-purple-700 transition-all"
               data-testid={`testimonial-${index}`}
             >
               <div className="flex items-center mb-4">

@@ -16,13 +16,13 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
-                className="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent/90 transition-colors"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 shadow-xl shadow-white/20 transition-all transform hover:scale-105"
                 data-testid="button-start-project"
               >
                 {t('hero.startProject')}
               </button>
               <button 
-                className="border border-primary-foreground/20 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/10 transition-colors"
+                className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-all shadow-lg"
                 data-testid="button-view-work"
               >
                 {t('hero.viewWork')}

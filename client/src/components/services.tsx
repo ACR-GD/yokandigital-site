@@ -41,10 +41,10 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-20 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4" data-testid="services-title">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title" data-testid="services-title">
             {t('services.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="services-subtitle">
@@ -71,7 +71,9 @@ export default function Services() {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center">
-                    <Check className="text-accent mr-2 w-4 h-4" />
+                    <div className="w-5 h-5 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <Check className="text-white w-3 h-3" />
+                    </div>
                     <span data-testid={`service-feature-${index}-${featureIndex}`}>{feature}</span>
                   </li>
                 ))}

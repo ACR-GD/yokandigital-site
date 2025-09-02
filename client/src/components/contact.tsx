@@ -59,11 +59,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-gradient-to-br from-rose-50 to-pink-50 dark:from-rose-950/20 dark:to-pink-950/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="contact-title">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-10 section-title" data-testid="contact-title">
               {t('contact.title')}
             </h2>
             <p className="text-xl text-muted-foreground mb-8" data-testid="contact-subtitle">
@@ -201,7 +201,7 @@ export default function Contact() {
               
               <Button 
                 type="submit" 
-                className="w-full"
+                className="w-full bg-gradient-to-r from-rose-500 to-pink-600 text-white hover:from-rose-600 hover:to-pink-700 shadow-lg shadow-rose-500/25 transition-all"
                 disabled={contactMutation.isPending}
                 data-testid="button-send-message"
               >

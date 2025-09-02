@@ -99,10 +99,10 @@ export default function Tools() {
   };
 
   return (
-    <section id="tools" className="py-20 bg-muted">
+    <section id="tools" className="py-20 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4" data-testid="tools-title">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title" data-testid="tools-title">
             {t('tools.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="tools-subtitle">
@@ -135,7 +135,7 @@ export default function Tools() {
               />
               <Button 
                 type="submit" 
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-blue-600 hover:to-indigo-700 shadow-lg shadow-blue-500/25 transition-all"
                 disabled={seoAuditMutation.isPending}
                 data-testid="button-analyze-website"
               >
@@ -168,7 +168,7 @@ export default function Tools() {
               />
               <Button 
                 type="submit" 
-                className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700 shadow-lg shadow-emerald-500/25 transition-all"
                 disabled={speedTestMutation.isPending}
                 data-testid="button-test-speed"
               >
@@ -210,7 +210,7 @@ export default function Tools() {
               />
               <Button 
                 type="submit" 
-                className="w-full bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                className="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white hover:from-amber-600 hover:to-orange-700 shadow-lg shadow-amber-500/25 transition-all"
                 disabled={consultationMutation.isPending}
                 data-testid="button-book-session"
               >
