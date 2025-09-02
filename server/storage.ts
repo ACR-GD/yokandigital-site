@@ -1,4 +1,9 @@
 import { 
+  users,
+  contacts,
+  consultations,
+  seoAudits,
+  speedTests,
   type User, 
   type InsertUser, 
   type Contact, 
@@ -10,7 +15,8 @@ import {
   type SpeedTest,
   type InsertSpeedTest
 } from "@shared/schema";
-import { randomUUID } from "crypto";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
@@ -24,65 +30,42 @@ export interface IStorage {
   getConsultations(): Promise<Consultation[]>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<string, User>;
-  private contacts: Map<string, Contact>;
-  private consultations: Map<string, Consultation>;
-  private seoAudits: Map<string, SeoAudit>;
-  private speedTests: Map<string, SpeedTest>;
-
-  constructor() {
-    this.users = new Map();
-    this.contacts = new Map();
-    this.consultations = new Map();
-    this.seoAudits = new Map();
-    this.speedTests = new Map();
-  }
-
+export class DatabaseStorage implements IStorage {
   async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user || undefined;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user || undefined;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db
+      .insert(users)
+      .values(insertUser)
+      .returning();
     return user;
   }
 
   async createContact(insertContact: InsertContact): Promise<Contact> {
-    const id = randomUUID();
-    const contact: Contact = { 
-      ...insertContact, 
-      id, 
-      createdAt: new Date() 
-    };
-    this.contacts.set(id, contact);
+    const [contact] = await db
+      .insert(contacts)
+      .values(insertContact)
+      .returning();
     return contact;
   }
 
   async createConsultation(insertConsultation: InsertConsultation): Promise<Consultation> {
-    const id = randomUUID();
-    const consultation: Consultation = { 
-      ...insertConsultation, 
-      id, 
-      scheduledDate: null,
-      status: "pending",
-      createdAt: new Date() 
-    };
-    this.consultations.set(id, consultation);
+    const [consultation] = await db
+      .insert(consultations)
+      .values(insertConsultation)
+      .returning();
     return consultation;
   }
 
   async createSeoAudit(insertAudit: InsertSeoAudit): Promise<SeoAudit> {
-    const id = randomUUID();
-    
     // Simulate SEO audit results
     const results = {
       metaTags: Math.random() > 0.5 ? "good" : "needs_improvement",
@@ -93,20 +76,18 @@ export class MemStorage implements IStorage {
     
     const score = Math.floor(Math.random() * 40 + 60).toString(); // 60-100 score
     
-    const audit: SeoAudit = { 
-      ...insertAudit, 
-      id, 
-      results,
-      score,
-      createdAt: new Date() 
-    };
-    this.seoAudits.set(id, audit);
+    const [audit] = await db
+      .insert(seoAudits)
+      .values({
+        ...insertAudit,
+        results,
+        score
+      })
+      .returning();
     return audit;
   }
 
   async createSpeedTest(insertTest: InsertSpeedTest): Promise<SpeedTest> {
-    const id = randomUUID();
-    
     // Simulate speed test results
     const loadTime = (Math.random() * 3 + 1).toFixed(2) + "s"; // 1-4 seconds
     const performanceScore = Math.floor(Math.random() * 40 + 60).toString(); // 60-100 score
@@ -117,25 +98,25 @@ export class MemStorage implements IStorage {
       "Leverage browser caching"
     ];
     
-    const test: SpeedTest = { 
-      ...insertTest, 
-      id, 
-      loadTime,
-      performanceScore,
-      recommendations,
-      createdAt: new Date() 
-    };
-    this.speedTests.set(id, test);
+    const [test] = await db
+      .insert(speedTests)
+      .values({
+        ...insertTest,
+        loadTime,
+        performanceScore,
+        recommendations
+      })
+      .returning();
     return test;
   }
 
   async getContacts(): Promise<Contact[]> {
-    return Array.from(this.contacts.values());
+    return await db.select().from(contacts);
   }
 
   async getConsultations(): Promise<Consultation[]> {
-    return Array.from(this.consultations.values());
+    return await db.select().from(consultations);
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();

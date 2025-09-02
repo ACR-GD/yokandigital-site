@@ -11,7 +11,7 @@ Preferred communication style: Simple, everyday language.
 ## Frontend Architecture
 - **Framework**: React 18 with TypeScript and Vite for development/build tooling
 - **Routing**: Wouter for client-side routing (lightweight alternative to React Router)
-- **Styling**: Tailwind CSS with shadcn/ui component library for consistent design system
+- **Styling**: Tailwind CSS with shadcn/ui component library and vibrant gradient design system
 - **State Management**: TanStack Query for server state management and API caching
 - **Internationalization**: Custom hook-based i18n system supporting English and Malay languages
 - **Form Handling**: React Hook Form with Zod validation for type-safe form submissions
@@ -19,7 +19,7 @@ Preferred communication style: Simple, everyday language.
 ## Backend Architecture
 - **Framework**: Express.js with TypeScript for API server
 - **Database**: PostgreSQL with Drizzle ORM for type-safe database operations
-- **Storage**: Dual storage implementation with in-memory storage for development and PostgreSQL for production
+- **Storage**: DatabaseStorage implementation using Neon PostgreSQL for data persistence
 - **Validation**: Zod schemas shared between frontend and backend for consistent data validation
 - **Development**: Vite integration for hot module replacement in development mode
 
