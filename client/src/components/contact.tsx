@@ -32,6 +32,7 @@ export default function Contact() {
       toast({
         title: "Message Sent Successfully",
         description: "Thank you for your inquiry. We'll contact you within 24 hours.",
+        className: "bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800 text-green-800 dark:text-green-200",
       });
       setFormData({
         firstName: "",
