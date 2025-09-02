@@ -57,45 +57,18 @@ export default function AdminDashboard() {
 
   const queryClient = useQueryClient();
 
-  // Redirect to login if not authenticated
-  useEffect(() => {
-    if (!isLoading && !isAuthenticated) {
-      navigate("/admin/login");
-    }
-  }, [isAuthenticated, isLoading, navigate]);
-
-  const handleLogout = () => {
-    logout();
-    navigate("/admin/login");
-  };
-
-  // Show loading while checking auth
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p>Checking authentication...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Don't render content if not authenticated
-  if (!isAuthenticated) {
-    return null;
-  }
-
-  // Fetch analytics
+  // Fetch analytics (always call hooks in the same order)
   const { data: analytics } = useQuery<{ success: boolean; analytics: Analytics }>({
     queryKey: ['/api/reports/analytics/dashboard'],
-    refetchInterval: 30000 // Refresh every 30 seconds
+    refetchInterval: 30000, // Refresh every 30 seconds
+    enabled: isAuthenticated // Only fetch when authenticated
   });
 
-  // Fetch clients
+  // Fetch clients (always call hooks in the same order)
   const { data: clientsData } = useQuery<{ success: boolean; clients: Client[] }>({
     queryKey: ['/api/reports/clients'],
-    refetchInterval: 30000
+    refetchInterval: 30000,
+    enabled: isAuthenticated // Only fetch when authenticated
   });
 
   // Create client mutation
@@ -133,6 +106,35 @@ export default function AdminDashboard() {
       alert('Report sent successfully!');
     }
   });
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!isLoading && !isAuthenticated) {
+      navigate("/admin/login");
+    }
+  }, [isAuthenticated, isLoading, navigate]);
+
+  const handleLogout = () => {
+    logout();
+    navigate("/admin/login");
+  };
+
+  // Show loading while checking auth
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p>Checking authentication...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Don't render content if not authenticated
+  if (!isAuthenticated) {
+    return null;
+  }
 
   const handleCreateClient = (e: React.FormEvent) => {
     e.preventDefault();
