@@ -1,6 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { sendContactEmail } from "./email";
 import { 
   insertContactSchema, 
   insertConsultationSchema, 
@@ -15,8 +16,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(validatedData);
-      res.json({ success: true, contact });
+      
+      // Send email notification
+      const emailSent = await sendContactEmail({
+        firstName: validatedData.firstName,
+        lastName: validatedData.lastName,
+        email: validatedData.email,
+        website: validatedData.website || undefined,
+        noWebsite: validatedData.noWebsite || undefined,
+        service: validatedData.service,
+        projectDetails: validatedData.projectDetails || undefined
+      });
+      
+      res.json({ 
+        success: true, 
+        contact, 
+        emailSent 
+      });
     } catch (error) {
+      console.error('Contact form error:', error);
       res.status(400).json({ 
         success: false, 
         error: "Invalid contact data provided" 

@@ -111,7 +111,7 @@ export default function Contact() {
                     {t('contact.email')}
                   </h4>
                   <p className="text-muted-foreground" data-testid="text-email-address">
-                    hello@yokandigital.my
+                    hello@yokandigital.com
                   </p>
                 </div>
               </div>
