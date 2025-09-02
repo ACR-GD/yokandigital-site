@@ -6,7 +6,7 @@ export default function Services() {
 
   const services = [
     {
-      icon: <Palette className="text-primary text-xl" />,
+      icon: <Palette className="text-white text-xl" />,
       title: t('services.webDesign.title'),
       description: t('services.webDesign.description'),
       features: [
@@ -14,10 +14,10 @@ export default function Services() {
         "CMS Integration",
         "E-commerce Solutions"
       ],
-      bgColor: "bg-primary/10"
+      bgColor: "bg-gradient-to-br from-purple-500 to-purple-600 shadow-lg shadow-purple-500/25"
     },
     {
-      icon: <Search className="text-accent text-xl" />,
+      icon: <Search className="text-white text-xl" />,
       title: t('services.seo.title'),
       description: t('services.seo.description'),
       features: [
@@ -25,10 +25,10 @@ export default function Services() {
         "Local SEO",
         "Technical SEO"
       ],
-      bgColor: "bg-accent/10"
+      bgColor: "bg-gradient-to-br from-pink-500 to-rose-500 shadow-lg shadow-pink-500/25"
     },
     {
-      icon: <Megaphone className="text-destructive text-xl" />,
+      icon: <Megaphone className="text-white text-xl" />,
       title: t('services.marketing.title'),
       description: t('services.marketing.description'),
       features: [
@@ -36,7 +36,7 @@ export default function Services() {
         "Google Ads Management",
         "Content Strategy"
       ],
-      bgColor: "bg-destructive/10"
+      bgColor: "bg-gradient-to-br from-orange-500 to-red-500 shadow-lg shadow-orange-500/25"
     }
   ];
 

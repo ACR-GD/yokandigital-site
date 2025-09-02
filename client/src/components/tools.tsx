@@ -113,8 +113,8 @@ export default function Tools() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* SEO Audit Tool */}
           <div className="tool-interactive bg-card p-8 rounded-xl shadow-lg border border-border">
-            <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-              <SearchCode className="text-primary text-xl" />
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 shadow-lg shadow-blue-500/25 rounded-lg flex items-center justify-center mb-6">
+              <SearchCode className="text-white text-xl" />
             </div>
             <h3 className="text-xl font-semibold mb-4" data-testid="tool-seo-title">
               {t('tools.seoAudit.title')}
@@ -146,8 +146,8 @@ export default function Tools() {
 
           {/* Website Speed Checker */}
           <div className="tool-interactive bg-card p-8 rounded-xl shadow-lg border border-border">
-            <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
-              <Gauge className="text-accent text-xl" />
+            <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 shadow-lg shadow-emerald-500/25 rounded-lg flex items-center justify-center mb-6">
+              <Gauge className="text-white text-xl" />
             </div>
             <h3 className="text-xl font-semibold mb-4" data-testid="tool-speed-title">
               {t('tools.speedTest.title')}
@@ -179,8 +179,8 @@ export default function Tools() {
 
           {/* Business Consultation Booking */}
           <div className="tool-interactive bg-card p-8 rounded-xl shadow-lg border border-border">
-            <div className="w-12 h-12 bg-destructive/10 rounded-lg flex items-center justify-center mb-6">
-              <CalendarCheck className="text-destructive text-xl" />
+            <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 shadow-lg shadow-amber-500/25 rounded-lg flex items-center justify-center mb-6">
+              <CalendarCheck className="text-white text-xl" />
             </div>
             <h3 className="text-xl font-semibold mb-4" data-testid="tool-consultation-title">
               {t('tools.consultation.title')}

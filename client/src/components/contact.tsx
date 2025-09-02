@@ -72,8 +72,8 @@ export default function Contact() {
             
             <div className="space-y-6">
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                  <MapPin className="text-primary" />
+                <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 shadow-lg shadow-violet-500/25 rounded-lg flex items-center justify-center mr-4">
+                  <MapPin className="text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold" data-testid="contact-office-label">
@@ -86,8 +86,8 @@ export default function Contact() {
               </div>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
-                  <Phone className="text-accent" />
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/25 rounded-lg flex items-center justify-center mr-4">
+                  <Phone className="text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold" data-testid="contact-phone-label">
@@ -100,8 +100,8 @@ export default function Contact() {
               </div>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-destructive/10 rounded-lg flex items-center justify-center mr-4">
-                  <Mail className="text-destructive" />
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-600 shadow-lg shadow-rose-500/25 rounded-lg flex items-center justify-center mr-4">
+                  <Mail className="text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold" data-testid="contact-email-label">
