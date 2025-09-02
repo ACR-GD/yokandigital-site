@@ -64,7 +64,7 @@ export default function Portfolio() {
             <div key={index} className="group cursor-pointer" data-testid={`project-${index}`}>
               <img 
                 src={project.image} 
-                alt={project.title}
+                alt={`${project.title} - Professional web design portfolio by Yokan Digital Malaysia showing increased online sales and SEO results`}
                 className="rounded-xl shadow-lg group-hover:shadow-xl transition-shadow w-full h-48 object-cover"
                 data-testid={`img-project-${index}`}
               />
@@ -89,7 +89,7 @@ export default function Portfolio() {
               <div className="flex items-center mb-4">
                 <img 
                   src={testimonial.image} 
-                  alt={testimonial.name}
+                  alt={`${testimonial.name}, ${testimonial.position} - Satisfied client of Yokan Digital web design and SEO services in Malaysia`}
                   className="w-12 h-12 rounded-full object-cover"
                   data-testid={`img-testimonial-${index}`}
                 />
