@@ -135,16 +135,6 @@ export default function AdminLogin() {
                 {isLoading ? "Logging in..." : "Login"}
               </Button>
             </form>
-
-            <div className="mt-6 p-4 bg-muted rounded-lg">
-              <p className="text-sm text-muted-foreground mb-2">
-                <strong>Demo Credentials:</strong>
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Username: admin<br />
-                Password: yokan2024
-              </p>
-            </div>
           </CardContent>
         </Card>
       </div>
