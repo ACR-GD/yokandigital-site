@@ -22,7 +22,7 @@ export default function Hero() {
                 {t('hero.startProject')}
               </button>
               <button 
-                className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-all shadow-lg"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 backdrop-blur-sm transition-all shadow-lg"
                 data-testid="button-view-work"
               >
                 {t('hero.viewWork')}
