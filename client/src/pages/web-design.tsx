@@ -13,24 +13,24 @@ export default function WebDesignPage() {
       icon: <Monitor className="w-8 h-8" />,
       title: "Responsive Design",
       description: "Your website will look perfect on all devices - desktop, tablet, and mobile. Every Malaysian customer can access your business seamlessly.",
-      benefit: "78% of Malaysians browse on mobile devices"
+      benefit: "78% of Malaysians and Singaporeans browse on mobile devices"
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Fast Loading Speed",
-      description: "Optimized for lightning-fast performance. Malaysian internet users expect quick loading times, and we deliver.",
-      benefit: "3x faster than average Malaysian websites"
+      description: "Optimized for lightning-fast performance. Malaysian and Singaporean internet users expect quick loading times, and we deliver.",
+      benefit: "3x faster than average Malaysian and Singaporean websites"
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "User Experience Focus",
-      description: "Designed with Malaysian user behavior in mind. Easy navigation that converts visitors into customers.",
+      description: "Designed with Malaysian and Singaporean user behavior in mind. Easy navigation that converts visitors into customers.",
       benefit: "2.5x higher conversion rates"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "SEO Optimized",
-      description: "Built with search engines in mind. Your website will rank higher on Google Malaysia from day one.",
+      description: "Built with search engines in mind. Your website will rank higher on Google Malaysia and/or Singapore from day one.",
       benefit: "Page 1 Google rankings guaranteed"
     }
   ];
@@ -69,7 +69,7 @@ export default function WebDesignPage() {
     {
       name: "Enterprise Website", 
       price: "RM 10,000",
-      description: "Complete solution for large Malaysian companies",
+      description: "Complete solution for large Malaysian and/or Singaporean companies",
       features: [
         "Unlimited pages",
         "Custom functionality",
@@ -89,7 +89,7 @@ export default function WebDesignPage() {
       name: "Ahmad Rahman",
       company: "Rahman Electronics",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      quote: "Our online sales increased by 300% within 3 months of launching our new website. Yokan Digital truly understands Malaysian customers.",
+      quote: "Our online sales increased by 300% within 3 months of launching our new website. Yokan Digital truly understands Malaysian and Singaporean customers.",
       result: "+300% Online Sales"
     },
     {
@@ -111,7 +111,7 @@ export default function WebDesignPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-primary-foreground">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6" data-testid="hero-title">
-                Professional Web Design That Converts Malaysian Visitors
+                Professional Web Design That Converts Malaysian and Singaporean Visitors
               </h1>
               <p className="text-xl mb-8 text-primary-foreground/90" data-testid="hero-subtitle">
                 Custom websites designed specifically for Malaysian and Singaporean businesses. Mobile-responsive, fast-loading, and optimized to turn visitors into customers.
@@ -152,7 +152,7 @@ export default function WebDesignPage() {
               Why Malaysian and Singaporean Businesses Choose Our Web Design
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Every website is crafted with Malaysian market insights and proven conversion strategies
+              Every website is crafted with Malaysian and/or Singaporean market insights and proven conversion strategies
             </p>
           </div>
 

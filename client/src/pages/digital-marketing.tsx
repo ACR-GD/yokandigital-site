@@ -12,8 +12,8 @@ export default function DigitalMarketingPage() {
     {
       icon: <Facebook className="w-8 h-8" />,
       name: "Facebook Marketing",
-      description: "Reach 26 million Malaysian Facebook users with targeted campaigns that convert.",
-      audience: "26M+ Malaysians",
+      description: "Reach 32 million Malaysian Facebook users with targeted campaigns that convert.",
+      audience: "32M+ Malaysians and Singaporeans",
       avgROI: "400%",
       features: ["Targeted advertising", "Content creation", "Community management", "Analytics & reporting"]
     },
@@ -21,7 +21,7 @@ export default function DigitalMarketingPage() {
       icon: <Instagram className="w-8 h-8" />,
       name: "Instagram Marketing", 
       description: "Engage with visual content that captures Malaysian consumers' attention.",
-      audience: "13M+ Malaysians",
+      audience: "13M+ Malaysians and Singaporeans",
       avgROI: "350%",
       features: ["Stories & Reels", "Influencer partnerships", "Product tagging", "Brand storytelling"]
     },
@@ -29,7 +29,7 @@ export default function DigitalMarketingPage() {
       icon: <MessageCircle className="w-8 h-8" />,
       name: "WhatsApp Business",
       description: "Connect directly with Malaysian customers through their preferred messaging platform.",
-      audience: "25M+ Malaysians",
+      audience: "25M+ Malaysians and Singaporeans",
       avgROI: "500%",
       features: ["Business API", "Automated responses", "Catalog integration", "Customer support"]
     },
@@ -137,17 +137,17 @@ export default function DigitalMarketingPage() {
     {
       stat: "26M+",
       label: "Malaysian Facebook Users",
-      insight: "98% of internet users in Malaysia use Facebook"
+      insight: "98% of internet users in Malaysia and Singapore use Facebook"
     },
     {
       stat: "25M+", 
-      label: "WhatsApp Users in Malaysia",
+      label: "WhatsApp Users in Malaysia and Singapore",
       insight: "Most preferred messaging platform for business"
     },
     {
       stat: "87%",
       label: "Mobile Internet Usage",
-      insight: "Malaysians primarily browse on mobile devices"
+      insight: "Malaysians and Singaporeans primarily browse on mobile devices"
     },
     {
       stat: "65%",
@@ -169,7 +169,7 @@ export default function DigitalMarketingPage() {
                 Digital Marketing That Drives Results for Malaysian and Singaporean Businesses
               </h1>
               <p className="text-xl mb-8 text-primary-foreground/90" data-testid="hero-subtitle">
-                Reach 32 million Malaysians across Facebook, Instagram, WhatsApp, and email. Our data-driven campaigns turn clicks into customers.
+                Reach 32 million Malaysians and Singaporeans across Facebook, Instagram, WhatsApp, and email. Our data-driven campaigns turn clicks into customers.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -199,15 +199,15 @@ export default function DigitalMarketingPage() {
         </div>
       </section>
 
-      {/* Malaysian Market Insights */}
+      {/* Malaysian and Singaporean Market Insights */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title">
-              Malaysian Digital Marketing Landscape
+              Malaysian and Singaporean Digital Marketing Landscape
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We understand Malaysian consumer behavior and leverage local insights for maximum impact
+              We understand Malaysian and Singaporean consumer behavior and leverage local insights for maximum impact
             </p>
           </div>
 
@@ -235,7 +235,7 @@ export default function DigitalMarketingPage() {
               Multi-Channel Marketing for Maximum Reach
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We manage your presence across all major platforms where Malaysians spend their time
+              We manage your presence across all major platforms where Malaysians and Singaporeans spend their time
             </p>
           </div>
 
@@ -386,7 +386,7 @@ export default function DigitalMarketingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title">
-              Malaysian Success Stories
+              Malaysian and Singaporean Success Stories
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Real results from real Malaysian and Singaporean businesses using our digital marketing strategies
@@ -447,7 +447,7 @@ export default function DigitalMarketingPage() {
       <section className="py-20 bg-gradient-to-r from-primary to-accent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-6">
-            Ready to Reach 32 Million Malaysians?
+            Ready to Reach 32 Million Malaysians and Singaporeans?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
             Get a custom digital marketing strategy designed specifically for your Malaysian and/or Singaporean business. Free consultation included.

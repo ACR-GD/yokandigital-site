@@ -25,22 +25,21 @@ export default function SEOServicesPage() {
   const seoServices = [
     {
       icon: <MapPin className="w-8 h-8" />,
-      title: "Local SEO Malaysia",
-      description: "Get found by customers in your city. We optimize your business for 'near me' searches across Malaysia.",
+      title: "Local SEO Malaysia and Singapore",
+      description: "Get found by customers in your city. We optimize your business for 'near me' searches across Malaysia and Singapore.",
       results: "+250% Local Traffic",
       features: ["Google My Business optimization", "Local citations", "Review management", "Location-based keywords"]
     },
     {
       icon: <Globe className="w-8 h-8" />,
       title: "National SEO",
-      description: "Dominate search results across Malaysia. Target customers from Kuala Lumpur to Penang and beyond.",
-      results: "Page 1 Rankings",
+results: "Page 1 Rankings",
       features: ["Keyword research", "On-page optimization", "Technical SEO", "Content strategy"]
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
       title: "Mobile SEO",
-      description: "78% of Malaysians search on mobile. We ensure your website ranks high on mobile search results.",
+      description: "78% of Malaysians and Singaporeans search on mobile. We ensure your website ranks high on mobile search results.",
       results: "+180% Mobile Visibility",
       features: ["Mobile-first indexing", "Page speed optimization", "Voice search optimization", "AMP implementation"]
     },
@@ -73,7 +72,7 @@ export default function SEOServicesPage() {
       name: "National SEO",
       price: "RM 5,000",
       duration: "/month", 
-      description: "For businesses targeting all of Malaysia",
+      description: "For businesses targeting all of Malaysia and/or Singapore",
       features: [
         "Comprehensive keyword research (200 keywords)",
         "On-page optimization (20 pages)",
@@ -145,7 +144,7 @@ export default function SEOServicesPage() {
                 SEO Services That Get Malaysian and Singaporean Businesses Found
               </h1>
               <p className="text-xl mb-8 text-primary-foreground/90" data-testid="hero-subtitle">
-                Dominate Google search results in Malaysia. Our proven SEO strategies help businesses get found by customers who are ready to buy.
+                Dominate Google search results in Malaysia and Singapore. Our proven SEO strategies help businesses get found by customers who are ready to buy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -337,7 +336,7 @@ export default function SEOServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 section-title">
-              Real SEO Success Stories from Malaysia
+              Real SEO Success Stories from Malaysia and Singapore
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               See how our SEO strategies transformed these Malaysian and Singaporean businesses
@@ -388,7 +387,7 @@ export default function SEOServicesPage() {
       <section className="py-20 bg-gradient-to-r from-primary to-accent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-6">
-            Ready to Dominate Google Search in Malaysia?
+            Ready to Dominate Google Search in Malaysia and Singapore?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
             Get a free SEO audit and see exactly how we can improve your search rankings. No obligations, just insights.
