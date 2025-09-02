@@ -86,6 +86,11 @@ export default function AdminDashboard() {
         package: "starter",
         monthlyFee: 2500
       });
+      alert('Client created successfully!');
+    },
+    onError: (error) => {
+      console.error('Error creating client:', error);
+      alert('Failed to create client: ' + error.message);
     }
   });
 
@@ -138,6 +143,14 @@ export default function AdminDashboard() {
 
   const handleCreateClient = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Basic validation
+    if (!newClient.name || !newClient.email) {
+      alert('Please fill in all required fields (Name and Email)');
+      return;
+    }
+    
+    console.log('Submitting client data:', newClient);
     createClientMutation.mutate(newClient);
   };
 
