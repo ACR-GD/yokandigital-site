@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -16,7 +17,8 @@ export default function Contact() {
     firstName: "",
     lastName: "",
     email: "",
-    company: "",
+    website: "",
+    noWebsite: false,
     service: "",
     projectDetails: ""
   });
@@ -35,7 +37,8 @@ export default function Contact() {
         firstName: "",
         lastName: "",
         email: "",
-        company: "",
+        website: "",
+        noWebsite: false,
         service: "",
         projectDetails: ""
       });
@@ -54,7 +57,7 @@ export default function Contact() {
     contactMutation.mutate(formData);
   };
 
-  const handleInputChange = (field: string, value: string) => {
+  const handleInputChange = (field: string, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -159,14 +162,32 @@ export default function Contact() {
               
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  {t('form.company')}
+                  Website
                 </label>
                 <Input
-                  type="text"
-                  value={formData.company}
-                  onChange={(e) => handleInputChange('company', e.target.value)}
-                  data-testid="input-company"
+                  type="url"
+                  value={formData.website}
+                  onChange={(e) => handleInputChange('website', e.target.value)}
+                  placeholder="https://your-website.com"
+                  disabled={formData.noWebsite}
+                  data-testid="input-website"
                 />
+                <div className="flex items-center space-x-2 mt-3">
+                  <Checkbox
+                    id="no-website"
+                    checked={formData.noWebsite}
+                    onCheckedChange={(checked) => {
+                      handleInputChange('noWebsite', checked as boolean);
+                      if (checked) {
+                        handleInputChange('website', '');
+                      }
+                    }}
+                    data-testid="checkbox-no-website"
+                  />
+                  <label htmlFor="no-website" className="text-sm text-muted-foreground cursor-pointer">
+                    I don't have a website yet
+                  </label>
+                </div>
               </div>
               
               <div>
@@ -177,7 +198,7 @@ export default function Contact() {
                   <SelectTrigger data-testid="select-service">
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="bg-background border border-border shadow-lg">
                     <SelectItem value="web-design">Web Design</SelectItem>
                     <SelectItem value="seo">SEO Services</SelectItem>
                     <SelectItem value="digital-marketing">Digital Marketing</SelectItem>
