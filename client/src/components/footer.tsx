@@ -1,5 +1,6 @@
 import { Rocket, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
+import { Link } from "wouter";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -31,13 +32,24 @@ export default function Footer() {
         { name: "Industry Reports", href: "#" },
         { name: "Support", href: "#contact" }
       ]
+    },
+    {
+      title: t('footer.serviceLocations'),
+      links: [
+        { name: t('footer.webDesignKL'), href: "/services/web-design/kuala-lumpur", isInternal: true },
+        { name: t('footer.seoPenang'), href: "/services/seo/penang", isInternal: true },
+        { name: t('footer.digitalMarketingJB'), href: "/services/digital-marketing/johor-bahru", isInternal: true },
+        { name: t('footer.webDesignSingapore'), href: "/services/web-design/singapore", isInternal: true },
+        { name: t('footer.seoSelangor'), href: "/services/seo/selangor", isInternal: true },
+        { name: t('footer.marketingIpoh'), href: "/services/digital-marketing/ipoh", isInternal: true }
+      ]
     }
   ];
 
   return (
     <footer className="bg-slate-900 text-slate-300 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
@@ -75,13 +87,23 @@ export default function Footer() {
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a 
-                      href={link.href} 
-                      className="text-slate-400 hover:text-white transition-colors"
-                      data-testid={`footer-link-${index}-${linkIndex}`}
-                    >
-                      {link.name}
-                    </a>
+                    {(link as any).isInternal ? (
+                      <Link 
+                        href={link.href} 
+                        className="text-slate-400 hover:text-white transition-colors"
+                        data-testid={`footer-link-${index}-${linkIndex}`}
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a 
+                        href={link.href} 
+                        className="text-slate-400 hover:text-white transition-colors"
+                        data-testid={`footer-link-${index}-${linkIndex}`}
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

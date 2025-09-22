@@ -9,6 +9,7 @@ import WebDesignPage from "@/pages/web-design";
 import SEOServicesPage from "@/pages/seo-services";
 import DigitalMarketingPage from "@/pages/digital-marketing";
 import CompletePackagePage from "@/pages/complete-package";
+import ServiceLocationPage from "@/pages/service-location";
 import AdminDashboard from "@/pages/admin-dashboard";
 import AdminLogin from "@/pages/admin-login";
 import ClientPortal from "@/pages/client-portal";
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/services/seo" component={SEOServicesPage} />
       <Route path="/services/digital-marketing" component={DigitalMarketingPage} />
       <Route path="/services/complete-package" component={CompletePackagePage} />
+      <Route path="/services/:service/:city" component={ServiceLocationPage} />
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/client-portal" component={ClientPortal} />

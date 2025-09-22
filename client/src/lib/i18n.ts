@@ -292,6 +292,38 @@ export const translations: Translations = {
   "footer.terms": {
     en: "Terms of Service",
     ms: "Terma Perkhidmatan"
+  },
+  "footer.serviceLocations": {
+    en: "Service Locations",
+    ms: "Lokasi Perkhidmatan"
+  },
+  "footer.webDesignKL": {
+    en: "Web Design KL",
+    ms: "Reka Bentuk Web KL"
+  },
+  "footer.seoPenang": {
+    en: "SEO Penang",
+    ms: "SEO Pulau Pinang"
+  },
+  "footer.digitalMarketingJB": {
+    en: "Digital Marketing JB",
+    ms: "Pemasaran Digital JB"
+  },
+  "footer.webDesignSingapore": {
+    en: "Web Design Singapore",
+    ms: "Reka Bentuk Web Singapura"
+  },
+  "footer.seoSelangor": {
+    en: "SEO Selangor",
+    ms: "SEO Selangor"
+  },
+  "footer.marketingIpoh": {
+    en: "Marketing Ipoh",
+    ms: "Pemasaran Ipoh"
+  },
+  "navigation.backToServices": {
+    en: "Back to Services",
+    ms: "Kembali ke Perkhidmatan"
   }
 };
 
