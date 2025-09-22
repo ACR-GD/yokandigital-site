@@ -84,7 +84,7 @@ export default function Contact() {
                     {t('contact.office')}
                   </h4>
                   <p className="text-muted-foreground" data-testid="text-office-location">
-                    Kuala Lumpur, Malaysia
+                    39A, Jalan Meru impian B3, Casa Kayanga Bandar Meru Raya, 30020 Ipoh, Malaysia
                   </p>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function Contact() {
                     {t('contact.phone')}
                   </h4>
                   <p className="text-muted-foreground" data-testid="text-phone-number">
-                    +60 3-1234 5678
+                    +60 11-3976 5116
                   </p>
                 </div>
               </div>
