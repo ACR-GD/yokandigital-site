@@ -84,7 +84,7 @@ export default function Contact() {
                     {t('contact.office')}
                   </h4>
                   <p className="text-muted-foreground" data-testid="text-office-location">
-                    39A, Jalan Meru impian B3, Casa Kayanga Bandar Meru Raya, 30020 Ipoh, Malaysia
+                    36A, Jalan Meru impian B3, Casa Kayanga Bandar Meru Raya, 30020 Ipoh, Malaysia
                   </p>
                 </div>
               </div>
