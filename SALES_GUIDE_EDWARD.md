@@ -1,402 +1,587 @@
 # Yokan Digital - Sales Guide for Edward
 
-**Welcome, Edward!** This guide will help you understand everything we offer at Yokan Digital so you can confidently present our services to prospects. You have the freedom to customize pricing and packages based on client needs - use this as your foundation, but feel free to create custom solutions that make sense for each business.
+**Welcome, Edward!** This guide will help you understand everything we offer so you can confidently sell our services. Here's the most important thing you need to know:
+
+## 🎯 Your #1 Job: Get Clients
+
+**The Golden Rule:** A client paying for ONE service is better than NO client at all. 
+
+- Don't lose deals by pushing too hard for bigger packages
+- Start with what they need RIGHT NOW
+- Prove our value with one service
+- Upsell later when they see results
+
+**You have complete freedom to:**
+- Sell any single service independently
+- Create custom bundles that make sense
+- Adjust pricing based on project scope
+- Offer payment plans or trial periods
+- Start small and grow accounts over time
 
 ---
 
-## 🎯 Our Mission
+## 💼 Our Services (Sell Them However You Want)
 
-We help Malaysian businesses thrive online through strategic digital marketing, beautiful web design, and results-driven SEO. We're not just service providers - we're growth partners who understand the Malaysian market inside and out.
+Every service below can be sold **standalone** or **combined**. The packages at the end are suggestions, not rules. Build what the client needs.
 
 ---
 
-## 📦 Our Three Core Packages
+### 🌐 **Web Design & Development**
 
-### 1️⃣ **Starter Package - RM2,500/month**
-**Perfect for:** Small businesses, startups, local shops just getting online
+**What It Is:**
+We build professional websites that work on all devices, load fast, and turn visitors into customers. From simple 5-page sites to full e-commerce platforms.
 
 **What You Tell Prospects:**
-"This package is designed for businesses that are ready to establish their digital presence without breaking the bank. You'll get a professional website that looks great on all devices, basic SEO to help people find you on Google, and our team monitoring your performance monthly."
+"We create websites that work hard for your business - mobile-friendly, fast-loading, and designed to convert visitors into customers. Whether you need a simple brochure site or a full online store, we build it right."
+
+**Standalone Pricing Options:**
+
+#### Option 1: One-Time Build + Monthly Maintenance
+- **5-Page Basic Site:** RM4,000-6,000 build + RM300/month maintenance
+- **10-15 Page Custom Site:** RM8,000-15,000 build + RM500/month maintenance
+- **E-commerce Site:** RM20,000-40,000 build + RM1,000/month maintenance
+
+#### Option 2: Monthly Subscription (No Big Upfront Cost)
+- **5-Page Basic Site:** RM1,200/month (12-month minimum)
+- **10-15 Page Custom Site:** RM2,000/month (12-month minimum)
+- **E-commerce Site:** RM3,500/month (12-month minimum)
 
 **What's Included:**
-- **5-Page Professional Website** - Home, About, Services, Contact, plus one custom page (e.g., Gallery, Testimonials)
-- **Basic SEO Optimization** - We'll optimize your site for relevant keywords, set up proper meta tags, and ensure Google can find and rank your pages
-- **Mobile Responsive Design** - Your site works perfectly on phones, tablets, and desktops
-- **Monthly Performance Report** - Easy-to-understand report showing website traffic, leads, and key metrics
-- **Email Support** - Direct access to our team during business hours
+- Custom design (no templates)
+- Mobile-responsive (works on phones, tablets, desktops)
+- Basic SEO setup (meta tags, site structure)
+- Contact forms and integrations
+- CMS so they can edit content
+- SSL certificate and security
+- Hosting included in maintenance
+- Regular updates and backups
 
-**When to Pitch This:**
-- New businesses with limited budgets (under RM5,000/month for marketing)
-- Businesses that need a professional online presence but don't need advanced features yet
-- Service-based businesses (consultants, freelancers, small agencies)
-- Retail shops wanting to showcase products online (without e-commerce yet)
+**Add-Ons You Can Sell:**
+- E-commerce functionality: +RM10,000 build or +RM800/month
+- Booking/appointment system: +RM3,000 or +RM300/month
+- Blog section: +RM2,000 or +RM200/month
+- Multiple languages: +RM1,500 or +RM150/month
+- Custom animations/effects: +RM2,000-5,000
 
-**Objection Handlers:**
-- "Why monthly vs one-time?" → "Websites need ongoing maintenance, security updates, and optimization. Our monthly model means you never have to worry about technical issues or outdated content. Plus, we're continuously improving your SEO."
-- "Can I just use Wix/Squarespace?" → "Absolutely you can! But those platforms limit your SEO potential and growth. We build custom sites that load faster, rank better, and can scale with your business. Plus, you get expert support instead of DIY troubleshooting."
-
----
-
-### 2️⃣ **Professional Package - RM5,000/month** ⭐ MOST POPULAR
-**Perfect for:** Growing businesses, established companies ready to scale, businesses serious about digital marketing
-
-**What You Tell Prospects:**
-"This is our most popular package because it delivers complete digital marketing. You're not just getting a website - you're getting a full marketing team managing your social media, running your ads, and actively working to bring you customers every single day. Most clients see ROI within 60-90 days."
-
-**What's Included:**
-- **15-Page Custom Website** - Larger site with custom features, blog section, advanced forms, integrations
-- **Advanced SEO + Local SEO** - Aggressive keyword targeting, Google My Business optimization, local directory listings, competitor analysis
-- **Social Media Management** - We create and post content on Facebook, Instagram, and LinkedIn (3-5 posts per week per platform)
-- **Google Ads Management** - We design, launch, and optimize Google Ads campaigns (client provides ad budget separately)
-- **Weekly Reporting** - Detailed weekly updates on all channels, what's working, and our strategy for the week ahead
-- **Phone + Email Support** - Direct line to our team whenever you need us
-
-**When to Pitch This:**
-- Businesses with RM10,000+ monthly marketing budgets
-- Companies with existing websites that underperform
-- Businesses in competitive industries (real estate, legal, healthcare, retail)
-- B2B companies needing lead generation
-- Service businesses wanting to dominate their local market
-
-**Key Selling Points:**
-- **Complete Solution** - No need to hire separate agencies for website, SEO, social media, and ads
-- **Local Expertise** - We understand Malaysian consumers, local search patterns, and what works in this market
-- **Weekly Check-ins** - You're never in the dark about what we're doing or how it's performing
-- **Scalable** - As you grow, we can increase ad spend and expand to more platforms
-
-**Objection Handlers:**
-- "That's expensive!" → "Let's do the math. If we bring you just 2-3 extra customers per month, what's that worth to your business? Most of our Professional clients see 5-15 new leads monthly, with 20-30% converting to sales."
-- "We tried digital marketing before and it didn't work" → "I hear that a lot. Usually it fails because of inconsistency or poor strategy. With us, you get experts managing this daily, not doing it when you have spare time. We also analyze what went wrong before and fix it."
-- "Can we start with Starter and upgrade?" → "Absolutely! Many clients do. But here's the thing - Professional delivers results faster because we're more aggressive on all channels. If you need customers soon, Professional is the way to go."
-
----
-
-### 3️⃣ **Enterprise Package - RM10,000/month**
-**Perfect for:** Large businesses, e-commerce, multi-location companies, brands needing premium support
-
-**What You Tell Prospects:**
-"This is our white-glove service for businesses that need enterprise-level digital marketing. You get unlimited pages, full e-commerce capabilities, campaigns across every major platform, advanced analytics, and most importantly - a dedicated account manager who becomes an extension of your team."
-
-**What's Included:**
-- **Unlimited Pages + E-commerce** - Full online store with payment gateway, inventory management, customer accounts, shipping integrations
-- **Full SEO + Content Marketing** - Comprehensive SEO with content creation (blog posts, videos, infographics), link building, PR outreach
-- **Multi-Platform Campaigns** - Facebook, Instagram, LinkedIn, Google Ads, YouTube, TikTok - we're everywhere your customers are
-- **Advanced Analytics & BI** - Custom dashboards, revenue attribution, customer journey mapping, predictive analytics
-- **Dedicated Account Manager** - Your own strategist who knows your business inside-out and meets with you regularly
-- **24/7 Priority Support** - We're available whenever you need us, including weekends and holidays for urgent issues
-
-**When to Pitch This:**
-- E-commerce businesses doing RM100,000+ monthly revenue
-- Multi-location businesses (franchises, chains)
-- B2B companies with long sales cycles and high deal values
-- Brands launching major campaigns or new products
-- Companies currently paying RM15,000+ for digital marketing across multiple agencies
-
-**Key Selling Points:**
-- **Consolidation** - Replace 3-4 vendors with one team
-- **Data-Driven** - Every decision backed by analytics, not guesswork
-- **Dedicated Resource** - Your account manager is invested in YOUR success
-- **Competitive Edge** - Enterprise-level marketing that small competitors can't match
-- **Scalability** - Built to handle growth from RM1M to RM10M+ annual revenue
-
-**Objection Handlers:**
-- "We have an in-house marketing team" → "Perfect! We work alongside them. We handle execution, technical SEO, ad management, and analytics - freeing your team to focus on strategy and creative. Many of our Enterprise clients have in-house teams."
-- "What if we don't need all these features?" → "We'll customize. The base package is RM10K, but we tailor it to your needs. Need more focus on content and less on ads? We adjust. Think of this as having a full digital agency on retainer."
-
----
-
-## 🛠️ Our Core Services (Standalone or in Packages)
-
-### Web Design & Development
-
-**What Prospects Need to Know:**
-We build websites that aren't just pretty - they're strategic business tools designed to convert visitors into customers.
-
-**Key Features:**
-- **Mobile-First Design** - Over 70% of Malaysians browse on mobile, so we design for phones first
-- **Lightning Fast** - Sites load in under 2 seconds (most websites take 5-8 seconds - that's where you lose customers)
-- **SEO-Ready** - Built with clean code, proper structure, and optimized from day one
-- **CMS Integration** - You can edit content yourself using an easy dashboard, or we do it for you
-- **E-commerce Solutions** - Full online stores with payment gateways (iPay88, Stripe, PayPal), inventory management, and shipping integrations
+**When to Pitch:**
+- Every business needs a website
+- Their current site looks outdated
+- Site is slow or doesn't work on mobile
+- They're losing customers to competitors with better sites
+- They want to sell online
 
 **Sales Pitch:**
-"Your website is your 24/7 salesperson. We build sites that work hard for your business - fast loading, mobile-friendly, and designed to turn visitors into customers. Whether you need a simple brochure site or a full e-commerce platform, we create websites that drive results."
-
-**Typical Standalone Pricing (if not in a package):**
-- Basic 5-page site: RM5,000-8,000 one-time + RM500/month maintenance
-- Custom 10-15 page site: RM12,000-20,000 one-time + RM800/month maintenance  
-- E-commerce site: RM25,000-50,000 one-time + RM1,500/month maintenance
+"Your website is working 24/7 for your business. Let's make sure it's bringing in customers, not turning them away. We can have you live with a professional site in 4-6 weeks."
 
 ---
 
-### SEO Optimization
+### 🔍 **SEO (Search Engine Optimization)**
 
-**What Prospects Need to Know:**
-SEO gets you found on Google when people search for what you offer. It's the most cost-effective way to get customers because they're already looking for you.
+**What It Is:**
+Getting their business to show up on Google when people search for what they offer. Most cost-effective way to get customers because they're already looking.
 
-**Our SEO Includes:**
-- **Keyword Research** - We find the exact terms your customers search for
-- **On-Page Optimization** - Every page optimized for target keywords
-- **Technical SEO** - Fix site speed, mobile issues, indexing problems
-- **Local SEO** - Get found in "near me" searches and Google Maps
-- **Link Building** - Earn high-quality backlinks from reputable Malaysian sites
-- **Content Creation** - Regular blog posts, service pages, and resources that rank
+**What You Tell Prospects:**
+"When someone searches 'best [their service] in [their city]', do you show up? SEO gets you found on Google. Unlike ads that stop working when you stop paying, SEO builds long-term visibility."
 
-**Sales Pitch:**
-"When someone in Kuala Lumpur searches 'best digital marketing agency Malaysia,' do you show up? SEO puts you in front of people actively looking for your services. Unlike ads that stop working when you stop paying, SEO builds long-term visibility. Our clients typically see first-page rankings within 3-6 months."
+**Standalone Pricing:**
+- **Basic SEO:** RM1,500/month - Good for local businesses with 1 location
+- **Advanced SEO:** RM3,000/month - Multi-location or competitive industries
+- **Enterprise SEO:** RM5,000+/month - E-commerce with hundreds of products
+
+**What's Included (Basic):**
+- Keyword research (find what customers search)
+- On-page optimization (every page optimized)
+- Google My Business setup and optimization
+- Monthly blog post (SEO-optimized)
+- Technical SEO fixes
+- Monthly ranking reports
+
+**What's Included (Advanced):**
+Everything in Basic PLUS:
+- 4 blog posts per month
+- Local directory listings (20+ directories)
+- Competitor analysis
+- Link building (earn backlinks)
+- Content strategy
+- Weekly ranking reports
 
 **Location-Specific SEO:**
-We offer specialized SEO for 11 Malaysian cities plus Singapore:
-- Kuala Lumpur, Penang, Johor Bahru, Ipoh, Malacca, Seremban, Kuching, Kota Kinabalu, Shah Alam, Petaling Jaya, Klang, Singapore
+We specialize in these Malaysian cities + Singapore:
+Kuala Lumpur • Penang • Johor Bahru • Ipoh • Malacca • Seremban • Kuching • Kota Kinabalu • Shah Alam • Petaling Jaya • Klang • Singapore
 
-**Results to Share:**
-- "Our clients typically see 40-60% increase in organic traffic within 6 months"
-- "Average client ranks for 30-50 keywords on Google's first page"
-- "Local SEO clients usually appear in top 3 Google Maps results within 90 days"
+**Timeline to Results:**
+- Month 1-2: Setup, research, initial optimization
+- Month 3-4: Start seeing ranking improvements
+- Month 5-6: First page rankings for target keywords
+- Month 6+: Consistent leads from organic search
 
----
-
-### Digital Marketing
-
-**What Prospects Need to Know:**
-Digital marketing is how we get your message in front of the right people at the right time across social media, Google, and other platforms.
-
-**Our Digital Marketing Services:**
-
-1. **Social Media Marketing**
-   - Platform Management: Facebook, Instagram, LinkedIn, TikTok
-   - Content Creation: Graphics, videos, captions, stories
-   - Community Management: Respond to comments and messages
-   - Paid Social Ads: Targeted campaigns to reach ideal customers
-   
-2. **Google Ads Management**
-   - Search Ads: Show up when people search for your services
-   - Display Ads: Banner ads across Malaysian websites
-   - Shopping Ads: For e-commerce products
-   - Remarketing: Bring back website visitors who didn't convert
-   
-3. **Content Marketing**
-   - Blog Posts: SEO-optimized articles that attract traffic
-   - Video Content: For YouTube, social media, website
-   - Email Marketing: Newsletters and automated campaigns
-   - Infographics: Shareable visual content
+**When to Pitch:**
+- They're not showing up on Google
+- They rely on word-of-mouth only
+- Competitors outrank them
+- They want long-term sustainable growth
+- They're paying too much for ads
 
 **Sales Pitch:**
-"Digital marketing is about being everywhere your customers are. We create compelling content, run strategic ad campaigns, and build a community around your brand. Whether it's Facebook ads bringing in leads or Google Ads driving immediate sales, we make sure your marketing budget works hard."
-
-**How We Prove ROI:**
-- Every campaign tracked with clear metrics (cost per lead, conversion rate, ROAS)
-- Weekly reports showing exactly what's working
-- A/B testing to continuously improve results
-- Transparent ad spend reporting (you know where every ringgit goes)
+"SEO is like planting seeds. It takes a few months to grow, but once it does, you get customers on autopilot. Our clients typically see 40-60% more website traffic within 6 months."
 
 ---
 
-## 🎁 Free Tools (Lead Generation)
+### 📱 **Social Media Management**
 
-We offer two free tools on our website that also serve as lead generation:
+**What It Is:**
+We create and post content on their Facebook, Instagram, LinkedIn, and TikTok. Keep their social media active, professional, and engaging.
 
-### 1. Free SEO Audit
-- Prospects enter their website URL
-- They get an instant score + report showing SEO issues
-- We capture their email and can follow up with solutions
+**What You Tell Prospects:**
+"Your customers are scrolling Facebook and Instagram daily. We keep your business in front of them with regular posts, stories, and engagement. You focus on your business, we handle your social media."
 
-### 2. Free Website Speed Test
-- Shows how fast their site loads
-- Compares to competitors
-- Identifies speed issues
-- We follow up with optimization services
+**Standalone Pricing:**
+- **1 Platform:** RM800/month (3-4 posts/week)
+- **2 Platforms:** RM1,400/month (3-4 posts/week each)
+- **3 Platforms:** RM2,000/month (3-4 posts/week each)
+- **4+ Platforms:** RM2,500/month (daily content)
 
-**How to Use These in Sales:**
-"Before we even talk pricing, let me run a free SEO audit on your site. It takes 30 seconds and shows exactly where you're losing traffic. Then we can discuss if you want our help fixing it."
+**What's Included:**
+- Content creation (graphics, captions, hashtags)
+- Posting schedule (consistent posting)
+- Community management (respond to comments)
+- Monthly analytics report
+- Content calendar (you approve before posting)
+
+**Add-Ons:**
+- Professional photography: +RM500/session
+- Video content creation: +RM800/month
+- Stories/Reels daily: +RM400/month
+- Social media ads: +RM600/month management (they pay ad budget separately)
+
+**When to Pitch:**
+- They post inconsistently or not at all
+- Their social media looks unprofessional
+- They don't have time to manage it
+- They want to build brand awareness
+- Competitors are more active on social
+
+**Sales Pitch:**
+"Social media is where your customers hang out. We keep your business visible with professional content that builds trust and brings in customers. Most businesses know they need social media but never do it consistently - that's where we come in."
 
 ---
 
-## 💰 Pricing Philosophy & Flexibility
+### 💰 **Google Ads Management**
 
-**Important, Edward:** While we have set packages, you have the freedom to customize based on client needs:
+**What It Is:**
+Running paid ad campaigns on Google so they show up at the top when people search. Pay-per-click advertising that brings immediate traffic.
 
-### When to Discount (10-20% off):
-- Annual commitments (pay 12 months upfront)
-- Multiple locations/franchises (bulk pricing)
+**What You Tell Prospects:**
+"Google Ads puts you at the top of search results instantly. While SEO builds long-term, ads bring customers TODAY. We design, manage, and optimize your campaigns so you get the best return on every ringgit spent."
+
+**Standalone Pricing:**
+- **Management Fee:** RM1,200-2,000/month (depending on ad budget size)
+- **Or:** 15% of monthly ad spend (whichever is higher)
+- **Client pays ad budget separately** (recommend minimum RM2,000/month ad budget)
+
+**What's Included:**
+- Campaign setup and strategy
+- Keyword research and selection
+- Ad copywriting and testing
+- Landing page optimization
+- Bid management and optimization
+- Conversion tracking setup
+- Weekly performance reports
+- Monthly strategy calls
+
+**Ad Budget Guidance:**
+- Small local business: RM2,000-3,000/month
+- Growing business: RM5,000-8,000/month
+- Competitive industry: RM10,000+/month
+
+**When to Pitch:**
+- They need customers immediately (can't wait for SEO)
+- High-value products/services (ads pay for themselves)
+- Seasonal business (ramp up quickly)
+- New business with no organic presence yet
+- Competitor ads are dominating search
+
+**Sales Pitch:**
+"SEO takes time. Ads work TODAY. We manage everything - you just approve the budget, and we bring the customers. Most clients see 3-5x return on ad spend within 60 days."
+
+---
+
+### 📧 **Email Marketing**
+
+**What It Is:**
+Building an email list and sending newsletters, promotions, and automated campaigns to keep customers engaged.
+
+**Standalone Pricing:**
+- RM600-1,000/month (depending on list size and frequency)
+
+**What's Included:**
+- Email platform setup (Mailchimp/SendGrid)
+- 2-4 email campaigns per month
+- Email design and copywriting
+- List management and segmentation
+- Automated welcome series
+- Monthly performance reports
+
+**When to Pitch:**
+- They have customer data but aren't using it
+- E-commerce businesses (cart abandonment emails)
+- Service businesses (follow-up sequences)
+- Restaurants/retail (promotional campaigns)
+
+---
+
+### 📝 **Content Marketing (Blog Writing)**
+
+**What It Is:**
+Creating SEO-optimized blog posts, articles, and content that attracts visitors and establishes expertise.
+
+**Standalone Pricing:**
+- **2 Blog Posts/Month:** RM500
+- **4 Blog Posts/Month:** RM900
+- **8 Blog Posts/Month:** RM1,600
+
+**What's Included:**
+- Keyword-optimized writing
+- 800-1,200 words per post
+- Images/graphics included
+- Posted to their website
+- SEO meta tags
+
+**When to Pitch:**
+- They want SEO but don't want full SEO package
+- Need content but no time to write
+- Want to establish thought leadership
+- Need regular fresh content for website
+
+---
+
+## 📦 Suggested Package Bundles (Not Required!)
+
+These are **SUGGESTED** combinations that work well together. Feel free to customize or sell any single service above.
+
+### **Starter Package - RM2,500/month**
+*Good starting point for small businesses*
+
+**Includes:**
+- 5-page website (monthly subscription model)
+- Basic SEO (RM1,500 value)
+- 2 blog posts/month (RM500 value)
+- Monthly reporting
+
+**Or Build Your Own Starter:**
+- Website only: RM1,200/month
+- Website + SEO: RM2,200/month
+- Website + Social Media (1 platform): RM1,800/month
+
+---
+
+### **Professional Package - RM5,000/month**
+*Most popular - complete digital presence*
+
+**Includes:**
+- 15-page custom website
+- Advanced SEO (RM3,000 value)
+- Social Media (2 platforms) (RM1,400 value)
+- Google Ads management (RM1,200 value)
+- Weekly reporting
+
+**Or Build Your Own Professional:**
+- Website + Advanced SEO: RM3,500/month
+- SEO + Social Media (3 platforms) + Google Ads: RM4,500/month
+- Website + Social Media (2 platforms) + Email: RM3,000/month
+
+---
+
+### **Enterprise Package - RM10,000/month**
+*For established businesses ready to dominate*
+
+**Includes:**
+- E-commerce website (unlimited pages)
+- Enterprise SEO (RM5,000 value)
+- Social Media (4 platforms) (RM2,500 value)
+- Google Ads management (RM2,000 value)
+- Email marketing (RM1,000 value)
+- Content marketing (8 posts/month) (RM1,600 value)
+- Dedicated account manager
+- 24/7 support
+
+---
+
+## 💡 The "Land and Expand" Strategy
+
+**Start Small, Grow Big:**
+
+Many of our best clients started with just ONE service:
+
+**Example Path 1:**
+1. Month 1: Client buys website only (RM1,200/month)
+2. Month 3: Website live, happy with work → adds SEO (RM1,500/month) = RM2,700 total
+3. Month 6: Seeing SEO results → adds social media (RM800/month) = RM3,500 total
+4. Month 9: Ready to scale → adds Google Ads (RM1,500/month) = RM5,000 total
+5. **Result: Turned RM1,200 client into RM5,000 client over 9 months**
+
+**Example Path 2:**
+1. Month 1: Client needs website urgently → sells one-time build (RM6,000 profit)
+2. Month 2: Website launches → sells maintenance (RM300/month)
+3. Month 3: Happy with website → sells SEO (RM1,500/month) = RM1,800 total
+4. Month 6: SEO working → sells Google Ads (RM1,200/month) = RM3,000 total
+5. **Result: One-time RM6K + now RM3,000/month recurring**
+
+**The Point:** 
+- Don't force packages on people who aren't ready
+- Get them in the door with what they need NOW
+- Deliver amazing results
+- They'll naturally want more
+
+---
+
+## 🎯 How to Price Custom Deals
+
+**Base Service Pricing (Your Starting Point):**
+- Website (5-page, monthly): RM1,200/month
+- Website (10-15 page, monthly): RM2,000/month
+- Website (one-time 5-page): RM5,000 + RM300/month maintenance
+- Website (one-time 10-15 page): RM10,000 + RM500/month maintenance
+- Basic SEO: RM1,500/month
+- Advanced SEO: RM3,000/month
+- Social Media (per platform): RM800/month
+- Google Ads: RM1,200/month + 15% of ad spend
+- Email Marketing: RM600-1,000/month
+- Blog Content: RM250 per post
+
+**Discounting Guidelines:**
+
+✅ **When to Discount (10-20% off):**
+- Annual commitment (pay 12 months upfront)
+- Multiple services bundled
 - Referrals from existing clients
-- Non-profits or social enterprises
-- Slow season for us (need to keep team busy)
+- Slow season (need to keep team busy)
+- Non-profits or social causes
+- They're comparing with competitors
 
-### When to Charge More (20-50% premium):
-- Rush projects (need in 2-4 weeks instead of 8-12 weeks)
-- Complex industries (legal, medical, financial with compliance needs)
-- High-maintenance clients (lots of revisions, frequent changes)
-- Enterprise features (custom integrations, advanced analytics)
+✅ **When to Charge Premium (+20-50%):**
+- Rush projects (need in 2-4 weeks)
+- Complex industries (legal, medical, finance)
+- High-maintenance clients (lots of revisions)
+- Custom integrations or features
+- Weekend/holiday work required
 
-### Custom Package Building:
-You can mix and match services. For example:
-- "Website + SEO only" = RM3,500/month
-- "Social Media + Google Ads" = RM4,000/month  
-- "Just Google Ads Management" = RM2,000/month + 15% of ad spend
+**Custom Bundle Pricing:**
+If they want multiple services, take the individual prices and offer 10-15% discount:
 
-**Rule of Thumb:** Minimum project value should be RM2,500/month or RM8,000 one-time. Anything less doesn't make financial sense for us.
-
----
-
-## 🎯 Qualifying Prospects (Don't Waste Time)
-
-### GOOD PROSPECTS:
-✅ Budget of RM2,500+ monthly or RM8,000+ for one-time projects
-✅ Understand digital marketing takes time (3-6 months to see big results)
-✅ Willing to provide content, images, information we need
-✅ Responsive to emails and calls
-✅ Have realistic expectations
-✅ Make decisions relatively quickly
-
-### RED FLAGS (Avoid or Charge Premium):
-❌ "Can we start with RM500/month and see how it goes?"
-❌ "My nephew can build websites, but I want to see your price"
-❌ Expect overnight results
-❌ Want to micromanage every detail
-❌ Take weeks to respond or make decisions
-❌ Have unrealistic expectations ("I want to rank #1 for 'marketing' in 30 days")
-❌ Shopping around to 10+ agencies (they'll always find cheaper)
+Example:
+- Website (RM1,200) + SEO (RM1,500) + Social (RM800) = RM3,500
+- Bundle discount 15% = **RM2,975/month**
 
 ---
 
-## 📞 Sales Process (Your Freedom to Adapt)
+## 🗣️ Sales Scripts & Pitch Examples
 
-### Discovery Call (20-30 mins):
-1. Ask about their business, goals, current challenges
-2. Understand their budget and timeline
-3. Identify pain points we can solve
-4. Offer free SEO audit or speed test
-5. Book follow-up meeting to present solution
+### Opening Pitch (First Call):
+*"Thanks for taking my call! I'm Edward from Yokan Digital. We help Malaysian businesses get more customers through better websites, SEO, and digital marketing. What's your biggest challenge right now when it comes to getting customers online?"*
 
-### Proposal Meeting (45-60 mins):
-1. Present custom package based on their needs
-2. Show case studies and results from similar clients
-3. Walk through timeline and what to expect
-4. Address concerns and objections
-5. Close or set next steps
+**Then LISTEN. Let them tell you what they need.**
 
-### Follow-Up:
-- Send proposal document within 24 hours
-- Follow up in 2-3 days if no response
-- Don't chase more than 3 times (if not interested, move on)
+### Discovery Questions:
+1. "What's your current website situation?" (Do they have one? Is it working?)
+2. "How do most customers find you right now?" (Word of mouth? Google? Social?)
+3. "If you could fix ONE thing about your online presence, what would it be?"
+4. "What's worked well in the past? What hasn't?"
+5. "What's your timeline for getting this done?"
+6. "What budget range are you working with?"
+
+### When They Say "Too Expensive":
+
+**Script 1 - Break It Down:**
+*"I understand. Let's think about it this way - if we bring you just 2 extra customers per month, what would that be worth to your business? Most of our clients see 5-15 new leads monthly. The service pays for itself."*
+
+**Script 2 - Start Smaller:**
+*"No problem! We don't have to do everything at once. What if we started with just [their biggest pain point] - that would be [lower price]. We can add more later once you see results."*
+
+**Script 3 - Payment Plan:**
+*"Would it help if we spread the one-time cost over 6 or 12 months? Many clients prefer that."*
+
+### When They Say "We'll Think About It":
+
+**Script 1 - Create Urgency:**
+*"Absolutely, take your time. Just so you know, we're booking projects 3-4 weeks out right now. If you want to launch by [their timeline], we'd need to start by [date]. Should I hold a spot for you?"*
+
+**Script 2 - Offer Free Value:**
+*"Of course! While you're thinking, can I run a free SEO audit on your site? Takes 30 seconds and shows exactly where you're losing traffic. Then you'll have concrete data to make your decision."*
+
+**Script 3 - Ask What's Holding Them Back:**
+*"Makes sense. Can I ask - what are you thinking about specifically? Is it the price, timeline, or something else? Maybe I can address that for you."*
+
+### When They Want to "Shop Around":
+
+**Script:**
+*"Smart move! You should compare options. Here's what I'd suggest - ask the other agencies about their process, timelines, and what happens if you're not satisfied. Also ask to see results from similar clients. We're happy to provide references. When you're ready to compare apples to apples, I'm here."*
+
+**Then send them:**
+- Our portfolio/case studies
+- A simple one-page proposal
+- Client testimonials
+- Free SEO audit results
+
+### Closing Script:
+
+**When You Sense They're Ready:**
+*"It sounds like [solution] is exactly what you need. We can get started this week and have you live by [date]. I'll send over the agreement today - does email work for you?"*
+
+**If They Hesitate:**
+*"Tell you what - we offer a 30-day money-back guarantee. If after the first month you're not happy, we'll refund you. You literally have nothing to lose. Should we get started?"*
 
 ---
 
-## 🏆 Case Studies & Results to Share
+## 📊 Tools to Close More Deals
 
-**Local Restaurant Chain (Professional Package):**
-- Started with 200 website visitors/month → now 2,500/month
-- Ranking #1 for "best [cuisine] in KL" 
-- Online orders increased 320% in 6 months
-- ROI: 4.5x their marketing investment
+### Free Lead Magnets:
+Use these to start conversations and prove value:
 
-**B2B SaaS Company (Enterprise Package):**
-- Generated 45 qualified leads in first 90 days
-- Reduced cost per lead from RM400 to RM120
-- 5 enterprise deals closed (RM250K total value)
-- LinkedIn presence grew from 200 to 3,500 followers
+1. **Free SEO Audit** (on our website)
+   - They enter website URL
+   - Get instant report showing issues
+   - You follow up: "I saw your audit showed [problem]. Want me to explain how we'd fix that?"
 
-**E-commerce Fashion Brand (Professional Package):**
-- Facebook/Instagram ads driving 40% of revenue
-- Average ROAS: 5.2x (RM5.20 revenue per RM1 ad spend)
-- Scaled from RM50K to RM200K monthly revenue in 8 months
-- Now upgrading to Enterprise for multi-platform expansion
+2. **Free Website Speed Test** (on our website)
+   - Shows load time vs competitors
+   - Identifies slow elements
+   - You follow up: "Your site loads in 8 seconds. Mobile users leave after 3 seconds. Want to see how we'd speed it up?"
+
+### During Sales Calls:
+
+**Screen Share & Show:**
+- Google their business and show where they rank (or don't rank)
+- Show competitor websites that look better
+- Pull up their social media and show gaps
+- Run free speed test live with them
+
+**Before/After Examples:**
+Show them real examples:
+- "Here's a client's site before working with us... and after"
+- "This client ranked #47 for their main keyword... now they're #3"
+- "This Facebook page had 200 followers... now 3,500"
 
 ---
 
-## 🤝 Working with Antoine & Amira
+## ❌ What NOT to Do
+
+**Don't:**
+- ❌ Turn away business because they don't fit a "package"
+- ❌ Be pushy about upselling before proving value
+- ❌ Promise guaranteed rankings or overnight results
+- ❌ Badmouth competitors
+- ❌ Get into bidding wars on price (compete on value, not price)
+- ❌ Take on clients you know will be nightmares (trust your gut)
+- ❌ Overpromise and underdeliver
+
+**Do:**
+- ✅ Listen to what they actually need
+- ✅ Start small if that's what works
+- ✅ Set realistic expectations
+- ✅ Follow up consistently
+- ✅ Build long-term relationships
+- ✅ Deliver exceptional work so they refer others
+
+---
+
+## 🤝 Working with the Team
 
 **Antoine (CEO & Strategist):**
-- Bring him in for complex deals (RM8K+/month)
-- He handles strategic planning and custom solutions
-- Great for pitching to C-level executives
-- Closes deals you can't close alone
+- Loop him in on deals over RM5,000/month
+- He handles complex technical questions
+- Great for closing enterprise clients
+- Approves custom pricing outside guidelines
 
-**Amira (Admin & Social Media):**
-- She manages all social media execution
-- Handles client onboarding and account setup
-- Your go-to for questions about content calendars, posting schedules
-- Clients love her creativity and attention to detail
+**Amira (Admin & Social Media Master):**
+- She executes all social media work
+- Handles onboarding new clients
+- Your go-to for content questions
+- Clients love working with her
 
 **Your Role:**
-- You own the client relationship from first call through closing
-- You're the main point of contact for sales and account questions
-- Commission structure: [Discuss with Antoine]
-- Freedom to negotiate within guidelines above
+- Own the sales process start to finish
+- Be the main client contact
+- Negotiate and close deals
+- Smooth handoff to team for execution
+- Check in with clients regularly
 
 ---
 
-## 📋 Resources Available
+## 📈 Success Metrics (How We'll Measure Your Success)
 
-- **Website**: All service pages, pricing, blog, case studies
-- **Proposal Templates**: [To be created - ask Antoine]
-- **Client Portal**: Where clients log in to see progress
-- **Analytics Dashboards**: Show prospects real-time data
-- **Contract Templates**: Standard agreements for each package
+**Monthly Goals:**
+- New clients signed: [Discuss with Antoine]
+- Monthly recurring revenue added: [Discuss with Antoine]
+- One-time project revenue: [Discuss with Antoine]
 
----
-
-## ❓ Common Questions & Answers
-
-**"How long does it take to see results?"**
-- Website: Live in 4-8 weeks
-- SEO: First page rankings in 3-6 months
-- Paid Ads: Immediate traffic, optimized results in 4-6 weeks
-- Social Media: Engagement grows within 30 days, real business impact in 90 days
-
-**"What if we're not happy?"**
-- 30-day money-back guarantee on first month
-- Month-to-month contracts (no long-term lock-in unless discounted)
-- We do quarterly reviews to ensure you're satisfied
-
-**"Do you work with our competitors?"**
-- We maintain client exclusivity within specific niches in specific cities
-- If we work with another [industry] company in KL, we won't take another in KL
-- Different cities? Usually fine.
-
-**"What industries do you work with?"**
-- We work with almost any B2B or B2C business
-- Strongest experience: Professional services, retail, restaurants, SaaS, real estate, healthcare
-- We don't work with: Adult content, gambling, crypto, MLM
-
-**"Can you guarantee rankings/results?"**
-- No one can guarantee specific rankings (Google changes algorithms)
-- We guarantee best practices, consistent effort, and transparent reporting
-- We're confident enough to offer money-back guarantee if you're not satisfied
+**Your Commission Structure:**
+[To be discussed with Antoine - but typically:]
+- X% of all monthly recurring revenue you bring in
+- X% of one-time project revenue
+- Bonuses for hitting monthly targets
+- Residuals on clients you sign (keep earning as long as they stay)
 
 ---
 
-## 🚀 Final Thoughts, Edward
+## 🚀 Getting Started (Your First Week)
 
-You're not just selling services - you're helping Malaysian businesses grow and succeed online. Every client you bring in gets the full power of our team working for them.
+**Day 1-2:**
+- Read this guide thoroughly
+- Review the website and all service pages
+- Look at our blog for case studies
 
-**Your Freedom:**
-- Customize packages to fit client needs
-- Negotiate pricing within reasonable ranges
-- Create payment plans if needed
-- Bundle services creatively
-- Offer trial periods for nervous prospects
+**Day 3:**
+- Practice your pitch with Antoine or Amira
+- Role-play common objections
+- Get access to CRM and tools
 
-**Your Responsibilities:**
-- Qualify leads properly (don't waste time on bad fits)
-- Set realistic expectations
-- Communicate clearly and often
-- Close deals professionally
-- Hand off smoothly to Antoine and Amira for execution
+**Day 4-5:**
+- Start reaching out to your network
+- Offer free SEO audits to get conversations started
+- Book 5-10 discovery calls
 
-**Remember:** We're in this together. If you need help closing a deal, brainstorming a custom package, or figuring out pricing - just ask. We trust your judgment, and we're here to support you.
-
-Now go bring in some amazing clients! 💪
+**Week 2 and Beyond:**
+- Goal: Close your first client
+- Focus on businesses you already have relationships with
+- Under-promise, over-deliver
 
 ---
 
-**Questions? Need Clarification?**
-- Slack/WhatsApp: [Contact info]
-- Weekly Sales Meetings: [Schedule]
-- CRM Access: [Link]
+## 💪 Final Pep Talk
+
+Edward, here's the truth: **Every business needs what we offer.** The hard part isn't convincing them they need digital marketing - they know that. The hard part is convincing them to choose US and to do it NOW instead of "later."
+
+**Your advantages:**
+- ✅ You understand the Malaysian market
+- ✅ You're personable and clients trust you
+- ✅ We deliver real results (our work speaks for itself)
+- ✅ You have complete flexibility to structure deals
+- ✅ We're hungry and will work harder than big agencies
+
+**Remember:**
+- A RM1,000/month client is BETTER than no client
+- Prove value first, upsell later
+- Focus on THEIR problems, not OUR services
+- Ask good questions and listen
+- Follow up, follow up, follow up
+
+**Most importantly:** Don't overthink it. Have conversations, understand what businesses need, and offer solutions. Start small if needed. Build trust. The revenue will grow.
+
+Now get out there and bring in some clients! 🚀
+
+---
+
+## 📞 Questions? Need Help?
+
+**Can't Close a Deal?** Call Antoine - we'll jump on together
+**Pricing Question?** Ask in team chat or call
+**Technical Question?** Antoine can answer anything
+**Delivery Timeline Question?** Check with Amira
+
+**We're a team. You're not alone in this.**
 
 ---
 
 *Last Updated: November 2025*
-*This guide evolves as we add services and learn what works - feel free to suggest updates!*
+*Remember: This guide is flexible. Adapt as you learn what works!*
