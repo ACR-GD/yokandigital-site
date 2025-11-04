@@ -5,7 +5,7 @@
   <!-- Main Homepage -->
   <url>
     <loc>https://yokandigital.com</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com"/>
@@ -15,7 +15,7 @@
   <!-- Main Service Pages -->
   <url>
     <loc>https://yokandigital.com/services/web-design</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/services/web-design"/>
@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://yokandigital.com/services/seo</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/services/seo"/>
@@ -31,7 +31,7 @@
   </url>
   <url>
     <loc>https://yokandigital.com/services/digital-marketing</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/services/digital-marketing"/>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://yokandigital.com/services/complete-package</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/services/complete-package"/>
@@ -49,7 +49,7 @@
   <!-- Blog Main Page -->
   <url>
     <loc>https://yokandigital.com/blog</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/blog"/>
@@ -59,73 +59,73 @@
   <!-- Blog Posts -->
   <url>
     <loc>https://yokandigital.com/blog/seo-guide-malaysian-businesses-2024</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/blog/web-design-trends-malaysia-singapore-2024</loc>
-    <lastmod>2024-01-20</lastmod>
+    <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/blog/social-media-marketing-strategy-malaysian-brands</loc>
-    <lastmod>2024-01-25</lastmod>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/blog/google-ads-optimization-malaysia-market</loc>
-    <lastmod>2024-02-01</lastmod>
+    <lastmod>2025-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/blog/ecommerce-website-development-malaysia</loc>
-    <lastmod>2024-02-05</lastmod>
+    <lastmod>2025-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/blog/content-marketing-malaysian-audience</loc>
-    <lastmod>2024-02-10</lastmod>
+    <lastmod>2025-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/blog/website-speed-optimization-malaysia</loc>
-    <lastmod>2024-02-15</lastmod>
+    <lastmod>2025-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/blog/digital-transformation-sme-malaysia</loc>
-    <lastmod>2024-02-20</lastmod>
+    <lastmod>2025-02-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/blog/email-marketing-best-practices-malaysia</loc>
-    <lastmod>2024-02-25</lastmod>
+    <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/blog/local-business-online-presence-malaysia</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/blog/why-labuan-businesses-need-professional-website-2024</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2025-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/blog/paid-advertising-guide-labuan-businesses-2024</loc>
-    <lastmod>2024-11-04</lastmod>
+    <lastmod>2025-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -133,67 +133,67 @@
   <!-- Service Location Pages - Web Design -->
   <url>
     <loc>https://yokandigital.com/services/web-design/kuala-lumpur</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/web-design/penang</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/web-design/johor-bahru</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/web-design/ipoh</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/web-design/shah-alam</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/web-design/klang</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/web-design/petaling-jaya</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/web-design/subang-jaya</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/web-design/kota-kinabalu</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/web-design/kuching</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/web-design/singapore</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -201,67 +201,67 @@
   <!-- Service Location Pages - SEO -->
   <url>
     <loc>https://yokandigital.com/services/seo/kuala-lumpur</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/seo/penang</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/seo/johor-bahru</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/seo/ipoh</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/seo/shah-alam</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/seo/klang</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/seo/petaling-jaya</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/seo/subang-jaya</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/seo/kota-kinabalu</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/seo/kuching</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/seo/singapore</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -269,67 +269,67 @@
   <!-- Service Location Pages - Digital Marketing -->
   <url>
     <loc>https://yokandigital.com/services/digital-marketing/kuala-lumpur</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/digital-marketing/penang</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/digital-marketing/johor-bahru</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/digital-marketing/ipoh</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/digital-marketing/shah-alam</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/digital-marketing/klang</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/digital-marketing/petaling-jaya</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/digital-marketing/subang-jaya</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/digital-marketing/kota-kinabalu</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/digital-marketing/kuching</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/digital-marketing/singapore</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -337,67 +337,67 @@
   <!-- Service Location Pages - Complete Package -->
   <url>
     <loc>https://yokandigital.com/services/complete-package/kuala-lumpur</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/complete-package/penang</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/complete-package/johor-bahru</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/complete-package/ipoh</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/complete-package/shah-alam</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/complete-package/klang</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/complete-package/petaling-jaya</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/complete-package/subang-jaya</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/complete-package/kota-kinabalu</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/complete-package/kuching</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://yokandigital.com/services/complete-package/singapore</loc>
-    <lastmod>2024-03-01</lastmod>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -25,7 +25,7 @@ const blogPosts: BlogPost[] = [
     title: "Complete SEO Guide for Malaysian Businesses in 2024",
     excerpt: "Master local SEO strategies to dominate search results in Malaysia. Learn keyword research, on-page optimization, and Google My Business tactics.",
     category: "SEO",
-    publishDate: "2024-01-15",
+    publishDate: "2025-01-15",
     readTime: "8 min read",
     tags: ["SEO", "Local Business", "Malaysia", "Google"]
   },
@@ -34,7 +34,7 @@ const blogPosts: BlogPost[] = [
     title: "Top Web Design Trends for Malaysia & Singapore in 2024",
     excerpt: "Discover the latest web design trends that Malaysian and Singaporean users love. From mobile-first design to cultural considerations.",
     category: "Web Design",
-    publishDate: "2024-01-20",
+    publishDate: "2025-01-20",
     readTime: "6 min read",
     tags: ["Web Design", "Trends", "UX", "Mobile"]
   },
@@ -43,7 +43,7 @@ const blogPosts: BlogPost[] = [
     title: "Social Media Marketing Strategy for Malaysian Brands",
     excerpt: "Build a winning social media strategy for the Malaysian market. Platform-specific tactics for Facebook, Instagram, TikTok, and LinkedIn.",
     category: "Digital Marketing",
-    publishDate: "2024-01-25",
+    publishDate: "2025-01-25",
     readTime: "10 min read",
     tags: ["Social Media", "Marketing", "Strategy", "Branding"]
   },
@@ -52,7 +52,7 @@ const blogPosts: BlogPost[] = [
     title: "Google Ads Optimization for the Malaysian Market",
     excerpt: "Maximize ROI from Google Ads campaigns targeting Malaysian consumers. Budget allocation, keyword bidding, and ad copy best practices.",
     category: "PPC",
-    publishDate: "2024-02-01",
+    publishDate: "2025-02-01",
     readTime: "7 min read",
     tags: ["Google Ads", "PPC", "ROI", "Advertising"]
   },
@@ -61,7 +61,7 @@ const blogPosts: BlogPost[] = [
     title: "E-commerce Website Development Guide for Malaysia",
     excerpt: "Build successful online stores for the Malaysian market. Payment gateways, logistics integration, and customer behavior insights.",
     category: "E-commerce",
-    publishDate: "2024-02-05",
+    publishDate: "2025-02-05",
     readTime: "12 min read",
     tags: ["E-commerce", "Development", "Online Store", "Payments"]
   },
@@ -70,7 +70,7 @@ const blogPosts: BlogPost[] = [
     title: "Content Marketing That Resonates with Malaysian Audiences",
     excerpt: "Create compelling content that connects with Malaysian consumers. Cultural insights, language preferences, and content formats that work.",
     category: "Content Marketing",
-    publishDate: "2024-02-10",
+    publishDate: "2025-02-10",
     readTime: "9 min read",
     tags: ["Content Marketing", "Culture", "Storytelling", "Engagement"]
   },
@@ -79,7 +79,7 @@ const blogPosts: BlogPost[] = [
     title: "Website Speed Optimization for Malaysian Users",
     excerpt: "Improve website loading times for Malaysian internet infrastructure. Technical optimization and CDN strategies for Southeast Asia.",
     category: "Performance",
-    publishDate: "2024-02-15",
+    publishDate: "2025-02-15",
     readTime: "8 min read",
     tags: ["Performance", "Speed", "Technical SEO", "UX"]
   },
@@ -88,7 +88,7 @@ const blogPosts: BlogPost[] = [
     title: "Digital Transformation Guide for Malaysian SMEs",
     excerpt: "Help small and medium enterprises embrace digital technologies. Step-by-step roadmap for digital adoption and growth.",
     category: "Business Strategy",
-    publishDate: "2024-02-20",
+    publishDate: "2025-02-20",
     readTime: "11 min read",
     tags: ["Digital Transformation", "SME", "Technology", "Growth"]
   },
@@ -97,7 +97,7 @@ const blogPosts: BlogPost[] = [
     title: "Email Marketing Best Practices for Malaysian Businesses",
     excerpt: "Build effective email campaigns for Malaysian consumers. Automation, personalization, and compliance with local regulations.",
     category: "Email Marketing",
-    publishDate: "2024-02-25",
+    publishDate: "2025-02-25",
     readTime: "7 min read",
     tags: ["Email Marketing", "Automation", "Personalization", "GDPR"]
   },
@@ -106,7 +106,7 @@ const blogPosts: BlogPost[] = [
     title: "Building Strong Online Presence for Local Malaysian Businesses",
     excerpt: "Complete guide for local businesses to establish digital presence. Google My Business, local directories, and community engagement.",
     category: "Local SEO",
-    publishDate: "2024-03-01",
+    publishDate: "2025-03-01",
     readTime: "10 min read",
     tags: ["Local SEO", "Online Presence", "Community", "Directories"]
   },
@@ -115,7 +115,7 @@ const blogPosts: BlogPost[] = [
     title: "Why Every Labuan Business Needs a Professional Website in 2024",
     excerpt: "Discover why having a website is crucial for Labuan businesses. From reaching tourists to competing with mainland Malaysia, learn how a professional website drives growth in Labuan's unique market.",
     category: "Web Design",
-    publishDate: "2024-11-04",
+    publishDate: "2025-11-04",
     readTime: "12 min read",
     tags: ["Labuan", "Website", "Business Growth", "Tourism", "Digital Presence"]
   },
@@ -124,7 +124,7 @@ const blogPosts: BlogPost[] = [
     title: "Complete Paid Advertising Guide for Labuan Businesses in 2024",
     excerpt: "Master paid advertising strategies for Labuan's unique market. Learn Google Ads, Facebook Ads, and local targeting tactics that bring customers to your Labuan business.",
     category: "PPC",
-    publishDate: "2024-11-04",
+    publishDate: "2025-11-04",
     readTime: "14 min read",
     tags: ["Labuan", "Paid Ads", "Google Ads", "Facebook Ads", "ROI"]
   }
