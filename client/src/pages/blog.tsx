@@ -109,6 +109,24 @@ const blogPosts: BlogPost[] = [
     publishDate: "2024-03-01",
     readTime: "10 min read",
     tags: ["Local SEO", "Online Presence", "Community", "Directories"]
+  },
+  {
+    slug: "why-labuan-businesses-need-professional-website-2024",
+    title: "Why Every Labuan Business Needs a Professional Website in 2024",
+    excerpt: "Discover why having a website is crucial for Labuan businesses. From reaching tourists to competing with mainland Malaysia, learn how a professional website drives growth in Labuan's unique market.",
+    category: "Web Design",
+    publishDate: "2024-11-04",
+    readTime: "12 min read",
+    tags: ["Labuan", "Website", "Business Growth", "Tourism", "Digital Presence"]
+  },
+  {
+    slug: "paid-advertising-guide-labuan-businesses-2024",
+    title: "Complete Paid Advertising Guide for Labuan Businesses in 2024",
+    excerpt: "Master paid advertising strategies for Labuan's unique market. Learn Google Ads, Facebook Ads, and local targeting tactics that bring customers to your Labuan business.",
+    category: "PPC",
+    publishDate: "2024-11-04",
+    readTime: "14 min read",
+    tags: ["Labuan", "Paid Ads", "Google Ads", "Facebook Ads", "ROI"]
   }
 ];
 

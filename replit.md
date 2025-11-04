@@ -1,10 +1,32 @@
 # Overview
 
-This is a full-stack web application for Yokan Digital, a Malaysian digital marketing agency. The application is built with a React frontend and Express.js backend, featuring a bilingual (English/Malay) marketing website with contact forms, consultation booking, and free SEO/speed testing tools. The app uses a modern tech stack with TypeScript, Tailwind CSS, shadcn/ui components, and Drizzle ORM for database operations.
+This is a full-stack web application for Yokan Digital, a Malaysian digital marketing agency. The application is built with a React frontend and Express.js backend, featuring a bilingual (English/Malay) marketing website with contact forms, consultation booking, free SEO/speed testing tools, and comprehensive blog with 12 SEO-optimized posts. The app uses a modern tech stack with TypeScript, Tailwind CSS, shadcn/ui components, and Drizzle ORM for database operations.
 
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+# Recent Updates (November 2025)
+
+## Blog Content
+- Added 2 comprehensive blog posts focused on Labuan, Malaysia digital marketing:
+  - "Why Every Labuan Business Needs a Professional Website in 2024" (12-min read)
+  - "Complete Paid Advertising Guide for Labuan Businesses in 2024" (14-min read)
+- Both posts are SEO-optimized with Labuan-specific keywords
+- Content is informative yet commercial, designed to attract and convert prospects
+- Sitemap updated with new blog URLs (now 62 total URLs)
+
+## Team Presentation
+- Team page created at /team with 3 team member profiles
+- Homepage team section showcasing expertise
+- Professional photos for all team members displayed correctly
+- Team navigation link added to header
+
+## Sales Resources
+- Comprehensive sales guide created for Edward (Sales Master)
+- Complete flexibility to sell services individually or bundled
+- "Land and expand" strategy documented
+- Standalone pricing for all services
 
 # System Architecture
 
