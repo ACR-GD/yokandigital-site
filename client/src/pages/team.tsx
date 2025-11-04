@@ -271,7 +271,7 @@ export default function TeamPage() {
               size="lg" 
               variant="secondary"
               className="bg-white text-purple-600 hover:bg-gray-100"
-              data-testid="button-get-started"
+              data-testid="button-team-get-started"
             >
               <Globe className="w-5 h-5 mr-2" />
               {language === 'en' ? 'Get Started' : 'Mulakan'}
@@ -280,7 +280,7 @@ export default function TeamPage() {
               size="lg" 
               variant="outline"
               className="border-white text-white hover:bg-white/10"
-              data-testid="button-contact"
+              data-testid="button-team-contact"
             >
               <Mail className="w-5 h-5 mr-2" />
               {language === 'en' ? 'Contact Us' : 'Hubungi Kami'}
