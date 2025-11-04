@@ -130,6 +130,13 @@ export default function Header() {
             >
               Blog
             </Link>
+            <Link 
+              href="/team"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              data-testid="nav-team"
+            >
+              {language === 'en' ? 'Team' : 'Pasukan'}
+            </Link>
             <button 
               onClick={() => scrollToSection('portfolio')}
               className="text-muted-foreground hover:text-foreground transition-colors"

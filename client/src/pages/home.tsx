@@ -3,6 +3,7 @@ import Hero from "@/components/hero";
 import Services from "@/components/services";
 import Tools from "@/components/tools";
 import Pricing from "@/components/pricing";
+import TeamSection from "@/components/team-section";
 import Portfolio from "@/components/portfolio";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
       <Tools />
       <Pricing />
+      <TeamSection />
       <Portfolio />
       <div className="py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-transparent to-pink-500/20"></div>
