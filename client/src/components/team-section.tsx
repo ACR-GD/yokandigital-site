@@ -22,7 +22,7 @@ export default function TeamSection() {
         en: "Leading Yokan Digital with strategic vision and 10+ years of digital marketing expertise. Passionate about helping Malaysian businesses thrive online.",
         ms: "Memimpin Yokan Digital dengan visi strategik dan lebih 10 tahun kepakaran pemasaran digital. Bersemangat membantu perniagaan Malaysia berkembang dalam talian."
       },
-      linkedin: "#"
+      linkedin: "https://www.linkedin.com/in/antoineclercrenaud/"
     },
     {
       name: "Edward Liang",
@@ -35,7 +35,7 @@ export default function TeamSection() {
         en: "Connecting Malaysian businesses with the digital solutions they need. Expert in client relations and market analysis with a consultative approach.",
         ms: "Menghubungkan perniagaan Malaysia dengan penyelesaian digital yang diperlukan. Pakar dalam hubungan klien dan analisis pasaran dengan pendekatan perundingan."
       },
-      linkedin: "#"
+      linkedin: "https://www.linkedin.com/in/edward-liang-2894b8300/"
     },
     {
       name: "Amira Natasha",
@@ -48,7 +48,7 @@ export default function TeamSection() {
         en: "Keeping operations smooth while crafting engaging social media strategies. Creative content creator with meticulous attention to detail.",
         ms: "Memastikan operasi berjalan lancar sambil mencipta strategi media sosial yang menarik. Pencipta kandungan kreatif dengan perhatian teliti terhadap perincian."
       },
-      linkedin: "#"
+      linkedin: "https://www.linkedin.com/in/amira-natasha-ahmad-sazali-369644202/"
     }
   ];
 
