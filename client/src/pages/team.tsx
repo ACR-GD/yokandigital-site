@@ -6,9 +6,9 @@ import Footer from "@/components/footer";
 import { useLanguage } from "@/hooks/use-language";
 import { useEffect } from "react";
 
-const antoinePhoto = new URL("../../attached_assets/Antoine Clerc-Renaud_1762224512434.JPG", import.meta.url).href;
-const edwardPhoto = new URL("../../attached_assets/Edward Liang_1762224521162.jpg", import.meta.url).href;
-const amiraPhoto = new URL("../../attached_assets/Amira Natasha_1762224525669.jpg", import.meta.url).href;
+const antoinePhoto = "/attached_assets/Antoine Clerc-Renaud_1762224512434.JPG";
+const edwardPhoto = "/attached_assets/Edward Liang_1762224521162.jpg";
+const amiraPhoto = "/attached_assets/Amira Natasha_1762224525669.jpg";
 
 interface TeamMember {
   name: string;
