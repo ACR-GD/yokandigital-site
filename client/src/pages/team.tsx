@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 const antoinePhoto = "/attached_assets/Antoine Clerc-Renaud_1762224512434.JPG";
 const edwardPhoto = "/attached_assets/Edward Liang_1762224521162.jpg";
-const amiraPhoto = "/attached_assets/Amira Natasha_1762224525669.jpg";
+const amiraPhoto = "/attached_assets/45930746-BF94-401B-A25A-8367FC59B00C_1762237372525.jpg";
 
 interface TeamMember {
   name: string;
