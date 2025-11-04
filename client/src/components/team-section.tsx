@@ -4,7 +4,7 @@ import { useLanguage } from "@/hooks/use-language";
 import { Link } from "wouter";
 
 const antoinePhoto = "/attached_assets/Antoine Clerc-Renaud_1762224512434.JPG";
-const edwardPhoto = "/attached_assets/Edward Liang_1762224521162.jpg";
+const edwardPhoto = "/attached_assets/1762235743680_1762240297752.png";
 const amiraPhoto = "/attached_assets/45930746-BF94-401B-A25A-8367FC59B00C_1762237372525.jpg";
 
 export default function TeamSection() {
