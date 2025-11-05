@@ -102,15 +102,22 @@ export default function TeamSection() {
                   {member.bio[language]}
                 </p>
                 {member.linkedin && (
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
+                  <a 
+                    href={member.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
                     className="w-full"
-                    data-testid={`button-linkedin-${index}`}
                   >
-                    <Linkedin className="w-4 h-4 mr-2" />
-                    LinkedIn
-                  </Button>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full"
+                      data-testid={`button-linkedin-${index}`}
+                    >
+                      <Linkedin className="w-4 h-4 mr-2" />
+                      LinkedIn
+                    </Button>
+                  </a>
                 )}
               </div>
             </div>

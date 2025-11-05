@@ -39,7 +39,7 @@ const teamMembers: TeamMember[] = [
       ms: "Antoine membawa lebih 10 tahun kepakaran pemasaran digital ke Yokan Digital. Sebagai pengasas dan CEO kami, beliau memimpin visi strategik kami dan memastikan setiap klien menerima penyelesaian terkini yang disesuaikan untuk pasaran Malaysia. Semangatnya untuk inovasi mendorong pasukan kami untuk memberikan hasil yang luar biasa."
     },
     skills: ["Digital Strategy", "SEO", "Business Development", "Team Leadership"],
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/antoineclercrenaud/",
     email: "antoine@yokandigital.com"
   },
   {
@@ -54,7 +54,7 @@ const teamMembers: TeamMember[] = [
       ms: "Edward adalah kuasa jualan kami, menghubungkan perniagaan Malaysia dengan penyelesaian digital yang mereka perlukan untuk berkembang maju. Dengan pemahaman mendalam tentang pasaran tempatan dan pendekatan perundingan, beliau memastikan setiap perkongsian klien bermula dengan baik dan terus berkembang."
     },
     skills: ["Client Relations", "Business Consulting", "Market Analysis", "Sales Strategy"],
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/edward-liang-2894b8300/",
     email: "edward@yokandigital.com"
   },
   {
@@ -69,7 +69,7 @@ const teamMembers: TeamMember[] = [
       ms: "Amira adalah kekuatan organisasi di sebalik Yokan Digital, memastikan operasi kami berjalan lancar sambil mencipta strategi media sosial yang menarik untuk klien kami. Pendekatan kreatifnya terhadap kandungan dan perhatian teliti terhadap perincian memastikan kedua-dua pasukan kami dan klien kami kekal di landasan kejayaan."
     },
     skills: ["Social Media Marketing", "Content Creation", "Operations Management", "Community Engagement"],
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/amira-natasha-ahmad-sazali-369644202/",
     email: "amira@yokandigital.com"
   }
 ];
@@ -192,24 +192,33 @@ export default function TeamPage() {
                   {/* Contact Links */}
                   <div className="flex gap-3">
                     {member.linkedin && (
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
+                      <a 
+                        href={member.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         className="flex-1"
-                        data-testid={`button-linkedin-${index}`}
                       >
-                        <Linkedin className="w-4 h-4 mr-2" />
-                        LinkedIn
-                      </Button>
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="w-full"
+                          data-testid={`button-linkedin-${index}`}
+                        >
+                          <Linkedin className="w-4 h-4 mr-2" />
+                          LinkedIn
+                        </Button>
+                      </a>
                     )}
                     {member.email && (
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        data-testid={`button-email-${index}`}
-                      >
-                        <Mail className="w-4 h-4" />
-                      </Button>
+                      <a href={`mailto:${member.email}`}>
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          data-testid={`button-email-${index}`}
+                        >
+                          <Mail className="w-4 h-4" />
+                        </Button>
+                      </a>
                     )}
                   </div>
                 </div>
