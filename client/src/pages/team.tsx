@@ -40,7 +40,7 @@ const teamMembers: TeamMember[] = [
     },
     skills: ["Digital Strategy", "SEO", "Business Development", "Team Leadership"],
     linkedin: "https://www.linkedin.com/in/antoineclercrenaud/",
-    email: "antoine@yokandigital.com"
+    email: "tony@yokandigital.com"
   },
   {
     name: "Edward Liang",
@@ -55,7 +55,7 @@ const teamMembers: TeamMember[] = [
     },
     skills: ["Client Relations", "Business Consulting", "Market Analysis", "Sales Strategy"],
     linkedin: "https://www.linkedin.com/in/edward-liang-2894b8300/",
-    email: "edward@yokandigital.com"
+    email: "sales@yokandigital.com"
   },
   {
     name: "Amira Natasha",
@@ -70,7 +70,7 @@ const teamMembers: TeamMember[] = [
     },
     skills: ["Social Media Marketing", "Content Creation", "Operations Management", "Community Engagement"],
     linkedin: "https://www.linkedin.com/in/amira-natasha-ahmad-sazali-369644202/",
-    email: "amira@yokandigital.com"
+    email: "social@yokandigital.com"
   }
 ];
 
