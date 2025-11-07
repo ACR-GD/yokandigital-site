@@ -8,6 +8,19 @@ Preferred communication style: Simple, everyday language.
 
 # Recent Updates (November 2025)
 
+## Blog Management System (Latest)
+- **Full CRUD functionality**: Complete admin dashboard for managing blog posts
+- **Database-driven**: Posts stored in PostgreSQL with hybrid approach (DB + original 12 hardcoded posts)
+- **Admin UI**: Dedicated Blog tab in admin dashboard with form for create/edit/delete operations
+- **Image uploads**: Support for featured images via multer (max 5MB, stored in attached_assets/blog-images)
+- **Rich metadata**: Title, slug, excerpt, content (HTML), category, tags, read time, publish date, draft/published state
+- **Bilingual support**: Language field for English/Malay content
+- **Auto slug generation**: Slugs auto-generated from titles for clean URLs
+- **Real-time updates**: React Query integration for instant UI updates after creating/editing posts
+- **Public display**: Blog listing and detail pages fetch from database with fallback to hardcoded posts
+- **Authentication**: Admin login at /admin/login (username: admin, password: admin123)
+- **End-to-end tested**: Complete workflow validated with Playwright from creation to public display
+
 ## Blog Content
 - Added 2 comprehensive blog posts focused on Labuan, Malaysia digital marketing:
   - "Why Every Labuan Business Needs a Professional Website in 2024" (12-min read)
@@ -46,19 +59,34 @@ Preferred communication style: Simple, everyday language.
 - **Development**: Vite integration for hot module replacement in development mode
 
 ## Database Schema
-The application uses five main entities:
+The application uses six main entities:
 - **Users**: Basic user authentication (username/password)
 - **Contacts**: Contact form submissions with service selection
 - **Consultations**: Consultation booking requests with scheduling
 - **SEO Audits**: Website analysis results with scoring and recommendations
 - **Speed Tests**: Website performance testing with load times and optimization suggestions
+- **Blog Posts**: Full blog post data with metadata, content, images, and publishing state
 
 ## API Design
 RESTful API endpoints:
+
+**Public Endpoints:**
 - `POST /api/contact` - Submit contact form
 - `POST /api/consultation` - Book consultation
 - `POST /api/seo-audit` - Request SEO analysis
 - `POST /api/speed-test` - Run website speed test
+- `GET /api/blog/posts/published` - Get all published blog posts
+- `GET /api/blog/posts/slug/:slug` - Get individual blog post by slug
+
+**Admin Endpoints:**
+- `POST /api/auth/login` - Admin login
+- `POST /api/auth/logout` - Admin logout
+- `GET /api/auth/check` - Check admin authentication status
+- `GET /api/blog/posts` - Get all blog posts (including drafts)
+- `POST /api/blog/posts` - Create new blog post (with image upload)
+- `GET /api/blog/posts/:id` - Get blog post by ID
+- `PATCH /api/blog/posts/:id` - Update blog post (with image upload)
+- `DELETE /api/blog/posts/:id` - Delete blog post
 
 All endpoints use JSON payloads with Zod validation and return structured responses with success/error indicators.
 
