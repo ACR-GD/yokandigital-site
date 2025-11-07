@@ -175,7 +175,7 @@ export default function Header() {
                 }`}
                 data-testid="lang-ms"
               >
-                MS
+                BM
               </button>
             </div>
             
