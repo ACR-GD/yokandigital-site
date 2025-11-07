@@ -97,6 +97,23 @@ export const reportSchedules = pgTable("report_schedules", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
+export const blogPosts = pgTable("blog_posts", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  slug: text("slug").notNull().unique(),
+  title: text("title").notNull(),
+  excerpt: text("excerpt").notNull(),
+  content: text("content").notNull(),
+  category: text("category").notNull(),
+  featuredImage: text("featured_image"),
+  publishDate: timestamp("publish_date").notNull(),
+  readTime: text("read_time").notNull(),
+  tags: text("tags").array().notNull(),
+  author: text("author").notNull().default("Yokan Digital Team"),
+  isPublished: boolean("is_published").default(false),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
@@ -154,6 +171,12 @@ export const insertReportScheduleSchema = createInsertSchema(reportSchedules).om
   nextRun: true,
 });
 
+export const insertBlogPostSchema = createInsertSchema(blogPosts).omit({
+  id: true,
+  createdAt: true,
+  updatedAt: true,
+});
+
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type InsertContact = z.infer<typeof insertContactSchema>;
@@ -172,3 +195,5 @@ export type InsertMetric = z.infer<typeof insertMetricSchema>;
 export type Metric = typeof metrics.$inferSelect;
 export type InsertReportSchedule = z.infer<typeof insertReportScheduleSchema>;
 export type ReportSchedule = typeof reportSchedules.$inferSelect;
+export type InsertBlogPost = z.infer<typeof insertBlogPostSchema>;
+export type BlogPost = typeof blogPosts.$inferSelect;

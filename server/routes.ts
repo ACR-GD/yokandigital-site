@@ -9,11 +9,15 @@ import {
   insertSpeedTestSchema
 } from "@shared/schema";
 import reportsRouter from "./routes/reports";
+import blogRouter from "./routes/blog";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   
   // Register reporting routes
   app.use("/api/reports", reportsRouter);
+  
+  // Register blog routes
+  app.use("/api/blog", blogRouter);
   
   // Contact form submission
   app.post("/api/contact", async (req, res) => {
