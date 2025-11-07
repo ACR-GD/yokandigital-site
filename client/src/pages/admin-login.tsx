@@ -20,7 +20,7 @@ export default function AdminLogin() {
   // Simple admin credentials (in production, this would be handled by a proper auth system)
   const ADMIN_CREDENTIALS = {
     username: "admin",
-    password: "yokan2024"
+    password: "admin123"
   };
 
   const handleLogin = async (e: React.FormEvent) => {

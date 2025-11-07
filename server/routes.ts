@@ -10,8 +10,12 @@ import {
 } from "@shared/schema";
 import reportsRouter from "./routes/reports";
 import blogRouter from "./routes/blog";
+import authRouter from "./routes/auth";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  
+  // Register auth routes
+  app.use("/api", authRouter);
   
   // Register reporting routes
   app.use("/api/reports", reportsRouter);

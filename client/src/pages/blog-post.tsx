@@ -3122,15 +3122,12 @@ const blogPosts: { [key: string]: BlogPost } = {
 export default function BlogPostPage() {
   const [match, params] = useRoute<{ slug: string }>("/blog/:slug");
   const { t } = useLanguage();
+  
+  const slug = params?.slug || '';
 
-  if (!match || !params) {
-    return <div>Page not found</div>;
-  }
-
-  const { slug } = params;
-
+  // ALL HOOKS MUST BE CALLED BEFORE ANY CONDITIONAL RETURNS
   // Try to fetch from database first
-  const { data: dbPostData } = useQuery<{ success: boolean; post: BlogPost }>({
+  const { data: dbPostData, isLoading } = useQuery<{ success: boolean; post: BlogPost }>({
     queryKey: ['/api/blog/posts/slug', slug],
     queryFn: async () => {
       const res = await fetch(`/api/blog/posts/slug/${slug}`);
@@ -3146,27 +3143,46 @@ export default function BlogPostPage() {
   // Use database post if available, otherwise fall back to hardcoded posts
   const post = dbPostData?.post || blogPosts[slug];
 
-  if (!post) {
-    return <div>Blog post not found</div>;
-  }
-
-  // Set page title and meta description for SEO
+  // Set page title and meta description for SEO (must be called before any returns)
   useEffect(() => {
-    document.title = post.title + " | Yokan Digital Blog";
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
+    if (post) {
+      document.title = post.title + " | Yokan Digital Blog";
+      
+      // Update meta description
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.setAttribute('name', 'description');
+        document.head.appendChild(metaDescription);
+      }
+      metaDescription.setAttribute('content', post.excerpt);
     }
-    metaDescription.setAttribute('content', post.excerpt);
     
     return () => {
       document.title = 'Yokan Digital - Malaysian Web Design & SEO Agency';
     };
   }, [post]);
+
+  // NOW we can have conditional returns
+  if (!match || !params) {
+    return <div>Page not found</div>;
+  }
+
+  // Show loading state while fetching from database
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!post) {
+    return <div>Blog post not found</div>;
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900">

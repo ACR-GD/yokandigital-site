@@ -175,6 +175,10 @@ export const insertBlogPostSchema = createInsertSchema(blogPosts).omit({
   id: true,
   createdAt: true,
   updatedAt: true,
+}).extend({
+  publishDate: z.string().or(z.date()).transform((val) => 
+    typeof val === 'string' ? new Date(val) : val
+  ),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
