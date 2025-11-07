@@ -17,7 +17,10 @@ import {
   Eye,
   LogOut,
   Edit,
-  Trash2
+  Trash2,
+  PenSquare,
+  Upload,
+  Save
 } from "lucide-react";
 import Header from "@/components/header";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
@@ -25,6 +28,9 @@ import { apiRequest } from "@/lib/queryClient";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { useLocation } from "wouter";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import BlogManagement from "@/components/blog-management";
 
 interface Client {
   id: string;
@@ -43,6 +49,23 @@ interface Analytics {
   activeClients: number;
   reportsThisMonth: number;
   monthlyRevenue: number;
+}
+
+interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  category: string;
+  featuredImage?: string;
+  publishDate: string;
+  readTime: string;
+  tags: string[];
+  author: string;
+  isPublished: boolean;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export default function AdminDashboard() {
@@ -309,10 +332,11 @@ export default function AdminDashboard() {
         </div>
 
         <Tabs defaultValue="clients" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full grid-cols-4">
             <TabsTrigger value="clients">Client Management</TabsTrigger>
             <TabsTrigger value="reports">Report Generation</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
+            <TabsTrigger value="blog" data-testid="tab-blog">Blog</TabsTrigger>
           </TabsList>
 
           {/* Client Management Tab */}
@@ -607,6 +631,11 @@ export default function AdminDashboard() {
                 </CardContent>
               </Card>
             </div>
+          </TabsContent>
+
+          {/* Blog Management Tab */}
+          <TabsContent value="blog" className="space-y-6">
+            <BlogManagement />
           </TabsContent>
         </Tabs>
       </div>
