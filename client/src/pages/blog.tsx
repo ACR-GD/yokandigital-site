@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { useLanguage } from "@/hooks/use-language";
+import { useQuery } from "@tanstack/react-query";
 
 interface BlogPost {
   slug: string;
@@ -133,6 +134,16 @@ const blogPosts: BlogPost[] = [
 export default function BlogPage() {
   const { t } = useLanguage();
 
+  // Fetch blog posts from database
+  const { data: dbPostsData } = useQuery<{ success: boolean; posts: BlogPost[] }>({
+    queryKey: ['/api/blog/posts/published']
+  });
+
+  // Combine database posts with hardcoded posts
+  const allPosts = [...(dbPostsData?.posts || []), ...blogPosts].sort((a, b) => 
+    new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+  );
+
   // Set page title for SEO
   useEffect(() => {
     document.title = 'Digital Marketing Blog | Yokan Digital - SEO, Web Design & Marketing Tips';
@@ -189,7 +200,7 @@ export default function BlogPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-            {blogPosts.map((post, index) => (
+            {allPosts.map((post, index) => (
               <Card key={post.slug} className="hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-3">

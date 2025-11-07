@@ -7,6 +7,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { useLanguage } from "@/hooks/use-language";
 import { Link } from "wouter";
+import { useQuery } from "@tanstack/react-query";
 
 interface BlogPost {
   slug: string;
@@ -3127,7 +3128,23 @@ export default function BlogPostPage() {
   }
 
   const { slug } = params;
-  const post = blogPosts[slug];
+
+  // Try to fetch from database first
+  const { data: dbPostData } = useQuery<{ success: boolean; post: BlogPost }>({
+    queryKey: ['/api/blog/posts/slug', slug],
+    queryFn: async () => {
+      const res = await fetch(`/api/blog/posts/slug/${slug}`);
+      if (!res.ok) {
+        if (res.status === 404) return { success: false, post: undefined };
+        throw new Error('Failed to fetch blog post');
+      }
+      return res.json();
+    },
+    enabled: !!slug
+  });
+
+  // Use database post if available, otherwise fall back to hardcoded posts
+  const post = dbPostData?.post || blogPosts[slug];
 
   if (!post) {
     return <div>Blog post not found</div>;
