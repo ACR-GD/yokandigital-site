@@ -137,6 +137,13 @@ export default function Header() {
             >
               {language === 'en' ? 'Team' : 'Pasukan'}
             </Link>
+            <Link 
+              href="/about"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              data-testid="nav-about"
+            >
+              {language === 'en' ? 'About' : 'Tentang'}
+            </Link>
             <button 
               onClick={() => scrollToSection('portfolio')}
               className="text-muted-foreground hover:text-foreground transition-colors"
