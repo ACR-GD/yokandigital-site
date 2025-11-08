@@ -13,6 +13,7 @@ import ServiceLocationPage from "@/pages/service-location";
 import BlogPage from "@/pages/blog";
 import BlogPostPage from "@/pages/blog-post";
 import TeamPage from "@/pages/team";
+import AboutPage from "@/pages/about";
 import AdminDashboard from "@/pages/admin-dashboard";
 import AdminLogin from "@/pages/admin-login";
 import ClientPortal from "@/pages/client-portal";
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/blog" component={BlogPage} />
       <Route path="/blog/:slug" component={BlogPostPage} />
       <Route path="/team" component={TeamPage} />
+      <Route path="/about" component={AboutPage} />
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/client-portal" component={ClientPortal} />
