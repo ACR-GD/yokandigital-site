@@ -8,7 +8,17 @@ Preferred communication style: Simple, everyday language.
 
 # Recent Updates (November 2025)
 
-## Blog Management System (Latest)
+## About Page (Latest)
+- **Comprehensive About page**: New /about page with inspiring company story and founder background
+- **Founder story**: Antoine's 10+ years of experience in France and Canada bringing global innovation to Malaysia
+- **Brand meaning**: Explanation of "Yokan" (予感) meaning "premonition/omen" in Japanese
+- **Japanese philosophy**: Four core values - Speed & Precision, Omotenashi Spirit, Kaizen Mindset, Monozukuri Excellence
+- **Bilingual content**: Full English/Malay support with localized SEO metadata
+- **SEO optimized**: Unique title, meta description, and Open Graph tags that update based on language
+- **Navigation**: Added to header between Team and About links
+- **End-to-end tested**: Complete workflow validated with Playwright
+
+## Blog Management System
 - **Full CRUD functionality**: Complete admin dashboard for managing blog posts
 - **Database-driven**: Posts stored in PostgreSQL with hybrid approach (DB + original 12 hardcoded posts)
 - **Admin UI**: Dedicated Blog tab in admin dashboard with form for create/edit/delete operations
