@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import { useLanguage } from '../hooks/use-language';
@@ -5,6 +6,48 @@ import { Sparkles, Target, TrendingUp, Heart, Zap, Globe, Award } from 'lucide-r
 
 export default function AboutPage() {
   const { t, language } = useLanguage();
+
+  // Set SEO metadata
+  useEffect(() => {
+    const title = language === 'en' 
+      ? 'About Us - Yokan Digital | European Innovation Meets Malaysian Digital Marketing'
+      : 'Tentang Kami - Yokan Digital | Inovasi Eropah Bertemu Pemasaran Digital Malaysia';
+    
+    const description = language === 'en'
+      ? 'Learn about Yokan Digital founder Antoine\'s 10+ years of experience in France and Canada, bringing Japanese business philosophy and European innovation to Malaysian digital marketing. Discover why Yokan means premonition.'
+      : 'Ketahui tentang pengasas Yokan Digital, Antoine dengan lebih 10 tahun pengalaman di Perancis dan Kanada, membawa falsafah perniagaan Jepun dan inovasi Eropah ke pemasaran digital Malaysia. Temui mengapa Yokan bermaksud firasat.';
+
+    document.title = title;
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', description);
+
+    // Update Open Graph tags
+    const updateOgTag = (property: string, content: string) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('property', property);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute('content', content);
+    };
+
+    updateOgTag('og:title', title);
+    updateOgTag('og:description', description);
+    updateOgTag('og:type', 'website');
+    updateOgTag('og:url', window.location.href);
+
+    return () => {
+      document.title = 'Yokan Digital - Malaysian Web Design & SEO Agency';
+    };
+  }, [language]);
 
   const values = [
     {
