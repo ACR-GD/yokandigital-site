@@ -840,13 +840,17 @@ export default function CataloguePage() {
                           </li>
                         ))}
                       </ul>
-                      {(language === 'en' ? service.features.en : service.features.ms).length > 5 && (
-                        <p className="text-xs text-muted-foreground italic">
-                          {language === 'en' 
-                            ? `+${(language === 'en' ? service.features.en : service.features.ms).length - 5} more features` 
-                            : `+${(language === 'en' ? service.features.en : service.features.ms).length - 5} ciri lagi`}
-                        </p>
-                      )}
+                      {(() => {
+                        const features = language === 'en' ? service.features.en : service.features.ms;
+                        const remaining = features.length - 5;
+                        return features.length > 5 && (
+                          <p className="text-xs text-muted-foreground italic">
+                            {language === 'en' 
+                              ? `+${remaining} more features` 
+                              : `+${remaining} ciri lagi`}
+                          </p>
+                        );
+                      })()}
                     </div>
 
                     {/* Add-Ons */}

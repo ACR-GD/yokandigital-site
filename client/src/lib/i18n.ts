@@ -15,6 +15,10 @@ export const translations: Translations = {
     en: "Services",
     ms: "Perkhidmatan"
   },
+  "nav.catalogue": {
+    en: "Catalogue",
+    ms: "Katalog"
+  },
   "nav.pricing": {
     en: "Pricing", 
     ms: "Harga"
