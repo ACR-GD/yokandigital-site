@@ -8,7 +8,25 @@ Preferred communication style: Simple, everyday language.
 
 # Recent Updates (November 2025)
 
-## About Page (Latest)
+## Interactive Service Catalogue (Latest)
+- **Comprehensive service showcase**: New /catalogue page displaying all services with transparent pricing
+- **Interactive filtering**: 7 category filters (All Services, Packages, Web Design, SEO, Marketing, Ads, Content)
+- **Service cards**: 18 total services with icons, descriptions, pricing, features, and optional add-ons
+- **Package bundles**: 3 packages (Starter RM2,500/month, Professional RM5,000/month, Enterprise RM10,000/month)
+- **Standalone services**: Web Design (3 tiers), SEO (3 tiers), Social Media (4 options), Google Ads, Email Marketing, Content Marketing (3 options)
+- **Visual design**: Attractive cards with gradient accents, badges (POPULAR/RECOMMENDED), and feature checkmarks
+- **Bilingual content**: Full English/Malay support for all service information
+- **SEO optimized**: Unique title and meta description that update based on language
+- **Navigation**: Added to header between Services and Pricing
+- **CTA section**: Bottom call-to-action encouraging free consultation booking
+- **End-to-end tested**: Complete workflow validated with Playwright including filtering, language switching, and navigation
+
+## Company Tagline
+- **Tagline integration**: "Alone we go faster, together we go further" (EN) / "Bersendirian kita lebih pantas, bersama kita lebih jauh" (BM)
+- **Placement**: Header, Footer, About page hero, Team page hero
+- **Brand alignment**: African proverb reinforcing collaborative philosophy and Japanese Yokan values
+
+## About Page
 - **Comprehensive About page**: New /about page with inspiring company story and founder background
 - **Founder story**: Antoine's 10+ years of experience in France and Canada bringing global innovation to Malaysia
 - **Brand meaning**: Explanation of "Yokan" (予感) meaning "premonition/omen" in Japanese
