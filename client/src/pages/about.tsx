@@ -101,6 +101,12 @@ export default function AboutPage() {
                 : 'Membawa Inovasi Global ke Pemasaran Digital Malaysia'}
             </h1>
             
+            <p className="text-2xl font-semibold text-purple-600 dark:text-purple-400 mb-4">
+              {language === 'en'
+                ? '"Alone we go faster, together we go further"'
+                : '"Bersendirian kita lebih pantas, bersama kita lebih jauh"'}
+            </p>
+            
             <p className="text-xl text-muted-foreground leading-relaxed">
               {language === 'en'
                 ? 'Where European expertise meets Japanese precision in the heart of Southeast Asia'

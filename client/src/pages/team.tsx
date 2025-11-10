@@ -137,6 +137,11 @@ export default function TeamPage() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               {language === 'en' ? 'Meet Our Team' : 'Kenali Pasukan Kami'}
             </h1>
+            <p className="text-2xl font-semibold text-purple-600 dark:text-purple-400 mb-4">
+              {language === 'en'
+                ? '"Alone we go faster, together we go further"'
+                : '"Bersendirian kita lebih pantas, bersama kita lebih jauh"'}
+            </p>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               {language === 'en' 
                 ? 'The passionate experts behind Yokan Digital, dedicated to transforming Malaysian businesses through innovative digital solutions'

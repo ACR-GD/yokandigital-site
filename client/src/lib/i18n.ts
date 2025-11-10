@@ -8,8 +8,8 @@ export interface Translations {
 export const translations: Translations = {
   // Header
   "header.tagline": {
-    en: "Malaysia's Premier Digital Agency",
-    ms: "Agensi Digital Terkemuka Malaysia"
+    en: "Alone we go faster, together we go further",
+    ms: "Bersendirian kita lebih pantas, bersama kita lebih jauh"
   },
   "nav.services": {
     en: "Services",
@@ -262,8 +262,8 @@ export const translations: Translations = {
 
   // Footer
   "footer.tagline": {
-    en: "Digital Growth Partner",
-    ms: "Rakan Pertumbuhan Digital"
+    en: "Alone we go faster, together we go further",
+    ms: "Bersendirian kita lebih pantas, bersama kita lebih jauh"
   },
   "footer.description": {
     en: "Empowering Malaysian and Singaporean businesses with cutting-edge digital solutions since 2020.",
