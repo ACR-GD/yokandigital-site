@@ -109,13 +109,6 @@ export default function Header() {
                 </div>
               )}
             </div>
-            <Link 
-              href="/catalogue"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="nav-catalogue"
-            >
-              {t('nav.catalogue')}
-            </Link>
             <button 
               onClick={() => scrollToSection('pricing')}
               className="text-muted-foreground hover:text-foreground transition-colors"
