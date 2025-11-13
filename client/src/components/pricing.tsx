@@ -8,7 +8,6 @@ export default function Pricing() {
   const plans = [
     {
       name: t('pricing.starter.title'),
-      price: "RM2,500",
       description: t('pricing.starter.description'),
       features: [
         "5-page professional website",
@@ -23,7 +22,6 @@ export default function Pricing() {
     },
     {
       name: t('pricing.professional.title'),
-      price: "RM5,000",
       description: t('pricing.professional.description'),
       features: [
         "15-page custom website",
@@ -39,7 +37,6 @@ export default function Pricing() {
     },
     {
       name: t('pricing.enterprise.title'),
-      price: "RM10,000",
       description: t('pricing.enterprise.description'),
       features: [
         "Unlimited pages + E-commerce",
@@ -87,12 +84,9 @@ export default function Pricing() {
               )}
               
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2" data-testid={`pricing-name-${index}`}>
+                <h3 className="text-2xl font-bold mb-4" data-testid={`pricing-name-${index}`}>
                   {plan.name}
                 </h3>
-                <div className="text-4xl font-bold text-primary mb-2" data-testid={`pricing-price-${index}`}>
-                  {plan.price}<span className="text-lg text-muted-foreground">/month</span>
-                </div>
                 <p className="text-muted-foreground" data-testid={`pricing-description-${index}`}>
                   {plan.description}
                 </p>
