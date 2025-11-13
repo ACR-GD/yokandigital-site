@@ -65,7 +65,16 @@ Preferred communication style: Simple, everyday language.
   - "Complete Paid Advertising Guide for Labuan Businesses in 2024" (14-min read)
 - Both posts are SEO-optimized with Labuan-specific keywords
 - Content is informative yet commercial, designed to attract and convert prospects
-- Sitemap updated with new blog URLs (now 62 total URLs)
+
+## Sitemap
+- **Complete sitemap.xml** with 66 total URLs including:
+  - Homepage and 4 main service pages
+  - Company pages: About, Team, Catalogue
+  - Location landing page: Labuan Digital Marketing
+  - Blog main page and 12 blog posts
+  - 44 service location pages (11 cities × 4 services)
+- All pages include bilingual hreflang tags for English/Malay SEO
+- Updated November 13, 2025 with latest pages
 
 ## Team Presentation
 - Team page created at /team with 3 team member profiles

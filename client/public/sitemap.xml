@@ -46,6 +46,42 @@
     <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/services/complete-package"/>
   </url>
   
+  <!-- Company Pages -->
+  <url>
+    <loc>https://yokandigital.com/about</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/about"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/about"/>
+  </url>
+  <url>
+    <loc>https://yokandigital.com/team</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/team"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/team"/>
+  </url>
+  <url>
+    <loc>https://yokandigital.com/catalogue</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/catalogue"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/catalogue"/>
+  </url>
+  
+  <!-- Location Landing Pages -->
+  <url>
+    <loc>https://yokandigital.com/labuan-digital-marketing</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/labuan-digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/labuan-digital-marketing"/>
+  </url>
+  
   <!-- Blog Main Page -->
   <url>
     <loc>https://yokandigital.com/blog</loc>
