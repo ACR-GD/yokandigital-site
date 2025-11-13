@@ -55,8 +55,6 @@ results: "Page 1 Rankings",
   const packages = [
     {
       name: "Local SEO",
-      price: "RM 2,500",
-      duration: "/month",
       description: "Perfect for local Malaysian and Singaporean businesses",
       features: [
         "Google My Business optimization",
@@ -70,8 +68,6 @@ results: "Page 1 Rankings",
     },
     {
       name: "National SEO",
-      price: "RM 5,000",
-      duration: "/month", 
       description: "For businesses targeting all of Malaysia and/or Singapore",
       features: [
         "Comprehensive keyword research (200 keywords)",
@@ -87,8 +83,6 @@ results: "Page 1 Rankings",
     },
     {
       name: "Enterprise SEO",
-      price: "RM 10,000",
-      duration: "/month",
       description: "Complete SEO domination for large businesses",
       features: [
         "Unlimited keyword targeting",
@@ -291,11 +285,8 @@ results: "Page 1 Rankings",
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                    <span className="text-muted-foreground ml-1">{pkg.duration}</span>
-                  </div>
-                  <p className="text-muted-foreground mt-2">{pkg.description}</p>
+                  <p className="text-muted-foreground mb-4">{pkg.description}</p>
+                  <p className="text-sm font-medium text-primary">Contact us for a custom quote</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">

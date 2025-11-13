@@ -93,9 +93,6 @@ export default function CompletePackagePage() {
   const packageTiers = [
     {
       name: "Startup Complete",
-      price: "RM 8,000",
-      setupFee: "One-time setup",
-      monthlyFee: "RM 3,000/month",
       description: "Perfect for new Malaysian and Singaporean businesses launching online",
       features: [
         "5-page professional website",
@@ -111,9 +108,6 @@ export default function CompletePackagePage() {
     },
     {
       name: "Business Complete",
-      price: "RM 15,000",
-      setupFee: "One-time setup", 
-      monthlyFee: "RM 5,000/month",
       description: "Comprehensive solution for growing Malaysian and Singaporean businesses",
       features: [
         "10-page custom website with CMS",
@@ -131,9 +125,6 @@ export default function CompletePackagePage() {
     },
     {
       name: "Enterprise Complete",
-      price: "RM 25,000",
-      setupFee: "One-time setup",
-      monthlyFee: "RM 10,000/month", 
       description: "Full-scale digital domination for established businesses",
       features: [
         "Unlimited pages with advanced functionality",
@@ -405,14 +396,9 @@ export default function CompletePackagePage() {
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-4">{tier.name}</h3>
-                  <div className="space-y-2">
-                    <div className="text-3xl font-bold text-primary">{tier.price}</div>
-                    <div className="text-sm text-muted-foreground">{tier.setupFee}</div>
-                    <div className="text-xl text-primary font-semibold">{tier.monthlyFee}</div>
-                    <div className="text-sm text-muted-foreground">Ongoing monthly service</div>
-                  </div>
-                  <p className="text-muted-foreground mt-4">{tier.description}</p>
-                  <div className="mt-4 text-sm font-semibold text-blue-600">{tier.timeline}</div>
+                  <p className="text-muted-foreground mb-4">{tier.description}</p>
+                  <p className="text-sm font-medium text-primary mb-2">Contact us for a custom quote</p>
+                  <div className="text-sm font-semibold text-blue-600">{tier.timeline}</div>
                 </div>
 
                 <ul className="space-y-4 mb-8">

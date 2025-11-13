@@ -46,58 +46,49 @@ export default function DigitalMarketingPage() {
   const packages = [
     {
       name: "Starter Marketing",
-      price: "RM 2,500",
-      duration: "/month",
       description: "Perfect for small Malaysian and Singaporean businesses starting digital marketing",
       channels: ["Facebook", "Instagram"],
       features: [
         "2 social media platforms",
         "8 posts per month per platform",
-        "Basic ad campaigns (RM500 ad spend included)",
+        "Basic ad campaigns with ad spend included",
         "Monthly performance reports",
         "Community management",
         "Content creation"
       ],
-      adSpend: "RM 500 included",
       guarantee: "20% increase in engagement"
     },
     {
       name: "Growth Marketing",
-      price: "RM 5,000", 
-      duration: "/month",
       description: "Complete digital marketing for growing Malaysian and Singaporean businesses",
       channels: ["Facebook", "Instagram", "WhatsApp", "Email"],
       features: [
         "4 marketing channels",
         "16 posts per month",
-        "Advanced ad campaigns (RM1,500 ad spend included)",
+        "Advanced ad campaigns with ad spend included",
         "Email marketing automation",
         "WhatsApp Business setup",
         "Lead generation campaigns",
         "Conversion tracking",
         "Weekly reports"
       ],
-      adSpend: "RM 1,500 included",
       guarantee: "50% increase in qualified leads",
       popular: true
     },
     {
       name: "Enterprise Marketing",
-      price: "RM 10,000",
-      duration: "/month", 
       description: "Full-scale digital marketing domination",
       channels: ["All Platforms", "Custom Strategy"],
       features: [
         "All marketing channels",
         "Unlimited content creation",
-        "Premium ad campaigns (RM3,000 ad spend included)",
+        "Premium ad campaigns with ad spend included",
         "Influencer partnerships",
         "Video content production",
         "Advanced analytics",
         "Dedicated account manager",
         "Daily monitoring"
       ],
-      adSpend: "RM 3,000 included",
       guarantee: "100% increase in ROI"
     }
   ];
@@ -336,16 +327,8 @@ export default function DigitalMarketingPage() {
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                    <span className="text-muted-foreground ml-1">{pkg.duration}</span>
-                  </div>
-                  <p className="text-muted-foreground mt-2">{pkg.description}</p>
-                  <div className="mt-4 space-y-2">
-                    <div className="bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-semibold inline-block">
-                      {pkg.adSpend}
-                    </div>
-                  </div>
+                  <p className="text-muted-foreground mb-4">{pkg.description}</p>
+                  <p className="text-sm font-medium text-primary">Contact us for a custom quote</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
