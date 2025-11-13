@@ -39,6 +39,7 @@ export default function Footer() {
         { name: t('footer.webDesignKL'), href: "/services/web-design/kuala-lumpur", isInternal: true },
         { name: t('footer.seoPenang'), href: "/services/seo/penang", isInternal: true },
         { name: t('footer.digitalMarketingJB'), href: "/services/digital-marketing/johor-bahru", isInternal: true },
+        { name: t('footer.digitalMarketingLabuan'), href: "/labuan-digital-marketing", isInternal: true },
         { name: t('footer.webDesignSingapore'), href: "/services/web-design/singapore", isInternal: true },
         { name: t('footer.seoSelangor'), href: "/services/seo/selangor", isInternal: true },
         { name: t('footer.marketingIpoh'), href: "/services/digital-marketing/ipoh", isInternal: true }

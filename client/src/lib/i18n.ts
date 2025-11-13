@@ -325,6 +325,10 @@ export const translations: Translations = {
     en: "Marketing Ipoh",
     ms: "Pemasaran Ipoh"
   },
+  "footer.digitalMarketingLabuan": {
+    en: "Digital Marketing Labuan",
+    ms: "Pemasaran Digital Labuan"
+  },
   "navigation.backToServices": {
     en: "Back to Services",
     ms: "Kembali ke Perkhidmatan"
