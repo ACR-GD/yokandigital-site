@@ -8,7 +8,17 @@ Preferred communication style: Simple, everyday language.
 
 # Recent Updates (November 2025)
 
-## Interactive Service Catalogue (Latest)
+## Labuan Digital Marketing Landing Page (Latest)
+- **SEO-optimized landing page**: New /labuan-digital-marketing page targeting "Digital Marketing Agency in Labuan" keyword
+- **Keyword integration**: All required keywords from SEO brief naturally integrated (digital marketing, companies in labuan, yokan digital, SEO, PPC, ROI, conversion rates, etc.)
+- **Comprehensive content**: Hero section, success metrics (250% traffic, 180% sales, 95% success rate, 50+ companies), 6 service cards, 4 "why choose us" features
+- **SEO structure**: Proper H1/H2 hierarchy, meta description, bilingual title tags
+- **Bilingual support**: Full English/Malay language switching for all content
+- **Footer integration**: Link added to Service Locations section in footer
+- **Multiple CTAs**: Strategic call-to-action buttons for consultation booking
+- **End-to-end tested**: Complete workflow validated with Playwright including navigation, language switching, and all sections
+
+## Interactive Service Catalogue
 - **Comprehensive service showcase**: New /catalogue page displaying all services with transparent pricing
 - **Interactive filtering**: 7 category filters (All Services, Packages, Web Design, SEO, Marketing, Ads, Content)
 - **Service cards**: 18 total services with icons, descriptions, pricing, features, and optional add-ons
