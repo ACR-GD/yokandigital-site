@@ -37,7 +37,6 @@ export default function ServiceLocationPage() {
         "Content Management",
         "E-commerce Integration"
       ],
-      price: "RM 2,500",
       deliveryTime: "2-4 weeks"
     },
     "seo": {
@@ -51,7 +50,6 @@ export default function ServiceLocationPage() {
         "Local SEO",
         "Monthly Reporting"
       ],
-      price: "RM 1,500",
       deliveryTime: "3-6 months"
     },
     "digital-marketing": {
@@ -65,7 +63,6 @@ export default function ServiceLocationPage() {
         "Analytics Setup",
         "Conversion Optimization"
       ],
-      price: "RM 3,000",
       deliveryTime: "Ongoing"
     },
     "complete-package": {
@@ -79,7 +76,6 @@ export default function ServiceLocationPage() {
         "Monthly Reports",
         "Priority Support"
       ],
-      price: "RM 10,000",
       deliveryTime: "1-2 months"
     }
   };
@@ -163,7 +159,7 @@ export default function ServiceLocationPage() {
   // Set page title and meta description for SEO
   useEffect(() => {
     const title = `${currentService.title} in ${currentCity.name} | Yokan Digital`;
-    const description = `Professional ${currentService.title.toLowerCase()} services for businesses in ${currentCity.name}, ${currentCity.description}. Starting from ${currentService.price}/month. Get your free quote today!`;
+    const description = `Professional ${currentService.title.toLowerCase()} services for businesses in ${currentCity.name}, ${currentCity.description}. Contact us for a custom quote tailored to your business needs.`;
     
     document.title = title;
     
@@ -285,9 +281,9 @@ export default function ServiceLocationPage() {
                 <CardDescription>Perfect for businesses in {currentCity.name}</CardDescription>
               </CardHeader>
               <CardContent className="text-center space-y-4">
-                <div className="text-4xl font-bold text-gray-900 dark:text-white">
-                  {currentService.price}
-                  <span className="text-lg font-normal text-gray-500">/month</span>
+                <div className="mb-4">
+                  <p className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">Contact us for a custom quote</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Tailored to your business needs</p>
                 </div>
                 
                 <div className="flex items-center justify-center gap-2 text-gray-600 dark:text-gray-300">

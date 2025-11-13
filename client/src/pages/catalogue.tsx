@@ -19,10 +19,6 @@ interface ServiceItem {
   titleMs: string;
   descriptionEn: string;
   descriptionMs: string;
-  pricing: {
-    en: string;
-    ms: string;
-  };
   features: {
     en: string[];
     ms: string[];
@@ -46,22 +42,18 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Pakej Permulaan",
     descriptionEn: "Perfect starting point for small businesses ready to establish their digital presence",
     descriptionMs: "Titik permulaan sempurna untuk perniagaan kecil yang bersedia untuk mewujudkan kehadiran digital mereka",
-    pricing: {
-      en: "RM2,500/month",
-      ms: "RM2,500/bulan"
-    },
     features: {
       en: [
         "5-page professional website (monthly subscription)",
-        "Basic SEO optimization (RM1,500 value)",
-        "2 blog posts per month (RM500 value)",
+        "Basic SEO optimization",
+        "2 blog posts per month",
         "Monthly performance reporting",
         "Email & phone support"
       ],
       ms: [
         "Laman web profesional 5-halaman (langganan bulanan)",
-        "Pengoptimuman SEO asas (nilai RM1,500)",
-        "2 artikel blog setiap bulan (nilai RM500)",
+        "Pengoptimuman SEO asas",
+        "2 artikel blog setiap bulan",
         "Laporan prestasi bulanan",
         "Sokongan e-mel & telefon"
       ]
@@ -76,24 +68,20 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Pakej Profesional",
     descriptionEn: "Our most popular package - complete digital presence for growing businesses",
     descriptionMs: "Pakej paling popular kami - kehadiran digital lengkap untuk perniagaan yang berkembang",
-    pricing: {
-      en: "RM5,000/month",
-      ms: "RM5,000/bulan"
-    },
     features: {
       en: [
         "15-page custom website with advanced features",
-        "Advanced SEO optimization (RM3,000 value)",
-        "Social Media Management - 2 platforms (RM1,400 value)",
-        "Google Ads management (RM1,200 value)",
+        "Advanced SEO optimization",
+        "Social Media Management - 2 platforms",
+        "Google Ads management",
         "Weekly performance reporting",
         "Priority support with dedicated account manager"
       ],
       ms: [
         "Laman web tersuai 15-halaman dengan ciri lanjutan",
-        "Pengoptimuman SEO lanjutan (nilai RM3,000)",
-        "Pengurusan Media Sosial - 2 platform (nilai RM1,400)",
-        "Pengurusan Google Ads (nilai RM1,200)",
+        "Pengoptimuman SEO lanjutan",
+        "Pengurusan Media Sosial - 2 platform",
+        "Pengurusan Google Ads",
         "Laporan prestasi mingguan",
         "Sokongan keutamaan dengan pengurus akaun khusus"
       ]
@@ -109,28 +97,24 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Pakej Perusahaan",
     descriptionEn: "For established businesses ready to dominate their market with comprehensive digital solutions",
     descriptionMs: "Untuk perniagaan mantap yang bersedia untuk menguasai pasaran mereka dengan penyelesaian digital komprehensif",
-    pricing: {
-      en: "RM10,000/month",
-      ms: "RM10,000/bulan"
-    },
     features: {
       en: [
-        "E-commerce website with unlimited pages (RM3,500 value)",
-        "Enterprise SEO optimization (RM5,000 value)",
-        "Social Media Management - 4 platforms (RM2,500 value)",
-        "Google Ads management (RM2,000 value)",
-        "Email marketing campaigns (RM1,000 value)",
-        "Content marketing - 8 blog posts/month (RM1,600 value)",
+        "E-commerce website with unlimited pages",
+        "Enterprise SEO optimization",
+        "Social Media Management - 4 platforms",
+        "Google Ads management",
+        "Email marketing campaigns",
+        "Content marketing - 8 blog posts/month",
         "Dedicated account manager",
         "24/7 priority support"
       ],
       ms: [
-        "Laman web e-dagang dengan halaman tanpa had (nilai RM3,500)",
-        "Pengoptimuman SEO perusahaan (nilai RM5,000)",
-        "Pengurusan Media Sosial - 4 platform (nilai RM2,500)",
-        "Pengurusan Google Ads (nilai RM2,000)",
-        "Kempen pemasaran e-mel (nilai RM1,000)",
-        "Pemasaran kandungan - 8 artikel blog/bulan (nilai RM1,600)",
+        "Laman web e-dagang dengan halaman tanpa had",
+        "Pengoptimuman SEO perusahaan",
+        "Pengurusan Media Sosial - 4 platform",
+        "Pengurusan Google Ads",
+        "Kempen pemasaran e-mel",
+        "Pemasaran kandungan - 8 artikel blog/bulan",
         "Pengurus akaun khusus",
         "Sokongan keutamaan 24/7"
       ]
@@ -148,10 +132,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Laman Web Asas 5-Halaman",
     descriptionEn: "Professional website perfect for small businesses and startups",
     descriptionMs: "Laman web profesional sempurna untuk perniagaan kecil dan permulaan",
-    pricing: {
-      en: "RM1,200/month or RM4,000-6,000 build + RM300/month maintenance",
-      ms: "RM1,200/bulan atau RM4,000-6,000 pembinaan + RM300/bulan penyelenggaraan"
-    },
     features: {
       en: [
         "Custom design (no templates)",
@@ -176,14 +156,14 @@ const servicesCatalogue: ServiceItem[] = [
     },
     addOns: {
       en: [
-        "Blog section: +RM2,000 or +RM200/month",
-        "Multiple languages: +RM1,500 or +RM150/month",
-        "Booking system: +RM3,000 or +RM300/month"
+        "Blog section (additional cost applies)",
+        "Multiple languages (additional cost applies)",
+        "Booking system (additional cost applies)"
       ],
       ms: [
-        "Bahagian blog: +RM2,000 atau +RM200/bulan",
-        "Pelbagai bahasa: +RM1,500 atau +RM150/bulan",
-        "Sistem tempahan: +RM3,000 atau +RM300/bulan"
+        "Bahagian blog (kos tambahan dikenakan)",
+        "Pelbagai bahasa (kos tambahan dikenakan)",
+        "Sistem tempahan (kos tambahan dikenakan)"
       ]
     },
     ctaLink: "/services/web-design"
@@ -196,10 +176,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Laman Web Tersuai 10-15 Halaman",
     descriptionEn: "Advanced custom website with multiple pages and enhanced functionality",
     descriptionMs: "Laman web tersuai lanjutan dengan pelbagai halaman dan fungsi dipertingkat",
-    pricing: {
-      en: "RM2,000/month or RM8,000-15,000 build + RM500/month maintenance",
-      ms: "RM2,000/bulan atau RM8,000-15,000 pembinaan + RM500/bulan penyelenggaraan"
-    },
     features: {
       en: [
         "All Basic Website features",
@@ -222,12 +198,12 @@ const servicesCatalogue: ServiceItem[] = [
     },
     addOns: {
       en: [
-        "E-commerce: +RM10,000 build or +RM800/month",
-        "Custom animations: +RM2,000-5,000"
+        "E-commerce functionality (additional cost applies)",
+        "Custom animations (additional cost applies)"
       ],
       ms: [
-        "E-dagang: +RM10,000 pembinaan atau +RM800/bulan",
-        "Animasi tersuai: +RM2,000-5,000"
+        "Fungsi e-dagang (kos tambahan dikenakan)",
+        "Animasi tersuai (kos tambahan dikenakan)"
       ]
     },
     ctaLink: "/services/web-design"
@@ -240,10 +216,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Laman Web E-Dagang",
     descriptionEn: "Full-featured online store with payment processing and inventory management",
     descriptionMs: "Kedai dalam talian berpenampilan lengkap dengan pemprosesan pembayaran dan pengurusan inventori",
-    pricing: {
-      en: "RM3,500/month or RM20,000-40,000 build + RM1,000/month maintenance",
-      ms: "RM3,500/bulan atau RM20,000-40,000 pembinaan + RM1,000/bulan penyelenggaraan"
-    },
     features: {
       en: [
         "All Custom Website features",
@@ -280,10 +252,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "SEO Asas",
     descriptionEn: "Essential SEO optimization for local businesses with one location",
     descriptionMs: "Pengoptimuman SEO penting untuk perniagaan tempatan dengan satu lokasi",
-    pricing: {
-      en: "RM1,500/month",
-      ms: "RM1,500/bulan"
-    },
     features: {
       en: [
         "Keyword research & optimization",
@@ -312,10 +280,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "SEO Lanjutan",
     descriptionEn: "Comprehensive SEO strategy for competitive markets and multiple locations",
     descriptionMs: "Strategi SEO komprehensif untuk pasaran kompetitif dan pelbagai lokasi",
-    pricing: {
-      en: "RM3,000/month",
-      ms: "RM3,000/bulan"
-    },
     features: {
       en: [
         "All Basic SEO features",
@@ -347,10 +311,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "SEO Perusahaan",
     descriptionEn: "Enterprise-level SEO for large businesses and e-commerce platforms",
     descriptionMs: "SEO peringkat perusahaan untuk perniagaan besar dan platform e-dagang",
-    pricing: {
-      en: "RM5,000+/month",
-      ms: "RM5,000+/bulan"
-    },
     features: {
       en: [
         "All Advanced SEO features",
@@ -385,10 +345,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Media Sosial - 1 Platform",
     descriptionEn: "Professional social media management for one platform",
     descriptionMs: "Pengurusan media sosial profesional untuk satu platform",
-    pricing: {
-      en: "RM800/month",
-      ms: "RM800/bulan"
-    },
     features: {
       en: [
         "3-4 posts per week",
@@ -409,16 +365,16 @@ const servicesCatalogue: ServiceItem[] = [
     },
     addOns: {
       en: [
-        "Professional photography: +RM500/session",
-        "Video content: +RM800/month",
-        "Stories/Reels daily: +RM400/month",
-        "Social media ads: +RM600/month management"
+        "Professional photography (per session, additional cost applies)",
+        "Video content (additional cost applies)",
+        "Stories/Reels daily (additional cost applies)",
+        "Social media ads management (additional cost applies)"
       ],
       ms: [
-        "Fotografi profesional: +RM500/sesi",
-        "Kandungan video: +RM800/bulan",
-        "Stories/Reels harian: +RM400/bulan",
-        "Iklan media sosial: +RM600/bulan pengurusan"
+        "Fotografi profesional (setiap sesi, kos tambahan dikenakan)",
+        "Kandungan video (kos tambahan dikenakan)",
+        "Stories/Reels harian (kos tambahan dikenakan)",
+        "Pengurusan iklan media sosial (kos tambahan dikenakan)"
       ]
     },
     ctaLink: "/services/digital-marketing"
@@ -431,10 +387,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Media Sosial - 2 Platform",
     descriptionEn: "Manage your presence across two major social platforms",
     descriptionMs: "Uruskan kehadiran anda merentas dua platform sosial utama",
-    pricing: {
-      en: "RM1,400/month",
-      ms: "RM1,400/bulan"
-    },
     features: {
       en: [
         "All 1 Platform features × 2",
@@ -462,10 +414,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Media Sosial - 3 Platform",
     descriptionEn: "Comprehensive social media presence across three platforms",
     descriptionMs: "Kehadiran media sosial komprehensif merentas tiga platform",
-    pricing: {
-      en: "RM2,000/month",
-      ms: "RM2,000/bulan"
-    },
     features: {
       en: [
         "All 2 Platforms features × 3",
@@ -492,10 +440,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Media Sosial - 4+ Platform",
     descriptionEn: "Maximum social media coverage with daily content across all major platforms",
     descriptionMs: "Liputan media sosial maksimum dengan kandungan harian merentas semua platform utama",
-    pricing: {
-      en: "RM2,500/month",
-      ms: "RM2,500/bulan"
-    },
     features: {
       en: [
         "Daily content across all platforms",
@@ -526,10 +470,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Pengurusan Google Ads",
     descriptionEn: "Professional Google Ads campaign management to drive qualified traffic and conversions",
     descriptionMs: "Pengurusan kempen Google Ads profesional untuk memacu trafik dan penukaran yang layak",
-    pricing: {
-      en: "RM1,200-2,000/month OR 15% of ad spend (whichever is higher)",
-      ms: "RM1,200-2,000/bulan ATAU 15% daripada perbelanjaan iklan (mana yang lebih tinggi)"
-    },
     features: {
       en: [
         "Campaign strategy & setup",
@@ -539,7 +479,7 @@ const servicesCatalogue: ServiceItem[] = [
         "Bid management & optimization",
         "Conversion tracking setup",
         "Monthly performance reports",
-        "Note: Client pays ad budget separately (min. RM2,000/month recommended)"
+        "Note: Client pays ad budget separately (minimum ad budget recommended)"
       ],
       ms: [
         "Strategi & persediaan kempen",
@@ -549,7 +489,7 @@ const servicesCatalogue: ServiceItem[] = [
         "Pengurusan & pengoptimuman bidaan",
         "Persediaan pengesanan penukaran",
         "Laporan prestasi bulanan",
-        "Nota: Klien membayar belanjawan iklan secara berasingan (min. RM2,000/bulan disyorkan)"
+        "Nota: Klien membayar belanjawan iklan secara berasingan (belanjawan iklan minimum disyorkan)"
       ]
     },
     ctaLink: "/services/digital-marketing"
@@ -564,10 +504,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Pemasaran E-mel",
     descriptionEn: "Strategic email campaigns to nurture leads and drive customer engagement",
     descriptionMs: "Kempen e-mel strategik untuk memupuk petunjuk dan memacu penglibatan pelanggan",
-    pricing: {
-      en: "RM600-1,000/month (depending on list size & frequency)",
-      ms: "RM600-1,000/bulan (bergantung kepada saiz senarai & kekerapan)"
-    },
     features: {
       en: [
         "Email campaign strategy",
@@ -602,10 +538,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Pemasaran Kandungan - 2 Siaran/Bulan",
     descriptionEn: "Regular blog content to boost SEO and establish thought leadership",
     descriptionMs: "Kandungan blog berkala untuk meningkatkan SEO dan mewujudkan kepimpinan pemikiran",
-    pricing: {
-      en: "RM500/month",
-      ms: "RM500/bulan"
-    },
     features: {
       en: [
         "2 SEO-optimized blog posts",
@@ -632,10 +564,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Pemasaran Kandungan - 4 Siaran/Bulan",
     descriptionEn: "Weekly blog content for consistent audience engagement",
     descriptionMs: "Kandungan blog mingguan untuk penglibatan khalayak yang konsisten",
-    pricing: {
-      en: "RM900/month",
-      ms: "RM900/bulan"
-    },
     features: {
       en: [
         "All 2 Posts features",
@@ -663,10 +591,6 @@ const servicesCatalogue: ServiceItem[] = [
     titleMs: "Pemasaran Kandungan - 8 Siaran/Bulan",
     descriptionEn: "Aggressive content strategy for maximum SEO impact and audience growth",
     descriptionMs: "Strategi kandungan agresif untuk kesan SEO maksimum dan pertumbuhan khalayak",
-    pricing: {
-      en: "RM1,600/month",
-      ms: "RM1,600/bulan"
-    },
     features: {
       en: [
         "All 4 Posts features",
@@ -745,14 +669,14 @@ export default function CataloguePage() {
 
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
             {language === 'en' 
-              ? 'Transparent Pricing for Digital Success' 
-              : 'Harga Telus untuk Kejayaan Digital'}
+              ? 'Complete Digital Solutions for Your Business' 
+              : 'Penyelesaian Digital Lengkap untuk Perniagaan Anda'}
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             {language === 'en'
-              ? 'Choose the perfect service or package for your business. No hidden fees, no surprises - just honest pricing and exceptional results.'
-              : 'Pilih perkhidmatan atau pakej sempurna untuk perniagaan anda. Tiada bayaran tersembunyi, tiada kejutan - hanya harga jujur dan hasil luar biasa.'}
+              ? 'Discover our comprehensive range of services and packages. Every solution is customized to your unique business needs and goals.'
+              : 'Temui rangkaian lengkap perkhidmatan dan pakej kami. Setiap penyelesaian disesuaikan dengan keperluan dan matlamat unik perniagaan anda.'}
           </p>
 
           {/* Category Filter */}
@@ -823,7 +747,7 @@ export default function CataloguePage() {
                         {language === 'en' ? 'Pricing' : 'Harga'}
                       </p>
                       <p className="text-xl font-bold text-purple-600 dark:text-purple-400" data-testid={`text-pricing-${service.id}`}>
-                        {language === 'en' ? service.pricing.en : service.pricing.ms}
+                        {language === 'en' ? 'Contact us for a custom quote' : 'Hubungi kami untuk sebut harga tersuai'}
                       </p>
                     </div>
 
