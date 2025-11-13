@@ -46,8 +46,8 @@ export const translations: Translations = {
     ms: "Kembangkan Perniagaan Anda Secara Online dengan Rakan Digital Terpercaya Malaysia"
   },
   "hero.subtitle": {
-    en: "Professional web design, SEO optimization, and digital marketing services tailored for Malaysian and Singaporean businesses. From RM2,500/month.",
-    ms: "Perkhidmatan reka bentuk web profesional, pengoptimuman SEO, dan pemasaran digital yang disesuaikan untuk perniagaan Malaysia. Dari RM2,500/bulan."
+    en: "Professional web design, SEO optimization, and digital marketing services tailored for Malaysian and Singaporean businesses. Custom solutions for your unique needs.",
+    ms: "Perkhidmatan reka bentuk web profesional, pengoptimuman SEO, dan pemasaran digital yang disesuaikan untuk perniagaan Malaysia. Penyelesaian tersuai untuk keperluan unik anda."
   },
   "hero.startProject": {
     en: "Start Your Project",

@@ -630,8 +630,8 @@ export default function CataloguePage() {
     }
     metaDescription.setAttribute('content', 
       language === 'en'
-        ? 'Explore Yokan Digital\'s complete service catalogue with transparent pricing. Web design from RM1,200/month, SEO from RM1,500/month, and comprehensive packages from RM2,500/month.'
-        : 'Terokai katalog perkhidmatan lengkap Yokan Digital dengan harga telus. Reka bentuk web dari RM1,200/bulan, SEO dari RM1,500/bulan, dan pakej komprehensif dari RM2,500/bulan.'
+        ? 'Explore Yokan Digital\'s complete service catalogue. Web design, SEO optimization, digital marketing, and comprehensive packages tailored to your business needs. Contact us for custom pricing.'
+        : 'Terokai katalog perkhidmatan lengkap Yokan Digital. Reka bentuk web, pengoptimuman SEO, pemasaran digital, dan pakej komprehensif yang disesuaikan dengan keperluan perniagaan anda. Hubungi kami untuk harga tersuai.'
     );
 
     return () => {
