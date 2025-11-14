@@ -16,7 +16,7 @@ interface ServiceLocationProps {
 
 export default function ServiceLocationPage() {
   const [match, params] = useRoute<{ service: string; city: string }>("/services/:service/:city");
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   if (!match || !params) {
     return <div>Page not found</div>;
@@ -159,7 +159,9 @@ export default function ServiceLocationPage() {
   // Set page title and meta description for SEO
   useEffect(() => {
     const title = `${currentService.title} in ${currentCity.name} | Yokan Digital`;
-    const description = `Professional ${currentService.title.toLowerCase()} services for businesses in ${currentCity.name}, ${currentCity.description}. Contact us for a custom quote tailored to your business needs.`;
+    const description = language === 'en' 
+      ? `Professional ${currentService.title.toLowerCase()} services for businesses in ${currentCity.name}, ${currentCity.description}. Contact us for a custom quote tailored to your business needs.`
+      : `Perkhidmatan ${currentService.title.toLowerCase()} profesional untuk perniagaan di ${currentCity.name}, ${currentCity.description}. Hubungi kami untuk sebut harga tersuai mengikut keperluan perniagaan anda.`;
     
     document.title = title;
     
@@ -282,17 +284,21 @@ export default function ServiceLocationPage() {
               </CardHeader>
               <CardContent className="text-center space-y-4">
                 <div className="mb-4">
-                  <p className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">Contact us for a custom quote</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Tailored to your business needs</p>
+                  <p className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">
+                    {language === 'en' ? 'Contact us for a custom quote' : 'Hubungi kami untuk sebut harga tersuai'}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {language === 'en' ? 'Tailored to your business needs' : 'Disesuaikan dengan keperluan perniagaan anda'}
+                  </p>
                 </div>
                 
                 <div className="flex items-center justify-center gap-2 text-gray-600 dark:text-gray-300">
                   <Clock className="w-4 h-4" />
-                  <span>Delivery: {currentService.deliveryTime}</span>
+                  <span>{language === 'en' ? 'Delivery' : 'Penghantaran'}: {currentService.deliveryTime}</span>
                 </div>
 
                 <Button className="w-full" size="lg" data-testid="button-start-project">
-                  Start Your Project
+                  {language === 'en' ? 'Start Your Project' : 'Mulakan Projek Anda'}
                 </Button>
 
                 <div className="flex items-center justify-center gap-1 text-yellow-500">

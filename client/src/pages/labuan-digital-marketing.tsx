@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Contact from "@/components/contact";
 import { useLanguage } from "@/hooks/use-language";
 
 export default function LabuanDigitalMarketingPage() {
@@ -442,6 +443,8 @@ export default function LabuanDigitalMarketingPage() {
           </Button>
         </div>
       </section>
+
+      <Contact />
 
       <Footer />
     </div>
