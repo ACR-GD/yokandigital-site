@@ -123,6 +123,9 @@ export default function Footer() {
             <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors" data-testid="link-terms">
               {t('footer.terms')}
             </a>
+            <a href="https://www.b2blistings.org/" className="text-slate-400 hover:text-white text-sm transition-colors" target="_blank" rel="noopener noreferrer" data-testid="link-b2b">
+              B2B Listings
+            </a>
           </div>
         </div>
       </div>
