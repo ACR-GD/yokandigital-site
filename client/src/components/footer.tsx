@@ -30,8 +30,7 @@ export default function Footer() {
         { name: "Free SEO Audit", href: "#tools" },
         { name: "Speed Test", href: "#tools" },
         { name: "Industry Reports", href: "#" },
-        { name: "Support", href: "#contact" },
-        { name: "B2B Listings", href: "https://www.b2blistings.org/", isExternal: true }
+        { name: "Support", href: "#contact" }
       ]
     },
     {
