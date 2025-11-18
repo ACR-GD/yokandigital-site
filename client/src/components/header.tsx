@@ -144,6 +144,13 @@ export default function Header() {
             >
               {language === 'en' ? 'About' : 'Tentang'}
             </Link>
+            <Link 
+              href="/resources"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              data-testid="nav-resources"
+            >
+              {language === 'en' ? 'Resources' : 'Sumber'}
+            </Link>
             <button 
               onClick={() => scrollToSection('portfolio')}
               className="text-muted-foreground hover:text-foreground transition-colors"
