@@ -30,7 +30,8 @@ export default function Footer() {
         { name: "Free SEO Audit", href: "#tools" },
         { name: "Speed Test", href: "#tools" },
         { name: "Industry Reports", href: "#" },
-        { name: "Support", href: "#contact" }
+        { name: "Support", href: "#contact" },
+        { name: "B2B Listings", href: "https://www.b2blistings.org/", isExternal: true }
       ]
     },
     {
@@ -96,6 +97,16 @@ export default function Footer() {
                       >
                         {link.name}
                       </Link>
+                    ) : (link as any).isExternal ? (
+                      <a 
+                        href={link.href} 
+                        className="text-slate-400 hover:text-white transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-testid={`footer-link-${index}-${linkIndex}`}
+                      >
+                        {link.name}
+                      </a>
                     ) : (
                       <a 
                         href={link.href} 
@@ -122,9 +133,6 @@ export default function Footer() {
             </a>
             <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors" data-testid="link-terms">
               {t('footer.terms')}
-            </a>
-            <a href="https://www.b2blistings.org/" className="text-slate-400 hover:text-white text-sm transition-colors" target="_blank" rel="noopener noreferrer" data-testid="link-b2b">
-              B2B Listings
             </a>
           </div>
         </div>
