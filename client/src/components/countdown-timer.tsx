@@ -37,23 +37,10 @@ export default function CountdownTimer() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
-      <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300 animate-pulse" />
-      {[
-        { value: timeLeft.days, label: 'Days' },
-        { value: timeLeft.hours, label: 'Hours' },
-        { value: timeLeft.minutes, label: 'Mins' },
-        { value: timeLeft.seconds, label: 'Secs' }
-      ].map((item, index) => (
-        <div key={index} className="flex flex-col items-center">
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 sm:px-4 py-1 sm:py-2 min-w-[55px] sm:min-w-[70px]">
-            <span className="text-xl sm:text-3xl font-bold text-white tabular-nums">
-              {String(item.value).padStart(2, '0')}
-            </span>
-          </div>
-          <span className="text-[10px] sm:text-xs text-white/80 mt-1 font-medium">{item.label}</span>
-        </div>
-      ))}
+    <div className="inline-flex items-center gap-1">
+      <span className="font-mono font-semibold text-purple-600 dark:text-purple-400">
+        {String(timeLeft.days).padStart(2, '0')}d {String(timeLeft.hours).padStart(2, '0')}h {String(timeLeft.minutes).padStart(2, '0')}m {String(timeLeft.seconds).padStart(2, '0')}s
+      </span>
     </div>
   );
 }

@@ -140,117 +140,107 @@ export default function LabuanDigitalMarketingPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900">
       <Header />
 
-      {/* LIMITED TIME OFFER - Hero Section */}
-      <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-orange-500 via-red-600 to-pink-600">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-yellow-400/30 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-0 right-10 w-96 h-96 bg-pink-400/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}} />
-          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-orange-400/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '0.5s'}} />
-        </div>
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center max-w-5xl mx-auto">
-            {/* Flashing LIMITED OFFER Badge */}
-            <div className="mb-6 inline-flex items-center gap-2 bg-yellow-400 text-black font-black px-6 py-3 rounded-full text-lg animate-bounce shadow-2xl">
-              <Sparkles className="w-6 h-6 animate-spin" />
-              <span className="uppercase tracking-wider">
-                {language === 'en' ? '🔥 LIMITED TIME OFFER 🔥' : '🔥 TAWARAN TERHAD 🔥'}
-              </span>
-              <Sparkles className="w-6 h-6 animate-spin" />
-            </div>
+          <div className="text-center max-w-4xl mx-auto mb-12">
+            <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white border-0 px-4 py-2">
+              {language === 'en' ? 'Trusted Digital Marketing Agency in Labuan' : 'Agensi Pemasaran Digital Dipercayai di Labuan'}
+            </Badge>
             
-            {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 text-white drop-shadow-2xl leading-tight" data-testid="page-title">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent" data-testid="page-title">
               {language === 'en' 
-                ? <>FREE CUSTOM<br/>WEBSITE + AI CHATBOT!</>
-                : <>LAMAN WEB PERCUMA<br/>+ CHATBOT AI!</>}
+                ? 'Digital Marketing Agency in Labuan, Malaysia' 
+                : 'Agensi Pemasaran Digital di Labuan, Malaysia'}
             </h1>
             
-            {/* Sub-headline with pulsing gift icon */}
-            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <Gift className="w-6 h-6 sm:w-10 sm:h-10 text-yellow-300 animate-bounce" />
-              <p className="text-lg sm:text-2xl md:text-3xl font-bold text-yellow-300">
-                {language === 'en'
-                  ? 'Exclusively for Labuan Businesses!'
-                  : 'Eksklusif untuk Perniagaan Labuan!'}
-              </p>
-              <Gift className="w-6 h-6 sm:w-10 sm:h-10 text-yellow-300 animate-bounce" />
-            </div>
+            <p className="text-xl text-muted-foreground mb-4 leading-relaxed">
+              {language === 'en'
+                ? 'Grow your business with Yokan Digital - the best digital marketing company serving companies in Labuan. Transform your business with proven digital marketing solutions.'
+                : 'Kembangkan perniagaan anda dengan Yokan Digital - syarikat pemasaran digital terbaik yang melayani syarikat di Labuan. Ubah perniagaan anda dengan penyelesaian pemasaran digital terbukti.'}
+            </p>
 
-            {/* Value Proposition */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 mb-6 sm:mb-8 border-2 sm:border-4 border-yellow-400 shadow-2xl">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6">
-                <div className="flex flex-col items-center">
-                  <Rocket className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-300 mb-2" />
-                  <p className="text-white font-bold text-base sm:text-lg">
-                    {language === 'en' ? 'Delivered in Hours!' : 'Siap Dalam Jam!'}
-                  </p>
-                  <p className="text-white/80 text-xs sm:text-sm">
-                    {language === 'en' ? 'Same-day delivery' : 'Penghantaran hari yang sama'}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <CheckCircle2 className="w-10 h-10 sm:w-12 sm:h-12 text-green-300 mb-2" />
-                  <p className="text-white font-bold text-base sm:text-lg">
-                    {language === 'en' ? 'No Strings Attached' : 'Tiada Syarat'}
-                  </p>
-                  <p className="text-white/80 text-xs sm:text-sm">
-                    {language === 'en' ? '100% Free, Forever' : '100% Percuma, Selamanya'}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <Sparkles className="w-10 h-10 sm:w-12 sm:h-12 text-pink-300 mb-2" />
-                  <p className="text-white font-bold text-base sm:text-lg">
-                    {language === 'en' ? 'AI-Powered Chatbot' : 'Chatbot Berkuasa AI'}
-                  </p>
-                  <p className="text-white/80 text-xs sm:text-sm">
-                    {language === 'en' ? '24/7 customer support' : 'Sokongan 24/7'}
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-red-600 text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl sm:rounded-2xl mb-3 sm:mb-4 text-sm sm:text-lg md:text-xl">
-                {language === 'en' 
-                  ? '⚡ ONE REQUIREMENT: Your business must NOT have a website yet!'
-                  : '⚡ SATU SYARAT: Perniagaan anda BELUM ada laman web!'}
-              </div>
-
-              <p className="text-white/90 text-base sm:text-lg">
-                {language === 'en'
-                  ? 'Worth RM5,000+ • Only for the first 50 Labuan businesses'
-                  : 'Bernilai RM5,000+ • Hanya untuk 50 perniagaan Labuan pertama'}
-              </p>
-            </div>
-
-            {/* Countdown Timer */}
-            <div className="mb-6 sm:mb-8">
-              <p className="text-yellow-300 font-bold text-lg sm:text-2xl mb-3 sm:mb-4 uppercase tracking-wide">
-                {language === 'en' ? '⏰ Offer Ends In:' : '⏰ Tawaran Tamat Dalam:'}
-              </p>
-              <CountdownTimer />
-            </div>
+            <p className="text-lg text-muted-foreground mb-8">
+              {language === 'en'
+                ? 'Elevate your brand with comprehensive digital marketing strategies. Our digital marketing experts deliver measurable results and business growth.'
+                : 'Tingkatkan jenama anda dengan strategi pemasaran digital komprehensif. Pakar pemasaran digital kami menyampaikan hasil boleh diukur dan pertumbuhan perniagaan.'}
+            </p>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-black text-base sm:text-xl md:text-2xl px-6 sm:px-10 md:px-12 py-4 sm:py-6 md:py-8 rounded-xl sm:rounded-2xl shadow-2xl transform hover:scale-110 transition-all border-2 sm:border-4 border-white w-full sm:w-auto"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white text-lg px-8 py-6"
                 asChild
-                data-testid="button-claim-offer"
+                data-testid="button-get-started"
               >
-                <a href="#contact">
-                  {language === 'en' ? '🎁 CLAIM YOUR FREE WEBSITE NOW!' : '🎁 TUNTUT LAMAN WEB PERCUMA ANDA!'}
+                <a href="/#consultation">
+                  {language === 'en' ? 'Grow Your Business Today' : 'Kembangkan Perniagaan Anda Hari Ini'}
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="text-lg px-8 py-6 border-2"
+                asChild
+                data-testid="button-view-services"
+              >
+                <a href="/#services">
+                  {language === 'en' ? 'View Digital Marketing Services' : 'Lihat Perkhidmatan Pemasaran Digital'}
                 </a>
               </Button>
             </div>
-
-            <p className="text-white/80 text-xs sm:text-sm mt-4 sm:mt-6 max-w-2xl mx-auto px-4">
-              {language === 'en'
-                ? '* Limited to Labuan businesses without an existing website. First come, first served. Offer expires December 31, 2025.'
-                : '* Terhad kepada perniagaan Labuan tanpa laman web sedia ada. Siapa cepat, dia dapat. Tawaran tamat 31 Disember 2025.'}
-            </p>
           </div>
+
+          {/* Special Offer Banner - Discreet */}
+          <Card className="max-w-3xl mx-auto border-2 border-purple-200 dark:border-purple-800 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/50 dark:to-pink-950/50 shadow-lg">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="bg-purple-600 rounded-full p-3 flex-shrink-0">
+                  <Gift className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Badge variant="secondary" className="bg-purple-600 text-white">
+                      {language === 'en' ? 'Limited Time Offer' : 'Tawaran Terhad'}
+                    </Badge>
+                    <span className="text-sm text-muted-foreground">
+                      {language === 'en' ? 'Expires Dec 31, 2025' : 'Tamat 31 Dis 2025'}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">
+                    {language === 'en' 
+                      ? 'Free Custom Website + AI Chatbot for Labuan Businesses'
+                      : 'Laman Web Percuma + Chatbot AI untuk Perniagaan Labuan'}
+                  </h3>
+                  <p className="text-muted-foreground mb-3 text-sm">
+                    {language === 'en'
+                      ? 'For businesses without an existing website. Worth RM5,000+ • Delivered in hours • No strings attached'
+                      : 'Untuk perniagaan tanpa laman web sedia ada. Bernilai RM5,000+ • Siap dalam jam • Tiada syarat'}
+                  </p>
+                  <div className="flex flex-wrap gap-3 items-center">
+                    <Button 
+                      size="sm" 
+                      className="bg-purple-600 hover:bg-purple-700"
+                      asChild
+                      data-testid="button-learn-more-offer"
+                    >
+                      <a href="#contact">
+                        {language === 'en' ? 'Claim Free Website' : 'Tuntut Laman Web Percuma'}
+                      </a>
+                    </Button>
+                    <div className="flex items-center gap-2 text-sm">
+                      <Clock className="w-4 h-4 text-purple-600" />
+                      <CountdownTimer />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
