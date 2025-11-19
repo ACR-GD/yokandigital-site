@@ -181,6 +181,11 @@ export const insertBlogPostSchema = createInsertSchema(blogPosts).omit({
   ),
 });
 
+export const newsletterSubscriptionSchema = z.object({
+  email: z.string().email("Invalid email address"),
+  name: z.string().optional(),
+});
+
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type InsertContact = z.infer<typeof insertContactSchema>;

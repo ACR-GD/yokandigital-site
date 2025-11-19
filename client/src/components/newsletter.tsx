@@ -1,8 +1,58 @@
-import { Mail } from "lucide-react";
+import { useState } from "react";
+import { Mail, CheckCircle2, Loader2 } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
 
 export default function Newsletter() {
   const { language } = useLanguage();
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const subscribeMutation = useMutation({
+    mutationFn: async (data: { email: string; name?: string }) => {
+      return apiRequest('/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+    },
+    onSuccess: () => {
+      setIsSubscribed(true);
+      setEmail("");
+      setName("");
+      toast({
+        title: language === 'en' ? 'Success!' : 'Berjaya!',
+        description: language === 'en' 
+          ? 'You have successfully subscribed to our newsletter.' 
+          : 'Anda telah berjaya melanggan surat berita kami.',
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: language === 'en' ? 'Error' : 'Ralat',
+        description: language === 'en' 
+          ? 'Failed to subscribe. Please try again.' 
+          : 'Gagal melanggan. Sila cuba lagi.',
+        variant: 'destructive',
+      });
+    },
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    
+    subscribeMutation.mutate({
+      email,
+      ...(name && { name }),
+    });
+  };
 
   return (
     <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900">
@@ -28,20 +78,65 @@ export default function Newsletter() {
           </p>
         </div>
 
-        {/* MailerLite Embed Form Container */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700">
-          <div 
-            id="mailerlite-form-container" 
-            className="mailerlite-embed-form"
-            data-testid="newsletter-form"
-          >
-            {/* MailerLite embed code will go here */}
-            <p className="text-center text-gray-500 dark:text-gray-400 italic">
-              {language === 'en'
-                ? 'Newsletter subscription form will appear here once configured.'
-                : 'Borang langganan surat berita akan muncul di sini setelah dikonfigurasi.'}
-            </p>
-          </div>
+          {isSubscribed ? (
+            <div className="text-center py-8" data-testid="subscription-success">
+              <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                {language === 'en' ? 'Thank You!' : 'Terima Kasih!'}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                {language === 'en'
+                  ? 'Check your inbox for a confirmation email.'
+                  : 'Semak peti mel anda untuk e-mel pengesahan.'}
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4" data-testid="newsletter-form">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Input
+                    type="text"
+                    placeholder={language === 'en' ? 'Your Name (Optional)' : 'Nama Anda (Pilihan)'}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full"
+                    data-testid="input-newsletter-name"
+                  />
+                </div>
+                <div>
+                  <Input
+                    type="email"
+                    placeholder={language === 'en' ? 'Your Email *' : 'E-mel Anda *'}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="w-full"
+                    data-testid="input-newsletter-email"
+                  />
+                </div>
+              </div>
+              
+              <Button
+                type="submit"
+                disabled={subscribeMutation.isPending || !email}
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-6 text-lg"
+                data-testid="button-newsletter-subscribe"
+              >
+                {subscribeMutation.isPending ? (
+                  <>
+                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                    {language === 'en' ? 'Subscribing...' : 'Melanggan...'}
+                  </>
+                ) : (
+                  <>
+                    <Mail className="w-5 h-5 mr-2" />
+                    {language === 'en' ? 'Subscribe to Newsletter' : 'Langgan Surat Berita'}
+                  </>
+                )}
+              </Button>
+            </form>
+          )}
         </div>
 
         <div className="mt-8 text-center">

@@ -6,7 +6,8 @@ import {
   insertContactSchema, 
   insertConsultationSchema, 
   insertSeoAuditSchema,
-  insertSpeedTestSchema
+  insertSpeedTestSchema,
+  newsletterSubscriptionSchema
 } from "@shared/schema";
 import reportsRouter from "./routes/reports";
 import blogRouter from "./routes/blog";
@@ -118,6 +119,61 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ 
         success: false, 
         error: "Failed to retrieve consultations" 
+      });
+    }
+  });
+
+  // Newsletter subscription
+  app.post("/api/newsletter/subscribe", async (req, res) => {
+    try {
+      const validatedData = newsletterSubscriptionSchema.parse(req.body);
+      const apiToken = process.env.MAILERLITE_API_TOKEN;
+
+      if (!apiToken) {
+        console.error('MailerLite API token not configured');
+        return res.status(500).json({ 
+          success: false, 
+          error: "Newsletter service not configured" 
+        });
+      }
+
+      const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${apiToken}`,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          email: validatedData.email,
+          ...(validatedData.name && {
+            fields: {
+              name: validatedData.name
+            }
+          })
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error('MailerLite API error:', errorData);
+        return res.status(response.status).json({ 
+          success: false, 
+          error: "Failed to subscribe to newsletter" 
+        });
+      }
+
+      const data = await response.json();
+      res.json({ 
+        success: true, 
+        message: "Successfully subscribed to newsletter",
+        subscriber: data.data 
+      });
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      res.status(400).json({ 
+        success: false, 
+        error: "Invalid subscription data provided" 
       });
     }
   });
