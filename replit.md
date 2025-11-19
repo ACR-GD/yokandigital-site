@@ -8,7 +8,24 @@ Preferred communication style: Simple, everyday language.
 
 # Recent Updates (November 2025)
 
-## Labuan Digital Marketing Landing Page (Latest)
+## Newsletter Subscription (Latest)
+- **MailerLite integration**: Newsletter subscription section added to homepage
+- **API integration**: Backend endpoint connects to MailerLite API for subscriber management
+- **Bilingual form**: Full English/Malay support with name (optional) and email fields
+- **User feedback**: Success/error toast notifications and thank you message after subscription
+- **Secure API key**: MailerLite API token stored securely in environment variables
+- **Placement**: Section added between CTA banner and contact form on homepage
+- **Visual design**: Gradient card design matching website's color scheme
+
+## Curated Resources Page
+- **Resources page**: New /resources page with curated digital marketing links
+- **6 categories**: SEO & Analytics, Social Media, Paid Advertising, Content Marketing, Email Marketing, Learning & Industry News
+- **30+ resources**: Hand-picked tools, blogs, and learning materials from across the web
+- **Bilingual content**: Full English/Malay support for all content
+- **Navigation**: Added to header between About and Portfolio
+- **External links**: All links open in new tabs with proper attribution
+
+## Labuan Digital Marketing Landing Page
 - **SEO-optimized landing page**: New /labuan-digital-marketing page targeting "Digital Marketing Agency in Labuan" keyword
 - **Keyword integration**: All required keywords from SEO brief naturally integrated (digital marketing, companies in labuan, yokan digital, SEO, PPC, ROI, conversion rates, etc.)
 - **Comprehensive content**: Hero section, success metrics (250% traffic, 180% sales, 95% success rate, 50+ companies), 6 service cards, 4 "why choose us" features
