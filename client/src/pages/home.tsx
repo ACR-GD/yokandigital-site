@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import OfferBanner from "@/components/offer-banner";
 import Hero from "@/components/hero";
 import Services from "@/components/services";
 import Tools from "@/components/tools";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
+      <OfferBanner />
       <Hero />
       <Services />
       <Tools />

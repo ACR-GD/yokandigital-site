@@ -195,48 +195,67 @@ export default function LabuanDigitalMarketingPage() {
             </div>
           </div>
 
-          {/* Special Offer Banner - Discreet */}
-          <Card className="max-w-3xl mx-auto border-2 border-purple-200 dark:border-purple-800 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/50 dark:to-pink-950/50 shadow-lg">
-            <CardContent className="p-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-purple-600 rounded-full p-3 flex-shrink-0">
-                  <Gift className="w-6 h-6 text-white" />
+          {/* Special Offer Banner - PROMINENT */}
+          <Card className="max-w-4xl mx-auto border-4 border-orange-400 dark:border-orange-500 bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50 dark:from-orange-950/50 dark:via-yellow-950/50 dark:to-amber-950/50 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-orange-400/20 to-red-400/20 rounded-full blur-3xl"></div>
+            <CardContent className="p-6 sm:p-8 relative z-10">
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl p-4 flex-shrink-0 shadow-lg">
+                  <Gift className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
                 </div>
                 <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Badge variant="secondary" className="bg-purple-600 text-white">
-                      {language === 'en' ? 'Limited Time Offer' : 'Tawaran Terhad'}
+                  <div className="flex flex-wrap items-center gap-2 mb-3">
+                    <Badge className="bg-gradient-to-r from-orange-600 to-red-600 text-white border-0 text-sm sm:text-base px-3 py-1">
+                      {language === 'en' ? '🎁 LIMITED TIME OFFER' : '🎁 TAWARAN TERHAD'}
                     </Badge>
-                    <span className="text-sm text-muted-foreground">
-                      {language === 'en' ? 'Expires Dec 31, 2025' : 'Tamat 31 Dis 2025'}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">
-                    {language === 'en' 
-                      ? 'Free Custom Website + AI Chatbot for Labuan Businesses'
-                      : 'Laman Web Percuma + Chatbot AI untuk Perniagaan Labuan'}
-                  </h3>
-                  <p className="text-muted-foreground mb-3 text-sm">
-                    {language === 'en'
-                      ? 'For businesses without an existing website. Worth RM5,000+ • Delivered in hours • No strings attached'
-                      : 'Untuk perniagaan tanpa laman web sedia ada. Bernilai RM5,000+ • Siap dalam jam • Tiada syarat'}
-                  </p>
-                  <div className="flex flex-wrap gap-3 items-center">
-                    <Button 
-                      size="sm" 
-                      className="bg-purple-600 hover:bg-purple-700"
-                      asChild
-                      data-testid="button-learn-more-offer"
-                    >
-                      <a href="#contact">
-                        {language === 'en' ? 'Claim Free Website' : 'Tuntut Laman Web Percuma'}
-                      </a>
-                    </Button>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Clock className="w-4 h-4 text-purple-600" />
+                    <div className="flex items-center gap-1.5 text-sm text-orange-700 dark:text-orange-400 font-semibold">
+                      <Clock className="w-4 h-4" />
                       <CountdownTimer />
                     </div>
                   </div>
+                  <h3 className="text-2xl sm:text-3xl font-black mb-3 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
+                    {language === 'en' 
+                      ? 'FREE Custom Website + AI Chatbot!'
+                      : 'PERCUMA Laman Web + Chatbot AI!'}
+                  </h3>
+                  <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-2 font-semibold">
+                    {language === 'en'
+                      ? 'Exclusively for Labuan businesses without a website'
+                      : 'Eksklusif untuk perniagaan Labuan tanpa laman web'}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4 text-sm">
+                    <span className="inline-flex items-center gap-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-3 py-1 rounded-full font-medium">
+                      <CheckCircle2 className="w-4 h-4" />
+                      {language === 'en' ? 'Worth RM5,000+' : 'Bernilai RM5,000+'}
+                    </span>
+                    <span className="inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-3 py-1 rounded-full font-medium">
+                      <Rocket className="w-4 h-4" />
+                      {language === 'en' ? 'Delivered in hours' : 'Siap dalam jam'}
+                    </span>
+                    <span className="inline-flex items-center gap-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 px-3 py-1 rounded-full font-medium">
+                      <Sparkles className="w-4 h-4" />
+                      {language === 'en' ? 'No strings attached' : 'Tiada syarat'}
+                    </span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button 
+                      size="lg" 
+                      className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold shadow-lg text-base sm:text-lg"
+                      asChild
+                      data-testid="button-claim-offer"
+                    >
+                      <a href="#contact" className="flex items-center justify-center">
+                        <Gift className="w-5 h-5 mr-2" />
+                        {language === 'en' ? 'Claim Your Free Website' : 'Tuntut Laman Web Percuma'}
+                      </a>
+                    </Button>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-3">
+                    {language === 'en'
+                      ? '* Offer valid until December 31, 2025. Limited to first 50 Labuan businesses.'
+                      : '* Tawaran sah sehingga 31 Disember 2025. Terhad kepada 50 perniagaan Labuan pertama.'}
+                  </p>
                 </div>
               </div>
             </CardContent>
