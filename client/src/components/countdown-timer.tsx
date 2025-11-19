@@ -37,8 +37,8 @@ export default function CountdownTimer() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center gap-4 flex-wrap">
-      <Clock className="w-6 h-6 text-yellow-300 animate-pulse" />
+    <div className="flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
+      <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-300 animate-pulse" />
       {[
         { value: timeLeft.days, label: 'Days' },
         { value: timeLeft.hours, label: 'Hours' },
@@ -46,12 +46,12 @@ export default function CountdownTimer() {
         { value: timeLeft.seconds, label: 'Secs' }
       ].map((item, index) => (
         <div key={index} className="flex flex-col items-center">
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 min-w-[70px]">
-            <span className="text-3xl font-bold text-white tabular-nums">
+          <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 sm:px-4 py-1 sm:py-2 min-w-[55px] sm:min-w-[70px]">
+            <span className="text-xl sm:text-3xl font-bold text-white tabular-nums">
               {String(item.value).padStart(2, '0')}
             </span>
           </div>
-          <span className="text-xs text-white/80 mt-1 font-medium">{item.label}</span>
+          <span className="text-[10px] sm:text-xs text-white/80 mt-1 font-medium">{item.label}</span>
         </div>
       ))}
     </div>

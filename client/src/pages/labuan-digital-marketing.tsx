@@ -161,62 +161,62 @@ export default function LabuanDigitalMarketingPage() {
             </div>
             
             {/* Main Headline */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white drop-shadow-2xl leading-tight" data-testid="page-title">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 text-white drop-shadow-2xl leading-tight" data-testid="page-title">
               {language === 'en' 
                 ? <>FREE CUSTOM<br/>WEBSITE + AI CHATBOT!</>
                 : <>LAMAN WEB PERCUMA<br/>+ CHATBOT AI!</>}
             </h1>
             
             {/* Sub-headline with pulsing gift icon */}
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <Gift className="w-10 h-10 text-yellow-300 animate-bounce" />
-              <p className="text-2xl md:text-3xl font-bold text-yellow-300">
+            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+              <Gift className="w-6 h-6 sm:w-10 sm:h-10 text-yellow-300 animate-bounce" />
+              <p className="text-lg sm:text-2xl md:text-3xl font-bold text-yellow-300">
                 {language === 'en'
                   ? 'Exclusively for Labuan Businesses!'
                   : 'Eksklusif untuk Perniagaan Labuan!'}
               </p>
-              <Gift className="w-10 h-10 text-yellow-300 animate-bounce" />
+              <Gift className="w-6 h-6 sm:w-10 sm:h-10 text-yellow-300 animate-bounce" />
             </div>
 
             {/* Value Proposition */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 mb-8 border-4 border-yellow-400 shadow-2xl">
-              <div className="grid md:grid-cols-3 gap-6 mb-6">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 mb-6 sm:mb-8 border-2 sm:border-4 border-yellow-400 shadow-2xl">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6">
                 <div className="flex flex-col items-center">
-                  <Rocket className="w-12 h-12 text-yellow-300 mb-2" />
-                  <p className="text-white font-bold text-lg">
+                  <Rocket className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-300 mb-2" />
+                  <p className="text-white font-bold text-base sm:text-lg">
                     {language === 'en' ? 'Delivered in Hours!' : 'Siap Dalam Jam!'}
                   </p>
-                  <p className="text-white/80 text-sm">
+                  <p className="text-white/80 text-xs sm:text-sm">
                     {language === 'en' ? 'Same-day delivery' : 'Penghantaran hari yang sama'}
                   </p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <CheckCircle2 className="w-12 h-12 text-green-300 mb-2" />
-                  <p className="text-white font-bold text-lg">
+                  <CheckCircle2 className="w-10 h-10 sm:w-12 sm:h-12 text-green-300 mb-2" />
+                  <p className="text-white font-bold text-base sm:text-lg">
                     {language === 'en' ? 'No Strings Attached' : 'Tiada Syarat'}
                   </p>
-                  <p className="text-white/80 text-sm">
+                  <p className="text-white/80 text-xs sm:text-sm">
                     {language === 'en' ? '100% Free, Forever' : '100% Percuma, Selamanya'}
                   </p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Sparkles className="w-12 h-12 text-pink-300 mb-2" />
-                  <p className="text-white font-bold text-lg">
+                  <Sparkles className="w-10 h-10 sm:w-12 sm:h-12 text-pink-300 mb-2" />
+                  <p className="text-white font-bold text-base sm:text-lg">
                     {language === 'en' ? 'AI-Powered Chatbot' : 'Chatbot Berkuasa AI'}
                   </p>
-                  <p className="text-white/80 text-sm">
+                  <p className="text-white/80 text-xs sm:text-sm">
                     {language === 'en' ? '24/7 customer support' : 'Sokongan 24/7'}
                   </p>
                 </div>
               </div>
 
-              <div className="bg-red-600 text-white font-bold py-4 px-6 rounded-2xl mb-4 text-xl">
+              <div className="bg-red-600 text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl sm:rounded-2xl mb-3 sm:mb-4 text-sm sm:text-lg md:text-xl">
                 {language === 'en' 
                   ? '⚡ ONE REQUIREMENT: Your business must NOT have a website yet!'
                   : '⚡ SATU SYARAT: Perniagaan anda BELUM ada laman web!'}
               </div>
 
-              <p className="text-white/90 text-lg">
+              <p className="text-white/90 text-base sm:text-lg">
                 {language === 'en'
                   ? 'Worth RM5,000+ • Only for the first 50 Labuan businesses'
                   : 'Bernilai RM5,000+ • Hanya untuk 50 perniagaan Labuan pertama'}
@@ -224,18 +224,18 @@ export default function LabuanDigitalMarketingPage() {
             </div>
 
             {/* Countdown Timer */}
-            <div className="mb-8">
-              <p className="text-yellow-300 font-bold text-2xl mb-4 uppercase tracking-wide">
+            <div className="mb-6 sm:mb-8">
+              <p className="text-yellow-300 font-bold text-lg sm:text-2xl mb-3 sm:mb-4 uppercase tracking-wide">
                 {language === 'en' ? '⏰ Offer Ends In:' : '⏰ Tawaran Tamat Dalam:'}
               </p>
               <CountdownTimer />
             </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
               <Button 
                 size="lg" 
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-black text-2xl px-12 py-8 rounded-2xl shadow-2xl transform hover:scale-110 transition-all border-4 border-white"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black font-black text-base sm:text-xl md:text-2xl px-6 sm:px-10 md:px-12 py-4 sm:py-6 md:py-8 rounded-xl sm:rounded-2xl shadow-2xl transform hover:scale-110 transition-all border-2 sm:border-4 border-white w-full sm:w-auto"
                 asChild
                 data-testid="button-claim-offer"
               >
@@ -245,7 +245,7 @@ export default function LabuanDigitalMarketingPage() {
               </Button>
             </div>
 
-            <p className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
+            <p className="text-white/80 text-xs sm:text-sm mt-4 sm:mt-6 max-w-2xl mx-auto px-4">
               {language === 'en'
                 ? '* Limited to Labuan businesses without an existing website. First come, first served. Offer expires December 31, 2025.'
                 : '* Terhad kepada perniagaan Labuan tanpa laman web sedia ada. Siapa cepat, dia dapat. Tawaran tamat 31 Disember 2025.'}
