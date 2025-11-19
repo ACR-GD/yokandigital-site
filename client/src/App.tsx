@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/hooks/use-language";
 import ChatWidget from "@/components/chat-widget";
 import WhatsAppButton from "@/components/whatsapp-button";
+import ExitIntentPopup from "@/components/exit-intent-popup";
 import Home from "@/pages/home";
 import WebDesignPage from "@/pages/web-design";
 import SEOServicesPage from "@/pages/seo-services";
@@ -59,6 +60,7 @@ function App() {
           <Router />
           <WhatsAppButton />
           <ChatWidget />
+          <ExitIntentPopup />
         </TooltipProvider>
       </LanguageProvider>
     </QueryClientProvider>
