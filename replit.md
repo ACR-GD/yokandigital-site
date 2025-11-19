@@ -26,14 +26,19 @@ Preferred communication style: Simple, everyday language.
 - **Professional design**: Gradient header, rounded chat bubbles, smooth animations
 - **Always accessible**: Floating button visible on all pages for instant support
 
-## Newsletter Subscription
+## Newsletter Subscription with Free Ebook
+- **Free digital marketing guide**: Comprehensive ebook automatically sent to all new subscribers via email
+- **Email delivery**: SendGrid integration sends welcome email with PDF attachment upon subscription
 - **MailerLite integration**: Newsletter subscription section added to homepage
-- **API integration**: Backend endpoint connects to MailerLite API for subscriber management
+- **API integration**: Backend endpoint connects to MailerLite API for subscriber management  
+- **Ebook content**: "Your Guide to Digital Marketing in Labuan" - covers SEO, social media, paid ads, email marketing, web design
 - **Bilingual form**: Full English/Malay support with name (optional) and email fields
-- **User feedback**: Success/error toast notifications and thank you message after subscription
-- **Secure API key**: MailerLite API token stored securely in environment variables
+- **Enhanced UI**: Newsletter section highlights free ebook gift with visual card and gift badge
+- **Professional welcome email**: Branded HTML email template with ebook attached, mentions Labuan free website offer
+- **User feedback**: Success messages remind users to check inbox for free guide
+- **Secure API key**: MailerLite and SendGrid API tokens stored securely in environment variables
 - **Placement**: Section added between CTA banner and contact form on homepage
-- **Visual design**: Gradient card design matching website's color scheme
+- **Visual design**: Gradient card design matching website's color scheme with ebook preview card
 
 ## Curated Resources Page
 - **Resources page**: New /resources page with curated digital marketing links
