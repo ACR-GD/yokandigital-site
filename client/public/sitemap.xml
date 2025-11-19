@@ -75,11 +75,75 @@
   <!-- Location Landing Pages -->
   <url>
     <loc>https://yokandigital.com/labuan-digital-marketing</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/labuan-digital-marketing"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/labuan-digital-marketing"/>
+  </url>
+  <url>
+    <loc>https://yokandigital.com/labuan-seo-agency</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/labuan-seo-agency"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/labuan-seo-agency"/>
+  </url>
+  <url>
+    <loc>https://yokandigital.com/labuan-paid-ads</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/labuan-paid-ads"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/labuan-paid-ads"/>
+  </url>
+  <url>
+    <loc>https://yokandigital.com/labuan-social-media-marketing</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/labuan-social-media-marketing"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/labuan-social-media-marketing"/>
+  </url>
+  <url>
+    <loc>https://yokandigital.com/labuan-facebook-ads</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/labuan-facebook-ads"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/labuan-facebook-ads"/>
+  </url>
+  <url>
+    <loc>https://yokandigital.com/labuan-tiktok-ads</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/labuan-tiktok-ads"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/labuan-tiktok-ads"/>
+  </url>
+  <url>
+    <loc>https://yokandigital.com/labuan-instagram-ads</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/labuan-instagram-ads"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/labuan-instagram-ads"/>
+  </url>
+  <url>
+    <loc>https://yokandigital.com/labuan-web-design</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/labuan-web-design"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/labuan-web-design"/>
+  </url>
+  <url>
+    <loc>https://yokandigital.com/labuan-web-development</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/labuan-web-development"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/labuan-web-development"/>
   </url>
   
   <!-- Blog Main Page -->
