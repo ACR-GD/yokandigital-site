@@ -3,6 +3,8 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { sendContactEmail } from "./email";
 import { MailService } from '@sendgrid/mail';
+import { readFileSync } from "fs";
+import { join } from "path";
 import { 
   insertContactSchema, 
   insertConsultationSchema, 
@@ -202,6 +204,95 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       const data = await response.json();
+
+      // Send welcome email with ebook
+      try {
+        const ebookPath = join(process.cwd(), 'attached_assets', 'yokan-digital-marketing-guide.pdf');
+        const ebookContent = readFileSync(ebookPath);
+        const ebookBase64 = ebookContent.toString('base64');
+
+        await sgMail.send({
+          to: validatedData.email,
+          from: 'hello@yokandigital.com',
+          subject: 'Welcome to Yokan Digital - Your Free Marketing Guide Inside! 🎁',
+          html: `
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <style>
+                body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+                .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+                .header { background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+                .content { background: #f9fafb; padding: 30px; border-radius: 0 0 10px 10px; }
+                .button { display: inline-block; background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 20px 0; }
+                .footer { text-align: center; margin-top: 30px; color: #6b7280; font-size: 14px; }
+              </style>
+            </head>
+            <body>
+              <div class="container">
+                <div class="header">
+                  <h1>🎉 Welcome to Yokan Digital!</h1>
+                  <p style="font-size: 18px; margin: 10px 0 0 0;">Your Free Digital Marketing Guide is Attached</p>
+                </div>
+                <div class="content">
+                  <p>Hi ${validatedData.name || 'there'},</p>
+                  
+                  <p>Thank you for subscribing to our newsletter! We're excited to have you join our community of forward-thinking business owners in Malaysia.</p>
+                  
+                  <p><strong>As promised, here's your FREE ebook:</strong></p>
+                  <p style="background: white; padding: 15px; border-left: 4px solid #9333ea; margin: 20px 0;">
+                    📘 <strong>"Your Guide to Digital Marketing in Labuan"</strong><br>
+                    <span style="color: #6b7280;">A comprehensive guide covering SEO, social media, paid advertising, email marketing, and web design strategies for Malaysian businesses.</span>
+                  </p>
+                  
+                  <p>In this guide, you'll discover:</p>
+                  <ul>
+                    <li>How to dominate local search results in Malaysia</li>
+                    <li>Social media strategies that actually work</li>
+                    <li>Paid advertising tactics for maximum ROI</li>
+                    <li>Email marketing best practices</li>
+                    <li>And much more!</li>
+                  </ul>
+                  
+                  <p><strong>🎁 SPECIAL OFFER FOR LABUAN BUSINESSES:</strong></p>
+                  <p style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 15px; border-radius: 5px; margin: 20px 0;">
+                    If you're a Labuan business without a website, we're offering a <strong>FREE custom website + AI chatbot</strong> (worth RM5,000+) until December 31, 2025. No strings attached!
+                  </p>
+                  
+                  <p>Ready to transform your digital presence?</p>
+                  <a href="https://yokandigital.com/labuan-digital-marketing" class="button">Learn More About Our Free Offer</a>
+                  
+                  <p>Have questions? Just reply to this email - we'd love to hear from you!</p>
+                  
+                  <p>Best regards,<br>
+                  <strong>The Yokan Digital Team</strong><br>
+                  <em>Alone we go faster, together we go further</em></p>
+                </div>
+                <div class="footer">
+                  <p>Yokan Digital - Malaysian Web Design & SEO Agency<br>
+                  📧 hello@yokandigital.com | 📱 WhatsApp: +601139765116</p>
+                  <p style="font-size: 12px; margin-top: 20px;">
+                    You're receiving this email because you subscribed to our newsletter at yokandigital.com
+                  </p>
+                </div>
+              </div>
+            </body>
+            </html>
+          `,
+          attachments: [
+            {
+              content: ebookBase64,
+              filename: 'Yokan-Digital-Marketing-Guide.pdf',
+              type: 'application/pdf',
+              disposition: 'attachment'
+            }
+          ]
+        });
+      } catch (emailError) {
+        console.error('Failed to send welcome email:', emailError);
+        // Don't fail the subscription if email fails
+      }
+
       res.json({ 
         success: true, 
         message: "Successfully subscribed to newsletter",
