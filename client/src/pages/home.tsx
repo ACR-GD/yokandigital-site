@@ -2,7 +2,7 @@ import Header from "@/components/header";
 import OfferBanner from "@/components/offer-banner";
 import Hero from "@/components/hero";
 import Services from "@/components/services";
-import Tools from "@/components/tools";
+import EbookShowcase from "@/components/ebook-showcase";
 import Pricing from "@/components/pricing";
 import TeamSection from "@/components/team-section";
 import Portfolio from "@/components/portfolio";
@@ -17,7 +17,7 @@ export default function Home() {
       <OfferBanner />
       <Hero />
       <Services />
-      <Tools />
+      <EbookShowcase />
       <Pricing />
       <TeamSection />
       <Portfolio />

@@ -13,6 +13,7 @@ import DigitalMarketingPage from "@/pages/digital-marketing";
 import CompletePackagePage from "@/pages/complete-package";
 import CataloguePage from "@/pages/catalogue";
 import LabuanDigitalMarketingPage from "@/pages/labuan-digital-marketing";
+import ToolsPage from "@/pages/tools";
 import ServiceLocationPage from "@/pages/service-location";
 import BlogPage from "@/pages/blog";
 import BlogPostPage from "@/pages/blog-post";
@@ -34,6 +35,7 @@ function Router() {
       <Route path="/services/complete-package" component={CompletePackagePage} />
       <Route path="/catalogue" component={CataloguePage} />
       <Route path="/labuan-digital-marketing" component={LabuanDigitalMarketingPage} />
+      <Route path="/tools" component={ToolsPage} />
       <Route path="/services/:service/:city" component={ServiceLocationPage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/blog/:slug" component={BlogPostPage} />
