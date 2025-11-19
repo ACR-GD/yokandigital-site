@@ -490,13 +490,18 @@ export default function LabuanDigitalMarketingPage() {
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 py-6"
+            className="bg-white text-purple-600 hover:bg-gray-100 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6"
             asChild
             data-testid="button-contact-cta"
           >
-            <a href="/#consultation">
-              {language === 'en' ? 'Get Your Free Digital Marketing Consultation' : 'Dapatkan Perundingan Pemasaran Digital Percuma Anda'}
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <a href="/#consultation" className="flex items-center justify-center">
+              <span className="hidden sm:inline">
+                {language === 'en' ? 'Get Your Free Digital Marketing Consultation' : 'Dapatkan Perundingan Pemasaran Digital Percuma Anda'}
+              </span>
+              <span className="sm:hidden">
+                {language === 'en' ? 'Get Free Consultation' : 'Perundingan Percuma'}
+              </span>
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
             </a>
           </Button>
         </div>
