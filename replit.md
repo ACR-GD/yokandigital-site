@@ -8,7 +8,15 @@ Preferred communication style: Simple, everyday language.
 
 # Recent Updates (November 2025)
 
-## Live Chat Support with AI Assistant (Latest)
+## Quick Contact System (Latest)
+- **Prominent header button**: "Contact Us" button in header opens quick contact modal on all pages
+- **Simplified form**: Just 3 fields - name, contact (phone/email), and optional message
+- **Multiple contact options**: Quick modal includes direct links to call or email
+- **Labeled floating buttons**: WhatsApp (left) and AI Chat (right) buttons now show text labels for clarity
+- **Fast response promise**: Quick contact form promises response within a few hours
+- **Bilingual support**: Full English/Malay language switching
+
+## Live Chat Support with AI Assistant
 - **AI-powered chat widget**: Floating chat button with expandable chat window on homepage
 - **Multilingual support**: Automatically responds in English or Bahasa Melayu based on user's language preference
 - **OpenAI integration**: Uses Replit AI Integrations with GPT-4o-mini model (no API key required, billed to Replit credits)
