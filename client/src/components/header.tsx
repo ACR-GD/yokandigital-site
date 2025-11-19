@@ -1,12 +1,14 @@
-import { Rocket, ChevronDown, Monitor, Search, TrendingUp, Package } from "lucide-react";
+import { Rocket, ChevronDown, Monitor, Search, TrendingUp, Package, MessageSquare } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
+import QuickContactModal from "@/components/quick-contact-modal";
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage();
   const [location] = useLocation();
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+  const [showQuickContact, setShowQuickContact] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     // If we're not on the home page, navigate to home first
@@ -194,14 +196,18 @@ export default function Header() {
             </div>
             
             <button 
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2.5 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 shadow-lg shadow-purple-500/25 transition-all"
-              data-testid="button-get-started"
+              onClick={() => setShowQuickContact(true)}
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2.5 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 shadow-lg shadow-purple-500/25 transition-all flex items-center gap-2"
+              data-testid="button-contact-us"
             >
-              {t('header.getStarted')}
+              <MessageSquare className="w-4 h-4" />
+              {language === 'en' ? 'Contact Us' : 'Hubungi Kami'}
             </button>
           </div>
         </div>
       </div>
+
+      <QuickContactModal isOpen={showQuickContact} onClose={() => setShowQuickContact(false)} />
     </header>
   );
 }

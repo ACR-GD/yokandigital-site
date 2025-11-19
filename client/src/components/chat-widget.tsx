@@ -83,11 +83,16 @@ export default function ChatWidget() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full shadow-lg flex items-center justify-center z-50 transition-all transform hover:scale-110"
+        className="fixed bottom-6 right-6 z-50 group"
         data-testid="button-open-chat"
         aria-label={language === 'en' ? 'Open chat' : 'Buka sembang'}
       >
-        <MessageCircle className="w-7 h-7" />
+        <div className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full px-4 py-3 shadow-2xl transition-all hover:scale-105">
+          <MessageCircle className="w-6 h-6" />
+          <span className="hidden sm:inline font-medium text-sm">
+            {language === 'en' ? 'AI Chat' : 'Sembang AI'}
+          </span>
+        </div>
       </button>
     );
   }

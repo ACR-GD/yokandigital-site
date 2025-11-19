@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { sendContactEmail } from "./email";
+import { MailService } from '@sendgrid/mail';
 import { 
   insertContactSchema, 
   insertConsultationSchema, 
@@ -13,6 +14,9 @@ import reportsRouter from "./routes/reports";
 import blogRouter from "./routes/blog";
 import authRouter from "./routes/auth";
 import chatRouter from "./routes/chat";
+
+const sgMail = new MailService();
+sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
 export async function registerRoutes(app: Express): Promise<Server> {
   
@@ -28,6 +32,36 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Register chat routes
   app.use("/api/chat", chatRouter);
   
+  // Quick contact form (simplified)
+  app.post("/api/quick-contact", async (req, res) => {
+    try {
+      const { name, contact, message } = req.body;
+      
+      // Send email notification
+      const mailService = sgMail;
+      await mailService.send({
+        to: 'hello@yokandigital.com',
+        from: 'hello@yokandigital.com',
+        subject: `Quick Contact from ${name}`,
+        text: `Name: ${name}\nContact: ${contact}\nMessage: ${message || 'No message provided'}`,
+        html: `
+          <h2>Quick Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Contact:</strong> ${contact}</p>
+          <p><strong>Message:</strong> ${message || 'No message provided'}</p>
+        `
+      });
+      
+      res.json({ success: true });
+    } catch (error) {
+      console.error('Quick contact error:', error);
+      res.status(400).json({ 
+        success: false, 
+        error: "Failed to send message" 
+      });
+    }
+  });
+
   // Contact form submission
   app.post("/api/contact", async (req, res) => {
     try {
