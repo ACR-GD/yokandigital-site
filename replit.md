@@ -8,7 +8,17 @@ Preferred communication style: Simple, everyday language.
 
 # Recent Updates (November 2025)
 
-## Newsletter Subscription (Latest)
+## Live Chat Support with AI Assistant (Latest)
+- **AI-powered chat widget**: Floating chat button with expandable chat window on homepage
+- **Multilingual support**: Automatically responds in English or Bahasa Melayu based on user's language preference
+- **OpenAI integration**: Uses Replit AI Integrations with GPT-4o-mini model (no API key required, billed to Replit credits)
+- **Smart responses**: AI assistant trained on Yokan Digital's services, pricing, and offerings
+- **Real-time chat**: Message history, typing indicators, and smooth user experience
+- **Bilingual UI**: All interface elements switch between English/Malay
+- **Professional design**: Gradient header, rounded chat bubbles, smooth animations
+- **Always accessible**: Floating button visible on all pages for instant support
+
+## Newsletter Subscription
 - **MailerLite integration**: Newsletter subscription section added to homepage
 - **API integration**: Backend endpoint connects to MailerLite API for subscriber management
 - **Bilingual form**: Full English/Malay support with name (optional) and email fields
