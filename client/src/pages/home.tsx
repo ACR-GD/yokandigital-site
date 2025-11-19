@@ -8,6 +8,7 @@ import Portfolio from "@/components/portfolio";
 import Newsletter from "@/components/newsletter";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
+import ChatWidget from "@/components/chat-widget";
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
       <Newsletter />
       <Contact />
       <Footer />
+      <ChatWidget />
     </div>
   );
 }

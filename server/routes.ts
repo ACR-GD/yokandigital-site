@@ -12,6 +12,7 @@ import {
 import reportsRouter from "./routes/reports";
 import blogRouter from "./routes/blog";
 import authRouter from "./routes/auth";
+import chatRouter from "./routes/chat";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   
@@ -23,6 +24,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
   
   // Register blog routes
   app.use("/api/blog", blogRouter);
+  
+  // Register chat routes
+  app.use("/api/chat", chatRouter);
   
   // Contact form submission
   app.post("/api/contact", async (req, res) => {
