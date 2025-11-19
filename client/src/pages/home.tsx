@@ -5,6 +5,7 @@ import Tools from "@/components/tools";
 import Pricing from "@/components/pricing";
 import TeamSection from "@/components/team-section";
 import Portfolio from "@/components/portfolio";
+import Newsletter from "@/components/newsletter";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 
@@ -37,6 +38,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Newsletter />
       <Contact />
       <Footer />
     </div>
