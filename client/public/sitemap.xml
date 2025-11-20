@@ -71,6 +71,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/catalogue"/>
     <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/catalogue"/>
   </url>
+  <url>
+    <loc>https://yokandigital.com/resources</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/resources"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/resources"/>
+  </url>
+  <url>
+    <loc>https://yokandigital.com/podcast</loc>
+    <lastmod>2025-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yokandigital.com/podcast"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://yokandigital.com/podcast"/>
+  </url>
   
   <!-- Location Landing Pages -->
   <url>
