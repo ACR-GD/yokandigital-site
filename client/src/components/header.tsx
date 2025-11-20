@@ -153,6 +153,13 @@ export default function Header() {
             >
               {language === 'en' ? 'Resources' : 'Sumber'}
             </Link>
+            <Link 
+              href="/podcast"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              data-testid="nav-podcast"
+            >
+              {language === 'en' ? 'Podcast' : 'Podcast'}
+            </Link>
             <button 
               onClick={() => scrollToSection('portfolio')}
               className="text-muted-foreground hover:text-foreground transition-colors"
