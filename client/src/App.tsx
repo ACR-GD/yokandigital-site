@@ -29,6 +29,7 @@ import BlogPostPage from "@/pages/blog-post";
 import TeamPage from "@/pages/team";
 import AboutPage from "@/pages/about";
 import CuratedLinksPage from "@/pages/curated-links";
+import MadeInMalaysiaPodcastPage from "@/pages/made-in-malaysia-podcast";
 import AdminDashboard from "@/pages/admin-dashboard";
 import AdminLogin from "@/pages/admin-login";
 import ClientPortal from "@/pages/client-portal";
@@ -59,6 +60,7 @@ function Router() {
       <Route path="/team" component={TeamPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/resources" component={CuratedLinksPage} />
+      <Route path="/podcast" component={MadeInMalaysiaPodcastPage} />
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/client-portal" component={ClientPortal} />
