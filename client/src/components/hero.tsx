@@ -31,7 +31,7 @@ export default function Hero() {
           </div>
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+              src="https://i.postimg.cc/WtRG9F1Q/Generated-Image-December-03-2025-6-50AM.jpg" 
               alt="Successful Malaysian business team collaboration - professional web design and digital marketing services by Yokan Digital in Kuala Lumpur" 
               className="rounded-xl shadow-2xl" 
               data-testid="img-hero"
