@@ -204,6 +204,7 @@ export default function Contact() {
                     <SelectItem value="seo">SEO Services</SelectItem>
                     <SelectItem value="digital-marketing">Digital Marketing</SelectItem>
                     <SelectItem value="complete-package">Complete Package</SelectItem>
+                    <SelectItem value="podcat-guest">Be a Guest on our Podcast</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
