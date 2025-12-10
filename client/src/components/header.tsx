@@ -1,8 +1,9 @@
-import { Rocket, ChevronDown, Monitor, Search, TrendingUp, Package, MessageSquare } from "lucide-react";
+import { ChevronDown, Monitor, Search, TrendingUp, Package, MessageSquare } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
 import QuickContactModal from "@/components/quick-contact-modal";
+import logoImage from "@assets/replicate-prediction-c0fjrebtfnrm80cnv84ra70nf4_copy_3_1765336433232.jpg";
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage();
@@ -54,15 +55,11 @@ export default function Header() {
     <header className="bg-gradient-to-r from-white to-purple-50/50 dark:from-gray-900 dark:to-purple-950/20 shadow-sm border-b border-border backdrop-blur-sm relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg shadow-purple-500/25 rounded-lg flex items-center justify-center">
-              <Rocket className="text-white text-lg" />
+          <Link href="/">
+            <div className="flex items-center cursor-pointer">
+              <img src={logoImage} alt="Yokan Digital" className="h-14 w-auto" />
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-foreground">Yokan Digital</h1>
-              <p className="text-xs text-muted-foreground">{t('header.tagline')}</p>
-            </div>
-          </div>
+          </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
             <div 
