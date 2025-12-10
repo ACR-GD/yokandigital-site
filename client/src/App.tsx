@@ -34,6 +34,25 @@ import AdminDashboard from "@/pages/admin-dashboard";
 import AdminLogin from "@/pages/admin-login";
 import ClientPortal from "@/pages/client-portal";
 import PrivacyPolicyPage from "@/pages/privacy-policy";
+import {
+  DigitalMarketingInteriorDesignersKL,
+  SEOForInteriorDesigners,
+  LocalSEOInteriorDesigners,
+  WebDesignForInteriorDesigners,
+  PaidAdsForInteriorDesigners,
+  ContentMarketingInteriorDesigners,
+  SocialMediaMarketingInteriorDesigners,
+  LeadGenerationInteriorDesigners,
+  InteriorDesignerMarketingKL,
+  InteriorDesignerMarketingMalaysia,
+  InteriorDesignerMarketingSelangor,
+  InteriorDesignerMarketingPJ,
+  InteriorDesignerMarketingPenang,
+  InteriorDesignerMarketingJB,
+  MarketingCondoInteriorDesigners,
+  MarketingLandedInteriorDesigners,
+  MarketingCommercialInteriorDesigners
+} from "@/pages/interior-designers";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -66,6 +85,32 @@ function Router() {
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/client-portal" component={ClientPortal} />
       <Route path="/privacy-policy" component={PrivacyPolicyPage} />
+      
+      {/* Interior Designer Marketing Pages - Pillar */}
+      <Route path="/digital-marketing-interior-designers-kuala-lumpur" component={DigitalMarketingInteriorDesignersKL} />
+      
+      {/* Interior Designer Marketing Pages - Services */}
+      <Route path="/seo-for-interior-designers" component={SEOForInteriorDesigners} />
+      <Route path="/local-seo-google-business-interior-designers" component={LocalSEOInteriorDesigners} />
+      <Route path="/web-design-for-interior-designers" component={WebDesignForInteriorDesigners} />
+      <Route path="/paid-ads-for-interior-designers" component={PaidAdsForInteriorDesigners} />
+      <Route path="/content-marketing-for-interior-designers" component={ContentMarketingInteriorDesigners} />
+      <Route path="/social-media-marketing-for-interior-designers" component={SocialMediaMarketingInteriorDesigners} />
+      <Route path="/lead-generation-funnels-for-interior-designers" component={LeadGenerationInteriorDesigners} />
+      
+      {/* Interior Designer Marketing Pages - Locations */}
+      <Route path="/interior-designer-marketing-kuala-lumpur" component={InteriorDesignerMarketingKL} />
+      <Route path="/interior-designer-marketing-malaysia" component={InteriorDesignerMarketingMalaysia} />
+      <Route path="/interior-designer-marketing-selangor" component={InteriorDesignerMarketingSelangor} />
+      <Route path="/interior-designer-marketing-petaling-jaya" component={InteriorDesignerMarketingPJ} />
+      <Route path="/interior-designer-marketing-penang" component={InteriorDesignerMarketingPenang} />
+      <Route path="/interior-designer-marketing-johor-bahru" component={InteriorDesignerMarketingJB} />
+      
+      {/* Interior Designer Marketing Pages - Industry Solutions */}
+      <Route path="/marketing-condo-apartment-interior-designers" component={MarketingCondoInteriorDesigners} />
+      <Route path="/marketing-landed-house-interior-designers" component={MarketingLandedInteriorDesigners} />
+      <Route path="/marketing-commercial-interior-designers" component={MarketingCommercialInteriorDesigners} />
+      
       <Route component={NotFound} />
     </Switch>
   );
