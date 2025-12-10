@@ -7,7 +7,6 @@ import { useLanguage } from "@/hooks/use-language";
 import { useEffect } from "react";
 
 const antoinePhoto = "/attached_assets/Antoine Clerc-Renaud_1762224512434.JPG";
-const edwardPhoto = "/attached_assets/1762235743680_1762240297752.png";
 const amiraPhoto = "/attached_assets/45930746-BF94-401B-A25A-8367FC59B00C_1762237372525.jpg";
 
 interface TeamMember {
@@ -41,21 +40,6 @@ const teamMembers: TeamMember[] = [
     skills: ["Digital Strategy", "SEO", "Business Development", "Team Leadership"],
     linkedin: "https://www.linkedin.com/in/antoineclercrenaud/",
     email: "tony@yokandigital.com"
-  },
-  {
-    name: "Edward Liang",
-    role: {
-      en: "Sales Master",
-      ms: "Pakar Jualan"
-    },
-    photo: edwardPhoto,
-    bio: {
-      en: "Edward is our sales powerhouse, connecting Malaysian businesses with the digital solutions they need to thrive. With his deep understanding of the local market and consultative approach, he ensures every client partnership starts on the right foot and continues to grow.",
-      ms: "Edward adalah kuasa jualan kami, menghubungkan perniagaan Malaysia dengan penyelesaian digital yang mereka perlukan untuk berkembang maju. Dengan pemahaman mendalam tentang pasaran tempatan dan pendekatan perundingan, beliau memastikan setiap perkongsian klien bermula dengan baik dan terus berkembang."
-    },
-    skills: ["Client Relations", "Business Consulting", "Market Analysis", "Sales Strategy"],
-    linkedin: "https://www.linkedin.com/in/edward-liang-2894b8300/",
-    email: "sales@yokandigital.com"
   },
   {
     name: "Amira Natasha",

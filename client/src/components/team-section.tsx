@@ -4,7 +4,6 @@ import { useLanguage } from "@/hooks/use-language";
 import { Link } from "wouter";
 
 const antoinePhoto = "/attached_assets/Antoine Clerc-Renaud_1762224512434.JPG";
-const edwardPhoto = "/attached_assets/1762235743680_1762240297752.png";
 const amiraPhoto = "/attached_assets/45930746-BF94-401B-A25A-8367FC59B00C_1762237372525.jpg";
 
 export default function TeamSection() {
@@ -23,19 +22,6 @@ export default function TeamSection() {
         ms: "Memimpin Yokan Digital dengan visi strategik dan lebih 10 tahun kepakaran pemasaran digital. Bersemangat membantu perniagaan Malaysia berkembang dalam talian."
       },
       linkedin: "https://www.linkedin.com/in/antoineclercrenaud/"
-    },
-    {
-      name: "Edward Liang",
-      role: {
-        en: "Sales Master",
-        ms: "Pakar Jualan"
-      },
-      photo: edwardPhoto,
-      bio: {
-        en: "Connecting Malaysian businesses with the digital solutions they need. Expert in client relations and market analysis with a consultative approach.",
-        ms: "Menghubungkan perniagaan Malaysia dengan penyelesaian digital yang diperlukan. Pakar dalam hubungan klien dan analisis pasaran dengan pendekatan perundingan."
-      },
-      linkedin: "https://www.linkedin.com/in/edward-liang-2894b8300/"
     },
     {
       name: "Amira Natasha",
