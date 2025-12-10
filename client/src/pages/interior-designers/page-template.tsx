@@ -28,6 +28,7 @@ export default function PageTemplate({ config }: PageTemplateProps) {
   
   useEffect(() => {
     document.title = config.title[language];
+    const url = `https://yokandigital.com/${config.slug}`;
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -50,7 +51,6 @@ export default function PageTemplate({ config }: PageTemplateProps) {
     }
 
     const canonical = document.querySelector('link[rel="canonical"]');
-    const url = `https://yokandigital.com/${config.slug}`;
     if (canonical) {
       canonical.setAttribute('href', url);
     } else {
@@ -59,6 +59,36 @@ export default function PageTemplate({ config }: PageTemplateProps) {
       link.href = url;
       document.head.appendChild(link);
     }
+
+    const existingHreflangEn = document.querySelector('link[hreflang="en"]');
+    const existingHreflangMs = document.querySelector('link[hreflang="ms"]');
+    
+    if (existingHreflangEn) {
+      existingHreflangEn.setAttribute('href', url);
+    } else {
+      const hreflangEn = document.createElement('link');
+      hreflangEn.rel = 'alternate';
+      hreflangEn.setAttribute('hreflang', 'en');
+      hreflangEn.href = url;
+      document.head.appendChild(hreflangEn);
+    }
+    
+    if (existingHreflangMs) {
+      existingHreflangMs.setAttribute('href', url);
+    } else {
+      const hreflangMs = document.createElement('link');
+      hreflangMs.rel = 'alternate';
+      hreflangMs.setAttribute('hreflang', 'ms');
+      hreflangMs.href = url;
+      document.head.appendChild(hreflangMs);
+    }
+
+    return () => {
+      const hreflangEnCleanup = document.querySelector('link[hreflang="en"]');
+      const hreflangMsCleanup = document.querySelector('link[hreflang="ms"]');
+      if (hreflangEnCleanup) hreflangEnCleanup.remove();
+      if (hreflangMsCleanup) hreflangMsCleanup.remove();
+    };
   }, [language, config]);
 
   const getCategoryLabel = () => {
@@ -109,12 +139,12 @@ export default function PageTemplate({ config }: PageTemplateProps) {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/#contact">
-              <Button size="lg" className="bg-white text-purple-900 hover:bg-purple-100 font-semibold px-8 py-6 text-lg">
+              <Button size="lg" className="bg-white text-purple-900 hover:bg-purple-100 font-semibold px-8 py-6 text-lg" data-testid="button-hero-consultation">
                 {config.ctaText[language]}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <a href="tel:+60123456789">
+            <a href="tel:+60123456789" data-testid="link-hero-call">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-semibold px-8 py-6 text-lg">
                 <Phone className="mr-2 w-5 h-5" />
                 {language === 'en' ? 'Call Us Now' : 'Hubungi Kami Sekarang'}
@@ -128,7 +158,7 @@ export default function PageTemplate({ config }: PageTemplateProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {config.sections.map((section, index) => {
-              const IconComponent = section.icon ? iconMap[section.icon] : Target;
+              const IconComponent = (section.icon && iconMap[section.icon]) ? iconMap[section.icon] : Target;
               return (
                 <div 
                   key={index}
@@ -196,12 +226,12 @@ export default function PageTemplate({ config }: PageTemplateProps) {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/#contact">
-              <Button size="lg" className="bg-white text-purple-900 hover:bg-purple-100 font-semibold px-8 py-6 text-lg">
+              <Button size="lg" className="bg-white text-purple-900 hover:bg-purple-100 font-semibold px-8 py-6 text-lg" data-testid="button-cta-consultation">
                 {language === 'en' ? 'Book Free Consultation' : 'Tempah Konsultasi Percuma'}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <a href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer" data-testid="link-cta-whatsapp">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-semibold px-8 py-6 text-lg">
                 {language === 'en' ? 'WhatsApp Us' : 'WhatsApp Kami'}
               </Button>
