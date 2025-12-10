@@ -7,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useLanguage } from "@/hooks/use-language";
+import ebookCover from "@assets/Generated_Image_December_10,_2025_-_2_39PM_1765349333056.jpeg";
 
 export default function ExitIntentPopup() {
   const { language } = useLanguage();
@@ -138,8 +139,8 @@ export default function ExitIntentPopup() {
             <div className="relative mb-6">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-2xl blur-2xl"></div>
               <img 
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-                alt="Interior Design Marketing Guide"
+                src={ebookCover} 
+                alt="Digital Marketing for Interior Designers in Malaysia - Free Ebook"
                 className="relative w-full max-w-sm rounded-xl shadow-2xl"
               />
               <div className="absolute -top-3 -right-3 bg-gradient-to-br from-purple-500 to-pink-500 text-white px-5 py-2 rounded-full shadow-lg transform rotate-12">

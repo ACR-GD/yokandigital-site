@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Mail, CheckCircle2, Loader2, BookOpen, Gift } from "lucide-react";
+import { Mail, CheckCircle2, Loader2, Gift, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+import ebookCover from "@assets/Generated_Image_December_10,_2025_-_2_39PM_1765349333056.jpeg";
 
 export default function Newsletter() {
   const { language } = useLanguage();
@@ -23,10 +24,10 @@ export default function Newsletter() {
       setEmail("");
       setName("");
       toast({
-        title: language === 'en' ? 'You\'re in! 🎉' : 'Anda masuk! 🎉',
+        title: language === 'en' ? 'Your free ebook is on the way! 🎨' : 'Ebook percuma anda sedang dihantar! 🎨',
         description: language === 'en' 
-          ? 'Watch for interior design marketing tips in your inbox soon!' 
-          : 'Nantikan tips pemasaran reka bentuk dalaman dalam peti mel anda tidak lama lagi!',
+          ? 'Check your email for the Interior Design Marketing Guide!' 
+          : 'Semak e-mel anda untuk Panduan Pemasaran Reka Bentuk Dalaman!',
       });
     },
     onError: (error: any) => {
@@ -51,111 +52,127 @@ export default function Newsletter() {
   };
 
   return (
-    <section id="newsletter" className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/50 dark:to-indigo-900/50 px-4 py-2 rounded-full mb-6 border border-blue-200 dark:border-blue-800">
-            <Mail className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-            <span className="text-sm font-medium text-blue-800 dark:text-blue-300">
-              {language === 'en' ? 'Newsletter' : 'Surat Berita'}
-            </span>
-          </div>
-          
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            {language === 'en' 
-              ? 'Tips for Growing Your Design Studio' 
-              : 'Tips untuk Mengembangkan Studio Reka Bentuk Anda'}
-          </h2>
-          
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
-            {language === 'en'
-              ? 'Get monthly tips on attracting quality clients, showcasing your work online, and growing your interior design business in Selangor & KL.'
-              : 'Dapatkan tips bulanan tentang menarik klien berkualiti, mempamerkan kerja anda dalam talian, dan mengembangkan perniagaan reka bentuk dalaman anda di Selangor & KL.'}
-          </p>
-        </div>
-
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700">
-          {isSubscribed ? (
-            <div className="text-center py-8" data-testid="subscription-success">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full mb-4 shadow-lg">
-                <CheckCircle2 className="w-10 h-10 text-white" />
+    <section id="newsletter" className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative flex justify-center">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-3xl blur-3xl"></div>
+            <div className="relative">
+              <img 
+                src={ebookCover} 
+                alt={language === 'en' ? 'Digital Marketing for Interior Designers in Malaysia - Free Ebook' : 'Pemasaran Digital untuk Pereka Dalaman di Malaysia - Ebook Percuma'}
+                className="w-full max-w-sm rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute -top-4 -right-4 bg-gradient-to-br from-yellow-400 to-orange-500 text-gray-900 px-6 py-3 rounded-full shadow-lg transform rotate-12">
+                <div className="flex items-center gap-2">
+                  <Gift className="w-5 h-5" />
+                  <span className="font-bold text-lg">
+                    {language === 'en' ? 'FREE!' : 'PERCUMA!'}
+                  </span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                {language === 'en' ? 'Welcome to Yokan Digital! 🎉' : 'Selamat Datang ke Yokan Digital! 🎉'}
-              </h3>
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-lg p-4 mb-4 max-w-md mx-auto border border-blue-200 dark:border-blue-800">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                  <p className="font-semibold text-gray-900 dark:text-white">
-                    {language === 'en' ? 'You\'re All Set!' : 'Anda Sudah Siap!'}
+            </div>
+          </div>
+
+          <div>
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
+              <Mail className="w-4 h-4 text-purple-300" />
+              <span className="text-sm font-medium text-purple-200">
+                {language === 'en' ? 'Free Ebook + Newsletter' : 'Ebook Percuma + Surat Berita'}
+              </span>
+            </div>
+            
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              {language === 'en' 
+                ? 'Get Your FREE Interior Design Marketing Guide!' 
+                : 'Dapatkan Panduan Pemasaran Reka Bentuk Dalaman PERCUMA!'}
+            </h2>
+            
+            <p className="text-lg text-purple-200 mb-6">
+              {language === 'en'
+                ? 'Learn SEO, social media, video marketing & paid ads strategies specifically for interior designers in Malaysia. Instant download!'
+                : 'Pelajari strategi SEO, media sosial, pemasaran video & iklan berbayar khusus untuk pereka dalaman di Malaysia. Muat turun segera!'}
+            </p>
+
+            <ul className="space-y-3 mb-8">
+              {[
+                { en: 'Get found when clients search online', ms: 'Ditemui apabila klien mencari dalam talian' },
+                { en: 'Social media strategies that work', ms: 'Strategi media sosial yang berkesan' },
+                { en: 'Turn visitors into consultations', ms: 'Tukar pelawat kepada konsultasi' },
+                { en: 'Attract quality clients, not tire-kickers', ms: 'Tarik klien berkualiti, bukan pembazir masa' }
+              ].map((item, index) => (
+                <li key={index} className="flex items-center gap-3 text-purple-100">
+                  <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <span>{language === 'en' ? item.en : item.ms}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              {isSubscribed ? (
+                <div className="text-center py-4" data-testid="subscription-success">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full mb-4 shadow-lg">
+                    <CheckCircle2 className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {language === 'en' ? 'Check Your Email! 🎉' : 'Semak E-mel Anda! 🎉'}
+                  </h3>
+                  <p className="text-purple-200">
+                    {language === 'en'
+                      ? 'Your free ebook is on its way to your inbox!'
+                      : 'Ebook percuma anda sedang dihantar ke peti mel anda!'}
                   </p>
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  {language === 'en'
-                    ? 'Watch your inbox for interior design marketing tips to help you attract more quality clients.'
-                    : 'Nantikan tips pemasaran reka bentuk dalaman di peti mel anda untuk membantu anda menarik lebih banyak klien berkualiti.'}
-                </p>
-              </div>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                {language === 'en'
-                  ? "Don't see it? Check your spam folder."
-                  : 'Tidak nampak? Semak folder spam anda.'}
-              </p>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4" data-testid="newsletter-form">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <Input
+                      type="text"
+                      placeholder={language === 'en' ? 'Your Name (Optional)' : 'Nama Anda (Pilihan)'}
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="bg-white/90 border-0 h-12"
+                      data-testid="input-newsletter-name"
+                    />
+                    <Input
+                      type="email"
+                      placeholder={language === 'en' ? 'Your Email *' : 'E-mel Anda *'}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="bg-white/90 border-0 h-12"
+                      data-testid="input-newsletter-email"
+                    />
+                  </div>
+                  
+                  <Button
+                    type="submit"
+                    disabled={subscribeMutation.isPending || !email}
+                    className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-bold py-6 text-lg shadow-lg"
+                    data-testid="button-newsletter-subscribe"
+                  >
+                    {subscribeMutation.isPending ? (
+                      <>
+                        <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                        {language === 'en' ? 'Sending...' : 'Menghantar...'}
+                      </>
+                    ) : (
+                      <>
+                        {language === 'en' ? 'Get My Free Ebook' : 'Dapatkan Ebook Percuma Saya'}
+                        <ArrowRight className="w-5 h-5 ml-2" />
+                      </>
+                    )}
+                  </Button>
+                  
+                  <p className="text-xs text-purple-300 text-center">
+                    {language === 'en'
+                      ? '🔒 We respect your privacy. Unsubscribe anytime.'
+                      : '🔒 Kami menghormati privasi anda. Berhenti langgan bila-bila masa.'}
+                  </p>
+                </form>
+              )}
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-4" data-testid="newsletter-form">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Input
-                    type="text"
-                    placeholder={language === 'en' ? 'Your Name (Optional)' : 'Nama Anda (Pilihan)'}
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="w-full"
-                    data-testid="input-newsletter-name"
-                  />
-                </div>
-                <div>
-                  <Input
-                    type="email"
-                    placeholder={language === 'en' ? 'Your Email *' : 'E-mel Anda *'}
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="w-full"
-                    data-testid="input-newsletter-email"
-                  />
-                </div>
-              </div>
-              
-              <Button
-                type="submit"
-                disabled={subscribeMutation.isPending || !email}
-                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-6 text-lg"
-                data-testid="button-newsletter-subscribe"
-              >
-                {subscribeMutation.isPending ? (
-                  <>
-                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                    {language === 'en' ? 'Subscribing...' : 'Melanggan...'}
-                  </>
-                ) : (
-                  <>
-                    <Mail className="w-5 h-5 mr-2" />
-                    {language === 'en' ? 'Subscribe to Newsletter' : 'Langgan Surat Berita'}
-                  </>
-                )}
-              </Button>
-            </form>
-          )}
-        </div>
-
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            {language === 'en'
-              ? '🔒 We respect your privacy. Unsubscribe anytime.'
-              : '🔒 Kami menghormati privasi anda. Berhenti langgan bila-bila masa.'}
-          </p>
+          </div>
         </div>
       </div>
     </section>
