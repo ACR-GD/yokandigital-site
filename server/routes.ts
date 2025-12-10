@@ -205,16 +205,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const data = await response.json();
 
-      // Send welcome email with ebook
+      // Send welcome email with ebook for interior designers
       try {
-        const ebookPath = join(process.cwd(), 'attached_assets', 'yokan-digital-marketing-guide.pdf');
+        const ebookPath = join(process.cwd(), 'attached_assets', 'digital-marketing-for-interior-designers-ebook-yokan-digital_1765349121514.pdf');
         const ebookContent = readFileSync(ebookPath);
         const ebookBase64 = ebookContent.toString('base64');
 
         await sgMail.send({
           to: validatedData.email,
           from: 'hello@yokandigital.com',
-          subject: 'Welcome to Yokan Digital - Your Free Marketing Guide Inside! 🎁',
+          subject: 'Your Free Interior Design Marketing Guide is Here! 🎨',
           html: `
             <!DOCTYPE html>
             <html>
@@ -231,46 +231,46 @@ export async function registerRoutes(app: Express): Promise<Server> {
             <body>
               <div class="container">
                 <div class="header">
-                  <h1>🎉 Welcome to Yokan Digital!</h1>
-                  <p style="font-size: 18px; margin: 10px 0 0 0;">Your Free Digital Marketing Guide is Attached</p>
+                  <h1>🎨 Welcome to Yokan Digital!</h1>
+                  <p style="font-size: 18px; margin: 10px 0 0 0;">Your Free Interior Design Marketing Guide is Attached</p>
                 </div>
                 <div class="content">
                   <p>Hi ${validatedData.name || 'there'},</p>
                   
-                  <p>Thank you for subscribing to our newsletter! We're excited to have you join our community of forward-thinking business owners in Malaysia.</p>
+                  <p>Thank you for joining our community of interior designers who are serious about growing their design studios in Malaysia!</p>
                   
-                  <p><strong>As promised, here's your FREE ebook:</strong></p>
+                  <p><strong>Your FREE guide is attached:</strong></p>
                   <p style="background: white; padding: 15px; border-left: 4px solid #9333ea; margin: 20px 0;">
-                    📘 <strong>"Your Guide to Digital Marketing in Labuan"</strong><br>
-                    <span style="color: #6b7280;">A comprehensive guide covering SEO, social media, paid advertising, email marketing, and web design strategies for Malaysian businesses.</span>
+                    📘 <strong>"Digital Marketing for Interior Designers in Malaysia"</strong><br>
+                    <span style="color: #6b7280;">A comprehensive guide covering SEO, social media, content marketing, video marketing, and paid advertising strategies specifically for interior designers.</span>
                   </p>
                   
                   <p>In this guide, you'll discover:</p>
                   <ul>
-                    <li>How to dominate local search results in Malaysia</li>
-                    <li>Social media strategies that actually work</li>
-                    <li>Paid advertising tactics for maximum ROI</li>
-                    <li>Email marketing best practices</li>
-                    <li>And much more!</li>
+                    <li>How to get found when homeowners search for designers online</li>
+                    <li>Social media strategies that attract quality clients</li>
+                    <li>Video marketing tactics to showcase your portfolio</li>
+                    <li>Paid advertising that delivers real leads</li>
+                    <li>Content ideas that convert visitors into consultations</li>
                   </ul>
                   
-                  <p><strong>🎁 SPECIAL OFFER FOR LABUAN BUSINESSES:</strong></p>
+                  <p><strong>🎁 FREE Website Review for Interior Designers:</strong></p>
                   <p style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 15px; border-radius: 5px; margin: 20px 0;">
-                    If you're a Labuan business without a website, we're offering a <strong>FREE custom website + AI chatbot</strong> (worth RM5,000+) until December 31, 2025. No strings attached!
+                    Want to know how your website stacks up? We offer a <strong>FREE website review</strong> for interior designers in Selangor & KL. Get actionable tips to attract more quality clients!
                   </p>
                   
-                  <p>Ready to transform your digital presence?</p>
-                  <a href="https://yokandigital.com/labuan-digital-marketing" class="button">Learn More About Our Free Offer</a>
+                  <p>Ready to grow your design studio?</p>
+                  <a href="https://yokandigital.com/#contact" class="button">Book Your Free Consultation</a>
                   
                   <p>Have questions? Just reply to this email - we'd love to hear from you!</p>
                   
                   <p>Best regards,<br>
                   <strong>The Yokan Digital Team</strong><br>
-                  <em>Alone we go faster, together we go further</em></p>
+                  <em>Helping Interior Designers Attract Quality Clients Online</em></p>
                 </div>
                 <div class="footer">
-                  <p>Yokan Digital - Malaysian Web Design & SEO Agency<br>
-                  📧 hello@yokandigital.com | 📱 WhatsApp: +601139765116</p>
+                  <p>Yokan Digital - Websites & Marketing for Interior Designers<br>
+                  📧 hello@yokandigital.com | 📱 WhatsApp: +60 11-1302 0107</p>
                   <p style="font-size: 12px; margin-top: 20px;">
                     You're receiving this email because you subscribed to our newsletter at yokandigital.com
                   </p>
@@ -282,7 +282,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           attachments: [
             {
               content: ebookBase64,
-              filename: 'Yokan-Digital-Marketing-Guide.pdf',
+              filename: 'Digital-Marketing-for-Interior-Designers-Yokan-Digital.pdf',
               type: 'application/pdf',
               disposition: 'attachment'
             }
