@@ -159,9 +159,9 @@ export default function Footer() {
             {t('footer.copyright')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors" data-testid="link-privacy">
+            <Link href="/privacy-policy" className="text-slate-400 hover:text-white text-sm transition-colors" data-testid="link-privacy">
               {t('footer.privacy')}
-            </a>
+            </Link>
             <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors" data-testid="link-terms">
               {t('footer.terms')}
             </a>
