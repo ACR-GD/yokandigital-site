@@ -1,49 +1,89 @@
 import { useLanguage } from "@/hooks/use-language";
 
 export default function Portfolio() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
-  const projects = [
+  const projects = language === 'en' ? [
     {
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
-      title: "E-commerce Platform",
-      result: "300% increase in online sales"
+      image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      title: "Luxury Condo Design Studio",
+      result: "12 consultation requests in first month"
     },
     {
-      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
-      title: "Corporate Website",
-      result: "50% more qualified leads"
+      image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      title: "Residential Interior Firm",
+      result: "Page 1 for 'Interior Designer Bangsar'"
     },
     {
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
-      title: "SEO Campaign",
-      result: "Page 1 Google rankings"
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      title: "Commercial Fit-Out Company",
+      result: "3x more qualified leads from website"
     },
     {
-      image: "https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
-      title: "Mobile App Design",
-      result: "10K+ downloads in first month"
+      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      title: "Boutique Design House",
+      result: "Instagram following to paying clients"
+    }
+  ] : [
+    {
+      image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      title: "Studio Reka Bentuk Kondo Mewah",
+      result: "12 permintaan konsultasi dalam bulan pertama"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      title: "Firma Reka Bentuk Dalaman Kediaman",
+      result: "Halaman 1 untuk 'Pereka Dalaman Bangsar'"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      title: "Syarikat Fit-Out Komersial",
+      result: "3x lebih prospek berkualiti dari laman web"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      title: "Rumah Reka Bentuk Butik",
+      result: "Pengikut Instagram jadi klien berbayar"
     }
   ];
 
-  const testimonials = [
-    {
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-      name: "Ahmad Rahman",
-      position: "CEO, Tech Solutions Sdn Bhd",
-      quote: "Yokan Digital transformed our online presence completely. Our website traffic increased by 400% and we're getting quality leads daily."
-    },
+  const testimonials = language === 'en' ? [
     {
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-      name: "Siti Nurhaliza", 
-      position: "Founder, Haliza Beauty",
-      quote: "Professional team, excellent results. Our e-commerce sales doubled within 6 months of working with Yokan Digital."
+      name: "Sarah Tan",
+      position: "Principal Designer, Studio Aria Interiors",
+      quote: "Finally, a team that understands what interior designers need. My portfolio website now actually brings in clients who appreciate my work."
     },
     {
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-      name: "David Lim",
-      position: "Director, KL Logistics",
-      quote: "Their SEO expertise got us to page 1 of Google for our main keywords. Highly recommend for Malaysian and Singaporean businesses."
+      name: "Marcus Wong", 
+      position: "Founder, MW Design Studio, Damansara",
+      quote: "I used to rely only on referrals. Now homeowners find me on Google and book consultations directly. Game changer."
+    },
+    {
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
+      name: "Amirul Hassan",
+      position: "Creative Director, Casa Design KL",
+      quote: "They helped me stop wasting time on clients who can't afford my services. Now I only get inquiries from serious homeowners."
+    }
+  ] : [
+    {
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
+      name: "Sarah Tan",
+      position: "Pereka Utama, Studio Aria Interiors",
+      quote: "Akhirnya, pasukan yang faham keperluan pereka dalaman. Laman web portfolio saya kini benar-benar membawa masuk klien yang menghargai kerja saya."
+    },
+    {
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
+      name: "Marcus Wong", 
+      position: "Pengasas, MW Design Studio, Damansara",
+      quote: "Dulu saya hanya bergantung pada rujukan. Sekarang pemilik rumah jumpa saya di Google dan tempah konsultasi terus. Perubahan besar."
+    },
+    {
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
+      name: "Amirul Hassan",
+      position: "Pengarah Kreatif, Casa Design KL",
+      quote: "Mereka bantu saya berhenti bazir masa dengan klien yang tak mampu bayar perkhidmatan saya. Sekarang saya hanya dapat pertanyaan dari pemilik rumah serius."
     }
   ];
 

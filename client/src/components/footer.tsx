@@ -3,46 +3,78 @@ import { useLanguage } from "@/hooks/use-language";
 import { Link } from "wouter";
 
 export default function Footer() {
-  const { t } = useLanguage();
-
-  const footerSections = [
+  const { t, language } = useLanguage();
+  
+  const footerSections = language === 'en' ? [
     {
-      title: t('footer.services'),
+      title: "Our Services",
       links: [
-        { name: "Web Design", href: "#services" },
-        { name: "SEO Optimization", href: "#services" }, 
-        { name: "Digital Marketing", href: "#services" },
-        { name: "E-commerce Solutions", href: "#services" }
+        { name: "Portfolio Websites", href: "/services/web-design", isInternal: true },
+        { name: "Get Found Locally", href: "/services/seo", isInternal: true }, 
+        { name: "Social Media & Ads", href: "/services/digital-marketing", isInternal: true },
+        { name: "Complete Growth Package", href: "/services/complete-package", isInternal: true }
       ]
     },
     {
-      title: t('footer.company'),
+      title: "Company",
       links: [
-        { name: "About Us", href: "#" },
-        { name: "Our Team", href: "#" },
-        { name: "Case Studies", href: "#portfolio" },
-        { name: "Blog", href: "#" }
+        { name: "About Us", href: "/about", isInternal: true },
+        { name: "Our Team", href: "/team", isInternal: true },
+        { name: "Designer Success Stories", href: "#portfolio" },
+        { name: "Contact", href: "#contact" }
       ]
     },
     {
-      title: t('footer.resources'),
+      title: "Free Resources",
       links: [
-        { name: "Free SEO Audit", href: "#tools" },
-        { name: "Speed Test", href: "#tools" },
-        { name: "Industry Reports", href: "#" },
-        { name: "Support", href: "#contact" }
+        { name: "Free Website Review", href: "#contact" },
+        { name: "Designer Marketing Tips", href: "/blog", isInternal: true },
+        { name: "Book a Call", href: "#contact" }
       ]
     },
     {
-      title: t('footer.serviceLocations'),
+      title: "Areas We Serve",
       links: [
-        { name: t('footer.webDesignKL'), href: "/services/web-design/kuala-lumpur", isInternal: true },
-        { name: t('footer.seoPenang'), href: "/services/seo/penang", isInternal: true },
-        { name: t('footer.digitalMarketingJB'), href: "/services/digital-marketing/johor-bahru", isInternal: true },
-        { name: t('footer.digitalMarketingLabuan'), href: "/labuan-digital-marketing", isInternal: true },
-        { name: t('footer.webDesignSingapore'), href: "/services/web-design/singapore", isInternal: true },
-        { name: t('footer.seoSelangor'), href: "/services/seo/selangor", isInternal: true },
-        { name: t('footer.marketingIpoh'), href: "/services/digital-marketing/ipoh", isInternal: true }
+        { name: "Interior Designers Selangor", href: "#contact" },
+        { name: "Interior Designers KL", href: "#contact" },
+        { name: "Bangsar & Mont Kiara", href: "#contact" },
+        { name: "Damansara & Petaling Jaya", href: "#contact" }
+      ]
+    }
+  ] : [
+    {
+      title: "Perkhidmatan Kami",
+      links: [
+        { name: "Laman Web Portfolio", href: "/services/web-design", isInternal: true },
+        { name: "Ditemui Secara Tempatan", href: "/services/seo", isInternal: true }, 
+        { name: "Media Sosial & Iklan", href: "/services/digital-marketing", isInternal: true },
+        { name: "Pakej Pertumbuhan Lengkap", href: "/services/complete-package", isInternal: true }
+      ]
+    },
+    {
+      title: "Syarikat",
+      links: [
+        { name: "Tentang Kami", href: "/about", isInternal: true },
+        { name: "Pasukan Kami", href: "/team", isInternal: true },
+        { name: "Kisah Kejayaan Pereka", href: "#portfolio" },
+        { name: "Hubungi", href: "#contact" }
+      ]
+    },
+    {
+      title: "Sumber Percuma",
+      links: [
+        { name: "Semakan Laman Web Percuma", href: "#contact" },
+        { name: "Tips Pemasaran Pereka", href: "/blog", isInternal: true },
+        { name: "Tempah Panggilan", href: "#contact" }
+      ]
+    },
+    {
+      title: "Kawasan Kami Berkhidmat",
+      links: [
+        { name: "Pereka Dalaman Selangor", href: "#contact" },
+        { name: "Pereka Dalaman KL", href: "#contact" },
+        { name: "Bangsar & Mont Kiara", href: "#contact" },
+        { name: "Damansara & Petaling Jaya", href: "#contact" }
       ]
     }
   ];

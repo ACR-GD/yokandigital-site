@@ -1,10 +1,15 @@
 # Overview
 
-This is a full-stack web application for Yokan Digital, a Malaysian digital marketing agency. The application is built with a React frontend and Express.js backend, featuring a bilingual (English/Malay) marketing website with contact forms, consultation booking, free SEO/speed testing tools, and comprehensive blog with 12 SEO-optimized posts. The app uses a modern tech stack with TypeScript, Tailwind CSS, shadcn/ui components, and Drizzle ORM for database operations.
+This is a full-stack web application for Yokan Digital, a web design and marketing agency **specifically targeting interior designers in Selangor and Kuala Lumpur, Malaysia**. The application is built with a React frontend and Express.js backend, featuring a bilingual (English/Malay) marketing website with contact forms, consultation booking, and portfolio showcases. The messaging is designed to speak directly to interior designers' pain points—getting quality clients, showcasing beautiful work online, and standing out from competitors. The app uses a modern tech stack with TypeScript, Tailwind CSS, shadcn/ui components, and Drizzle ORM for database operations.
+
+# Target Audience
+- Interior designers and design studios in Selangor & Kuala Lumpur
+- Focus areas: Bangsar, Damansara, Mont Kiara, Petaling Jaya
+- Pain points: losing clients to competitors with better websites, invisible online, tire-kickers wasting time, over-reliance on referrals
 
 # User Preferences
 
-Preferred communication style: Simple, everyday language.
+Preferred communication style: Simple, everyday language. Avoid digital marketing jargon. Speak the language interior designers understand.
 
 # Recent Updates (November 2025)
 

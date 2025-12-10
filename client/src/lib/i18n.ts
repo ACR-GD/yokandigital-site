@@ -8,8 +8,8 @@ export interface Translations {
 export const translations: Translations = {
   // Header
   "header.tagline": {
-    en: "Alone we go faster, together we go further",
-    ms: "Bersendirian kita lebih pantas, bersama kita lebih jauh"
+    en: "Websites for Interior Designers in Selangor & KL",
+    ms: "Laman Web untuk Pereka Dalaman di Selangor & KL"
   },
   "nav.services": {
     en: "Services",
@@ -42,54 +42,54 @@ export const translations: Translations = {
 
   // Hero
   "hero.title": {
-    en: "Grow Your Business Online with Malaysia's Trusted Digital Partner",
-    ms: "Kembangkan Perniagaan Anda Secara Online dengan Rakan Digital Terpercaya Malaysia"
+    en: "Get More Clients for Your Interior Design Studio",
+    ms: "Dapatkan Lebih Banyak Klien untuk Studio Reka Bentuk Dalaman Anda"
   },
   "hero.subtitle": {
-    en: "Professional web design, SEO optimization, and digital marketing services tailored for Malaysian and Singaporean businesses. Custom solutions for your unique needs.",
-    ms: "Perkhidmatan reka bentuk web profesional, pengoptimuman SEO, dan pemasaran digital yang disesuaikan untuk perniagaan Malaysia. Penyelesaian tersuai untuk keperluan unik anda."
+    en: "We build stunning portfolio websites that turn visitors into consultation bookings. Trusted by interior designers across Selangor & KL.",
+    ms: "Kami membina laman web portfolio yang memukau dan menukarkan pelawat kepada tempahan konsultasi. Dipercayai oleh pereka dalaman di seluruh Selangor & KL."
   },
   "hero.startProject": {
-    en: "Start Your Project",
-    ms: "Mulakan Projek Anda"
+    en: "Get a Free Website Review",
+    ms: "Dapatkan Semakan Laman Web Percuma"
   },
   "hero.viewWork": {
-    en: "View Our Work",
-    ms: "Lihat Kerja Kami"
+    en: "See Designer Websites",
+    ms: "Lihat Laman Web Pereka"
   },
 
   // Services
   "services.title": {
-    en: "Comprehensive Digital Solutions",
-    ms: "Penyelesaian Digital Menyeluruh"
+    en: "How We Help Interior Designers Grow",
+    ms: "Bagaimana Kami Membantu Pereka Dalaman Berkembang"
   },
   "services.subtitle": {
-    en: "We help Malaysian and Singaporean businesses establish a strong online presence with professional web design, effective SEO strategies, and results-driven digital marketing.",
-    ms: "Kami membantu perniagaan Malaysia mewujudkan kehadiran online yang kuat dengan reka bentuk web profesional, strategi SEO berkesan, dan pemasaran digital yang menghasilkan keputusan."
+    en: "Stop losing potential clients to competitors with better websites. We help you showcase your work beautifully and get found by homeowners who need your expertise.",
+    ms: "Berhenti kehilangan klien berpotensi kepada pesaing dengan laman web yang lebih baik. Kami membantu anda mempamerkan kerja anda dengan cantik dan ditemui oleh pemilik rumah yang memerlukan kepakaran anda."
   },
   "services.webDesign.title": {
-    en: "Web Design & Development",
-    ms: "Reka Bentuk & Pembangunan Web"
+    en: "Portfolio Websites That Impress",
+    ms: "Laman Web Portfolio Yang Memukau"
   },
   "services.webDesign.description": {
-    en: "Custom websites that convert visitors into customers. Mobile-responsive, fast-loading, and optimized for Malaysian market.",
-    ms: "Laman web kustom yang menukar pelawat kepada pelanggan. Responsif mudah alih, pemuatan pantas, dan dioptimumkan untuk pasaran Malaysia."
+    en: "Show off your best projects with a website that matches your design standards. Mobile-friendly, fast, and built to book consultations.",
+    ms: "Tunjukkan projek terbaik anda dengan laman web yang setanding standard reka bentuk anda. Mesra telefon, pantas, dan dibina untuk tempahan konsultasi."
   },
   "services.seo.title": {
-    en: "SEO Optimization", 
-    ms: "Pengoptimuman SEO"
+    en: "Get Found by Local Homeowners", 
+    ms: "Ditemui Oleh Pemilik Rumah Tempatan"
   },
   "services.seo.description": {
-    en: "Rank higher on Google with our proven SEO strategies. Local and national optimization for Malaysian and Singaporean businesses.",
-    ms: "Kedudukan lebih tinggi di Google dengan strategi SEO terbukti kami. Pengoptimuman tempatan dan nasional untuk perniagaan Malaysia."
+    en: "When someone in Bangsar or Damansara searches for an interior designer, your studio should appear first. We make that happen.",
+    ms: "Apabila seseorang di Bangsar atau Damansara mencari pereka dalaman, studio anda patut muncul dahulu. Kami menjadikannya kenyataan."
   },
   "services.marketing.title": {
-    en: "Digital Marketing",
-    ms: "Pemasaran Digital"
+    en: "Instagram & Social That Converts",
+    ms: "Instagram & Sosial Yang Menukar"
   },
   "services.marketing.description": {
-    en: "Strategic campaigns across social media, Google Ads, and content marketing to drive qualified leads and sales.",
-    ms: "Kempen strategik merentas media sosial, Iklan Google, dan pemasaran kandungan untuk mendorong prospek dan jualan yang layak."
+    en: "Turn your project photos into a lead machine. We help you attract serious clients, not just followers who say 'beautiful' and disappear.",
+    ms: "Tukarkan foto projek anda menjadi mesin prospek. Kami membantu anda menarik klien serius, bukan pengikut yang cakap 'cantik' dan hilang."
   },
 
   // Tools
@@ -128,36 +128,36 @@ export const translations: Translations = {
 
   // Pricing
   "pricing.title": {
-    en: "Transparent Pricing Plans",
-    ms: "Pelan Harga Telus"
+    en: "Simple, Transparent Pricing",
+    ms: "Harga Mudah dan Telus"
   },
   "pricing.subtitle": {
-    en: "Choose the perfect plan for your business growth. All plans include dedicated support and monthly reporting.",
-    ms: "Pilih pelan yang sempurna untuk pertumbuhan perniagaan anda. Semua pelan termasuk sokongan khusus dan pelaporan bulanan."
+    en: "Packages designed specifically for interior design studios. No hidden fees, no tech jargon—just results.",
+    ms: "Pakej direka khas untuk studio reka bentuk dalaman. Tiada yuran tersembunyi, tiada jargon teknikal—hanya hasil."
   },
   "pricing.starter.title": {
-    en: "Starter",
-    ms: "Permulaan"
+    en: "Portfolio Website",
+    ms: "Laman Web Portfolio"
   },
   "pricing.starter.description": {
-    en: "Perfect for small businesses getting started",
-    ms: "Sesuai untuk perniagaan kecil yang baru bermula"
+    en: "Show off your work beautifully",
+    ms: "Pamerkan kerja anda dengan cantik"
   },
   "pricing.professional.title": {
-    en: "Professional",
-    ms: "Profesional"
+    en: "Growth Package",
+    ms: "Pakej Pertumbuhan"
   },
   "pricing.professional.description": {
-    en: "Ideal for growing businesses",
-    ms: "Sesuai untuk perniagaan yang berkembang"
+    en: "Website + get found locally",
+    ms: "Laman web + ditemui secara tempatan"
   },
   "pricing.enterprise.title": {
-    en: "Enterprise",
-    ms: "Perusahaan"
+    en: "Full Service",
+    ms: "Perkhidmatan Penuh"
   },
   "pricing.enterprise.description": {
-    en: "Complete digital transformation",
-    ms: "Transformasi digital lengkap"
+    en: "Complete client attraction system",
+    ms: "Sistem tarikan klien lengkap"
   },
   "pricing.mostPopular": {
     en: "Most Popular",
@@ -166,22 +166,22 @@ export const translations: Translations = {
 
   // Portfolio
   "portfolio.title": {
-    en: "Our Success Stories",
-    ms: "Kisah Kejayaan Kami"
+    en: "Interior Designers We've Helped",
+    ms: "Pereka Dalaman Yang Kami Telah Bantu"
   },
   "portfolio.subtitle": {
-    en: "See how we've helped Malaysian and Singaporean businesses achieve remarkable online growth and digital transformation.",
-    ms: "Lihat bagaimana kami telah membantu perniagaan Malaysia mencapai pertumbuhan online yang luar biasa dan transformasi digital."
+    en: "Real results from design studios across Selangor and Kuala Lumpur. More consultations, better clients, less time wasted.",
+    ms: "Hasil sebenar dari studio reka bentuk di seluruh Selangor dan Kuala Lumpur. Lebih konsultasi, klien lebih baik, kurang masa terbuang."
   },
 
   // Contact
   "contact.title": {
-    en: "Let's Discuss Your Project",
-    ms: "Mari Bincangkan Projek Anda"
+    en: "Let's Talk About Growing Your Design Studio",
+    ms: "Mari Berbincang Tentang Mengembangkan Studio Reka Bentuk Anda"
   },
   "contact.subtitle": {
-    en: "Ready to take your business to the next level? Contact our team for a free consultation and project quote.",
-    ms: "Bersedia untuk membawa perniagaan anda ke tahap seterusnya? Hubungi pasukan kami untuk perundingan percuma dan sebut harga projek."
+    en: "Tell us about your studio and what you're looking for. We'll show you exactly how we can help you get more quality clients.",
+    ms: "Ceritakan tentang studio anda dan apa yang anda cari. Kami akan tunjukkan dengan tepat bagaimana kami boleh bantu anda dapatkan lebih banyak klien berkualiti."
   },
   "contact.office": {
     en: "Our Office",
@@ -266,12 +266,12 @@ export const translations: Translations = {
 
   // Footer
   "footer.tagline": {
-    en: "Alone we go faster, together we go further",
-    ms: "Bersendirian kita lebih pantas, bersama kita lebih jauh"
+    en: "Helping Interior Designers Get Found & Get Hired",
+    ms: "Membantu Pereka Dalaman Ditemui & Diupah"
   },
   "footer.description": {
-    en: "Empowering Malaysian and Singaporean businesses with cutting-edge digital solutions since 2020.",
-    ms: "Memperkasakan perniagaan Malaysia dengan penyelesaian digital terdepan sejak 2020."
+    en: "We build websites and online presence for interior designers in Selangor & Kuala Lumpur who want more quality clients.",
+    ms: "Kami membina laman web dan kehadiran online untuk pereka dalaman di Selangor & Kuala Lumpur yang mahukan lebih banyak klien berkualiti."
   },
   "footer.services": {
     en: "Services",

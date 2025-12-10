@@ -24,28 +24,53 @@ export default function Header() {
     }
   };
 
-  const servicePages = [
+  const servicePages = language === 'en' ? [
     {
-      title: "Web Design & Development",
-      description: "Custom websites that convert",
+      title: "Portfolio Websites",
+      description: "Showcase your best projects beautifully",
       href: "/services/web-design",
       icon: <Monitor className="w-4 h-4" />
     },
     {
-      title: "SEO Optimization",
-      description: "Dominate Google search",
+      title: "Get Found Locally",
+      description: "Rank #1 in Selangor & KL searches",
       href: "/services/seo",
       icon: <Search className="w-4 h-4" />
     },
     {
-      title: "Digital Marketing",
-      description: "Multi-channel campaigns",
+      title: "Social Media & Ads",
+      description: "Turn followers into clients",
       href: "/services/digital-marketing",
       icon: <TrendingUp className="w-4 h-4" />
     },
     {
-      title: "Complete Package",
-      description: "Everything you need",
+      title: "Complete Growth Package",
+      description: "Website + Visibility + Leads",
+      href: "/services/complete-package",
+      icon: <Package className="w-4 h-4" />
+    }
+  ] : [
+    {
+      title: "Laman Web Portfolio",
+      description: "Pamerkan projek terbaik dengan cantik",
+      href: "/services/web-design",
+      icon: <Monitor className="w-4 h-4" />
+    },
+    {
+      title: "Ditemui Secara Tempatan",
+      description: "Ranking #1 di carian Selangor & KL",
+      href: "/services/seo",
+      icon: <Search className="w-4 h-4" />
+    },
+    {
+      title: "Media Sosial & Iklan",
+      description: "Tukar pengikut jadi klien",
+      href: "/services/digital-marketing",
+      icon: <TrendingUp className="w-4 h-4" />
+    },
+    {
+      title: "Pakej Pertumbuhan Lengkap",
+      description: "Laman Web + Keterlihatan + Prospek",
       href: "/services/complete-package",
       icon: <Package className="w-4 h-4" />
     }
@@ -79,7 +104,7 @@ export default function Header() {
               {showServicesDropdown && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-white dark:bg-gray-900 rounded-xl shadow-xl border border-border z-50">
                   <div className="p-6 space-y-4">
-                    <div className="text-sm font-semibold text-muted-foreground mb-4">Our Services</div>
+                    <div className="text-sm font-semibold text-muted-foreground mb-4">{language === 'en' ? 'Services for Interior Designers' : 'Perkhidmatan untuk Pereka Dalaman'}</div>
                     {servicePages.map((service, index) => (
                       <Link key={index} href={service.href}>
                         <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors cursor-pointer group">
@@ -101,7 +126,7 @@ export default function Header() {
                         }}
                         className="text-purple-600 hover:text-purple-700 text-sm font-medium"
                       >
-                        View all services overview →
+                        {language === 'en' ? 'See all our services →' : 'Lihat semua perkhidmatan kami →'}
                       </button>
                     </div>
                   </div>

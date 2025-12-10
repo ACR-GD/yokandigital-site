@@ -4,17 +4,21 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
 export default function Services() {
-  const { t } = useLanguage();
-
+  const { t, language } = useLanguage();
+  
   const services = [
     {
       icon: <Palette className="text-white text-xl" />,
       title: t('services.webDesign.title'),
       description: t('services.webDesign.description'),
-      features: [
-        "Mobile-Responsive Design",
-        "CMS Integration",
-        "E-commerce Solutions"
+      features: language === 'en' ? [
+        "Project Gallery & Lookbooks",
+        "Before/After Showcases",
+        "Consultation Booking Form"
+      ] : [
+        "Galeri Projek & Lookbook",
+        "Pameran Sebelum/Selepas",
+        "Borang Tempahan Konsultasi"
       ],
       bgColor: "bg-gradient-to-br from-purple-500 to-purple-600 shadow-lg shadow-purple-500/25",
       href: "/services/web-design"
@@ -23,10 +27,14 @@ export default function Services() {
       icon: <Search className="text-white text-xl" />,
       title: t('services.seo.title'),
       description: t('services.seo.description'),
-      features: [
-        "Keyword Research",
-        "Local SEO",
-        "Technical SEO"
+      features: language === 'en' ? [
+        "Selangor & KL Area Targeting",
+        "Google Business Profile",
+        "Houzz & Directory Listings"
+      ] : [
+        "Sasaran Kawasan Selangor & KL",
+        "Profil Google Business",
+        "Senarai Houzz & Direktori"
       ],
       bgColor: "bg-gradient-to-br from-pink-500 to-rose-500 shadow-lg shadow-pink-500/25",
       href: "/services/seo"
@@ -35,10 +43,14 @@ export default function Services() {
       icon: <Megaphone className="text-white text-xl" />,
       title: t('services.marketing.title'),
       description: t('services.marketing.description'),
-      features: [
-        "Social Media Marketing",
-        "Google Ads Management",
-        "Content Strategy"
+      features: language === 'en' ? [
+        "Instagram Content Strategy",
+        "Pinterest for Designers",
+        "Ads for Renovation Leads"
+      ] : [
+        "Strategi Kandungan Instagram",
+        "Pinterest untuk Pereka",
+        "Iklan untuk Prospek Renovasi"
       ],
       bgColor: "bg-gradient-to-br from-orange-500 to-red-500 shadow-lg shadow-orange-500/25",
       href: "/services/digital-marketing"
@@ -101,10 +113,13 @@ export default function Services() {
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="relative z-10">
               <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-                Need Everything? Get Our Complete Package
+                {language === 'en' ? 'The Complete Interior Designer Growth Package' : 'Pakej Pertumbuhan Lengkap Pereka Dalaman'}
               </h3>
               <p className="text-lg lg:text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-                Website + SEO + Digital Marketing + Ongoing Support. One solution, maximum results for your Malaysian and/or Singaporean business.
+                {language === 'en' 
+                  ? 'Portfolio website + Local visibility + Social media strategy. Everything you need to get more quality clients in Selangor & KL.'
+                  : 'Laman web portfolio + Keterlihatan tempatan + Strategi media sosial. Semua yang anda perlukan untuk mendapat lebih banyak klien berkualiti di Selangor & KL.'
+                }
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/services/complete-package">
@@ -112,7 +127,7 @@ export default function Services() {
                     className="bg-white text-purple-600 px-8 py-4 text-lg hover:bg-gray-100 shadow-xl transition-all transform hover:scale-105"
                     data-testid="button-complete-package"
                   >
-                    View Complete Package
+                    {language === 'en' ? 'See What\'s Included' : 'Lihat Apa Yang Termasuk'}
                   </Button>
                 </Link>
                 <Button 
@@ -120,7 +135,7 @@ export default function Services() {
                   className="border-white text-white px-8 py-4 text-lg hover:bg-white/10 transition-all"
                   data-testid="button-get-proposal"
                 >
-                  Get Custom Proposal
+                  {language === 'en' ? 'Book Free Consultation' : 'Tempah Konsultasi Percuma'}
                 </Button>
               </div>
             </div>

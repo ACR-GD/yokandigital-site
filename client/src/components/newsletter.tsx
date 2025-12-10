@@ -23,10 +23,10 @@ export default function Newsletter() {
       setEmail("");
       setName("");
       toast({
-        title: language === 'en' ? 'Success! 🎉' : 'Berjaya! 🎉',
+        title: language === 'en' ? 'You\'re in! 🎉' : 'Anda masuk! 🎉',
         description: language === 'en' 
-          ? 'Check your inbox for your FREE digital marketing guide!' 
-          : 'Semak peti mel anda untuk panduan pemasaran digital PERCUMA!',
+          ? 'Watch for interior design marketing tips in your inbox soon!' 
+          : 'Nantikan tips pemasaran reka bentuk dalaman dalam peti mel anda tidak lama lagi!',
       });
     },
     onError: (error: any) => {
@@ -63,42 +63,15 @@ export default function Newsletter() {
           
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             {language === 'en' 
-              ? 'Get Your FREE Digital Marketing Guide!' 
-              : 'Dapatkan Panduan Pemasaran Digital PERCUMA!'}
+              ? 'Tips for Growing Your Design Studio' 
+              : 'Tips untuk Mengembangkan Studio Reka Bentuk Anda'}
           </h2>
-          
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-100 to-pink-100 dark:from-orange-900/50 dark:to-pink-900/50 px-4 py-2 rounded-full mb-6 border-2 border-orange-300 dark:border-orange-700">
-            <Gift className="w-5 h-5 text-orange-600 dark:text-orange-400" />
-            <span className="text-sm font-bold text-orange-800 dark:text-orange-300">
-              {language === 'en' ? 'FREE Ebook with Your Subscription!' : 'Ebook PERCUMA dengan Langganan Anda!'}
-            </span>
-          </div>
           
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
             {language === 'en'
-              ? 'Subscribe to our newsletter and get instant access to our comprehensive guide on digital marketing in Malaysia, plus exclusive tips and industry insights.'
-              : 'Langgan surat berita kami dan dapatkan akses segera kepada panduan komprehensif kami mengenai pemasaran digital di Malaysia, serta tips eksklusif dan pandangan industri.'}
+              ? 'Get monthly tips on attracting quality clients, showcasing your work online, and growing your interior design business in Selangor & KL.'
+              : 'Dapatkan tips bulanan tentang menarik klien berkualiti, mempamerkan kerja anda dalam talian, dan mengembangkan perniagaan reka bentuk dalaman anda di Selangor & KL.'}
           </p>
-
-          <div className="max-w-md mx-auto bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-xl p-6 mb-8 border border-blue-200 dark:border-blue-800">
-            <div className="flex items-start gap-4">
-              <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg p-3 flex-shrink-0">
-                <BookOpen className="w-6 h-6 text-white" />
-              </div>
-              <div className="flex-1 text-left">
-                <h3 className="font-bold text-gray-900 dark:text-white mb-1">
-                  {language === 'en' 
-                    ? '"Your Guide to Digital Marketing in Labuan"' 
-                    : '"Panduan Anda untuk Pemasaran Digital di Labuan"'}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  {language === 'en'
-                    ? 'Complete guide covering SEO, social media, paid ads, email marketing & more!'
-                    : 'Panduan lengkap merangkumi SEO, media sosial, iklan berbayar, pemasaran e-mel & lagi!'}
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700">
@@ -114,13 +87,13 @@ export default function Newsletter() {
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   <p className="font-semibold text-gray-900 dark:text-white">
-                    {language === 'en' ? 'Check Your Email!' : 'Semak E-mel Anda!'}
+                    {language === 'en' ? 'You\'re All Set!' : 'Anda Sudah Siap!'}
                   </p>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   {language === 'en'
-                    ? 'Your FREE digital marketing guide is waiting in your inbox with actionable tips to grow your business online.'
-                    : 'Panduan pemasaran digital PERCUMA anda menunggu di peti mel anda dengan tips yang boleh dilaksanakan untuk mengembangkan perniagaan anda dalam talian.'}
+                    ? 'Watch your inbox for interior design marketing tips to help you attract more quality clients.'
+                    : 'Nantikan tips pemasaran reka bentuk dalaman di peti mel anda untuk membantu anda menarik lebih banyak klien berkualiti.'}
                 </p>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-400">

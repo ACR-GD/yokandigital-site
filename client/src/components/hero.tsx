@@ -31,8 +31,8 @@ export default function Hero() {
           </div>
           <div className="relative">
             <img 
-              src="https://i.postimg.cc/nc9gmp0L/Generated-Image-December-10-2025-11-12AM.jpg" 
-              alt="Successful Malaysian business team collaboration - professional web design and digital marketing services by Yokan Digital in Kuala Lumpur" 
+              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+              alt="Beautiful modern interior design living room - portfolio website design for interior designers in Selangor and Kuala Lumpur" 
               className="rounded-xl shadow-2xl" 
               data-testid="img-hero"
             />

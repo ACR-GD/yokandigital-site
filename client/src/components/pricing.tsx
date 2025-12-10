@@ -3,20 +3,20 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/use-language";
 
 export default function Pricing() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
-  const plans = [
+  const plans = language === 'en' ? [
     {
       name: t('pricing.starter.title'),
       description: t('pricing.starter.description'),
       features: [
-        "5-page professional website",
-        "Basic SEO optimization", 
-        "Mobile responsive design",
-        "Monthly performance report",
-        "Email support"
+        "Stunning project gallery",
+        "Before/after showcases", 
+        "Consultation booking form",
+        "Mobile-friendly design",
+        "Fast loading speed"
       ],
-      buttonText: t('button.getStarted'),
+      buttonText: "Get Started",
       buttonVariant: "secondary" as const,
       featured: false
     },
@@ -24,14 +24,13 @@ export default function Pricing() {
       name: t('pricing.professional.title'),
       description: t('pricing.professional.description'),
       features: [
-        "15-page custom website",
-        "Advanced SEO + Local SEO",
-        "Social media management", 
-        "Google Ads management",
-        "Weekly reporting",
-        "Phone + email support"
+        "Everything in Portfolio Website",
+        "Rank for 'Interior Designer [Your Area]'",
+        "Google Business optimization", 
+        "Monthly progress reports",
+        "WhatsApp + email support"
       ],
-      buttonText: t('button.chooseProfessional'),
+      buttonText: "Most Popular",
       buttonVariant: "default" as const,
       featured: true
     },
@@ -39,14 +38,56 @@ export default function Pricing() {
       name: t('pricing.enterprise.title'),
       description: t('pricing.enterprise.description'),
       features: [
-        "Unlimited pages + E-commerce",
-        "Full SEO + Content marketing",
-        "Multi-platform campaigns",
-        "Advanced analytics & BI",
-        "Dedicated account manager",
-        "24/7 priority support"
+        "Everything in Growth Package",
+        "Instagram content strategy",
+        "Paid ads for renovation leads",
+        "Priority support",
+        "Quarterly strategy calls"
       ],
-      buttonText: t('button.contactSales'),
+      buttonText: "Let's Talk",
+      buttonVariant: "secondary" as const,
+      featured: false
+    }
+  ] : [
+    {
+      name: t('pricing.starter.title'),
+      description: t('pricing.starter.description'),
+      features: [
+        "Galeri projek memukau",
+        "Pameran sebelum/selepas", 
+        "Borang tempahan konsultasi",
+        "Reka bentuk mesra telefon",
+        "Kelajuan memuatkan pantas"
+      ],
+      buttonText: "Mulakan",
+      buttonVariant: "secondary" as const,
+      featured: false
+    },
+    {
+      name: t('pricing.professional.title'),
+      description: t('pricing.professional.description'),
+      features: [
+        "Semua dalam Laman Web Portfolio",
+        "Ranking untuk 'Pereka Dalaman [Kawasan Anda]'",
+        "Pengoptimuman Google Business", 
+        "Laporan kemajuan bulanan",
+        "Sokongan WhatsApp + emel"
+      ],
+      buttonText: "Paling Popular",
+      buttonVariant: "default" as const,
+      featured: true
+    },
+    {
+      name: t('pricing.enterprise.title'),
+      description: t('pricing.enterprise.description'),
+      features: [
+        "Semua dalam Pakej Pertumbuhan",
+        "Strategi kandungan Instagram",
+        "Iklan berbayar untuk prospek renovasi",
+        "Sokongan keutamaan",
+        "Panggilan strategi suku tahunan"
+      ],
+      buttonText: "Mari Berbincang",
       buttonVariant: "secondary" as const,
       featured: false
     }

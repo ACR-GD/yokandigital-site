@@ -18,8 +18,8 @@ export default function TeamSection() {
       },
       photo: antoinePhoto,
       bio: {
-        en: "Leading Yokan Digital with strategic vision and 10+ years of digital marketing expertise. Passionate about helping Malaysian businesses thrive online.",
-        ms: "Memimpin Yokan Digital dengan visi strategik dan lebih 10 tahun kepakaran pemasaran digital. Bersemangat membantu perniagaan Malaysia berkembang dalam talian."
+        en: "10+ years helping creative businesses get found online. Now focused on helping interior designers in Selangor & KL showcase their work and attract quality clients.",
+        ms: "Lebih 10 tahun membantu perniagaan kreatif ditemui dalam talian. Kini fokus membantu pereka dalaman di Selangor & KL mempamerkan kerja mereka dan menarik klien berkualiti."
       },
       linkedin: "https://www.linkedin.com/in/antoineclercrenaud/"
     },
@@ -31,8 +31,8 @@ export default function TeamSection() {
       },
       photo: amiraPhoto,
       bio: {
-        en: "Keeping operations smooth while crafting engaging social media strategies. Creative content creator with meticulous attention to detail.",
-        ms: "Memastikan operasi berjalan lancar sambil mencipta strategi media sosial yang menarik. Pencipta kandungan kreatif dengan perhatian teliti terhadap perincian."
+        en: "Specializes in showcasing beautiful interior projects on social media. Helps designers build an Instagram presence that attracts serious clients.",
+        ms: "Pakar dalam mempamerkan projek dalaman yang cantik di media sosial. Membantu pereka membina kehadiran Instagram yang menarik klien serius."
       },
       linkedin: "https://www.linkedin.com/in/amira-natasha-ahmad-sazali-369644202/"
     }
@@ -48,12 +48,12 @@ export default function TeamSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            {language === 'en' ? 'Meet Our Team' : 'Kenali Pasukan Kami'}
+            {language === 'en' ? 'Your Website Team' : 'Pasukan Laman Web Anda'}
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             {language === 'en'
-              ? 'The passionate experts driving digital success for Malaysian businesses'
-              : 'Pakar bersemangat yang memacu kejayaan digital untuk perniagaan Malaysia'
+              ? 'We understand the design industry. Your portfolio deserves a team that gets it.'
+              : 'Kami memahami industri reka bentuk. Portfolio anda layak mendapat pasukan yang faham.'
             }
           </p>
         </div>

@@ -10,12 +10,12 @@ export default function AboutPage() {
   // Set SEO metadata
   useEffect(() => {
     const title = language === 'en' 
-      ? 'About Us - Yokan Digital | European Innovation Meets Malaysian Digital Marketing'
-      : 'Tentang Kami - Yokan Digital | Inovasi Eropah Bertemu Pemasaran Digital Malaysia';
+      ? 'About Us - Yokan Digital | Websites for Interior Designers in Selangor & KL'
+      : 'Tentang Kami - Yokan Digital | Laman Web untuk Pereka Dalaman di Selangor & KL';
     
     const description = language === 'en'
-      ? 'Learn about Yokan Digital founder Antoine\'s 10+ years of experience in France and Canada, bringing Japanese business philosophy and European innovation to Malaysian digital marketing. Discover why Yokan means premonition.'
-      : 'Ketahui tentang pengasas Yokan Digital, Antoine dengan lebih 10 tahun pengalaman di Perancis dan Kanada, membawa falsafah perniagaan Jepun dan inovasi Eropah ke pemasaran digital Malaysia. Temui mengapa Yokan bermaksud firasat.';
+      ? 'We help interior designers in Selangor and Kuala Lumpur showcase their work online and attract quality clients. Learn about our approach to building portfolio websites that convert.'
+      : 'Kami membantu pereka dalaman di Selangor dan Kuala Lumpur mempamerkan kerja mereka dalam talian dan menarik klien berkualiti. Ketahui pendekatan kami membina laman web portfolio yang menukar.';
 
     document.title = title;
     
@@ -97,20 +97,20 @@ export default function AboutPage() {
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
               {language === 'en' 
-                ? 'Bringing Global Innovation to Malaysian Digital Marketing' 
-                : 'Membawa Inovasi Global ke Pemasaran Digital Malaysia'}
+                ? 'We Build Websites for Interior Designers' 
+                : 'Kami Membina Laman Web untuk Pereka Dalaman'}
             </h1>
             
             <p className="text-2xl font-semibold text-purple-600 dark:text-purple-400 mb-4">
               {language === 'en'
-                ? '"Alone we go faster, together we go further"'
-                : '"Bersendirian kita lebih pantas, bersama kita lebih jauh"'}
+                ? 'Helping you get found and get hired in Selangor & KL'
+                : 'Membantu anda ditemui dan diupah di Selangor & KL'}
             </p>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
               {language === 'en'
-                ? 'Where European expertise meets Japanese precision in the heart of Southeast Asia'
-                : 'Di mana kepakaran Eropah bertemu dengan ketepatan Jepun di tengah-tengah Asia Tenggara'}
+                ? 'Your work is beautiful. Your online presence should match. We help design studios showcase their best projects and book more consultations.'
+                : 'Kerja anda cantik. Kehadiran online anda patut setanding. Kami membantu studio reka bentuk mempamerkan projek terbaik mereka dan tempah lebih banyak konsultasi.'}
             </p>
           </div>
         </div>

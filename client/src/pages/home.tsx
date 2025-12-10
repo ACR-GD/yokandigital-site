@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import OfferBanner from "@/components/offer-banner";
 import Hero from "@/components/hero";
+import PainPoints from "@/components/pain-points";
 import Services from "@/components/services";
 import EbookShowcase from "@/components/ebook-showcase";
 import Pricing from "@/components/pricing";
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <OfferBanner />
       <Hero />
+      <PainPoints />
       <Services />
       <EbookShowcase />
       <Pricing />
@@ -25,17 +27,17 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-transparent to-pink-500/20"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Digital Presence?
+            Ready to Get More Interior Design Clients?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join hundreds of Malaysian and Singaporean businesses that trust Yokan Digital for their online growth. Start your journey today.
+            Stop letting potential clients slip away to designers with better websites. Let's talk about how to showcase your work and book more consultations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 shadow-lg transition-all transform hover:scale-105">
-              Start Your Project
+              Get a Free Website Review
             </button>
             <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-all">
-              Schedule Consultation
+              Book a Quick Call
             </button>
           </div>
         </div>
