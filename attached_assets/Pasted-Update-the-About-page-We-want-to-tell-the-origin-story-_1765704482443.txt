@@ -1,0 +1,46 @@
+Update the 'About' page.
+We want to tell the origin story of the name "Yokan" and connect it to our "Revenue Engineering" positioning.
+
+### 1. DESIGN VIBE: "Zen Engineering"
+- Background: Deep Black (#050505).
+- Visual Element: A large, subtle watermark of the Japanese Kanji for Yokan (予感) in the background (very low opacity, barely visible, dark grey).
+- Typography: Mix of clean Sans-Serif (Inter) for the narrative and Monospace (JetBrains Mono) for the keywords "Data" and "Prediction".
+
+### 2. CONTENT STRUCTURE (Bilingual EN/FR)
+
+**Section A: The Definition (Hero)**
+- Center screen.
+- Large Kanji: 予感
+- Phonetic: [Yo-Kan]
+- Definition: "n. Premonition; the feeling of something to come."
+- Animation: The text should fade in slowly (Framer Motion).
+
+**Section B: The Pivot (The Narrative)**
+- Layout: Split screen or centered narrow column (Editorials style).
+- Text (Use the translations provided below).
+- Key Concept to highlight (make this text Green or Glowing): "From Intuition to Calculation."
+
+**Section C: The Mission**
+- A simple grid showing:
+  - Old Yokan: "Hunch" (Crossed out)
+  - New Yokan: "Mathematical Certainty"
+- Sign-off: "Antoine Clerc-Renaud, Founder."
+
+### 3. TEXT ASSETS (Insert into translations.js)
+
+**EN:**
+title: "From Premonition to Prediction.",
+definition: "In Japanese, Yokan (予感) means 'Premonition'.",
+story: "In traditional business, growth is often a guessing game. You have a 'hunch'. We built Yokan Digital to replace that hunch with certainty. When you build the right Data & AI infrastructure, revenue is no longer a surprise. It becomes a calculated result.",
+tagline: "Stop guessing your future. Engineer it."
+
+**FR:**
+title: "De la Prémonition à la Prédiction.",
+definition: "En japonais, Yokan (予感) signifie 'Prémonition'.",
+story: "Dans le business traditionnel, la croissance est un jeu de hasard. On a une 'intuition'. Nous avons créé Yokan Digital pour remplacer cette intuition par la certitude. Avec la bonne infrastructure Data & IA, le revenu n'est plus une surprise. C'est un résultat calculé.",
+tagline: "Arrêtez de deviner l'avenir. Ingéniez-le."
+
+### INSTRUCTIONS
+- Use a minimalist, high-end aesthetic.
+- Ensure the Kanji (予感) looks elegant, not cheesy.
+- Add a subtle 'glitch' effect on the word "Prediction" to symbolize the tech aspect.

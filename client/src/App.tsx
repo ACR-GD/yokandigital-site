@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/hooks/use-language";
 import Home from "@/pages/home";
+import AboutPage from "@/pages/about";
 import BlogPage from "@/pages/blog";
 import BlogPostPage from "@/pages/blog-post";
 import AdminDashboard from "@/pages/admin-dashboard";
@@ -16,6 +17,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/about" component={AboutPage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/blog/:slug" component={BlogPostPage} />
       <Route path="/admin/login" component={AdminLogin} />

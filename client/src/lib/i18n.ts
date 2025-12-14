@@ -206,6 +206,48 @@ export const translations: Translations = {
     fr: "Envoyer"
   },
 
+  // About Page
+  "about.title": {
+    en: "From Premonition to Prediction.",
+    fr: "De la Prémonition à la Prédiction."
+  },
+  "about.definition": {
+    en: "In Japanese, Yokan (予感) means 'Premonition'.",
+    fr: "En japonais, Yokan (予感) signifie 'Prémonition'."
+  },
+  "about.phonetic": {
+    en: "[Yo-Kan]",
+    fr: "[Yo-Kan]"
+  },
+  "about.definitionShort": {
+    en: "n. Premonition; the feeling of something to come.",
+    fr: "n. Prémonition; le pressentiment de quelque chose à venir."
+  },
+  "about.story": {
+    en: "In traditional business, growth is often a guessing game. You have a 'hunch'. We built Yokan Digital to replace that hunch with certainty. When you build the right Data & AI infrastructure, revenue is no longer a surprise. It becomes a calculated result.",
+    fr: "Dans le business traditionnel, la croissance est un jeu de hasard. On a une 'intuition'. Nous avons créé Yokan Digital pour remplacer cette intuition par la certitude. Avec la bonne infrastructure Data & IA, le revenu n'est plus une surprise. C'est un résultat calculé."
+  },
+  "about.pivot": {
+    en: "From Intuition to Calculation.",
+    fr: "De l'Intuition au Calcul."
+  },
+  "about.tagline": {
+    en: "Stop guessing your future. Engineer it.",
+    fr: "Arrêtez de deviner l'avenir. Ingéniez-le."
+  },
+  "about.old": {
+    en: "Hunch",
+    fr: "Intuition"
+  },
+  "about.new": {
+    en: "Mathematical Certainty",
+    fr: "Certitude Mathématique"
+  },
+  "about.founder": {
+    en: "Antoine Clerc-Renaud, Founder.",
+    fr: "Antoine Clerc-Renaud, Fondateur."
+  },
+
   // Footer
   "footer.tagline": {
     en: "Revenue Architecture & AI Systems",

@@ -1,320 +1,269 @@
-import { useEffect } from 'react';
-import Header from '../components/header';
-import Footer from '../components/footer';
-import { useLanguage } from '../hooks/use-language';
-import { Sparkles, Target, TrendingUp, Heart, Zap, Globe, Award } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useLanguage } from "@/hooks/use-language";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Linkedin } from "lucide-react";
+import { useEffect } from "react";
 
 export default function AboutPage() {
-  const { t, language } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
 
-  // Set SEO metadata
   useEffect(() => {
     const title = language === 'en' 
-      ? 'About Us - Yokan Digital | Websites for Interior Designers in Selangor & KL'
-      : 'Tentang Kami - Yokan Digital | Laman Web untuk Pereka Dalaman di Selangor & KL';
-    
-    const description = language === 'en'
-      ? 'We help interior designers in Selangor and Kuala Lumpur showcase their work online and attract quality clients. Learn about our approach to building portfolio websites that convert.'
-      : 'Kami membantu pereka dalaman di Selangor dan Kuala Lumpur mempamerkan kerja mereka dalam talian dan menarik klien berkualiti. Ketahui pendekatan kami membina laman web portfolio yang menukar.';
-
+      ? 'About Yokan Digital | Revenue Architecture & AI Systems'
+      : 'À Propos de Yokan Digital | Architecture Revenue & Systèmes IA';
     document.title = title;
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-
-    // Update Open Graph tags
-    const updateOgTag = (property: string, content: string) => {
-      let tag = document.querySelector(`meta[property="${property}"]`);
-      if (!tag) {
-        tag = document.createElement('meta');
-        tag.setAttribute('property', property);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute('content', content);
-    };
-
-    updateOgTag('og:title', title);
-    updateOgTag('og:description', description);
-    updateOgTag('og:type', 'website');
-    updateOgTag('og:url', window.location.href);
-
-    return () => {
-      document.title = 'Yokan Digital - Malaysian Web Design & SEO Agency';
-    };
   }, [language]);
 
-  const values = [
-    {
-      icon: Zap,
-      titleEn: "Speed & Precision",
-      titleMs: "Kelajuan & Ketepatan",
-      descEn: "Like Japanese efficiency, we deliver results fast without compromising quality",
-      descMs: "Seperti kecekapan Jepun, kami menyampaikan hasil dengan pantas tanpa mengorbankan kualiti"
-    },
-    {
-      icon: Heart,
-      titleEn: "Omotenashi Spirit",
-      titleMs: "Semangat Omotenashi",
-      descEn: "Anticipating your needs before you ask—this is true customer service",
-      descMs: "Menjangka keperluan anda sebelum anda bertanya—inilah perkhidmatan pelanggan sebenar"
-    },
-    {
-      icon: Target,
-      titleEn: "Kaizen Mindset",
-      titleMs: "Minda Kaizen",
-      descEn: "Continuous improvement in every campaign, every strategy, every result",
-      descMs: "Penambahbaikan berterusan dalam setiap kempen, setiap strategi, setiap hasil"
-    },
-    {
-      icon: Award,
-      titleEn: "Monozukuri Excellence",
-      titleMs: "Kecemerlangan Monozukuri",
-      descEn: "Craftsmanship in digital—we build campaigns with artisan-level attention to detail",
-      descMs: "Ketukangan dalam digital—kami membina kempen dengan perhatian terhadap perincian peringkat artisan"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-4xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/50 dark:to-pink-900/50 px-4 py-2 rounded-full mb-6 border border-purple-200 dark:border-purple-800">
-              <Sparkles className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-              <span className="text-sm font-medium text-purple-600 dark:text-purple-400">
-                {language === 'en' ? 'About Yokan Digital' : 'Tentang Yokan Digital'}
-              </span>
-            </div>
+    <div className="min-h-screen bg-[#050505] text-white overflow-x-hidden relative">
+      {/* Kanji Watermark Background */}
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
+        <span className="text-[40vw] font-serif text-gray-900/[0.03] select-none">
+          予感
+        </span>
+      </div>
+
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <a href="/" data-testid="logo">
+              <img src="/logo.png" alt="Yokan Digital" className="h-8 md:h-10" />
+            </a>
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
-              {language === 'en' 
-                ? 'We Build Websites for Interior Designers' 
-                : 'Kami Membina Laman Web untuk Pereka Dalaman'}
+            <div className="hidden md:flex items-center gap-8">
+              <a href="/#methodology" className="text-sm text-gray-400 hover:text-white transition-colors" data-testid="nav-methodology">
+                {t("nav.methodology")}
+              </a>
+              <a href="/#system" className="text-sm text-gray-400 hover:text-white transition-colors" data-testid="nav-system">
+                {t("nav.system")}
+              </a>
+              <a href="/about" className="text-sm text-white transition-colors" data-testid="nav-about">
+                {t("nav.about")}
+              </a>
+              <a href="/#contact" className="text-sm text-gray-400 hover:text-white transition-colors" data-testid="nav-contact">
+                {t("nav.contact")}
+              </a>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1 text-sm font-mono border border-white/10 rounded-md overflow-hidden">
+                <button
+                  onClick={() => setLanguage('en')}
+                  className={`px-3 py-1.5 transition-colors ${language === 'en' ? 'bg-white/10 text-white' : 'text-gray-500 hover:text-white'}`}
+                  data-testid="lang-en"
+                >
+                  EN
+                </button>
+                <button
+                  onClick={() => setLanguage('fr')}
+                  className={`px-3 py-1.5 transition-colors ${language === 'fr' ? 'bg-white/10 text-white' : 'text-gray-500 hover:text-white'}`}
+                  data-testid="lang-fr"
+                >
+                  FR
+                </button>
+              </div>
+              
+              <a href="/#contact">
+                <Button 
+                  className="hidden sm:flex glitch-effect bg-[#00ff88] text-black hover:bg-[#00ff88]/90 font-semibold px-4 py-2 text-sm"
+                  data-testid="button-audit-cta"
+                >
+                  {t("nav.auditCta")}
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Section A: The Definition (Hero) */}
+      <section className="min-h-screen flex items-center justify-center relative pt-20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className="text-center relative z-10"
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mb-8"
+          >
+            <span className="text-[120px] md:text-[180px] font-serif text-white/90 leading-none">
+              予感
+            </span>
+          </motion.div>
+          
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="font-mono text-[#00ff88] text-lg mb-4"
+          >
+            {t("about.phonetic")}
+          </motion.p>
+          
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="text-xl text-gray-400 italic max-w-lg mx-auto"
+          >
+            {t("about.definitionShort")}
+          </motion.p>
+        </motion.div>
+      </section>
+
+      {/* Section B: The Pivot (The Narrative) */}
+      <section className="py-24 relative z-10">
+        <div className="max-w-3xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold mb-8" data-testid="about-title">
+              {t("about.title").split("Prediction").map((part, i) => (
+                i === 0 ? (
+                  <span key={i}>
+                    {part}
+                    <span className="glitch-effect text-[#00ff88]" data-text={language === 'en' ? 'Prediction' : 'Prédiction'}>
+                      {language === 'en' ? 'Prediction' : 'Prédiction'}
+                    </span>
+                  </span>
+                ) : (
+                  <span key={i}>{part}</span>
+                )
+              ))}
             </h1>
-            
-            <p className="text-2xl font-semibold text-purple-600 dark:text-purple-400 mb-4">
-              {language === 'en'
-                ? 'Helping you get found and get hired in Selangor & KL'
-                : 'Membantu anda ditemui dan diupah di Selangor & KL'}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-8"
+          >
+            <p className="text-lg text-gray-300 leading-relaxed">
+              {t("about.definition")}
             </p>
             
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              {language === 'en'
-                ? 'Your work is beautiful. Your online presence should match. We help design studios showcase their best projects and book more consultations.'
-                : 'Kerja anda cantik. Kehadiran online anda patut setanding. Kami membantu studio reka bentuk mempamerkan projek terbaik mereka dan tempah lebih banyak konsultasi.'}
+            <p className="text-lg text-gray-400 leading-relaxed">
+              {t("about.story")}
             </p>
-          </div>
+            
+            <div className="py-8 text-center">
+              <p className="text-2xl md:text-3xl font-bold">
+                <span className="text-[#00ff88] glow-text">{t("about.pivot")}</span>
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Why Yokan Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                {language === 'en' ? 'Why "Yokan"?' : 'Mengapa "Yokan"?'}
-              </h2>
-              
-              <div className="space-y-6 text-lg text-muted-foreground">
-                <p>
-                  {language === 'en'
-                    ? 'Yokan (予感) is a Japanese word meaning "premonition" or "omen"—the ability to sense what\'s coming before it arrives.'
-                    : 'Yokan (予感) adalah perkataan Jepun yang bermaksud "firasat" atau "pertanda"—keupayaan untuk merasakan apa yang akan datang sebelum ia tiba.'}
-                </p>
-                
-                <p>
-                  {language === 'en'
-                    ? 'In today\'s fast-paced digital world, success belongs to those who can anticipate trends, predict consumer behavior, and position brands ahead of the curve. We don\'t just react to the market—we help you see what\'s coming next.'
-                    : 'Dalam dunia digital yang pantas hari ini, kejayaan adalah milik mereka yang boleh menjangka trend, meramal tingkah laku pengguna, dan meletakkan jenama lebih awal. Kami bukan sahaja bertindak balas kepada pasaran—kami membantu anda melihat apa yang akan datang.'}
-                </p>
-                
-                <p className="font-semibold text-purple-600 dark:text-purple-400">
-                  {language === 'en'
-                    ? 'Our mission is to give Malaysian businesses that same premonition—the foresight to lead, not follow.'
-                    : 'Misi kami adalah untuk memberikan perniagaan Malaysia firasat yang sama—kebijaksanaan untuk memimpin, bukan mengikut.'}
-                </p>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur-3xl opacity-20"></div>
-              <div className="relative bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 p-8 rounded-2xl border border-purple-200 dark:border-purple-800">
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
-                      <Globe className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">
-                        {language === 'en' ? 'Global Perspective' : 'Perspektif Global'}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {language === 'en'
-                          ? 'Methods proven in Europe and Canada, adapted for Malaysian success'
-                          : 'Kaedah yang terbukti di Eropah dan Kanada, disesuaikan untuk kejayaan Malaysia'}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
-                      <TrendingUp className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">
-                        {language === 'en' ? 'Latest Innovations' : 'Inovasi Terkini'}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {language === 'en'
-                          ? 'Cutting-edge strategies from international markets, delivered locally'
-                          : 'Strategi terkini dari pasaran antarabangsa, disampaikan secara tempatan'}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center flex-shrink-0">
-                      <Sparkles className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">
-                        {language === 'en' ? 'Japanese Precision' : 'Ketepatan Jepun'}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {language === 'en'
-                          ? 'Meticulous attention to detail in every campaign we craft'
-                          : 'Perhatian teliti terhadap perincian dalam setiap kempen yang kami buat'}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Founder Story */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 md:p-12 border border-purple-100 dark:border-purple-900">
-            <div className="mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                {language === 'en' ? 'Meet Antoine' : 'Kenali Antoine'}
-              </h2>
-              <p className="text-lg text-purple-600 dark:text-purple-400 font-medium">
-                {language === 'en' ? 'Founder & CEO' : 'Pengasas & Ketua Pegawai Eksekutif'}
+      {/* Section C: The Mission */}
+      <section className="py-24 relative z-10">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="grid md:grid-cols-2 gap-8 mb-16"
+          >
+            {/* Old Yokan */}
+            <div className="tech-card rounded-2xl p-8 text-center border-red-500/20">
+              <p className="font-mono text-sm text-red-400 mb-4">Old Yokan</p>
+              <p className="text-3xl font-bold text-gray-500 line-through">
+                {t("about.old")}
               </p>
             </div>
             
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-              <p>
-                {language === 'en'
-                  ? 'With over 10 years of experience transforming brands in France and Canada, Antoine brings a unique blend of European creativity and North American data-driven strategy to Malaysian digital marketing.'
-                  : 'Dengan lebih 10 tahun pengalaman mengubah jenama di Perancis dan Kanada, Antoine membawa gabungan unik kreativiti Eropah dan strategi berasaskan data Amerika Utara kepada pemasaran digital Malaysia.'}
-              </p>
-              
-              <p>
-                {language === 'en'
-                  ? 'Having worked with Fortune 500 companies in Paris and Toronto, Antoine witnessed firsthand how the most successful brands stay ahead—not by following trends, but by predicting them. This insight became the foundation of Yokan Digital.'
-                  : 'Setelah bekerja dengan syarikat Fortune 500 di Paris dan Toronto, Antoine menyaksikan sendiri bagaimana jenama paling berjaya kekal di hadapan—bukan dengan mengikut trend, tetapi dengan meramalnya. Wawasan ini menjadi asas Yokan Digital.'}
-              </p>
-              
-              <p>
-                {language === 'en'
-                  ? 'Inspired by Japanese business philosophy—where precision, patience, and continuous improvement (Kaizen) drive excellence—Antoine moved to Malaysia to combine these global best practices with deep local market understanding.'
-                  : 'Diilhamkan oleh falsafah perniagaan Jepun—di mana ketepatan, kesabaran, dan penambahbaikan berterusan (Kaizen) memacu kecemerlangan—Antoine berpindah ke Malaysia untuk menggabungkan amalan terbaik global ini dengan pemahaman pasaran tempatan yang mendalam.'}
-              </p>
-              
-              <p className="font-semibold text-foreground">
-                {language === 'en'
-                  ? '"Malaysia is at a digital crossroads. The businesses that will dominate the next decade are being built today. Yokan Digital exists to ensure our clients are among them."'
-                  : '"Malaysia berada di persimpangan digital. Perniagaan yang akan mendominasi dekad seterusnya sedang dibina hari ini. Yokan Digital wujud untuk memastikan pelanggan kami adalah antara mereka."'}
+            {/* New Yokan */}
+            <div className="tech-card rounded-2xl p-8 text-center glow-border">
+              <p className="font-mono text-sm text-[#00ff88] mb-4">New Yokan</p>
+              <p className="text-3xl font-bold text-white">
+                {t("about.new")}
               </p>
             </div>
-          </div>
-        </div>
-      </section>
+          </motion.div>
 
-      {/* Japanese Work Philosophy */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-500 to-pink-500 text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
-              {language === 'en' 
-                ? 'The Japanese Way in a Fast-Paced World' 
-                : 'Cara Jepun dalam Dunia Pantas'}
-            </h2>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-              {language === 'en'
-                ? 'In an era of "move fast and break things," Japanese business wisdom offers a smarter path: move deliberately and build things that last.'
-                : 'Dalam era "bergerak pantas dan pecahkan sesuatu," kebijaksanaan perniagaan Jepun menawarkan jalan yang lebih bijak: bergerak dengan sengaja dan bina sesuatu yang berkekalan.'}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center"
+          >
+            <p className="text-2xl md:text-3xl font-bold text-white mb-12">
+              "{t("about.tagline")}"
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <div 
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all"
-              >
-                <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center mb-6">
-                  <value.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">
-                  {language === 'en' ? value.titleEn : value.titleMs}
-                </h3>
-                <p className="text-purple-100 text-lg">
-                  {language === 'en' ? value.descEn : value.descMs}
-                </p>
-              </div>
-            ))}
-          </div>
-          
-          <div className="mt-16 text-center">
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto leading-relaxed">
-              {language === 'en'
-                ? 'While others chase viral moments, we build sustainable growth. While competitors focus on quick wins, we create lasting market positions. This is the Yokan difference.'
-                : 'Sementara yang lain mengejar detik viral, kami membina pertumbuhan mampan. Sementara pesaing fokus pada kemenangan pantas, kami mencipta kedudukan pasaran yang berkekalan. Inilah perbezaan Yokan.'}
+            
+            <p className="font-mono text-[#00ff88]">
+              — {t("about.founder")}
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            {language === 'en' 
-              ? 'Ready to See What\'s Coming Next?' 
-              : 'Bersedia untuk Melihat Apa yang Akan Datang?'}
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            {language === 'en'
-              ? 'Let\'s build your brand\'s future together—with the foresight to lead your industry.'
-              : 'Mari bina masa depan jenama anda bersama—dengan kebijaksanaan untuk memimpin industri anda.'}
-          </p>
-          <button 
-            onClick={() => window.location.href = '/#contact'}
-            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 shadow-lg shadow-purple-500/25 transition-all text-lg"
-            data-testid="button-contact-us"
+      <section className="py-24 relative z-10">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            {language === 'en' ? 'Get Started Today' : 'Mulakan Hari Ini'}
-          </button>
+            <a href="/#contact">
+              <Button 
+                size="lg"
+                className="bg-[#00ff88] text-black hover:bg-[#00ff88]/90 font-semibold px-8 py-6 text-base pulse-glow"
+                data-testid="button-cta"
+              >
+                {t("cta.button")}
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
+          </motion.div>
         </div>
       </section>
 
-      <Footer />
+      {/* Footer */}
+      <footer className="py-8 bg-[#050505] border-t border-white/5 relative z-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <img src="/logo.png" alt="Yokan Digital" className="h-6" />
+              <span className="font-mono text-sm text-gray-600">— {t("footer.tagline")}</span>
+            </div>
+            
+            <div className="flex items-center gap-6">
+              <a href="/privacy-policy" className="text-sm text-gray-600 hover:text-white transition-colors" data-testid="link-privacy">
+                {t("footer.privacy")}
+              </a>
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-[#00ff88] transition-colors"
+                data-testid="link-linkedin"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
+            
+            <div className="font-mono text-sm text-gray-600">
+              {t("footer.copyright")}
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
