@@ -1,0 +1,73 @@
+Act as a Senior Frontend Engineer and UI/UX Designer.
+I need a complete overhaul of my agency website, "Yokan Digital".
+We are pivoting from an interior design marketing agency to a high-end "Revenue Architecture & AI Systems" firm.
+
+Project Goal: Build a high-performance, bilingual (English/French) landing page that sells "Mathematical Truth" and "Autonomous Acquisition Ecosystems".
+
+### 1. TECH STACK REQUIREMENTS
+- Framework: React (Vite)
+- Styling: Tailwind CSS
+- Animations: Framer Motion (for subtle, tech-like reveal effects)
+- Icons: Lucide React
+- Language Management: i18next (or a custom context hook) for instant EN/FR switching.
+- Routing: React Router (if needed, but a single-page scroll layout is preferred).
+
+### 2. DESIGN AESTHETIC (The "Engineer" Vibe)
+- Theme: Ultra-Dark Mode. Backgrounds should be nearly black (e.g., #050505 or #0A0A0A).
+- Accents: Electric Green (data/success) or Cyber Blue (tech). Use gradients sparingly.
+- Typography:
+  - Headings: Clean Sans-Serif (Inter or Plus Jakarta Sans).
+  - Subtitles/Data points: Monospace font (JetBrains Mono or Roboto Mono) to emphasize the "Code/Math" aspect.
+- Visuals: Use grid lines, glowing borders, and abstract data visualization elements (like nodes connecting) instead of stock photos of people.
+- Feel: Precise, surgical, industrial, futuristic.
+
+### 3. CORE FEATURES
+- **Language Toggle:** A prominent switch in the navbar (EN | FR).
+- **Responsive:** Mobile-first engineering.
+- **Performance:** High lighthouse score structure.
+
+### 4. CONTENT STRUCTURE (Section by Section)
+
+A. Navbar
+- Logo: "Yokan Digital" (Monospace font).
+- Links: Methodology, The System, About, Contact.
+- CTA Button: "Audit Your Architecture" (Glitch effect on hover).
+- Lang Switch: EN/FR.
+
+B. Hero Section
+- Headline (EN): "Stop Guessing. Start Engineering Revenue."
+- Headline (FR): "Arrêtez de deviner. Ingéniez vos revenus."
+- Subheadline: "We build Autonomous Acquisition Ecosystems powered by Data & AI. Replacing marketing magic with mathematical truth."
+- Background: Abstract animated data flow or a dark grid.
+
+C. The Problem ("The Chaos")
+- Split screen or cards showing: "Vanity Metrics" vs "P&L Reality", "Manual Grunt Work" vs "AI Automation".
+- Text: "Traditional agencies sell you hope. We sell you a system."
+
+D. The Solution ("The Machine")
+- Feature 3 Pillars:
+  1. Data-First Truth (Server-side tracking, Dashboards).
+  2. AI Autonomy (n8n/Make workflows, AI Agents).
+  3. Scalable Infrastructure (Assets that you own).
+- Visual idea: An interactive diagram showing inputs (Data) -> Processing (AI) -> Output (Revenue).
+
+E. Tech Stack Showcase
+- Marquee or Grid of logos: Python, SQL, n8n, OpenAI, Google BigQuery, Looker Studio.
+- Caption: "Our Weapons of Choice."
+
+F. Founder Section (About)
+- Photo placeholder.
+- Short bio emphasizing the "Architect" role.
+- Quote: "Alone we go faster, together we go further."
+
+G. Footer
+- Simple links.
+- Socials (LinkedIn).
+- Copyright Yokan Digital.
+
+### INSTRUCTIONS FOR EXECUTION
+1. Set up the file structure for a React Vite project.
+2. Create a `translations.js` file to handle the EN/FR text objects easily.
+3. Build the components using Tailwind for styling.
+4. Ensure the design feels "expensive" and "technical".
+5. Start by generating the code.

@@ -1,118 +1,121 @@
 # Yokan Digital - Design Guidelines
+## Revenue Architecture & AI Systems Firm
 
 ## Design Approach
-**Reference-Based Approach** inspired by modern SaaS agencies (Vercel, Linear, Stripe) combined with vibrant gradient aesthetics from platforms like Dribbble/Behance agency portfolios. This creates a professional yet energetic identity for a digital marketing company.
+**Reference-Based Approach** inspired by Linear's precision, Stripe's technical clarity, and Vercel's dark mode aesthetics. Creates a surgical, high-tech identity for an AI systems and revenue architecture firm.
 
-**Core Principles**: Bold gradients as accent elements, clean typography hierarchy, asymmetric layouts for visual interest, generous whitespace to let vibrant colors breathe.
+**Core Principles**: Ultra-dark foundations, electric accent glows, monospace data presentation, grid-based precision, technical authenticity, industrial minimalism.
+
+---
+
+## Color System
+**Backgrounds**: 
+- Primary: #050505
+- Elevated surfaces: #0A0A0A
+- Cards/sections: #0F0F0F
+
+**Accents** (choose one primary):
+- Electric Green: #00FF88 (primary glow)
+- Cyber Blue: #00D4FF (alternative)
+
+**Grid/Borders**: rgba(255,255,255,0.05) for subtle lines, accent color at 20% opacity for glowing borders
+
+**Text**:
+- Primary: #FFFFFF
+- Secondary: #A0A0A0
+- Tertiary: #666666
 
 ---
 
 ## Typography System
 
-**Primary Font**: Inter (via Google Fonts CDN)
-**Accent Font**: Manrope for headings (via Google Fonts)
+**Fonts**: Inter (headings/body), JetBrains Mono (data/metrics) via Google Fonts CDN
 
 **Hierarchy**:
-- Hero Headlines: Manrope Bold, text-6xl (60px) → text-4xl mobile
-- Section Headers: Manrope Bold, text-4xl (36px) → text-3xl mobile  
-- Subsection Titles: Inter Semibold, text-2xl (24px)
-- Body Large: Inter Regular, text-lg (18px)
-- Body Standard: Inter Regular, text-base (16px)
-- Captions/Labels: Inter Medium, text-sm (14px)
-
-**Bilingual Handling**: Language toggle button in header. Use identical font sizes for both languages, with slightly increased line-height (leading-relaxed) for Bahasa Melayu to accommodate diacritics.
+- Hero Headlines: Inter Bold, text-6xl → text-4xl mobile
+- Section Headers: Inter Semibold, text-4xl → text-3xl mobile
+- Data Metrics: JetBrains Mono Bold, text-5xl (large numbers)
+- Body: Inter Regular, text-lg (18px)
+- Technical Labels: JetBrains Mono Regular, text-sm
+- Captions: Inter Medium, text-sm
 
 ---
 
-## Layout & Spacing System
+## Layout & Spacing
 
-**Spacing Units**: Tailwind units of 4, 6, 8, 12, 16, 20, 24 (e.g., p-4, gap-8, mt-12)
+**Spacing Units**: Tailwind 4, 6, 8, 12, 16, 24 (p-4, gap-8, mt-12)
 
-**Section Padding**: py-20 lg:py-32 for major sections, py-12 lg:py-20 for subsections
+**Section Padding**: py-24 lg:py-32 for major sections
 
-**Container Strategy**:
-- Full-width sections: w-full with inner max-w-7xl mx-auto px-6
-- Content sections: max-w-6xl mx-auto
-- Text content: max-w-3xl for optimal readability
+**Container**: max-w-7xl mx-auto px-6
 
-**Grid Systems**:
-- Team cards: grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8
-- Service features: grid-cols-1 lg:grid-cols-2 gap-12
-- Case studies/portfolio: masonry grid with varying heights
+**Single-Page Scroll Structure**:
+1. Hero (80vh)
+2. Services/Capabilities (2-column grid)
+3. Technology Stack (masonry grid)
+4. Case Study/Results (stats-heavy)
+5. Team (3-column cards)
+6. Contact/CTA
 
 ---
 
 ## Component Library
 
-### Navigation Header
-Sticky header with backdrop-blur-xl, logo left, nav center, language toggle + CTA button right. Mobile: hamburger menu with full-screen overlay featuring gradient background.
+### Navigation
+Sticky header (#050505 backdrop-blur-xl), logo left, anchor links (Services, Tech, Results, Team, Contact) center, CTA button right. Thin border-b with accent glow. Mobile: slide-in menu from right.
 
-### Hero Section (Homepage)
-Large hero image showing dynamic marketing/digital work (illustrations of social media, analytics, creative design). Overlay gradient (purple to pink, 40% opacity). Content positioned left-aligned with max-w-2xl. Hero headline + subtext + dual CTA buttons (primary: "Get Started", secondary: "View Our Work"). Buttons have backdrop-blur-md with semi-transparent backgrounds.
+### Hero Section
+Full-screen (#050505) with abstract grid pattern overlay (subtle white lines at 5% opacity). Large hero headline left-aligned (max-w-3xl): "Revenue Architecture Through AI Systems" + supporting text. Dual CTA buttons with backdrop-blur-md, glowing accent borders. Right side: Abstract data visualization element (animated grid of glowing dots/lines forming neural network pattern).
 
-Height: min-h-[600px] lg:min-h-[700px]
+Height: min-h-[80vh]
 
-### Team Cards (Homepage Section & Team Page)
+### Services Grid
+2-column asymmetric layout. Each service card: dark elevated background (#0F0F0F), glowing accent border (1px), icon (Heroicons), title, description, key metric in JetBrains Mono (e.g., "↑340% Revenue"). Hover: border glow intensifies.
 
-**Homepage Team Section** (3 cards horizontal):
-- Section title "Meet Our Team" / "Kenali Pasukan Kami"
-- 3-column grid showcasing CEO, Sales Master, Admin/Social Media roles
-- Each card: Professional headshot photo (aspect-ratio-square, rounded-2xl), gradient border effect, name, role title (bilingual), brief 2-sentence bio, social media links (LinkedIn icon)
-- Card hover: subtle lift (translate-y-2) with shadow increase
-- Background: Subtle gradient sphere blur decoration behind cards
+### Technology Stack Section
+Title "Our Technology Stack". Masonry grid (4 columns → 2 mobile) of tech logos/names on dark cards with glowing borders. Categories: AI/ML, Data Infrastructure, Analytics, Integration Tools. Each card shows logo + brief descriptor.
 
-**Dedicated Team Page**:
-Hero banner with team photo showing all members collaborating. Below: expanded 3-column grid with larger cards including:
-- Larger photos (aspect-ratio-3/4, rounded-xl)
-- Name + dual-language role
-- Extended bio paragraph (4-5 sentences)
-- Skills tags (e.g., "Digital Strategy", "SEO", "Content Creation") as pill badges with gradient backgrounds
-- Contact button per member
-- Additional section: "Our Values" with 4-column grid of value cards (Innovation, Transparency, Results, Partnership)
+### Results/Case Study
+Dark section with grid background. Large metrics displayed in JetBrains Mono: Revenue increase %, Cost reduction %, Time saved. Below: 2-3 case study cards with client logo, industry, challenge, solution (brief), results in bold numbers. Glowing accent dividers between cards.
 
-### Service Cards
-Asymmetric grid with alternating layouts. Each service features icon (from Heroicons), title, description, "Learn More" link. Purple-to-pink gradient accent on hover.
+### Team Cards
+3-column grid. Each card: Professional headshot (grayscale with subtle accent tint), name (Inter Bold), role in JetBrains Mono, 2-sentence technical bio, LinkedIn icon. Cards have glowing borders, hover: subtle glow increase + translate-y-1.
 
-### Case Study/Portfolio Grid
-Masonry-style grid (3 columns desktop, 2 tablet, 1 mobile). Each card: project thumbnail, client logo, title, metrics (e.g., "+150% engagement"), gradient overlay on hover revealing full description + CTA.
-
-### CTA Sections
-Full-width gradient background sections with centered content. Include headline, supporting text, primary CTA, trust indicator (e.g., "Trusted by 50+ Malaysian brands").
+### Contact/CTA Section
+Full-width with grid pattern background. Centered content: headline, form (Name, Email, Company, Message) with glowing input borders, submit button with accent glow. Side element: Real-time "availability" indicator (green dot + "Available for consultation").
 
 ### Footer
-4-column layout (Services, Company, Resources, Contact). Newsletter signup form with gradient button. Social media icons (Facebook, Instagram, LinkedIn, TikTok). Language switcher. Bottom bar with copyright + privacy links.
+Minimal single-row: Logo left, nav links center, social icons (LinkedIn, GitHub) + copyright right. Thin top border with accent.
 
 ---
 
-## Animations (Minimal & Strategic)
+## Visual Elements
 
-- Scroll-triggered fade-in for section entries (stagger delay for grid items)
-- Gradient shift animation on hero background (subtle, 10s duration)
-- Button hover: slight scale (1.02) + shadow increase
-- Card hover: translate-y-2 with smooth transition
-- No complex parallax or scroll-jacking effects
+**Grid Patterns**: Subtle grid overlays (8px or 16px squares) at 5% opacity on dark backgrounds
+
+**Glowing Borders**: 1px borders with accent color, box-shadow with accent at 20% opacity spreading 4px
+
+**Data Viz Elements**: Abstract geometric shapes (hexagons, circuit lines) as decorative elements between sections
 
 ---
 
-## Images Section
+## Animations
+- Section fade-in on scroll (opacity + translate-y)
+- Glowing border pulse on hover (shadow intensity)
+- Subtle grid animation in hero (slow drift)
+- Metric count-up animation when scrolled into view
+- NO color transitions or complex effects
 
-**Homepage**:
-1. **Hero Image**: Dynamic composition showing digital marketing elements—laptop with analytics dashboard, mobile phones displaying social media, colorful graphs, creative tools. Modern, energetic feel. Full-width background image.
+---
 
-2. **Team Section Background**: Abstract gradient spheres (blur-3xl) positioned behind team cards for depth—one purple sphere top-left, one pink sphere bottom-right.
+## Images
 
-3. **Team Member Photos** (3): Professional headshots with clean backgrounds, similar lighting/composition for consistency. Square crop (1:1 ratio).
+**Hero Background**: Abstract dark tech imagery—server rooms, circuit boards, or code on screens. Apply dark overlay (80% opacity) to maintain #050505 base.
 
-**Team Page**:
-1. **Team Hero Banner**: Group photo of all 3 members in office environment, collaborating around laptop/whiteboard. Landscape orientation (16:9), min-height 400px.
+**Team Photos** (3): Professional headshots, convert to grayscale with subtle electric green tint overlay. Clean backgrounds. Square crop.
 
-2. **Individual Team Photos** (3): Professional portraits, slightly more editorial style than homepage (3:4 ratio). Show personality while maintaining professionalism—could be in creative workspace.
+**Case Study Assets** (2-3): Dashboard screenshots, analytics graphs, or system architecture diagrams. Apply dark theme treatment.
 
-3. **Office/Culture Photos** (2-3): Candid shots of workspace, team collaboration, or creative process. Used as decorative elements between sections.
+**Decorative Elements**: Abstract geometric data visualization graphics (neural networks, flowcharts) as SVG elements throughout—use sparingly for accent.
 
-**General**:
-- Portfolio/Case Study thumbnails: 10-12 project screenshots showing diverse work (social media campaigns, website designs, branding work)
-- Client logos: 6-8 recognizable Malaysian brands (grayscale, hover reveals color)
-- Service illustrations: 4-5 custom illustrations representing services (SEO, Social Media, Web Design, Branding, Analytics)
-
-All images should align with the vibrant purple-pink gradient aesthetic through subtle color grading or overlay treatments.
+All imagery maintains dark aesthetic with accent color highlights for cohesion with ultra-dark theme.

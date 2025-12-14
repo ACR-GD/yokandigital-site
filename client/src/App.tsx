@@ -4,113 +4,23 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/hooks/use-language";
-import ChatWidget from "@/components/chat-widget";
-import WhatsAppButton from "@/components/whatsapp-button";
-import ExitIntentPopup from "@/components/exit-intent-popup";
 import Home from "@/pages/home";
-import WebDesignPage from "@/pages/web-design";
-import SEOServicesPage from "@/pages/seo-services";
-import DigitalMarketingPage from "@/pages/digital-marketing";
-import CompletePackagePage from "@/pages/complete-package";
-import CataloguePage from "@/pages/catalogue";
-import LabuanDigitalMarketingPage from "@/pages/labuan-digital-marketing";
-import LabuanSEOAgencyPage from "@/pages/labuan-seo-agency";
-import LabuanPaidAdsPage from "@/pages/labuan-paid-ads";
-import LabuanSocialMediaMarketingPage from "@/pages/labuan-social-media-marketing";
-import LabuanFacebookAdsPage from "@/pages/labuan-facebook-ads";
-import LabuanTikTokAdsPage from "@/pages/labuan-tiktok-ads";
-import LabuanInstagramAdsPage from "@/pages/labuan-instagram-ads";
-import LabuanWebDesignPage from "@/pages/labuan-web-design";
-import LabuanWebDevelopmentPage from "@/pages/labuan-web-development";
-import ToolsPage from "@/pages/tools";
-import ServiceLocationPage from "@/pages/service-location";
 import BlogPage from "@/pages/blog";
 import BlogPostPage from "@/pages/blog-post";
-import TeamPage from "@/pages/team";
-import AboutPage from "@/pages/about";
-import CuratedLinksPage from "@/pages/curated-links";
-import MadeInMalaysiaPodcastPage from "@/pages/made-in-malaysia-podcast";
 import AdminDashboard from "@/pages/admin-dashboard";
 import AdminLogin from "@/pages/admin-login";
-import ClientPortal from "@/pages/client-portal";
 import PrivacyPolicyPage from "@/pages/privacy-policy";
-import {
-  DigitalMarketingInteriorDesignersKL,
-  SEOForInteriorDesigners,
-  LocalSEOInteriorDesigners,
-  WebDesignForInteriorDesigners,
-  PaidAdsForInteriorDesigners,
-  ContentMarketingInteriorDesigners,
-  SocialMediaMarketingInteriorDesigners,
-  LeadGenerationInteriorDesigners,
-  InteriorDesignerMarketingKL,
-  InteriorDesignerMarketingMalaysia,
-  InteriorDesignerMarketingSelangor,
-  InteriorDesignerMarketingPJ,
-  InteriorDesignerMarketingPenang,
-  InteriorDesignerMarketingJB,
-  MarketingCondoInteriorDesigners,
-  MarketingLandedInteriorDesigners,
-  MarketingCommercialInteriorDesigners
-} from "@/pages/interior-designers";
 import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/services/web-design" component={WebDesignPage} />
-      <Route path="/services/seo" component={SEOServicesPage} />
-      <Route path="/services/digital-marketing" component={DigitalMarketingPage} />
-      <Route path="/services/complete-package" component={CompletePackagePage} />
-      <Route path="/catalogue" component={CataloguePage} />
-      <Route path="/labuan-digital-marketing" component={LabuanDigitalMarketingPage} />
-      <Route path="/labuan-seo-agency" component={LabuanSEOAgencyPage} />
-      <Route path="/labuan-paid-ads" component={LabuanPaidAdsPage} />
-      <Route path="/labuan-social-media-marketing" component={LabuanSocialMediaMarketingPage} />
-      <Route path="/labuan-facebook-ads" component={LabuanFacebookAdsPage} />
-      <Route path="/labuan-tiktok-ads" component={LabuanTikTokAdsPage} />
-      <Route path="/labuan-instagram-ads" component={LabuanInstagramAdsPage} />
-      <Route path="/labuan-web-design" component={LabuanWebDesignPage} />
-      <Route path="/labuan-web-development" component={LabuanWebDevelopmentPage} />
-      <Route path="/tools" component={ToolsPage} />
-      <Route path="/services/:service/:city" component={ServiceLocationPage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/blog/:slug" component={BlogPostPage} />
-      <Route path="/team" component={TeamPage} />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/resources" component={CuratedLinksPage} />
-      <Route path="/podcast" component={MadeInMalaysiaPodcastPage} />
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin" component={AdminDashboard} />
-      <Route path="/client-portal" component={ClientPortal} />
       <Route path="/privacy-policy" component={PrivacyPolicyPage} />
-      
-      {/* Interior Designer Marketing Pages - Pillar */}
-      <Route path="/digital-marketing-interior-designers-kuala-lumpur" component={DigitalMarketingInteriorDesignersKL} />
-      
-      {/* Interior Designer Marketing Pages - Services */}
-      <Route path="/seo-for-interior-designers" component={SEOForInteriorDesigners} />
-      <Route path="/local-seo-google-business-interior-designers" component={LocalSEOInteriorDesigners} />
-      <Route path="/web-design-for-interior-designers" component={WebDesignForInteriorDesigners} />
-      <Route path="/paid-ads-for-interior-designers" component={PaidAdsForInteriorDesigners} />
-      <Route path="/content-marketing-for-interior-designers" component={ContentMarketingInteriorDesigners} />
-      <Route path="/social-media-marketing-for-interior-designers" component={SocialMediaMarketingInteriorDesigners} />
-      <Route path="/lead-generation-funnels-for-interior-designers" component={LeadGenerationInteriorDesigners} />
-      
-      {/* Interior Designer Marketing Pages - Locations */}
-      <Route path="/interior-designer-marketing-kuala-lumpur" component={InteriorDesignerMarketingKL} />
-      <Route path="/interior-designer-marketing-malaysia" component={InteriorDesignerMarketingMalaysia} />
-      <Route path="/interior-designer-marketing-selangor" component={InteriorDesignerMarketingSelangor} />
-      <Route path="/interior-designer-marketing-petaling-jaya" component={InteriorDesignerMarketingPJ} />
-      <Route path="/interior-designer-marketing-penang" component={InteriorDesignerMarketingPenang} />
-      <Route path="/interior-designer-marketing-johor-bahru" component={InteriorDesignerMarketingJB} />
-      
-      {/* Interior Designer Marketing Pages - Industry Solutions */}
-      <Route path="/marketing-condo-apartment-interior-designers" component={MarketingCondoInteriorDesigners} />
-      <Route path="/marketing-landed-house-interior-designers" component={MarketingLandedInteriorDesigners} />
-      <Route path="/marketing-commercial-interior-designers" component={MarketingCommercialInteriorDesigners} />
-      
       <Route component={NotFound} />
     </Switch>
   );
@@ -123,9 +33,6 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
-          <WhatsAppButton />
-          <ChatWidget />
-          <ExitIntentPopup />
         </TooltipProvider>
       </LanguageProvider>
     </QueryClientProvider>

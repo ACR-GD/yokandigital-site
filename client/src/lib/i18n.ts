@@ -1,340 +1,230 @@
 export interface Translations {
   [key: string]: {
     en: string;
-    ms: string;
+    fr: string;
   };
 }
 
 export const translations: Translations = {
-  // Header
-  "header.tagline": {
-    en: "Websites for Interior Designers in Selangor & KL",
-    ms: "Laman Web untuk Pereka Dalaman di Selangor & KL"
+  // Navigation
+  "nav.methodology": {
+    en: "Methodology",
+    fr: "Méthodologie"
   },
-  "nav.services": {
-    en: "Services",
-    ms: "Perkhidmatan"
+  "nav.system": {
+    en: "The System",
+    fr: "Le Système"
   },
-  "nav.catalogue": {
-    en: "Catalogue",
-    ms: "Katalog"
-  },
-  "nav.pricing": {
-    en: "Pricing", 
-    ms: "Harga"
-  },
-  "nav.tools": {
-    en: "Free Tools",
-    ms: "Alat Percuma"
-  },
-  "nav.portfolio": {
-    en: "Portfolio",
-    ms: "Portfolio"
+  "nav.about": {
+    en: "About",
+    fr: "À Propos"
   },
   "nav.contact": {
     en: "Contact",
-    ms: "Hubungi"
+    fr: "Contact"
   },
-  "header.getStarted": {
-    en: "Get Started",
-    ms: "Mulakan"
+  "nav.auditCta": {
+    en: "Audit Your Architecture",
+    fr: "Auditez Votre Architecture"
   },
 
-  // Hero
+  // Hero Section
   "hero.title": {
-    en: "Get More Clients for Your Interior Design Studio",
-    ms: "Dapatkan Lebih Banyak Klien untuk Studio Reka Bentuk Dalaman Anda"
+    en: "Stop Guessing. Start Engineering Revenue.",
+    fr: "Arrêtez de deviner. Ingéniez vos revenus."
   },
   "hero.subtitle": {
-    en: "We build stunning portfolio websites that turn visitors into consultation bookings. Trusted by interior designers across Selangor & KL.",
-    ms: "Kami membina laman web portfolio yang memukau dan menukarkan pelawat kepada tempahan konsultasi. Dipercayai oleh pereka dalaman di seluruh Selangor & KL."
+    en: "We build Autonomous Acquisition Ecosystems powered by Data & AI. Replacing marketing magic with mathematical truth.",
+    fr: "Nous construisons des Écosystèmes d'Acquisition Autonomes propulsés par les Données & l'IA. Remplacer la magie du marketing par la vérité mathématique."
   },
-  "hero.startProject": {
-    en: "Get a Free Website Review",
-    ms: "Dapatkan Semakan Laman Web Percuma"
+  "hero.cta.primary": {
+    en: "Book Architecture Review",
+    fr: "Réserver un Audit Architecture"
   },
-  "hero.viewWork": {
-    en: "See Designer Websites",
-    ms: "Lihat Laman Web Pereka"
-  },
-
-  // Services
-  "services.title": {
-    en: "How We Help Interior Designers Grow",
-    ms: "Bagaimana Kami Membantu Pereka Dalaman Berkembang"
-  },
-  "services.subtitle": {
-    en: "Stop losing potential clients to competitors with better websites. We help you showcase your work beautifully and get found by homeowners who need your expertise.",
-    ms: "Berhenti kehilangan klien berpotensi kepada pesaing dengan laman web yang lebih baik. Kami membantu anda mempamerkan kerja anda dengan cantik dan ditemui oleh pemilik rumah yang memerlukan kepakaran anda."
-  },
-  "services.webDesign.title": {
-    en: "Portfolio Websites That Impress",
-    ms: "Laman Web Portfolio Yang Memukau"
-  },
-  "services.webDesign.description": {
-    en: "Show off your best projects with a website that matches your design standards. Mobile-friendly, fast, and built to book consultations.",
-    ms: "Tunjukkan projek terbaik anda dengan laman web yang setanding standard reka bentuk anda. Mesra telefon, pantas, dan dibina untuk tempahan konsultasi."
-  },
-  "services.seo.title": {
-    en: "Get Found by Local Homeowners", 
-    ms: "Ditemui Oleh Pemilik Rumah Tempatan"
-  },
-  "services.seo.description": {
-    en: "When someone in Bangsar or Damansara searches for an interior designer, your studio should appear first. We make that happen.",
-    ms: "Apabila seseorang di Bangsar atau Damansara mencari pereka dalaman, studio anda patut muncul dahulu. Kami menjadikannya kenyataan."
-  },
-  "services.marketing.title": {
-    en: "Instagram & Social That Converts",
-    ms: "Instagram & Sosial Yang Menukar"
-  },
-  "services.marketing.description": {
-    en: "Turn your project photos into a lead machine. We help you attract serious clients, not just followers who say 'beautiful' and disappear.",
-    ms: "Tukarkan foto projek anda menjadi mesin prospek. Kami membantu anda menarik klien serius, bukan pengikut yang cakap 'cantik' dan hilang."
+  "hero.cta.secondary": {
+    en: "See The System",
+    fr: "Voir le Système"
   },
 
-  // Tools
-  "tools.title": {
-    en: "Free Business Tools",
-    ms: "Alat Perniagaan Percuma"
+  // Problem Section (The Chaos)
+  "problem.title": {
+    en: "The Chaos",
+    fr: "Le Chaos"
   },
-  "tools.subtitle": {
-    en: "Powerful tools to analyze and improve your online presence. Use them for free to get started.",
-    ms: "Alat berkuasa untuk menganalisis dan meningkatkan kehadiran online anda. Gunakan secara percuma untuk bermula."
+  "problem.subtitle": {
+    en: "Traditional agencies sell you hope. We sell you a system.",
+    fr: "Les agences traditionnelles vous vendent de l'espoir. Nous vous vendons un système."
   },
-  "tools.seoAudit.title": {
-    en: "Free SEO Audit",
-    ms: "Audit SEO Percuma"
+  "problem.vanity.title": {
+    en: "Vanity Metrics",
+    fr: "Métriques de Vanité"
   },
-  "tools.seoAudit.description": {
-    en: "Get a comprehensive SEO analysis of your website",
-    ms: "Dapatkan analisis SEO menyeluruh laman web anda"
+  "problem.vanity.items": {
+    en: "Likes, Impressions, Followers, Traffic",
+    fr: "Likes, Impressions, Abonnés, Trafic"
   },
-  "tools.speedTest.title": {
-    en: "Speed Test Tool",
-    ms: "Alat Ujian Kelajuan"
+  "problem.reality.title": {
+    en: "P&L Reality",
+    fr: "Réalité du P&L"
   },
-  "tools.speedTest.description": {
-    en: "Check your website's loading speed and performance",
-    ms: "Semak kelajuan pemuatan dan prestasi laman web anda"
+  "problem.reality.items": {
+    en: "Revenue, CAC, LTV, ROAS, Profit",
+    fr: "Revenu, CAC, LTV, ROAS, Profit"
   },
-  "tools.consultation.title": {
-    en: "Free Consultation",
-    ms: "Perundingan Percuma"
+  "problem.manual.title": {
+    en: "Manual Grunt Work",
+    fr: "Travail Manuel Répétitif"
   },
-  "tools.consultation.description": {
-    en: "Book a 30-minute strategy session with our experts",
-    ms: "Tempah sesi strategi 30 minit dengan pakar kami"
+  "problem.manual.items": {
+    en: "Copy-paste, spreadsheets, human error",
+    fr: "Copier-coller, tableurs, erreur humaine"
   },
-
-  // Pricing
-  "pricing.title": {
-    en: "Simple, Transparent Pricing",
-    ms: "Harga Mudah dan Telus"
+  "problem.automation.title": {
+    en: "AI Automation",
+    fr: "Automatisation IA"
   },
-  "pricing.subtitle": {
-    en: "Packages designed specifically for interior design studios. No hidden fees, no tech jargon—just results.",
-    ms: "Pakej direka khas untuk studio reka bentuk dalaman. Tiada yuran tersembunyi, tiada jargon teknikal—hanya hasil."
-  },
-  "pricing.starter.title": {
-    en: "Portfolio Website",
-    ms: "Laman Web Portfolio"
-  },
-  "pricing.starter.description": {
-    en: "Show off your work beautifully",
-    ms: "Pamerkan kerja anda dengan cantik"
-  },
-  "pricing.professional.title": {
-    en: "Growth Package",
-    ms: "Pakej Pertumbuhan"
-  },
-  "pricing.professional.description": {
-    en: "Website + get found locally",
-    ms: "Laman web + ditemui secara tempatan"
-  },
-  "pricing.enterprise.title": {
-    en: "Full Service",
-    ms: "Perkhidmatan Penuh"
-  },
-  "pricing.enterprise.description": {
-    en: "Complete client attraction system",
-    ms: "Sistem tarikan klien lengkap"
-  },
-  "pricing.mostPopular": {
-    en: "Most Popular",
-    ms: "Paling Popular"
+  "problem.automation.items": {
+    en: "24/7 workflows, zero latency, infinite scale",
+    fr: "Workflows 24/7, zéro latence, échelle infinie"
   },
 
-  // Portfolio
-  "portfolio.title": {
-    en: "Interior Designers We've Helped",
-    ms: "Pereka Dalaman Yang Kami Telah Bantu"
+  // Solution Section (The Machine)
+  "solution.title": {
+    en: "The Machine",
+    fr: "La Machine"
   },
-  "portfolio.subtitle": {
-    en: "Real results from design studios across Selangor and Kuala Lumpur. More consultations, better clients, less time wasted.",
-    ms: "Hasil sebenar dari studio reka bentuk di seluruh Selangor dan Kuala Lumpur. Lebih konsultasi, klien lebih baik, kurang masa terbuang."
+  "solution.subtitle": {
+    en: "Three pillars of autonomous revenue generation",
+    fr: "Trois piliers de génération de revenus autonome"
+  },
+  "solution.pillar1.title": {
+    en: "Data-First Truth",
+    fr: "Vérité Data-First"
+  },
+  "solution.pillar1.description": {
+    en: "Server-side tracking that captures every signal. Real-time dashboards that show the actual P&L impact.",
+    fr: "Tracking côté serveur qui capture chaque signal. Tableaux de bord en temps réel qui montrent l'impact réel sur le P&L."
+  },
+  "solution.pillar1.features": {
+    en: "Server-side tracking, BigQuery pipelines, Looker dashboards",
+    fr: "Tracking serveur, pipelines BigQuery, dashboards Looker"
+  },
+  "solution.pillar2.title": {
+    en: "AI Autonomy",
+    fr: "Autonomie IA"
+  },
+  "solution.pillar2.description": {
+    en: "Workflows that run without you. AI agents that make decisions, execute, and optimize 24/7.",
+    fr: "Des workflows qui tournent sans vous. Des agents IA qui décident, exécutent et optimisent 24/7."
+  },
+  "solution.pillar2.features": {
+    en: "n8n/Make workflows, GPT agents, automated campaigns",
+    fr: "Workflows n8n/Make, agents GPT, campagnes automatisées"
+  },
+  "solution.pillar3.title": {
+    en: "Scalable Infrastructure",
+    fr: "Infrastructure Évolutive"
+  },
+  "solution.pillar3.description": {
+    en: "Assets you own, not rent. Systems that compound value over time.",
+    fr: "Des actifs que vous possédez, pas louez. Des systèmes qui composent de la valeur dans le temps."
+  },
+  "solution.pillar3.features": {
+    en: "Custom CRMs, owned databases, proprietary models",
+    fr: "CRMs personnalisés, bases de données propriétaires, modèles exclusifs"
   },
 
-  // Contact
-  "contact.title": {
-    en: "Let's Talk About Growing Your Design Studio",
-    ms: "Mari Berbincang Tentang Mengembangkan Studio Reka Bentuk Anda"
+  // Tech Stack
+  "tech.title": {
+    en: "Our Weapons of Choice",
+    fr: "Nos Armes de Prédilection"
   },
-  "contact.subtitle": {
-    en: "Tell us about your studio and what you're looking for. We'll show you exactly how we can help you get more quality clients.",
-    ms: "Ceritakan tentang studio anda dan apa yang anda cari. Kami akan tunjukkan dengan tepat bagaimana kami boleh bantu anda dapatkan lebih banyak klien berkualiti."
-  },
-  "contact.office": {
-    en: "Our Office",
-    ms: "Pejabat Kami"
-  },
-  "contact.phone": {
-    en: "Phone",
-    ms: "Telefon"
-  },
-  "contact.email": {
-    en: "Email",
-    ms: "Emel"
+  "tech.subtitle": {
+    en: "The technology stack that powers autonomous revenue systems",
+    fr: "La stack technologique qui alimente les systèmes de revenus autonomes"
   },
 
-  // Form fields
-  "form.firstName": {
-    en: "First Name",
-    ms: "Nama Pertama"
+  // Founder Section
+  "founder.title": {
+    en: "The Architect",
+    fr: "L'Architecte"
   },
-  "form.lastName": {
-    en: "Last Name", 
-    ms: "Nama Akhir"
+  "founder.name": {
+    en: "Antoine",
+    fr: "Antoine"
+  },
+  "founder.role": {
+    en: "Founder & Revenue Architect",
+    fr: "Fondateur & Architecte Revenue"
+  },
+  "founder.bio": {
+    en: "10+ years engineering growth systems across France, Canada, and Southeast Asia. I don't do marketing—I build machines that generate revenue while you sleep.",
+    fr: "10+ ans d'ingénierie de systèmes de croissance en France, au Canada et en Asie du Sud-Est. Je ne fais pas de marketing—je construis des machines qui génèrent des revenus pendant que vous dormez."
+  },
+  "founder.quote": {
+    en: "Alone we go faster, together we go further.",
+    fr: "Seul on va plus vite, ensemble on va plus loin."
+  },
+
+  // Contact / CTA
+  "cta.title": {
+    en: "Ready to Stop Guessing?",
+    fr: "Prêt à Arrêter de Deviner?"
+  },
+  "cta.subtitle": {
+    en: "Book a 30-minute architecture review. We'll audit your current stack and show you exactly where revenue is leaking.",
+    fr: "Réservez un audit architecture de 30 minutes. Nous analyserons votre stack actuelle et vous montrerons exactement où les revenus fuient."
+  },
+  "cta.button": {
+    en: "Book Architecture Review",
+    fr: "Réserver l'Audit Architecture"
+  },
+  "cta.available": {
+    en: "Available for consultation",
+    fr: "Disponible pour consultation"
+  },
+
+  // Form
+  "form.name": {
+    en: "Name",
+    fr: "Nom"
   },
   "form.email": {
-    en: "Email Address",
-    ms: "Alamat Emel"
+    en: "Email",
+    fr: "Email"
   },
   "form.company": {
-    en: "Company Name",
-    ms: "Nama Syarikat"
+    en: "Company",
+    fr: "Entreprise"
   },
-  "form.service": {
-    en: "Service Interest",
-    ms: "Minat Perkhidmatan"
+  "form.message": {
+    en: "Tell us about your current revenue challenges",
+    fr: "Parlez-nous de vos défis de revenus actuels"
   },
-  "form.projectDetails": {
-    en: "Project Details",
-    ms: "Butiran Projek"
-  },
-  "form.name": {
-    en: "Your name",
-    ms: "Nama anda"
-  },
-  "form.url": {
-    en: "Enter your website URL",
-    ms: "Masukkan URL laman web anda"
-  },
-  "form.websiteUrl": {
-    en: "Enter website URL",
-    ms: "Masukkan URL laman web"
-  },
-
-  // Buttons
-  "button.analyze": {
-    en: "Analyze Website",
-    ms: "Analisis Laman Web"
-  },
-  "button.testSpeed": {
-    en: "Test Speed",
-    ms: "Uji Kelajuan"
-  },
-  "button.bookSession": {
-    en: "Book Session",
-    ms: "Tempah Sesi"
-  },
-  "button.sendMessage": {
-    en: "Send Message",
-    ms: "Hantar Mesej"
-  },
-  "button.getStarted": {
-    en: "Get Started",
-    ms: "Mulakan"
-  },
-  "button.chooseProfessional": {
-    en: "Choose Professional",
-    ms: "Pilih Profesional"
-  },
-  "button.contactSales": {
-    en: "Contact Sales",
-    ms: "Hubungi Jualan"
+  "form.submit": {
+    en: "Submit",
+    fr: "Envoyer"
   },
 
   // Footer
   "footer.tagline": {
-    en: "Helping Interior Designers Get Found & Get Hired",
-    ms: "Membantu Pereka Dalaman Ditemui & Diupah"
-  },
-  "footer.description": {
-    en: "We build websites and online presence for interior designers in Selangor & Kuala Lumpur who want more quality clients.",
-    ms: "Kami membina laman web dan kehadiran online untuk pereka dalaman di Selangor & Kuala Lumpur yang mahukan lebih banyak klien berkualiti."
-  },
-  "footer.services": {
-    en: "Services",
-    ms: "Perkhidmatan"
-  },
-  "footer.company": {
-    en: "Company",
-    ms: "Syarikat"
-  },
-  "footer.resources": {
-    en: "Resources",
-    ms: "Sumber"
+    en: "Revenue Architecture & AI Systems",
+    fr: "Architecture Revenue & Systèmes IA"
   },
   "footer.copyright": {
     en: "© 2024 Yokan Digital. All rights reserved.",
-    ms: "© 2024 Yokan Digital. Hak cipta terpelihara."
+    fr: "© 2024 Yokan Digital. Tous droits réservés."
   },
   "footer.privacy": {
     en: "Privacy Policy",
-    ms: "Polisi Privasi"
+    fr: "Politique de Confidentialité"
   },
   "footer.terms": {
     en: "Terms of Service",
-    ms: "Terma Perkhidmatan"
-  },
-  "footer.serviceLocations": {
-    en: "Service Locations",
-    ms: "Lokasi Perkhidmatan"
-  },
-  "footer.webDesignKL": {
-    en: "Web Design KL",
-    ms: "Reka Bentuk Web KL"
-  },
-  "footer.seoPenang": {
-    en: "SEO Penang",
-    ms: "SEO Pulau Pinang"
-  },
-  "footer.digitalMarketingJB": {
-    en: "Digital Marketing JB",
-    ms: "Pemasaran Digital JB"
-  },
-  "footer.webDesignSingapore": {
-    en: "Web Design Singapore",
-    ms: "Reka Bentuk Web Singapura"
-  },
-  "footer.seoSelangor": {
-    en: "SEO Selangor",
-    ms: "SEO Selangor"
-  },
-  "footer.marketingIpoh": {
-    en: "Marketing Ipoh",
-    ms: "Pemasaran Ipoh"
-  },
-  "footer.digitalMarketingLabuan": {
-    en: "Digital Marketing Labuan",
-    ms: "Pemasaran Digital Labuan"
-  },
-  "navigation.backToServices": {
-    en: "Back to Services",
-    ms: "Kembali ke Perkhidmatan"
+    fr: "Conditions d'Utilisation"
   }
 };
 
-export function translate(key: string, language: 'en' | 'ms'): string {
+export function translate(key: string, language: 'en' | 'fr'): string {
   return translations[key]?.[language] || key;
 }
