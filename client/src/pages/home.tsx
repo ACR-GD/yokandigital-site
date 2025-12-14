@@ -45,9 +45,13 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="font-mono text-xl font-bold tracking-tight" data-testid="logo">
-              Yokan<span className="text-[#00ff88]">.</span>Digital
-            </div>
+            <a href="/" data-testid="logo">
+              <img 
+                src="/logo.png" 
+                alt="Yokan Digital" 
+                className="h-8 md:h-10"
+              />
+            </a>
             
             <div className="hidden md:flex items-center gap-8">
               <a href="#methodology" className="text-sm text-gray-400 hover:text-white transition-colors" data-testid="nav-methodology">
@@ -496,8 +500,9 @@ export default function Home() {
       <footer className="py-8 bg-[#050505] border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="font-mono text-sm text-gray-600">
-              Yokan<span className="text-[#00ff88]">.</span>Digital — {t("footer.tagline")}
+            <div className="flex items-center gap-3">
+              <img src="/logo.png" alt="Yokan Digital" className="h-6" />
+              <span className="font-mono text-sm text-gray-600">— {t("footer.tagline")}</span>
             </div>
             
             <div className="flex items-center gap-6">
