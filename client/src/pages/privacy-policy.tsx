@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLanguage } from "@/hooks/use-language";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 
 export default function PrivacyPolicyPage() {
   const { language } = useLanguage();
@@ -145,32 +145,44 @@ export default function PrivacyPolicyPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
-      <Header />
+    <div className="min-h-screen bg-[#050505] text-white">
+      {/* Simple Nav */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050505]/95 backdrop-blur-md border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="text-xl font-bold text-white hover:text-[#00ff88] transition-colors">
+            YOKAN<span className="text-[#00ff88]">.</span>
+          </Link>
+          <Link href="/">
+            <Button variant="outline" size="sm" className="border-white/20 text-white hover:bg-white/10">
+              ← Back to Home
+            </Button>
+          </Link>
+        </div>
+      </nav>
       
       <main className="pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4" data-testid="privacy-title">
+          <h1 className="text-4xl font-bold text-white mb-4" data-testid="privacy-title">
             {content.title}
           </h1>
-          <p className="text-gray-500 dark:text-gray-400 mb-8">
+          <p className="text-gray-500 mb-8">
             {content.lastUpdated}
           </p>
           
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-12">
+          <p className="text-lg text-gray-400 mb-12">
             {content.intro}
           </p>
 
           <div className="space-y-10">
             {content.sections.map((section, index) => (
               <div key={index}>
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h2 className="text-2xl font-semibold text-white mb-4">
                   {section.title}
                 </h2>
                 <ul className="space-y-3">
                   {section.content.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></span>
+                    <li key={itemIndex} className="flex items-start gap-3 text-gray-400">
+                      <span className="w-2 h-2 bg-[#00ff88] rounded-full mt-2 flex-shrink-0"></span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -181,7 +193,12 @@ export default function PrivacyPolicyPage() {
         </div>
       </main>
 
-      <Footer />
+      {/* Simple Footer */}
+      <footer className="py-8 border-t border-white/5 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
+          © {new Date().getFullYear()} Yokan Digital. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 }

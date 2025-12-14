@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import { useLanguage } from "@/hooks/use-language";
 import { useQuery } from "@tanstack/react-query";
 
@@ -163,23 +161,35 @@ export default function BlogPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900">
-      <Header />
+    <div className="min-h-screen bg-[#050505] text-white">
+      {/* Simple Nav */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050505]/95 backdrop-blur-md border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="text-xl font-bold text-white hover:text-[#00ff88] transition-colors">
+            YOKAN<span className="text-[#00ff88]">.</span>
+          </Link>
+          <Link href="/">
+            <Button variant="outline" size="sm" className="border-white/20 text-white hover:bg-white/10">
+              ← Back to Home
+            </Button>
+          </Link>
+        </div>
+      </nav>
       
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Digital Marketing{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Revenue{" "}
+              <span className="text-[#00ff88]">
                 Insights
               </span>
             </h1>
             
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-              Expert insights, practical tips, and actionable strategies to help Malaysian businesses 
-              succeed in the digital world. Stay ahead of the competition with our latest articles.
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+              Expert insights on data-driven revenue architecture, AI automation, 
+              and scalable growth systems for B2B companies.
             </p>
 
             <div className="max-w-md mx-auto">
@@ -201,10 +211,10 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
             {allPosts.map((post, index) => (
-              <Card key={post.slug} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={post.slug} className="bg-[#0A0A0A] border-white/10 hover:border-[#00ff88]/30 transition-all duration-300">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-3">
-                    <Badge variant="secondary">{post.category}</Badge>
+                    <Badge className="bg-[#00ff88]/10 text-[#00ff88] border-[#00ff88]/30">{post.category}</Badge>
                     <div className="flex items-center text-sm text-gray-500 gap-4">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
@@ -217,17 +227,17 @@ export default function BlogPage() {
                     </div>
                   </div>
                   
-                  <CardTitle className="text-xl mb-2 line-clamp-2">
+                  <CardTitle className="text-xl mb-2 line-clamp-2 text-white">
                     <Link 
                       href={`/blog/${post.slug}`}
-                      className="hover:text-blue-600 transition-colors"
+                      className="hover:text-[#00ff88] transition-colors"
                       data-testid={`link-blog-${post.slug}`}
                     >
                       {post.title}
                     </Link>
                   </CardTitle>
                   
-                  <CardDescription className="line-clamp-3">
+                  <CardDescription className="line-clamp-3 text-gray-400">
                     {post.excerpt}
                   </CardDescription>
                 </CardHeader>
@@ -235,14 +245,14 @@ export default function BlogPage() {
                 <CardContent>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.slice(0, 3).map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="outline" className="text-xs">
+                      <Badge key={tagIndex} variant="outline" className="text-xs border-white/20 text-gray-400">
                         {tag}
                       </Badge>
                     ))}
                   </div>
                   
                   <Link href={`/blog/${post.slug}`}>
-                    <Button variant="outline" size="sm" className="w-full group" data-testid={`button-read-${post.slug}`}>
+                    <Button variant="outline" size="sm" className="w-full group border-white/20 text-white hover:border-[#00ff88] hover:text-[#00ff88]" data-testid={`button-read-${post.slug}`}>
                       Read More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -255,33 +265,38 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-[#0A0A0A] border-y border-white/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Get Digital Marketing Tips Delivered Weekly
+          <h2 className="text-3xl font-bold mb-4 text-white">
+            Get Revenue Engineering Insights
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join 500+ Malaysian business owners who get actionable insights every Tuesday.
+          <p className="text-xl text-gray-400 mb-8">
+            Join founders and revenue leaders who get data-driven growth strategies weekly.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <Input 
               placeholder="Enter your email" 
-              className="flex-1 text-gray-900"
+              className="flex-1 bg-[#050505] border-white/20 text-white placeholder:text-gray-500"
               data-testid="input-newsletter-email"
             />
-            <Button variant="secondary" size="lg" data-testid="button-subscribe-newsletter">
-              Subscribe Free
+            <Button className="bg-[#00ff88] text-black hover:bg-[#00ff88]/90" size="lg" data-testid="button-subscribe-newsletter">
+              Subscribe
             </Button>
           </div>
           
-          <p className="text-sm text-blue-100 mt-4">
-            No spam. Unsubscribe anytime. We respect your privacy.
+          <p className="text-sm text-gray-500 mt-4">
+            No spam. Unsubscribe anytime.
           </p>
         </div>
       </section>
 
-      <Footer />
+      {/* Simple Footer */}
+      <footer className="py-8 border-t border-white/5 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
+          © {new Date().getFullYear()} Yokan Digital. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 }

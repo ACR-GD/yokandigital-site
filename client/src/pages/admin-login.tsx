@@ -4,8 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Lock, User, Eye, EyeOff } from "lucide-react";
-import Header from "@/components/header";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 
 export default function AdminLogin() {
   const [, navigate] = useLocation();
@@ -49,10 +48,17 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <div className="min-h-screen bg-[#050505]">
+      {/* Simple Nav */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050505]/95 backdrop-blur-md border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="text-xl font-bold text-white hover:text-[#00ff88] transition-colors">
+            YOKAN<span className="text-[#00ff88]">.</span>
+          </Link>
+        </div>
+      </nav>
       
-      <div className="flex items-center justify-center min-h-[calc(100vh-80px)] px-4">
+      <div className="flex items-center justify-center min-h-screen px-4 pt-20">
         <Card className="w-full max-w-md">
           <CardHeader className="space-y-1 text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">

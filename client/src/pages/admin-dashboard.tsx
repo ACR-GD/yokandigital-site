@@ -22,7 +22,6 @@ import {
   Upload,
   Save
 } from "lucide-react";
-import Header from "@/components/header";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
@@ -267,8 +266,16 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <div className="min-h-screen bg-[#050505] text-white">
+      {/* Simple Nav */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050505]/95 backdrop-blur-md border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <a href="/" className="text-xl font-bold text-white hover:text-[#00ff88] transition-colors">
+            YOKAN<span className="text-[#00ff88]">.</span>
+          </a>
+          <span className="text-[#00ff88] text-sm font-mono">ADMIN PANEL</span>
+        </div>
+      </nav>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-24">
         <div className="mb-8">

@@ -3,8 +3,6 @@ import { useEffect } from "react";
 import { Calendar, Clock, ArrowLeft, Share2, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import { useLanguage } from "@/hooks/use-language";
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
@@ -3185,23 +3183,29 @@ export default function BlogPostPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900">
-      <Header />
+    <div className="min-h-screen bg-[#050505] text-white">
+      {/* Simple Nav */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050505]/95 backdrop-blur-md border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="text-xl font-bold text-white hover:text-[#00ff88] transition-colors">
+            YOKAN<span className="text-[#00ff88]">.</span>
+          </Link>
+          <Link href="/blog">
+            <Button variant="outline" size="sm" className="border-white/20 text-white hover:bg-white/10">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Blog
+            </Button>
+          </Link>
+        </div>
+      </nav>
       
       <article className="pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Back to Blog */}
-          <div className="mb-8">
-            <Link href="/blog" className="text-blue-600 hover:text-blue-700 flex items-center gap-2" data-testid="link-back-to-blog">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-          </div>
 
           {/* Article Header */}
           <header className="mb-12">
             <div className="flex items-center gap-4 mb-6">
-              <Badge variant="secondary">{post.category}</Badge>
+              <Badge className="bg-[#00ff88]/10 text-[#00ff88] border-[#00ff88]/30">{post.category}</Badge>
               <div className="flex items-center text-sm text-gray-500 gap-4">
                 <span className="flex items-center gap-1">
                   <Calendar className="w-3 h-3" />
@@ -3218,24 +3222,24 @@ export default function BlogPostPage() {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
             </h1>
             
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-xl text-gray-400 mb-8">
               {post.excerpt}
             </p>
 
             <div className="flex flex-wrap gap-2 mb-8">
               {post.tags.map((tag, index) => (
-                <Badge key={index} variant="outline">
+                <Badge key={index} variant="outline" className="border-white/20 text-gray-400">
                   {tag}
                 </Badge>
               ))}
             </div>
 
             <div className="flex items-center gap-4">
-              <Button variant="outline" size="sm" data-testid="button-share-article">
+              <Button variant="outline" size="sm" className="border-white/20 text-white hover:border-[#00ff88] hover:text-[#00ff88]" data-testid="button-share-article">
                 <Share2 className="w-4 h-4 mr-2" />
                 Share Article
               </Button>
@@ -3243,43 +3247,42 @@ export default function BlogPostPage() {
           </header>
 
           {/* Article Content */}
-          <div className="prose prose-lg max-w-none dark:prose-invert">
+          <div className="prose prose-lg max-w-none prose-invert prose-headings:text-white prose-p:text-gray-300 prose-li:text-gray-300 prose-strong:text-white">
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>
 
           {/* Author Bio */}
-          <div className="mt-16 p-6 bg-white dark:bg-gray-800 rounded-lg border">
+          <div className="mt-16 p-6 bg-[#0A0A0A] rounded-lg border border-white/10">
             <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              <div className="w-16 h-16 bg-[#00ff88] rounded-full flex items-center justify-center text-black font-bold text-xl">
                 YD
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">{post.author}</h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  The Yokan Digital team consists of experienced digital marketing professionals 
-                  who specialize in helping Malaysian businesses grow online. We combine international 
-                  best practices with local market insights to deliver results that matter.
+                <h3 className="text-xl font-semibold mb-2 text-white">{post.author}</h3>
+                <p className="text-gray-400">
+                  Yokan Digital specializes in Revenue Architecture and AI-powered growth systems 
+                  for B2B companies. We transform chaos into scalable, data-driven acquisition engines.
                 </p>
               </div>
             </div>
           </div>
 
           {/* Newsletter Signup */}
-          <div className="mt-16 p-8 bg-blue-600 text-white rounded-lg text-center">
-            <h3 className="text-2xl font-bold mb-4">
+          <div className="mt-16 p-8 bg-[#0A0A0A] border border-white/10 rounded-lg text-center">
+            <h3 className="text-2xl font-bold mb-4 text-white">
               Get More Insights Like This
             </h3>
-            <p className="text-blue-100 mb-6">
-              Join our weekly newsletter for the latest digital marketing tips and Malaysian business insights.
+            <p className="text-gray-400 mb-6">
+              Join founders and revenue leaders who get data-driven growth strategies weekly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input 
                 type="email" 
                 placeholder="Enter your email" 
-                className="flex-1 px-4 py-2 rounded text-gray-900"
+                className="flex-1 px-4 py-2 rounded bg-[#050505] border border-white/20 text-white placeholder:text-gray-500"
                 data-testid="input-newsletter-signup"
               />
-              <Button variant="secondary" data-testid="button-newsletter-subscribe">
+              <Button className="bg-[#00ff88] text-black hover:bg-[#00ff88]/90" data-testid="button-newsletter-subscribe">
                 Subscribe
               </Button>
             </div>
@@ -3287,7 +3290,12 @@ export default function BlogPostPage() {
         </div>
       </article>
 
-      <Footer />
+      {/* Simple Footer */}
+      <footer className="py-8 border-t border-white/5 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
+          © {new Date().getFullYear()} Yokan Digital. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 }
