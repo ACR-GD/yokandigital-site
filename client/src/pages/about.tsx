@@ -211,6 +211,84 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Team Section - Lean by Design */}
+      <section className="py-24 relative z-10 border-t border-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" data-testid="team-headline">
+              {language === 'en' ? 'Lean by Design.' : 'Légers par Conception.'}
+            </h2>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              {language === 'en' 
+                ? "We practice what we preach. We use Data & AI to run a global firm with minimal headcount. We don't hire bodies; we build systems."
+                : "Nous appliquons ce que nous prêchons. Nous utilisons les données et l'IA pour diriger une entreprise mondiale avec un effectif minimal. Nous n'embauchons pas des corps; nous construisons des systèmes."}
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-2xl mx-auto">
+            {/* Team Member 1 - Antoine */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-center group"
+              data-testid="team-member-antoine"
+            >
+              <div className="mb-6">
+                <img 
+                  src="https://ui-avatars.com/api/?name=Antoine+Clerc-Renaud&background=0A0A0A&color=00ff88&size=200&font-size=0.35&bold=true"
+                  alt="Antoine Clerc-Renaud"
+                  className="w-32 h-32 rounded-full mx-auto grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-1">Antoine Clerc-Renaud</h3>
+              <p className="font-mono text-sm text-[#00ff88] mb-3">
+                {language === 'en' ? 'Founder & Lead Systems Architect' : 'Fondateur & Architecte Systèmes Principal'}
+              </p>
+              <p className="text-sm text-gray-500">
+                {language === 'en' 
+                  ? 'Specialized in Revenue Architecture, n8n Logic, and Data Strategy.'
+                  : "Spécialisé en Architecture Revenue, Logique n8n et Stratégie Data."}
+              </p>
+            </motion.div>
+
+            {/* Team Member 2 - Tasha */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-center group"
+              data-testid="team-member-tasha"
+            >
+              <div className="mb-6">
+                <img 
+                  src="https://ui-avatars.com/api/?name=Tasha&background=0A0A0A&color=00ff88&size=200&font-size=0.35&bold=true"
+                  alt="Tasha"
+                  className="w-32 h-32 rounded-full mx-auto grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-1">Tasha</h3>
+              <p className="font-mono text-sm text-[#00ff88] mb-3">
+                {language === 'en' ? 'Head of Operations' : 'Directrice des Opérations'}
+              </p>
+              <p className="text-sm text-gray-500">
+                {language === 'en' 
+                  ? 'Ensures operational excellence, client delivery, and system integrity.'
+                  : "Assure l'excellence opérationnelle, la livraison client et l'intégrité des systèmes."}
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 relative z-10">
         <div className="max-w-4xl mx-auto px-6 text-center">
