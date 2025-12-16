@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLanguage } from "@/hooks/use-language";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { MapPin, Phone, Linkedin } from "lucide-react";
 
 export default function PrivacyPolicyPage() {
   const { language } = useLanguage();
@@ -194,9 +195,56 @@ export default function PrivacyPolicyPage() {
       </main>
 
       {/* Simple Footer */}
-      <footer className="py-8 border-t border-white/5 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
-          © {new Date().getFullYear()} Yokan Digital. All rights reserved.
+      <footer className="py-12 border-t border-white/5 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <img src="/logo.png" alt="Yokan Digital" className="h-6" />
+              </div>
+              <p className="text-sm text-gray-500 font-mono">
+                {language === 'en' ? 'A brand by ACR Digital Ventures' : 'Une marque de ACR Digital Ventures'}
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-white font-semibold mb-3 text-sm">{language === 'en' ? 'Contact' : 'Contact'}</h4>
+              <div className="space-y-2 text-sm text-gray-500">
+                <p className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 mt-0.5 text-[#00ff88] flex-shrink-0" />
+                  <span>68 Circular Road, 049422 Singapore</span>
+                </p>
+                <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-[#00ff88] flex-shrink-0" />
+                  <a href="tel:+6531637757" className="hover:text-white transition-colors">+65 3163 7757</a>
+                </p>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="text-white font-semibold mb-3 text-sm">{language === 'en' ? 'Links' : 'Liens'}</h4>
+              <div className="flex flex-col gap-2">
+                <a href="/privacy-policy" className="text-sm text-gray-500 hover:text-white transition-colors">
+                  {language === 'en' ? 'Privacy Policy' : 'Politique de Confidentialité'}
+                </a>
+                <a 
+                  href="https://linkedin.com/company/yokandigital" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-500 hover:text-[#00ff88] transition-colors flex items-center gap-2"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="pt-8 border-t border-white/5 text-center">
+            <p className="font-mono text-sm text-gray-600">
+              © {new Date().getFullYear()} Yokan Digital. {language === 'en' ? 'All rights reserved.' : 'Tous droits réservés.'}
+            </p>
+          </div>
         </div>
       </footer>
     </div>

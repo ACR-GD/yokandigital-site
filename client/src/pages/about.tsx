@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/hooks/use-language";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Linkedin } from "lucide-react";
+import { ArrowRight, Linkedin, MapPin, Phone } from "lucide-react";
 import { useEffect } from "react";
 
 export default function AboutPage() {
@@ -313,32 +313,56 @@ export default function AboutPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-[#050505] border-t border-white/5 relative z-10">
+      <footer className="py-12 bg-[#050505] border-t border-white/5 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="Yokan Digital" className="h-6" />
-              <span className="font-mono text-sm text-gray-600">— {t("footer.tagline")}</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <img src="/logo.png" alt="Yokan Digital" className="h-6" />
+              </div>
+              <p className="text-sm text-gray-500 font-mono">
+                {language === 'en' ? 'A brand by ACR Digital Ventures' : 'Une marque de ACR Digital Ventures'}
+              </p>
             </div>
             
-            <div className="flex items-center gap-6">
-              <a href="/privacy-policy" className="text-sm text-gray-600 hover:text-white transition-colors" data-testid="link-privacy">
-                {t("footer.privacy")}
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-[#00ff88] transition-colors"
-                data-testid="link-linkedin"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
+            <div>
+              <h4 className="text-white font-semibold mb-3 text-sm">{language === 'en' ? 'Contact' : 'Contact'}</h4>
+              <div className="space-y-2 text-sm text-gray-500">
+                <p className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 mt-0.5 text-[#00ff88] flex-shrink-0" />
+                  <span>68 Circular Road, 049422 Singapore</span>
+                </p>
+                <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-[#00ff88] flex-shrink-0" />
+                  <a href="tel:+6531637757" className="hover:text-white transition-colors">+65 3163 7757</a>
+                </p>
+              </div>
             </div>
             
-            <div className="font-mono text-sm text-gray-600">
+            <div>
+              <h4 className="text-white font-semibold mb-3 text-sm">{language === 'en' ? 'Links' : 'Liens'}</h4>
+              <div className="flex flex-col gap-2">
+                <a href="/privacy-policy" className="text-sm text-gray-500 hover:text-white transition-colors" data-testid="link-privacy">
+                  {t("footer.privacy")}
+                </a>
+                <a 
+                  href="https://linkedin.com/company/yokandigital" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-500 hover:text-[#00ff88] transition-colors flex items-center gap-2"
+                  data-testid="link-linkedin"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="pt-8 border-t border-white/5 text-center">
+            <p className="font-mono text-sm text-gray-600">
               {t("footer.copyright")}
-            </div>
+            </p>
           </div>
         </div>
       </footer>
