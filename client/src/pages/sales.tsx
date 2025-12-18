@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Crosshair, Brain, Wifi, RefreshCw, ArrowRight, TrendingDown, CheckCircle } from "lucide-react";
+import n8nWorkflow from "@assets/1765693919816_1766017219696.jpeg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -254,12 +255,17 @@ export default function SalesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="border-2 border-dashed border-gray-600 rounded-xl p-12 text-center bg-[#1e293b]/50"
+            className="border-2 border-[#22c55e]/30 rounded-xl p-4 md:p-8 bg-[#1e293b]/50 shadow-lg shadow-[#22c55e]/5"
           >
-            <div className="aspect-video flex items-center justify-center border border-gray-700 rounded-lg bg-[#0f172a] mb-4">
-              <p className="font-mono text-gray-500 text-lg">PLACEHOLDER: Insert n8n Workflow Screenshot Here</p>
+            <div className="rounded-lg overflow-hidden border border-gray-700 mb-4">
+              <img 
+                src={n8nWorkflow} 
+                alt="n8n Workflow Automation - AI-powered lead scoring and nurturing system" 
+                className="w-full h-auto"
+                data-testid="img-n8n-workflow"
+              />
             </div>
-            <p className="text-gray-400 font-mono text-sm">
+            <p className="text-gray-400 font-mono text-sm text-center">
               Complex automations running 24/7, installed directly into your business.
             </p>
           </motion.div>
@@ -282,7 +288,7 @@ export default function SalesPage() {
             </h2>
 
             <div className="mb-8">
-              <span className="text-6xl md:text-7xl font-bold font-mono text-white">€20,000</span>
+              <span className="text-6xl md:text-7xl font-bold font-mono text-white">$25,000</span>
               <p className="text-gray-400 mt-2">Implementation Fee</p>
             </div>
 
@@ -292,7 +298,7 @@ export default function SalesPage() {
                 <span className="text-xl font-bold font-mono text-[#22c55e]">The 90-Day ROI Guarantee</span>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                If the system doesn't generate €20k in pipeline value within 90 days, we work for free until it does.
+                If the system doesn't generate $25k in pipeline value within 90 days, we work for free until it does.
               </p>
             </div>
 
