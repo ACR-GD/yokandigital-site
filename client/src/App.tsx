@@ -11,6 +11,7 @@ import BlogPostPage from "@/pages/blog-post";
 import AdminDashboard from "@/pages/admin-dashboard";
 import AdminLogin from "@/pages/admin-login";
 import PrivacyPolicyPage from "@/pages/privacy-policy";
+import SalesPage from "@/pages/sales";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -23,6 +24,7 @@ function Router() {
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/privacy-policy" component={PrivacyPolicyPage} />
+      <Route path="/sales" component={SalesPage} />
       <Route component={NotFound} />
     </Switch>
   );

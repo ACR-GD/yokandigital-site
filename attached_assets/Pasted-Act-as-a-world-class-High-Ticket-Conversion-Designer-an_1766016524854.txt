@@ -1,0 +1,56 @@
+Act as a world-class High-Ticket Conversion Designer and Frontend Developer.
+
+Create a single-page Sales Landing Page for a "Revenue Engineering Firm" called "Yokan Digital".
+The goal is to sell a €20,000 infrastructure implementation to Wealth Management Firms and Staffing Agencies.
+
+**Tech Stack:**
+- HTML5
+- Tailwind CSS (use via CDN for simplicity)
+- FontAwesome (for icons)
+- Google Fonts (Inter for body, JetBrains Mono for headers/tech feel)
+
+**Design Aesthetic:**
+- "Dark Mode" Engineering Vibe: Black/Dark Gray backgrounds (#0f172a), White text.
+- Accents: "Terminal Green" (#22c55e) or "Cyber Blue" to convey system/tech/money.
+- Clean, minimalist, no clutter.
+- NO Navigation bar (we don't want them to leave). Just a logo top left.
+
+**Page Structure & Copy (Use this exact text):**
+
+1. **Hero Section (Center aligned):**
+   - Badge: "For Staffing Agencies & Wealth Management Firms Only"
+   - Headline (H1): "Stop Renting Your Growth. Own The Infrastructure."
+   - Subheadline: "We build and install your own Autonomous Client Acquisition System in 21 days. No retainers. Just sovereignty."
+   - CTA Button: "Audit Your Infrastructure" (Scrolls to bottom).
+
+2. **The Problem Section (Two columns):**
+   - Title: "The Leaking Bucket"
+   - Left: "Most agencies sell you leads. But your problem isn't traffic. It's System Failure. You are losing 98% of your opportunities because you rely on manual labor and unconnected tools."
+   - Right: [Placeholder for a Chart/Visual showing lost leads]
+
+3. **The Solution: "The Sovereign Growth OS" (Grid of 4 Cards):**
+   - Card 1: "The Market Sniper". Icon: Crosshair. Text: "AI-Driven scraping identifies your Total Addressable Market instantly."
+   - Card 2: "The Neural Outreach". Icon: Robot/Brain. Text: "n8n + OpenAI workflows that contact decision makers with human relevance at scale."
+   - Card 3: "The Invisible Net". Icon: Wifi/Signal. Text: "Retargeting protocols that recapture the 98% who leave your site."
+   - Card 4: "The Resurrection Protocol". Icon: Refresh. Text: "We reactivate your dead CRM data and turn it into pipeline."
+
+4. **The "Engineering" Proof (Visual Section):**
+   - Headline: "We don't do Magic. We do Engineering."
+   - Content: A large placeholder box with a border that says "PLACEHOLDER: Insert n8n Workflow Screenshot Here".
+   - Caption: "Complex automations running 24/7, installed directly into your business."
+
+5. **The Offer & Guarantee (Boxed Section):**
+   - Title: "One-Time Investment. Lifetime Asset."
+   - Price: "€20,000 Implementation Fee."
+   - Guarantee: "The 90-Day ROI Guarantee. If the system doesn't generate €20k in pipeline value within 90 days, we work for free until it does."
+
+6. **The Close (Calendly Section):**
+   - Headline: "Are you ready to build?"
+   - Subhead: "Book your Systems Audit. Serious inquiries only."
+   - Content: A div with ID "calendly-embed" (I will add my code later).
+
+**Interactive Elements:**
+- Smooth scrolling when clicking the Hero CTA.
+- subtle hover effects on the 4 cards (glow effect).
+
+Build this now as a single index.html file.
