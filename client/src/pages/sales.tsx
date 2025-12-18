@@ -25,6 +25,16 @@ export default function SalesPage() {
     if (meta) {
       meta.setAttribute('content', 'We build and install your own Autonomous Client Acquisition System in 21 days. For Staffing Agencies & Wealth Management Firms.');
     }
+    
+    // Load Calendly script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   const scrollToCalendly = () => {
@@ -332,15 +342,11 @@ export default function SalesPage() {
             </p>
 
             <div 
-              id="calendly-embed" 
-              className="bg-[#0f172a] border border-gray-700 rounded-xl p-12 min-h-[400px] flex items-center justify-center"
-              data-testid="calendly-placeholder"
-            >
-              <div className="text-center">
-                <p className="font-mono text-gray-500 text-lg mb-4">Calendly Embed Will Appear Here</p>
-                <p className="text-gray-600 text-sm">Add your Calendly script to activate scheduling</p>
-              </div>
-            </div>
+              className="calendly-inline-widget bg-[#0f172a] border border-gray-700 rounded-xl overflow-hidden"
+              data-url="https://calendly.com/tony-yokandigital/30min"
+              style={{ minWidth: '320px', height: '700px' }}
+              data-testid="calendly-embed"
+            />
           </motion.div>
         </div>
       </section>
