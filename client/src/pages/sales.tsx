@@ -315,11 +315,11 @@ export default function SalesPage() {
             <Button
               onClick={scrollToCalendly}
               size="lg"
-              className="bg-[#22c55e] text-black hover:bg-[#22c55e]/90 font-bold px-10 py-7 text-lg rounded-lg shadow-lg shadow-[#22c55e]/20 hover:shadow-[#22c55e]/40 transition-all duration-300"
+              className="bg-[#22c55e] text-black hover:bg-[#22c55e]/90 font-bold px-6 md:px-10 py-6 md:py-7 text-base md:text-lg rounded-lg shadow-lg shadow-[#22c55e]/20 hover:shadow-[#22c55e]/40 transition-all duration-300 w-full md:w-auto"
               data-testid="button-offer-cta"
             >
               Claim Your Infrastructure
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
             </Button>
           </motion.div>
         </div>
