@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Crosshair, Brain, Wifi, RefreshCw, ArrowRight, TrendingDown, CheckCircle } from "lucide-react";
 import n8nWorkflow from "@assets/1765693919816_1766017219696.jpeg";
-import leakyBucketImg from "@assets/Leaky_Bucket_1766233306405.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -204,26 +203,6 @@ export default function SalesPage() {
               <p className="mt-6 text-center text-red-400 font-mono text-sm">98% Revenue Left on the Table</p>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Leaky Bucket Visual Section */}
-      <section className="py-16 px-6 bg-[#0f172a]">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="rounded-xl overflow-hidden border border-gray-700"
-          >
-            <img 
-              src={leakyBucketImg} 
-              alt="The Recruitment Leaking Bucket - 98% Lost Forever" 
-              className="w-full h-auto"
-              data-testid="img-leaky-bucket"
-            />
-          </motion.div>
         </div>
       </section>
 
