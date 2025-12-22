@@ -144,7 +144,7 @@ export default function BlogPage() {
 
   // Set page title for SEO
   useEffect(() => {
-    document.title = 'Digital Marketing Blog | Yokan Digital - SEO, Web Design & Marketing Tips';
+    document.title = 'Revenue Engineering Blog | Yokan Digital - AI Systems & Automation';
     
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -153,10 +153,10 @@ export default function BlogPage() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Expert insights on SEO, web design, and digital marketing for Malaysian businesses. Get actionable tips to grow your online presence and boost sales.');
+    metaDescription.setAttribute('content', 'Expert insights on revenue architecture, AI automation, and autonomous acquisition systems. Data-driven strategies to scale your business.');
     
     return () => {
-      document.title = 'Yokan Digital - Malaysian Web Design & SEO Agency';
+      document.title = 'Yokan Digital | Revenue Architecture & AI Systems';
     };
   }, []);
 

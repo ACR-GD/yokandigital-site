@@ -3157,7 +3157,7 @@ export default function BlogPostPage() {
     }
     
     return () => {
-      document.title = 'Yokan Digital - Malaysian Web Design & SEO Agency';
+      document.title = 'Yokan Digital | Revenue Architecture & AI Systems';
     };
   }, [post]);
 
