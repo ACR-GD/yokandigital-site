@@ -13,11 +13,11 @@ export const translations: Translations = {
   },
   "nav.system": {
     en: "The System",
-    fr: "Le Système"
+    fr: "Le système"
   },
   "nav.about": {
     en: "About",
-    fr: "À Propos"
+    fr: "À propos"
   },
   "nav.contact": {
     en: "Contact",
@@ -25,31 +25,31 @@ export const translations: Translations = {
   },
   "nav.auditCta": {
     en: "Audit Your Architecture",
-    fr: "Auditez Votre Architecture"
+    fr: "Faites un audit de votre architecture"
   },
 
   // Hero Section
   "hero.title": {
     en: "Stop Guessing. Start Engineering Revenue.",
-    fr: "Arrêtez de deviner. Ingéniez vos revenus."
+    fr: "Arrêtez d'improviser. Architecturez votre revenu."
   },
   "hero.subtitle": {
     en: "We build Autonomous Acquisition Ecosystems powered by Data & AI. Replacing marketing magic with mathematical truth.",
-    fr: "Nous construisons des Écosystèmes d'Acquisition Autonomes propulsés par les Données & l'IA. Remplacer la magie du marketing par la vérité mathématique."
+    fr: "Nous construisons des Écosystèmes d'Acquisition Autonomes propulsés par les data & l'IA. Remplacer la magie du marketing par la vérité mathématique."
   },
   "hero.cta.primary": {
     en: "Book Architecture Review",
-    fr: "Réserver un Audit Architecture"
+    fr: "Réserver un audit de votre architecture"
   },
   "hero.cta.secondary": {
     en: "See The System",
-    fr: "Voir le Système"
+    fr: "Voir le système"
   },
 
   // Problem Section (The Chaos)
   "problem.title": {
     en: "The Chaos",
-    fr: "Le Chaos"
+    fr: "Le chaos"
   },
   "problem.subtitle": {
     en: "Traditional agencies sell you hope. We sell you a system.",
@@ -57,7 +57,7 @@ export const translations: Translations = {
   },
   "problem.vanity.title": {
     en: "Vanity Metrics",
-    fr: "Métriques de Vanité"
+    fr: "Indicateurs de façade"
   },
   "problem.vanity.items": {
     en: "Likes, Impressions, Followers, Traffic",
@@ -65,7 +65,7 @@ export const translations: Translations = {
   },
   "problem.reality.title": {
     en: "P&L Reality",
-    fr: "Réalité du P&L"
+    fr: "Réalité des pertes et profits"
   },
   "problem.reality.items": {
     en: "Revenue, CAC, LTV, ROAS, Profit",
@@ -73,7 +73,7 @@ export const translations: Translations = {
   },
   "problem.manual.title": {
     en: "Manual Grunt Work",
-    fr: "Travail Manuel Répétitif"
+    fr: "Travail manuel répétitif"
   },
   "problem.manual.items": {
     en: "Copy-paste, spreadsheets, human error",
@@ -85,13 +85,13 @@ export const translations: Translations = {
   },
   "problem.automation.items": {
     en: "24/7 workflows, zero latency, infinite scale",
-    fr: "Workflows 24/7, zéro latence, échelle infinie"
+    fr: "Workflows 24h/24, zéro latence, croissance infinie"
   },
 
   // Solution Section (The Machine)
   "solution.title": {
     en: "The Machine",
-    fr: "La Machine"
+    fr: "La machine"
   },
   "solution.subtitle": {
     en: "Three pillars of autonomous revenue generation",
@@ -103,31 +103,31 @@ export const translations: Translations = {
   },
   "solution.pillar1.description": {
     en: "Server-side tracking that captures every signal. Real-time dashboards that show the actual P&L impact.",
-    fr: "Tracking côté serveur qui capture chaque signal. Tableaux de bord en temps réel qui montrent l'impact réel sur le P&L."
+    fr: "Suivi côté serveur qui capture chaque signal. Tableaux de bord en temps réel qui montrent l'impact réel sur les pertes et profits."
   },
   "solution.pillar1.features": {
     en: "Server-side tracking, BigQuery pipelines, Looker dashboards",
-    fr: "Tracking serveur, pipelines BigQuery, dashboards Looker"
+    fr: "Suivi serveur, pipelines BigQuery, dashboards Looker Studio"
   },
   "solution.pillar2.title": {
     en: "AI Autonomy",
     fr: "Autonomie IA"
   },
   "solution.pillar2.description": {
-    en: "Workflows that run without you. AI agents that make decisions, execute, and optimize 24/7.",
-    fr: "Des workflows qui tournent sans vous. Des agents IA qui décident, exécutent et optimisent 24/7."
+    en: "Workflows that run without you (or us). AI agents that make decisions, execute, and optimize 24/7.",
+    fr: "Des workflows qui tournent sans vous (ou nous). Des agents IA qui décident, exécutent et optimisent 24h/24."
   },
   "solution.pillar2.features": {
-    en: "n8n/Make workflows, GPT agents, automated campaigns",
-    fr: "Workflows n8n/Make, agents GPT, campagnes automatisées"
+    en: "n8n workflows, AI agents, automated campaigns",
+    fr: "Workflows n8n, agents IA, campagnes automatisées"
   },
   "solution.pillar3.title": {
     en: "Scalable Infrastructure",
-    fr: "Infrastructure Évolutive"
+    fr: "Infrastructure évolutive"
   },
   "solution.pillar3.description": {
     en: "Assets you own, not rent. Systems that compound value over time.",
-    fr: "Des actifs que vous possédez, pas louez. Des systèmes qui composent de la valeur dans le temps."
+    fr: "Ne louez plus votre croissance, possédez-la. Construisez des systèmes à rendement exponentiel."
   },
   "solution.pillar3.features": {
     en: "Custom CRMs, owned databases, proprietary models",
@@ -137,17 +137,17 @@ export const translations: Translations = {
   // Tech Stack
   "tech.title": {
     en: "Our Weapons of Choice",
-    fr: "Nos Armes de Prédilection"
+    fr: "Nos armes de prédilection"
   },
   "tech.subtitle": {
     en: "The technology stack that powers autonomous revenue systems",
-    fr: "La stack technologique qui alimente les systèmes de revenus autonomes"
+    fr: "Le stack technologique qui alimente les systèmes de revenus autonomes"
   },
 
   // Founder Section
   "founder.title": {
     en: "The Architect",
-    fr: "L'Architecte"
+    fr: "L'architecte"
   },
   "founder.name": {
     en: "Antoine",
@@ -155,11 +155,11 @@ export const translations: Translations = {
   },
   "founder.role": {
     en: "Founder & Revenue Architect",
-    fr: "Fondateur & Architecte Revenue"
+    fr: "Fondateur & Architecte du Revenu"
   },
   "founder.bio": {
-    en: "10+ years engineering growth systems across France, Canada, and Southeast Asia. I don't do marketing—I build machines that generate revenue while you sleep.",
-    fr: "10+ ans d'ingénierie de systèmes de croissance en France, au Canada et en Asie du Sud-Est. Je ne fais pas de marketing—je construis des machines qui génèrent des revenus pendant que vous dormez."
+    en: "10+ years engineering growth systems across France, Canada, and Southeast Asia. I don't do marketing. I build machines that generate revenue while you sleep.",
+    fr: "Plus de 10 ans d'ingénierie de systèmes de croissance en France, au Canada et en Asie du Sud-Est. Je ne fais pas de marketing. Je construis des machines qui génèrent des revenus pendant que vous dormez."
   },
   "founder.quote": {
     en: "Alone we go faster, together we go further.",
@@ -169,15 +169,15 @@ export const translations: Translations = {
   // Contact / CTA
   "cta.title": {
     en: "Ready to Stop Guessing?",
-    fr: "Prêt à Arrêter de Deviner?"
+    fr: "Prêt à arrêter d'improviser?"
   },
   "cta.subtitle": {
     en: "Book a 30-minute architecture review. We'll audit your current stack and show you exactly where revenue is leaking.",
-    fr: "Réservez un audit architecture de 30 minutes. Nous analyserons votre stack actuelle et vous montrerons exactement où les revenus fuient."
+    fr: "Réservez un audit de votre architecture de 30 minutes. Nous analyserons votre stack actuel et vous montrerons exactement où les revenus fuient."
   },
   "cta.button": {
     en: "Book Architecture Review",
-    fr: "Réserver l'Audit Architecture"
+    fr: "Réserver l'audit de votre architecture"
   },
   "cta.available": {
     en: "Available for consultation",
@@ -209,15 +209,15 @@ export const translations: Translations = {
   // About Page
   "about.title": {
     en: "From Premonition to Prediction.",
-    fr: "De la Prémonition à la Prédiction."
+    fr: "De la prémonition à la prédiction."
   },
   "about.definition": {
     en: "In Japanese, Yokan (予感) means 'Premonition'.",
     fr: "En japonais, Yokan (予感) signifie 'Prémonition'."
   },
   "about.phonetic": {
-    en: "[Yo-Kan]",
-    fr: "[Yo-Kan]"
+    en: "[Yō-Kan]",
+    fr: "[Yō-Kan]"
   },
   "about.definitionShort": {
     en: "n. Premonition; the feeling of something to come.",
@@ -229,11 +229,11 @@ export const translations: Translations = {
   },
   "about.pivot": {
     en: "From Intuition to Calculation.",
-    fr: "De l'Intuition au Calcul."
+    fr: "De l'intuition au calcul."
   },
   "about.tagline": {
     en: "Stop guessing your future. Engineer it.",
-    fr: "Arrêtez de deviner l'avenir. Ingéniez-le."
+    fr: "Arrêtez d'essayer de deviner l'avenir. Architecturez-le."
   },
   "about.old": {
     en: "Hunch",
@@ -241,7 +241,7 @@ export const translations: Translations = {
   },
   "about.new": {
     en: "Mathematical Certainty",
-    fr: "Certitude Mathématique"
+    fr: "Certitude mathématique"
   },
   "about.founder": {
     en: "Antoine Clerc-Renaud, Founder.",
@@ -251,11 +251,11 @@ export const translations: Translations = {
   // Footer
   "footer.tagline": {
     en: "Revenue Architecture & AI Systems",
-    fr: "Architecture Revenue & Systèmes IA"
+    fr: "Architecture Revenu & Systèmes IA"
   },
   "footer.copyright": {
-    en: "© 2024 Yokan Digital. All rights reserved.",
-    fr: "© 2024 Yokan Digital. Tous droits réservés."
+    en: "© 2025 Yokan Digital. All rights reserved.",
+    fr: "© 2025 Yokan Digital. Tous droits réservés."
   },
   "footer.privacy": {
     en: "Privacy Policy",
@@ -269,15 +269,15 @@ export const translations: Translations = {
   // Sales Page
   "sales.badge": {
     en: "For Staffing Agencies & Wealth Management Firms Only",
-    fr: "Pour Agences de Recrutement & Cabinets de Gestion de Patrimoine Uniquement"
+    fr: "Pour agences de recrutement & cabinets de gestion de patrimoine uniquement"
   },
   "sales.hero.title1": {
     en: "Stop Renting Your Growth.",
-    fr: "Arrêtez de Louer Votre Croissance."
+    fr: "Arrêtez de louer votre croissance."
   },
   "sales.hero.title2": {
     en: "Own The Infrastructure.",
-    fr: "Possédez L'Infrastructure."
+    fr: "Possédez l'infrastructure."
   },
   "sales.hero.subtitle": {
     en: "We build and install your own Autonomous Client Acquisition System in 21 days. No retainers. Just sovereignty.",
@@ -285,11 +285,11 @@ export const translations: Translations = {
   },
   "sales.hero.cta": {
     en: "Audit Your Infrastructure",
-    fr: "Auditez Votre Infrastructure"
+    fr: "Auditez votre infrastructure"
   },
   "sales.problem.title": {
     en: "The Leaking Bucket",
-    fr: "Le Seau Percé"
+    fr: "Le seau percé"
   },
   "sales.problem.text1": {
     en: "Most agencies sell you leads. But your problem isn't traffic.",
@@ -297,7 +297,7 @@ export const translations: Translations = {
   },
   "sales.problem.text2": {
     en: "System Failure",
-    fr: "Défaillance Système"
+    fr: "Défaillance système"
   },
   "sales.problem.text3": {
     en: "You are losing",
@@ -309,7 +309,7 @@ export const translations: Translations = {
   },
   "sales.problem.funnel": {
     en: "Lost Opportunity Funnel",
-    fr: "Entonnoir d'Opportunités Perdues"
+    fr: "Entonnoir d'opportunités perdues"
   },
   "sales.problem.in": {
     en: "100% In",
@@ -329,7 +329,7 @@ export const translations: Translations = {
   },
   "sales.problem.lost": {
     en: "98% Revenue Left on the Table",
-    fr: "98% du Revenu Laissé sur la Table"
+    fr: "98% du revenu laissé sur la table"
   },
   "sales.calculator.title": {
     en: "THE COST OF INACTION",
@@ -341,31 +341,31 @@ export const translations: Translations = {
   },
   "sales.calculator.leads": {
     en: "Monthly Leads",
-    fr: "Leads Mensuels"
+    fr: "Leads mensuels"
   },
   "sales.calculator.clientValue": {
     en: "Average Client Value",
-    fr: "Valeur Client Moyenne"
+    fr: "Valeur client moyenne"
   },
   "sales.calculator.humanRate": {
     en: "Current Human Conversion Rate",
-    fr: "Taux de Conversion Humain Actuel"
+    fr: "Taux de conversion actuel avec un humain en charge"
   },
   "sales.calculator.systemRate": {
     en: "System Conversion Rate (Fixed)",
-    fr: "Taux de Conversion Système (Fixe)"
+    fr: "Taux de conversion système (Fixe)"
   },
   "sales.calculator.result": {
     en: "Annual Revenue Leak",
-    fr: "Fuite de Revenu Annuelle"
+    fr: "Fuite annuelle de revenu"
   },
   "sales.calculator.lostText": {
     en: "Lost every year to manual processes",
-    fr: "Perdu chaque année à cause des processus manuels"
+    fr: "perdus chaque année à cause des processus manuels"
   },
   "sales.calculator.cta": {
     en: "Plug the Leak - Book Audit ($25k Implementation)",
-    fr: "Colmatez la Fuite - Réservez l'Audit (Implémentation $25k)"
+    fr: "Colmatez la fuite - Réservez votre audit (Implémentation 20k€)"
   },
   "sales.solution.title": {
     en: "The Sovereign Growth OS",
@@ -377,15 +377,15 @@ export const translations: Translations = {
   },
   "sales.solution.card1.title": {
     en: "The Market Sniper",
-    fr: "Le Market Sniper"
+    fr: "Le market sniper"
   },
   "sales.solution.card1.desc": {
     en: "AI-Driven scraping identifies your Total Addressable Market instantly.",
-    fr: "Le scraping piloté par IA identifie votre Marché Adressable Total instantanément."
+    fr: "Le scraping piloté par IA identifie votre marché adressable total instantanément."
   },
   "sales.solution.card2.title": {
     en: "The Neural Outreach",
-    fr: "Le Neural Outreach"
+    fr: "Le neural outreach"
   },
   "sales.solution.card2.desc": {
     en: "n8n + OpenAI workflows that contact decision makers with human relevance at scale.",
@@ -393,7 +393,7 @@ export const translations: Translations = {
   },
   "sales.solution.card3.title": {
     en: "The Invisible Net",
-    fr: "Le Filet Invisible"
+    fr: "Le filet invisible"
   },
   "sales.solution.card3.desc": {
     en: "Retargeting protocols that recapture the 98% who leave your site.",
@@ -401,7 +401,7 @@ export const translations: Translations = {
   },
   "sales.solution.card4.title": {
     en: "The Resurrection Protocol",
-    fr: "Le Protocole de Résurrection"
+    fr: "Le protocole de résurrection"
   },
   "sales.solution.card4.desc": {
     en: "We reactivate your dead CRM data and turn it into pipeline.",
@@ -409,27 +409,27 @@ export const translations: Translations = {
   },
   "sales.proof.title1": {
     en: "We don't do Magic.",
-    fr: "Nous ne faisons pas de Magie."
+    fr: "Nous ne faisons pas de magie."
   },
   "sales.proof.title2": {
     en: "We do Engineering.",
-    fr: "Nous faisons de l'Ingénierie."
+    fr: "Nous faisons de l'ingénierie."
   },
   "sales.proof.caption": {
     en: "Complex automations running 24/7, installed directly into your business.",
-    fr: "Automatisations complexes tournant 24/7, installées directement dans votre entreprise."
+    fr: "Automatisations complexes tournant 24h/24, installées directement dans votre entreprise."
   },
   "sales.offer.title1": {
     en: "One-Time Investment.",
-    fr: "Investissement Unique."
+    fr: "Investissement unique."
   },
   "sales.offer.title2": {
     en: "Lifetime Asset.",
-    fr: "Actif à Vie."
+    fr: "Un actif perpétuel"
   },
   "sales.offer.price": {
     en: "Implementation Fee",
-    fr: "Frais d'Implémentation"
+    fr: "Frais d'implémentation"
   },
   "sales.offer.guarantee.title": {
     en: "The 90-Day ROI Guarantee",
@@ -437,11 +437,11 @@ export const translations: Translations = {
   },
   "sales.offer.guarantee.text": {
     en: "If the system doesn't generate $25k in pipeline value within 90 days, we work for free until it does.",
-    fr: "Si le système ne génère pas $25k de valeur pipeline en 90 jours, nous travaillons gratuitement jusqu'à ce qu'il le fasse."
+    fr: "Si le système ne génère pas 20k€ de valeur pipeline en 90 jours, nous travaillons gratuitement jusqu'à ce qu'il le fasse."
   },
   "sales.offer.cta": {
     en: "Claim Your Infrastructure",
-    fr: "Réclamez Votre Infrastructure"
+    fr: "Réclamez votre infrastructure"
   },
   "sales.calendly.title": {
     en: "Are you ready to build?",
@@ -449,7 +449,7 @@ export const translations: Translations = {
   },
   "sales.calendly.subtitle": {
     en: "Book your Systems Audit. Serious inquiries only.",
-    fr: "Réservez votre Audit Système. Demandes sérieuses uniquement."
+    fr: "Réservez votre audit système. Demandes sérieuses uniquement."
   },
   "sales.footer": {
     en: "A brand by ACR Digital Ventures.",
