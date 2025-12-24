@@ -264,6 +264,196 @@ export const translations: Translations = {
   "footer.terms": {
     en: "Terms of Service",
     fr: "Conditions d'Utilisation"
+  },
+
+  // Sales Page
+  "sales.badge": {
+    en: "For Staffing Agencies & Wealth Management Firms Only",
+    fr: "Pour Agences de Recrutement & Cabinets de Gestion de Patrimoine Uniquement"
+  },
+  "sales.hero.title1": {
+    en: "Stop Renting Your Growth.",
+    fr: "Arrêtez de Louer Votre Croissance."
+  },
+  "sales.hero.title2": {
+    en: "Own The Infrastructure.",
+    fr: "Possédez L'Infrastructure."
+  },
+  "sales.hero.subtitle": {
+    en: "We build and install your own Autonomous Client Acquisition System in 21 days. No retainers. Just sovereignty.",
+    fr: "Nous construisons et installons votre propre Système d'Acquisition Client Autonome en 21 jours. Pas de rétention. Juste la souveraineté."
+  },
+  "sales.hero.cta": {
+    en: "Audit Your Infrastructure",
+    fr: "Auditez Votre Infrastructure"
+  },
+  "sales.problem.title": {
+    en: "The Leaking Bucket",
+    fr: "Le Seau Percé"
+  },
+  "sales.problem.text1": {
+    en: "Most agencies sell you leads. But your problem isn't traffic.",
+    fr: "La plupart des agences vous vendent des leads. Mais votre problème n'est pas le trafic."
+  },
+  "sales.problem.text2": {
+    en: "System Failure",
+    fr: "Défaillance Système"
+  },
+  "sales.problem.text3": {
+    en: "You are losing",
+    fr: "Vous perdez"
+  },
+  "sales.problem.text4": {
+    en: "of your opportunities because you rely on manual labor and unconnected tools.",
+    fr: "de vos opportunités parce que vous comptez sur le travail manuel et des outils non connectés."
+  },
+  "sales.problem.funnel": {
+    en: "Lost Opportunity Funnel",
+    fr: "Entonnoir d'Opportunités Perdues"
+  },
+  "sales.problem.in": {
+    en: "100% In",
+    fr: "100% Entrée"
+  },
+  "sales.problem.seen": {
+    en: "40% Seen",
+    fr: "40% Vus"
+  },
+  "sales.problem.engaged": {
+    en: "10% Engaged",
+    fr: "10% Engagés"
+  },
+  "sales.problem.converted": {
+    en: "2% Converted",
+    fr: "2% Convertis"
+  },
+  "sales.problem.lost": {
+    en: "98% Revenue Left on the Table",
+    fr: "98% du Revenu Laissé sur la Table"
+  },
+  "sales.calculator.title": {
+    en: "THE COST OF INACTION",
+    fr: "LE COÛT DE L'INACTION"
+  },
+  "sales.calculator.subtitle": {
+    en: "Your manual process is a leaking bucket. See exactly how much it's costing you.",
+    fr: "Votre processus manuel est un seau percé. Voyez exactement combien cela vous coûte."
+  },
+  "sales.calculator.leads": {
+    en: "Monthly Leads",
+    fr: "Leads Mensuels"
+  },
+  "sales.calculator.clientValue": {
+    en: "Average Client Value",
+    fr: "Valeur Client Moyenne"
+  },
+  "sales.calculator.humanRate": {
+    en: "Current Human Conversion Rate",
+    fr: "Taux de Conversion Humain Actuel"
+  },
+  "sales.calculator.systemRate": {
+    en: "System Conversion Rate (Fixed)",
+    fr: "Taux de Conversion Système (Fixe)"
+  },
+  "sales.calculator.result": {
+    en: "Annual Revenue Leak",
+    fr: "Fuite de Revenu Annuelle"
+  },
+  "sales.calculator.lostText": {
+    en: "Lost every year to manual processes",
+    fr: "Perdu chaque année à cause des processus manuels"
+  },
+  "sales.calculator.cta": {
+    en: "Plug the Leak - Book Audit ($25k Implementation)",
+    fr: "Colmatez la Fuite - Réservez l'Audit (Implémentation $25k)"
+  },
+  "sales.solution.title": {
+    en: "The Sovereign Growth OS",
+    fr: "Le Sovereign Growth OS"
+  },
+  "sales.solution.subtitle": {
+    en: "Your complete autonomous acquisition infrastructure",
+    fr: "Votre infrastructure d'acquisition autonome complète"
+  },
+  "sales.solution.card1.title": {
+    en: "The Market Sniper",
+    fr: "Le Market Sniper"
+  },
+  "sales.solution.card1.desc": {
+    en: "AI-Driven scraping identifies your Total Addressable Market instantly.",
+    fr: "Le scraping piloté par IA identifie votre Marché Adressable Total instantanément."
+  },
+  "sales.solution.card2.title": {
+    en: "The Neural Outreach",
+    fr: "Le Neural Outreach"
+  },
+  "sales.solution.card2.desc": {
+    en: "n8n + OpenAI workflows that contact decision makers with human relevance at scale.",
+    fr: "Workflows n8n + OpenAI qui contactent les décideurs avec pertinence humaine à l'échelle."
+  },
+  "sales.solution.card3.title": {
+    en: "The Invisible Net",
+    fr: "Le Filet Invisible"
+  },
+  "sales.solution.card3.desc": {
+    en: "Retargeting protocols that recapture the 98% who leave your site.",
+    fr: "Protocoles de retargeting qui recapturent les 98% qui quittent votre site."
+  },
+  "sales.solution.card4.title": {
+    en: "The Resurrection Protocol",
+    fr: "Le Protocole de Résurrection"
+  },
+  "sales.solution.card4.desc": {
+    en: "We reactivate your dead CRM data and turn it into pipeline.",
+    fr: "Nous réactivons vos données CRM mortes et les transformons en pipeline."
+  },
+  "sales.proof.title1": {
+    en: "We don't do Magic.",
+    fr: "Nous ne faisons pas de Magie."
+  },
+  "sales.proof.title2": {
+    en: "We do Engineering.",
+    fr: "Nous faisons de l'Ingénierie."
+  },
+  "sales.proof.caption": {
+    en: "Complex automations running 24/7, installed directly into your business.",
+    fr: "Automatisations complexes tournant 24/7, installées directement dans votre entreprise."
+  },
+  "sales.offer.title1": {
+    en: "One-Time Investment.",
+    fr: "Investissement Unique."
+  },
+  "sales.offer.title2": {
+    en: "Lifetime Asset.",
+    fr: "Actif à Vie."
+  },
+  "sales.offer.price": {
+    en: "Implementation Fee",
+    fr: "Frais d'Implémentation"
+  },
+  "sales.offer.guarantee.title": {
+    en: "The 90-Day ROI Guarantee",
+    fr: "La Garantie ROI 90 Jours"
+  },
+  "sales.offer.guarantee.text": {
+    en: "If the system doesn't generate $25k in pipeline value within 90 days, we work for free until it does.",
+    fr: "Si le système ne génère pas $25k de valeur pipeline en 90 jours, nous travaillons gratuitement jusqu'à ce qu'il le fasse."
+  },
+  "sales.offer.cta": {
+    en: "Claim Your Infrastructure",
+    fr: "Réclamez Votre Infrastructure"
+  },
+  "sales.calendly.title": {
+    en: "Are you ready to build?",
+    fr: "Êtes-vous prêt à construire?"
+  },
+  "sales.calendly.subtitle": {
+    en: "Book your Systems Audit. Serious inquiries only.",
+    fr: "Réservez votre Audit Système. Demandes sérieuses uniquement."
+  },
+  "sales.footer": {
+    en: "A brand by ACR Digital Ventures.",
+    fr: "Une marque d'ACR Digital Ventures."
   }
 };
 

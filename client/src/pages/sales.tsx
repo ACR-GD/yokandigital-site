@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
-import { Crosshair, Brain, Wifi, RefreshCw, ArrowRight, TrendingDown, CheckCircle } from "lucide-react";
+import { Crosshair, Brain, Wifi, RefreshCw, ArrowRight, TrendingDown, CheckCircle, Globe } from "lucide-react";
+import { useLanguage } from "@/hooks/use-language";
 import n8nWorkflow from "@assets/1765693919816_1766017219696.jpeg";
 
 const fadeInUp = {
@@ -20,6 +21,7 @@ const staggerContainer = {
 };
 
 export default function SalesPage() {
+  const { t, language, setLanguage } = useLanguage();
   const [monthlyLeads, setMonthlyLeads] = useState(100);
   const [clientValue, setClientValue] = useState(10000);
   const [conversionRate, setConversionRate] = useState(3);
@@ -38,7 +40,6 @@ export default function SalesPage() {
       meta.setAttribute('content', 'We build and install your own Autonomous Client Acquisition System in 21 days. For Staffing Agencies & Wealth Management Firms.');
     }
     
-    // Load Calendly script
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
@@ -59,34 +60,42 @@ export default function SalesPage() {
   const solutionCards = [
     {
       icon: Crosshair,
-      title: "The Market Sniper",
-      description: "AI-Driven scraping identifies your Total Addressable Market instantly."
+      titleKey: "sales.solution.card1.title",
+      descKey: "sales.solution.card1.desc"
     },
     {
       icon: Brain,
-      title: "The Neural Outreach",
-      description: "n8n + OpenAI workflows that contact decision makers with human relevance at scale."
+      titleKey: "sales.solution.card2.title",
+      descKey: "sales.solution.card2.desc"
     },
     {
       icon: Wifi,
-      title: "The Invisible Net",
-      description: "Retargeting protocols that recapture the 98% who leave your site."
+      titleKey: "sales.solution.card3.title",
+      descKey: "sales.solution.card3.desc"
     },
     {
       icon: RefreshCw,
-      title: "The Resurrection Protocol",
-      description: "We reactivate your dead CRM data and turn it into pipeline."
+      titleKey: "sales.solution.card4.title",
+      descKey: "sales.solution.card4.desc"
     }
   ];
 
   return (
     <div className="min-h-screen bg-[#0f172a] text-white overflow-x-hidden font-sans">
-      {/* Logo Only Header */}
+      {/* Logo Only Header with Language Toggle */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/90 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="/" data-testid="logo-sales">
             <img src="/logo.png" alt="Yokan Digital" className="h-8" />
           </a>
+          <button
+            onClick={() => setLanguage(language === 'en' ? 'fr' : 'en')}
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#22c55e]/30 hover:border-[#22c55e]/60 transition-colors text-sm font-mono"
+            data-testid="button-language-toggle"
+          >
+            <Globe className="w-4 h-4 text-[#22c55e]" />
+            <span className="text-white">{language.toUpperCase()}</span>
+          </button>
         </div>
       </header>
 
@@ -105,17 +114,17 @@ export default function SalesPage() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#22c55e]/30 bg-[#22c55e]/10 mb-8" data-testid="badge-target">
             <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
-            <span className="text-sm font-mono text-[#22c55e]">For Staffing Agencies & Wealth Management Firms Only</span>
+            <span className="text-sm font-mono text-[#22c55e]">{t("sales.badge")}</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight font-mono" data-testid="hero-headline">
-            Stop Renting Your Growth.
+            {t("sales.hero.title1")}
             <br />
-            <span className="text-[#22c55e]">Own The Infrastructure.</span>
+            <span className="text-[#22c55e]">{t("sales.hero.title2")}</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            We build and install your own Autonomous Client Acquisition System in 21 days. No retainers. Just sovereignty.
+            {t("sales.hero.subtitle")}
           </p>
 
           <Button
@@ -124,7 +133,7 @@ export default function SalesPage() {
             className="bg-[#22c55e] text-black hover:bg-[#22c55e]/90 font-bold px-10 py-7 text-lg rounded-lg shadow-lg shadow-[#22c55e]/20 hover:shadow-[#22c55e]/40 transition-all duration-300"
             data-testid="button-hero-cta"
           >
-            Audit Your Infrastructure
+            {t("sales.hero.cta")}
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </motion.div>
@@ -141,7 +150,7 @@ export default function SalesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold font-mono mb-4" data-testid="problem-headline">
-              The <span className="text-red-500">Leaking Bucket</span>
+              {t("sales.problem.title").split(" ")[0]} <span className="text-red-500">{t("sales.problem.title").split(" ").slice(1).join(" ")}</span>
             </h2>
           </motion.div>
 
@@ -153,13 +162,13 @@ export default function SalesPage() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                Most agencies sell you leads. But your problem isn't traffic.
+                {t("sales.problem.text1")}
               </p>
               <p className="text-2xl font-semibold text-white mb-6">
-                It's <span className="text-red-500">System Failure</span>.
+                {language === 'en' ? "It's " : "C'est une "}<span className="text-red-500">{t("sales.problem.text2")}</span>.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
-                You are losing <span className="text-[#22c55e] font-mono font-bold">98%</span> of your opportunities because you rely on manual labor and unconnected tools.
+                {t("sales.problem.text3")} <span className="text-[#22c55e] font-mono font-bold">98%</span> {t("sales.problem.text4")}
               </p>
             </motion.div>
 
@@ -172,35 +181,35 @@ export default function SalesPage() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <TrendingDown className="w-8 h-8 text-red-500" />
-                <span className="font-mono text-lg text-gray-300">Lost Opportunity Funnel</span>
+                <span className="font-mono text-lg text-gray-300">{t("sales.problem.funnel")}</span>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-full bg-gray-700 rounded-full h-4">
                     <div className="bg-[#22c55e] h-4 rounded-full" style={{ width: '100%' }} />
                   </div>
-                  <span className="font-mono text-sm text-gray-400 w-24">100% In</span>
+                  <span className="font-mono text-sm text-gray-400 w-28">{t("sales.problem.in")}</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-full bg-gray-700 rounded-full h-4">
                     <div className="bg-yellow-500 h-4 rounded-full" style={{ width: '40%' }} />
                   </div>
-                  <span className="font-mono text-sm text-gray-400 w-24">40% Seen</span>
+                  <span className="font-mono text-sm text-gray-400 w-28">{t("sales.problem.seen")}</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-full bg-gray-700 rounded-full h-4">
                     <div className="bg-orange-500 h-4 rounded-full" style={{ width: '10%' }} />
                   </div>
-                  <span className="font-mono text-sm text-gray-400 w-24">10% Engaged</span>
+                  <span className="font-mono text-sm text-gray-400 w-28">{t("sales.problem.engaged")}</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-full bg-gray-700 rounded-full h-4">
                     <div className="bg-red-500 h-4 rounded-full" style={{ width: '2%' }} />
                   </div>
-                  <span className="font-mono text-sm text-gray-400 w-24">2% Converted</span>
+                  <span className="font-mono text-sm text-gray-400 w-28">{t("sales.problem.converted")}</span>
                 </div>
               </div>
-              <p className="mt-6 text-center text-red-400 font-mono text-sm">98% Revenue Left on the Table</p>
+              <p className="mt-6 text-center text-red-400 font-mono text-sm">{t("sales.problem.lost")}</p>
             </motion.div>
           </div>
         </div>
@@ -219,10 +228,10 @@ export default function SalesPage() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-6xl font-bold font-mono mb-4 text-white tracking-tight" data-testid="calculator-headline">
-              THE COST OF <span className="text-[#39FF14]">INACTION</span>
+              {t("sales.calculator.title").split(" ").slice(0, -1).join(" ")} <span className="text-[#39FF14]">{t("sales.calculator.title").split(" ").slice(-1)}</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-400 font-mono">
-              Your manual process is a leaking bucket. See exactly how much it's costing you.
+              {t("sales.calculator.subtitle")}
             </p>
           </motion.div>
 
@@ -238,7 +247,7 @@ export default function SalesPage() {
               {/* Monthly Leads Slider */}
               <div>
                 <div className="flex justify-between items-center mb-3">
-                  <label className="text-white font-mono text-sm md:text-base">Monthly Leads</label>
+                  <label className="text-white font-mono text-sm md:text-base">{t("sales.calculator.leads")}</label>
                   <span className="text-[#39FF14] font-mono font-bold text-lg md:text-xl" data-testid="value-monthly-leads">{monthlyLeads}</span>
                 </div>
                 <Slider
@@ -255,7 +264,7 @@ export default function SalesPage() {
               {/* Average Client Value Slider */}
               <div>
                 <div className="flex justify-between items-center mb-3">
-                  <label className="text-white font-mono text-sm md:text-base">Average Client Value</label>
+                  <label className="text-white font-mono text-sm md:text-base">{t("sales.calculator.clientValue")}</label>
                   <span className="text-[#39FF14] font-mono font-bold text-lg md:text-xl" data-testid="value-client-value">{formatCurrency(clientValue)}</span>
                 </div>
                 <Slider
@@ -272,7 +281,7 @@ export default function SalesPage() {
               {/* Current Conversion Rate Slider */}
               <div>
                 <div className="flex justify-between items-center mb-3">
-                  <label className="text-white font-mono text-sm md:text-base">Current Human Conversion Rate</label>
+                  <label className="text-white font-mono text-sm md:text-base">{t("sales.calculator.humanRate")}</label>
                   <span className="text-[#39FF14] font-mono font-bold text-lg md:text-xl" data-testid="value-conversion-rate">{conversionRate}%</span>
                 </div>
                 <Slider
@@ -288,14 +297,14 @@ export default function SalesPage() {
 
               {/* System Rate Display */}
               <div className="flex justify-between items-center py-3 border-t border-gray-800">
-                <span className="text-gray-500 font-mono text-sm">System Conversion Rate (Fixed)</span>
+                <span className="text-gray-500 font-mono text-sm">{t("sales.calculator.systemRate")}</span>
                 <span className="text-[#39FF14] font-mono font-bold">{systemConversionRate}%</span>
               </div>
             </div>
 
             {/* Annual Revenue Leak Output */}
             <div className="text-center py-8 border-t-2 border-[#39FF14]/30">
-              <p className="text-gray-400 font-mono text-sm mb-4 uppercase tracking-widest">Annual Revenue Leak</p>
+              <p className="text-gray-400 font-mono text-sm mb-4 uppercase tracking-widest">{t("sales.calculator.result")}</p>
               <motion.div
                 key={annualRevenueLeak}
                 initial={{ scale: 0.9, opacity: 0 }}
@@ -313,7 +322,7 @@ export default function SalesPage() {
                   {formatCurrency(annualRevenueLeak)}
                 </span>
               </motion.div>
-              <p className="text-red-400/70 font-mono text-sm mt-4">Lost every year to manual processes</p>
+              <p className="text-red-400/70 font-mono text-sm mt-4">{t("sales.calculator.lostText")}</p>
             </div>
 
             {/* CTA Button */}
@@ -324,7 +333,7 @@ export default function SalesPage() {
                 className="bg-[#39FF14] text-black hover:bg-[#39FF14]/90 font-bold font-mono px-6 md:px-10 py-6 md:py-7 text-base md:text-lg rounded-none shadow-[0_0_20px_rgba(57,255,20,0.3)] hover:shadow-[0_0_30px_rgba(57,255,20,0.5)] transition-all duration-300 w-full md:w-auto uppercase tracking-wide"
                 data-testid="button-calculator-cta"
               >
-                Plug the Leak - Book Audit ($25k Implementation)
+                {t("sales.calculator.cta")}
                 <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
               </Button>
             </div>
@@ -345,10 +354,10 @@ export default function SalesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold font-mono mb-4" data-testid="solution-headline">
-              The <span className="text-[#22c55e]">Sovereign Growth OS</span>
+              {language === 'en' ? 'The ' : 'Le '}<span className="text-[#22c55e]">{t("sales.solution.title").replace('The ', '').replace('Le ', '')}</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Your complete autonomous acquisition infrastructure
+              {t("sales.solution.subtitle")}
             </p>
           </motion.div>
 
@@ -371,8 +380,8 @@ export default function SalesPage() {
                     <card.icon className="w-8 h-8 text-[#22c55e]" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold font-mono text-white mb-2">{card.title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{card.description}</p>
+                    <h3 className="text-xl font-bold font-mono text-white mb-2">{t(card.titleKey)}</h3>
+                    <p className="text-gray-400 leading-relaxed">{t(card.descKey)}</p>
                   </div>
                 </div>
               </motion.div>
@@ -392,9 +401,9 @@ export default function SalesPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-5xl font-bold font-mono mb-4" data-testid="engineering-headline">
-              We don't do Magic.
+              {t("sales.proof.title1")}
               <br />
-              <span className="text-[#22c55e]">We do Engineering.</span>
+              <span className="text-[#22c55e]">{t("sales.proof.title2")}</span>
             </h2>
           </motion.div>
 
@@ -414,7 +423,7 @@ export default function SalesPage() {
               />
             </div>
             <p className="text-gray-400 font-mono text-sm text-center">
-              Complex automations running 24/7, installed directly into your business.
+              {t("sales.proof.caption")}
             </p>
           </motion.div>
         </div>
@@ -432,21 +441,21 @@ export default function SalesPage() {
             data-testid="offer-box"
           >
             <h2 className="text-3xl md:text-4xl font-bold font-mono mb-6">
-              One-Time Investment. <span className="text-[#22c55e]">Lifetime Asset.</span>
+              {t("sales.offer.title1")} <span className="text-[#22c55e]">{t("sales.offer.title2")}</span>
             </h2>
 
             <div className="mb-8">
               <span className="text-6xl md:text-7xl font-bold font-mono text-white">$25,000</span>
-              <p className="text-gray-400 mt-2">Implementation Fee</p>
+              <p className="text-gray-400 mt-2">{t("sales.offer.price")}</p>
             </div>
 
             <div className="bg-[#22c55e]/10 border border-[#22c55e]/30 rounded-xl p-6 mb-8">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <CheckCircle className="w-6 h-6 text-[#22c55e]" />
-                <span className="text-xl font-bold font-mono text-[#22c55e]">The 90-Day ROI Guarantee</span>
+                <span className="text-xl font-bold font-mono text-[#22c55e]">{t("sales.offer.guarantee.title")}</span>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                If the system doesn't generate $25k in pipeline value within 90 days, we work for free until it does.
+                {t("sales.offer.guarantee.text")}
               </p>
             </div>
 
@@ -456,7 +465,7 @@ export default function SalesPage() {
               className="bg-[#22c55e] text-black hover:bg-[#22c55e]/90 font-bold px-6 md:px-10 py-6 md:py-7 text-base md:text-lg rounded-lg shadow-lg shadow-[#22c55e]/20 hover:shadow-[#22c55e]/40 transition-all duration-300 w-full md:w-auto"
               data-testid="button-offer-cta"
             >
-              Claim Your Infrastructure
+              {t("sales.offer.cta")}
               <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
             </Button>
           </motion.div>
@@ -473,10 +482,10 @@ export default function SalesPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-5xl font-bold font-mono mb-4" data-testid="calendly-headline">
-              Are you ready to <span className="text-[#22c55e]">build</span>?
+              {t("sales.calendly.title").replace('build', '').replace('construire', '')}<span className="text-[#22c55e]">{language === 'en' ? 'build' : 'construire'}</span>?
             </h2>
             <p className="text-xl text-gray-400 mb-12">
-              Book your Systems Audit. Serious inquiries only.
+              {t("sales.calendly.subtitle")}
             </p>
 
             <div 
@@ -493,7 +502,7 @@ export default function SalesPage() {
       <footer className="py-8 bg-[#0f172a] border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="font-mono text-sm text-gray-600">
-            © {new Date().getFullYear()} Yokan Digital. A brand by ACR Digital Ventures.
+            © {new Date().getFullYear()} Yokan Digital. {t("sales.footer")}
           </p>
         </div>
       </footer>
