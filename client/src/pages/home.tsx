@@ -1,3 +1,4 @@
+import { InlineWidget } from "react-calendly";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/hooks/use-language";
 import { Button } from "@/components/ui/button";
@@ -428,7 +429,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA / Contact Section */}
+       {/* CTA / Calendly Section */}
       <section id="contact" className="py-24 bg-[#050505] relative grid-pattern">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div
@@ -438,6 +439,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
+            {/* Titre et Sous-titre (inchangés) */}
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="cta-title">
               {t("cta.title")}
             </h2>
@@ -445,55 +447,23 @@ export default function Home() {
               {t("cta.subtitle")}
             </p>
             
+            {/* Indicateur "Available" (inchangé) */}
             <div className="flex items-center justify-center gap-2 mb-12">
               <span className="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse" />
               <span className="font-mono text-sm text-[#00ff88]">{t("cta.available")}</span>
             </div>
 
-            <div className="tech-card rounded-2xl p-8 max-w-lg mx-auto glow-border">
-              <form className="space-y-6">
-                <div>
-                  <input
-                    type="text"
-                    placeholder={t("form.name")}
-                    className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-[#00ff88]/50 focus:outline-none transition-colors"
-                    data-testid="input-name"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder={t("form.email")}
-                    className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-[#00ff88]/50 focus:outline-none transition-colors"
-                    data-testid="input-email"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder={t("form.company")}
-                    className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-[#00ff88]/50 focus:outline-none transition-colors"
-                    data-testid="input-company"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    placeholder={t("form.message")}
-                    rows={4}
-                    className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-[#00ff88]/50 focus:outline-none transition-colors resize-none"
-                    data-testid="input-message"
-                  />
-                </div>
-                <Button 
-                  type="submit"
-                  className="w-full bg-[#00ff88] text-black hover:bg-[#00ff88]/90 font-semibold py-6 text-base pulse-glow"
-                  data-testid="button-submit"
-                >
-                  {t("cta.button")}
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </form>
+            {/* Le Cadre "Tech" qui contient maintenant Calendly */}
+            {/* J'ai mis max-w-3xl pour que le calendrier ait de la place */}
+            <div className="tech-card rounded-2xl overflow-hidden max-w-3xl mx-auto glow-border border border-white/10">
+              <div className="w-full h-[750px]">
+                <InlineWidget 
+                  url="https://calendly.com/tony-yokandigital/30min"
+                  styles={{ height: '100%' }}
+                />
+              </div>
             </div>
+
           </motion.div>
         </div>
       </section>
@@ -532,7 +502,7 @@ export default function Home() {
                   {t("footer.privacy")}
                 </a>
                 <a 
-                  href="https://linkedin.com/company/yokandigital" 
+                  href="https://linkedin.com/company/yokan-digital-inc" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sm text-gray-500 hover:text-[#00ff88] transition-colors flex items-center gap-2"
