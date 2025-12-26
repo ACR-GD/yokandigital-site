@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yokan Digital - Professional Web Design & SEO Services Malaysia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                borderRadius: {
+                    lg: "var(--radius)",
+                    md: "calc(var(--radius) - 2px)",
+                    sm: "calc(var(--radius) - 4px)",
+                },
+                colors: {
+                    background: "var(--background)",
+                    foreground: "var(--foreground)",
+                    card: {
+                        DEFAULT: "var(--card)",
+                        foreground: "var(--card-foreground)",
+                    },
+                    popover: {
+                        DEFAULT: "var(--popover)",
+                        foreground: "var(--popover-foreground)",
+                    },
+                    primary: {
+                        DEFAULT: "var(--primary)",
+                        foreground: "var(--primary-foreground)",
+                    },
+                    secondary: {
+                        DEFAULT: "var(--secondary)",
+                        foreground: "var(--secondary-foreground)",
+                    },
+                    muted: {
+                        DEFAULT: "var(--muted)",
+                        foreground: "var(--muted-foreground)",
+                    },
+                    accent: {
+                        DEFAULT: "var(--accent)",
+                        foreground: "var(--accent-foreground)",
+                    },
+                    destructive: {
+                        DEFAULT: "var(--destructive)",
+                        foreground: "var(--destructive-foreground)",
+                    },
+                    border: "var(--border)",
+                    input: "var(--input)",
+                    ring: "var(--ring)",
+                },
+                fontFamily: {
+                    sans: ["var(--font-sans)"],
+                }
+            },
+        }
+    };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --background: hsl(210 40% 96%);
+            --foreground: hsl(222.2 84% 4.9%);
+            --card: hsl(0 0% 100%);
+            --card-foreground: hsl(222.2 84% 4.9%);
+            --popover: hsl(0 0% 100%);
+            --popover-foreground: hsl(222.2 84% 4.9%);
+            --primary: hsl(221.2 83.2% 53.3%);
+            --primary-foreground: hsl(210 40% 98%);
+            --secondary: hsl(210 40% 96%);
+            --secondary-foreground: hsl(222.2 84% 4.9%);
+            --muted: hsl(210 40% 96%);
+            --muted-foreground: hsl(215.4 16.3% 46.9%);
+            --accent: hsl(178 100% 29%);
+            --accent-foreground: hsl(210 40% 98%);
+            --destructive: hsl(0 84.2% 60.2%);
+            --destructive-foreground: hsl(210 40% 98%);
+            --border: hsl(214.3 31.8% 91.4%);
+            --input: hsl(214.3 31.8% 91.4%);
+            --ring: hsl(221.2 83.2% 53.3%);
+            --radius: 8px;
+            --font-sans: 'Inter', sans-serif;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+        }
+        
+        .gradient-hero {
+            background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+        }
+        
+        .language-toggle {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid hsl(var(--accent));
+            transform: scale(1.05);
+        }
+        
+        .tool-interactive {
+            background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- @COMPONENT: Header -->
+    <header class="bg-card shadow-sm border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <i class="fas fa-rocket text-primary-foreground text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-foreground">Yokan Digital</h1>
+                        <p class="text-xs text-muted-foreground" data-en="Malaysia's Premier Digital Agency" data-ms="Agensi Digital Terkemuka Malaysia">Malaysia's Premier Digital Agency</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-muted-foreground hover:text-foreground transition-colors" data-en="Services" data-ms="Perkhidmatan">Services</a>
+                    <a href="#pricing" class="text-muted-foreground hover:text-foreground transition-colors" data-en="Pricing" data-ms="Harga">Pricing</a>
+                    <a href="#tools" class="text-muted-foreground hover:text-foreground transition-colors" data-en="Free Tools" data-ms="Alat Percuma">Free Tools</a>
+                    <a href="#portfolio" class="text-muted-foreground hover:text-foreground transition-colors" data-en="Portfolio" data-ms="Portfolio">Portfolio</a>
+                    <a href="#contact" class="text-muted-foreground hover:text-foreground transition-colors" data-en="Contact" data-ms="Hubungi">Contact</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Language Toggle -->
+                    <div class="language-toggle flex bg-muted rounded-lg p-1">
+                        <button onclick="switchLanguage('en')" id="lang-en" class="px-3 py-1 rounded-md text-sm font-medium bg-card text-foreground shadow-sm">EN</button>
+                        <button onclick="switchLanguage('ms')" id="lang-ms" class="px-3 py-1 rounded-md text-sm font-medium text-muted-foreground">MS</button>
+                    </div>
+                    
+                    <button class="bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors" data-en="Get Started" data-ms="Mulakan">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section class="gradient-hero py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-primary-foreground">
+                    <h1 class="text-4xl lg:text-6xl font-bold mb-6" data-en="Grow Your Business Online with Malaysia's Trusted Digital Partner" data-ms="Kembangkan Perniagaan Anda Secara Online dengan Rakan Digital Terpercaya Malaysia">
+                        Grow Your Business Online with Malaysia's Trusted Digital Partner
+                    </h1>
+                    <p class="text-xl mb-8 text-primary-foreground/90" data-en="Professional web design, SEO optimization, and digital marketing services tailored for Malaysian businesses. From RM2,500/month." data-ms="Perkhidmatan reka bentuk web profesional, pengoptimuman SEO, dan pemasaran digital yang disesuaikan untuk perniagaan Malaysia. Dari RM2,500/bulan.">
+                        Professional web design, SEO optimization, and digital marketing services tailored for Malaysian businesses. From RM2,500/month.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent/90 transition-colors" data-en="Start Your Project" data-ms="Mulakan Projek Anda">
+                            Start Your Project
+                        </button>
+                        <button class="border border-primary-foreground/20 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/10 transition-colors" data-en="View Our Work" data-ms="Lihat Kerja Kami">
+                            View Our Work
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Professional Malaysian business team collaborating on digital strategy -->
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Malaysian business professionals" class="rounded-xl shadow-2xl" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Services Section -->
+    <section id="services" class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-foreground mb-4" data-en="Comprehensive Digital Solutions" data-ms="Penyelesaian Digital Menyeluruh">
+                    Comprehensive Digital Solutions
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto" data-en="We help Malaysian businesses establish a strong online presence with professional web design, effective SEO strategies, and results-driven digital marketing." data-ms="Kami membantu perniagaan Malaysia mewujudkan kehadiran online yang kuat dengan reka bentuk web profesional, strategi SEO berkesan, dan pemasaran digital yang menghasilkan keputusan.">
+                    We help Malaysian businesses establish a strong online presence with professional web design, effective SEO strategies, and results-driven digital marketing.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-card p-8 rounded-xl shadow-lg border border-border transition-all duration-300">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="Web Design & Development" data-ms="Reka Bentuk & Pembangunan Web">Web Design & Development</h3>
+                    <p class="text-muted-foreground mb-6" data-en="Custom websites that convert visitors into customers. Mobile-responsive, fast-loading, and optimized for Malaysian market." data-ms="Laman web kustom yang menukar pelawat kepada pelanggan. Responsif mudah alih, pemuatan pantas, dan dioptimumkan untuk pasaran Malaysia.">
+                        Custom websites that convert visitors into customers. Mobile-responsive, fast-loading, and optimized for Malaysian market.
+                    </p>
+                    <ul class="space-y-2 text-sm text-muted-foreground">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i><span data-en="Responsive Design" data-ms="Reka Bentuk Responsif">Responsive Design</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i><span data-en="CMS Integration" data-ms="Integrasi CMS">CMS Integration</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i><span data-en="E-commerce Solutions" data-ms="Penyelesaian E-dagang">E-commerce Solutions</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card bg-card p-8 rounded-xl shadow-lg border border-border transition-all duration-300">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="SEO Optimization" data-ms="Pengoptimuman SEO">SEO Optimization</h3>
+                    <p class="text-muted-foreground mb-6" data-en="Rank higher on Google with our proven SEO strategies. Local and national optimization for Malaysian businesses." data-ms="Kedudukan lebih tinggi di Google dengan strategi SEO terbukti kami. Pengoptimuman tempatan dan nasional untuk perniagaan Malaysia.">
+                        Rank higher on Google with our proven SEO strategies. Local and national optimization for Malaysian businesses.
+                    </p>
+                    <ul class="space-y-2 text-sm text-muted-foreground">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i><span data-en="Keyword Research" data-ms="Penyelidikan Kata Kunci">Keyword Research</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i><span data-en="Local SEO" data-ms="SEO Tempatan">Local SEO</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i><span data-en="Technical SEO" data-ms="SEO Teknikal">Technical SEO</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card bg-card p-8 rounded-xl shadow-lg border border-border transition-all duration-300">
+                    <div class="w-12 h-12 bg-destructive/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bullhorn text-destructive text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="Digital Marketing" data-ms="Pemasaran Digital">Digital Marketing</h3>
+                    <p class="text-muted-foreground mb-6" data-en="Strategic campaigns across social media, Google Ads, and content marketing to drive qualified leads and sales." data-ms="Kempen strategik merentas media sosial, Iklan Google, dan pemasaran kandungan untuk mendorong prospek dan jualan yang layak.">
+                        Strategic campaigns across social media, Google Ads, and content marketing to drive qualified leads and sales.
+                    </p>
+                    <ul class="space-y-2 text-sm text-muted-foreground">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i><span data-en="Social Media Marketing" data-ms="Pemasaran Media Sosial">Social Media Marketing</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i><span data-en="Google Ads Management" data-ms="Pengurusan Iklan Google">Google Ads Management</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i><span data-en="Content Strategy" data-ms="Strategi Kandungan">Content Strategy</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Services Section -->
+
+    <!-- @COMPONENT: Free Tools Section -->
+    <section id="tools" class="py-20 bg-muted">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-foreground mb-4" data-en="Free Business Tools" data-ms="Alat Perniagaan Percuma">
+                    Free Business Tools
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto" data-en="Powerful tools to analyze and improve your online presence. Use them for free to get started." data-ms="Alat berkuasa untuk menganalisis dan meningkatkan kehadiran online anda. Gunakan secara percuma untuk bermula.">
+                    Powerful tools to analyze and improve your online presence. Use them for free to get started.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO Audit Tool -->
+                <div class="tool-interactive bg-card p-8 rounded-xl shadow-lg border border-border">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-search-plus text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="Free SEO Audit" data-ms="Audit SEO Percuma">Free SEO Audit</h3>
+                    <p class="text-muted-foreground mb-6" data-en="Get a comprehensive SEO analysis of your website" data-ms="Dapatkan analisis SEO menyeluruh laman web anda">Get a comprehensive SEO analysis of your website</p>
+                    
+                    <div class="space-y-4">
+                        <input type="url" placeholder="Enter your website URL" class="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent" data-placeholder-en="Enter your website URL" data-placeholder-ms="Masukkan URL laman web anda" />
+                        <button class="w-full bg-primary text-primary-foreground py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors" data-en="Analyze Website" data-ms="Analisis Laman Web">
+                            Analyze Website
+                        </button>
+                    </div>
+                    <!-- TODO: Implement SEO audit functionality -->
+                </div>
+
+                <!-- Website Speed Checker -->
+                <div class="tool-interactive bg-card p-8 rounded-xl shadow-lg border border-border">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-tachometer-alt text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="Speed Test Tool" data-ms="Alat Ujian Kelajuan">Speed Test Tool</h3>
+                    <p class="text-muted-foreground mb-6" data-en="Check your website's loading speed and performance" data-ms="Semak kelajuan pemuatan dan prestasi laman web anda">Check your website's loading speed and performance</p>
+                    
+                    <div class="space-y-4">
+                        <input type="url" placeholder="Enter website URL" class="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent" data-placeholder-en="Enter website URL" data-placeholder-ms="Masukkan URL laman web" />
+                        <button class="w-full bg-accent text-accent-foreground py-3 rounded-lg font-medium hover:bg-accent/90 transition-colors" data-en="Test Speed" data-ms="Uji Kelajuan">
+                            Test Speed
+                        </button>
+                    </div>
+                    <!-- TODO: Implement speed test functionality -->
+                </div>
+
+                <!-- Business Consultation Booking -->
+                <div class="tool-interactive bg-card p-8 rounded-xl shadow-lg border border-border">
+                    <div class="w-12 h-12 bg-destructive/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-check text-destructive text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="Free Consultation" data-ms="Perundingan Percuma">Free Consultation</h3>
+                    <p class="text-muted-foreground mb-6" data-en="Book a 30-minute strategy session with our experts" data-ms="Tempah sesi strategi 30 minit dengan pakar kami">Book a 30-minute strategy session with our experts</p>
+                    
+                    <div class="space-y-4">
+                        <input type="text" placeholder="Your name" class="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent" data-placeholder-en="Your name" data-placeholder-ms="Nama anda" />
+                        <input type="email" placeholder="Email address" class="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent" data-placeholder-en="Email address" data-placeholder-ms="Alamat emel" />
+                        <button class="w-full bg-destructive text-destructive-foreground py-3 rounded-lg font-medium hover:bg-destructive/90 transition-colors" data-en="Book Session" data-ms="Tempah Sesi">
+                            Book Session
+                        </button>
+                    </div>
+                    <!-- TODO: Implement booking functionality -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Free Tools Section -->
+
+    <!-- @COMPONENT: Pricing Section -->
+    <section id="pricing" class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-foreground mb-4" data-en="Transparent Pricing Plans" data-ms="Pelan Harga Telus">
+                    Transparent Pricing Plans
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto" data-en="Choose the perfect plan for your business growth. All plans include dedicated support and monthly reporting." data-ms="Pilih pelan yang sempurna untuk pertumbuhan perniagaan anda. Semua pelan termasuk sokongan khusus dan pelaporan bulanan.">
+                    Choose the perfect plan for your business growth. All plans include dedicated support and monthly reporting.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="pricing-card bg-card p-8 rounded-xl shadow-lg border border-border">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2" data-en="Starter" data-ms="Permulaan">Starter</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">RM2,500<span class="text-lg text-muted-foreground">/month</span></div>
+                        <p class="text-muted-foreground" data-en="Perfect for small businesses getting started" data-ms="Sesuai untuk perniagaan kecil yang baru bermula">Perfect for small businesses getting started</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="5-page professional website" data-ms="Laman web profesional 5 halaman">5-page professional website</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Basic SEO optimization" data-ms="Pengoptimuman SEO asas">Basic SEO optimization</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Mobile responsive design" data-ms="Reka bentuk responsif mudah alih">Mobile responsive design</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Monthly performance report" data-ms="Laporan prestasi bulanan">Monthly performance report</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Email support" data-ms="Sokongan emel">Email support</span></li>
+                    </ul>
+                    
+                    <button class="w-full bg-secondary text-secondary-foreground py-3 rounded-lg font-medium hover:bg-secondary/80 transition-colors" data-en="Get Started" data-ms="Mulakan">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="pricing-card featured bg-card p-8 rounded-xl shadow-xl border-2 border-accent relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-medium" data-en="Most Popular" data-ms="Paling Popular">Most Popular</span>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2" data-en="Professional" data-ms="Profesional">Professional</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">RM5,000<span class="text-lg text-muted-foreground">/month</span></div>
+                        <p class="text-muted-foreground" data-en="Ideal for growing businesses" data-ms="Sesuai untuk perniagaan yang berkembang">Ideal for growing businesses</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="15-page custom website" data-ms="Laman web kustom 15 halaman">15-page custom website</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Advanced SEO + Local SEO" data-ms="SEO Lanjutan + SEO Tempatan">Advanced SEO + Local SEO</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Social media management" data-ms="Pengurusan media sosial">Social media management</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Google Ads management" data-ms="Pengurusan Iklan Google">Google Ads management</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Weekly reporting" data-ms="Pelaporan mingguan">Weekly reporting</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Phone + email support" data-ms="Sokongan telefon + emel">Phone + email support</span></li>
+                    </ul>
+                    
+                    <button class="w-full bg-primary text-primary-foreground py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors" data-en="Choose Professional" data-ms="Pilih Profesional">
+                        Choose Professional
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card bg-card p-8 rounded-xl shadow-lg border border-border">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2" data-en="Enterprise" data-ms="Perusahaan">Enterprise</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">RM10,000<span class="text-lg text-muted-foreground">/month</span></div>
+                        <p class="text-muted-foreground" data-en="Complete digital transformation" data-ms="Transformasi digital lengkap">Complete digital transformation</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Unlimited pages + E-commerce" data-ms="Halaman tanpa had + E-dagang">Unlimited pages + E-commerce</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Full SEO + Content marketing" data-ms="SEO Penuh + Pemasaran kandungan">Full SEO + Content marketing</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Multi-platform campaigns" data-ms="Kempen berbilang platform">Multi-platform campaigns</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Advanced analytics & BI" data-ms="Analitik lanjutan & BI">Advanced analytics & BI</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="Dedicated account manager" data-ms="Pengurus akaun khusus">Dedicated account manager</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-3"></i><span data-en="24/7 priority support" data-ms="Sokongan keutamaan 24/7">24/7 priority support</span></li>
+                    </ul>
+                    
+                    <button class="w-full bg-secondary text-secondary-foreground py-3 rounded-lg font-medium hover:bg-secondary/80 transition-colors" data-en="Contact Sales" data-ms="Hubungi Jualan">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Pricing Section -->
+
+    <!-- @COMPONENT: Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-foreground mb-4" data-en="Our Success Stories" data-ms="Kisah Kejayaan Kami">
+                    Our Success Stories
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto" data-en="See how we've helped Malaysian businesses achieve remarkable online growth and digital transformation." data-ms="Lihat bagaimana kami telah membantu perniagaan Malaysia mencapai pertumbuhan online yang luar biasa dan transformasi digital.">
+                    See how we've helped Malaysian businesses achieve remarkable online growth and digital transformation.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <!-- Modern e-commerce website mockup showcasing clean design and user interface -->
+                <div class="group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="Web design mockup" class="rounded-xl shadow-lg group-hover:shadow-xl transition-shadow" />
+                    <h4 class="font-semibold mt-4" data-en="E-commerce Platform" data-ms="Platform E-dagang">E-commerce Platform</h4>
+                    <p class="text-sm text-muted-foreground" data-en="300% increase in online sales" data-ms="Peningkatan 300% dalam jualan online">300% increase in online sales</p>
+                </div>
+
+                <!-- Professional business website design displaying corporate branding and layout -->
+                <div class="group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="Web design mockup" class="rounded-xl shadow-lg group-hover:shadow-xl transition-shadow" />
+                    <h4 class="font-semibold mt-4" data-en="Corporate Website" data-ms="Laman Web Korporat">Corporate Website</h4>
+                    <p class="text-sm text-muted-foreground" data-en="50% more qualified leads" data-ms="50% lebih prospek layak">50% more qualified leads</p>
+                </div>
+
+                <!-- SEO analytics dashboard showing website performance metrics and rankings -->
+                <div class="group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="SEO analytics dashboard" class="rounded-xl shadow-lg group-hover:shadow-xl transition-shadow" />
+                    <h4 class="font-semibold mt-4" data-en="SEO Campaign" data-ms="Kempen SEO">SEO Campaign</h4>
+                    <p class="text-sm text-muted-foreground" data-en="Page 1 Google rankings" data-ms="Kedudukan Google halaman 1">Page 1 Google rankings</p>
+                </div>
+
+                <!-- Modern mobile app interface design showcasing responsive layout -->
+                <div class="group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="Web design mockup" class="rounded-xl shadow-lg group-hover:shadow-xl transition-shadow" />
+                    <h4 class="font-semibold mt-4" data-en="Mobile App Design" data-ms="Reka Bentuk Aplikasi Mudah Alih">Mobile App Design</h4>
+                    <p class="text-sm text-muted-foreground" data-en="10K+ downloads in first month" data-ms="10K+ muat turun dalam bulan pertama">10K+ downloads in first month</p>
+                </div>
+            </div>
+
+            <!-- Client Testimonials -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Malaysian business professional in modern office setting -->
+                <div class="bg-card p-6 rounded-xl shadow-lg border border-border">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Malaysian business professional" class="w-12 h-12 rounded-full object-cover" />
+                        <div class="ml-4">
+                            <h4 class="font-semibold" data-mock="true">Ahmad Rahman</h4>
+                            <p class="text-sm text-muted-foreground" data-en="CEO, Tech Solutions Sdn Bhd" data-ms="Ketua Pegawai Eksekutif, Tech Solutions Sdn Bhd">CEO, Tech Solutions Sdn Bhd</p>
+                        </div>
+                    </div>
+                    <p class="text-muted-foreground" data-en="Yokan Digital transformed our online presence completely. Our website traffic increased by 400% and we're getting quality leads daily." data-ms="Yokan Digital mengubah kehadiran online kami sepenuhnya. Trafik laman web kami meningkat 400% dan kami mendapat prospek berkualiti setiap hari.">
+                        "Yokan Digital transformed our online presence completely. Our website traffic increased by 400% and we're getting quality leads daily."
+                    </p>
+                </div>
+
+                <!-- Professional Malaysian businesswoman in corporate environment -->
+                <div class="bg-card p-6 rounded-xl shadow-lg border border-border">
+                    <div class="flex items-center mb-4">
+                        <img src="https://pixabay.com/get/g0724c7bc85f509e95c77af3961bd170b8e90673f6fb4ce912bce16f2d4d2c137221f9f80df0e041b4d9837b2fea55977be2253429b504973ca8836b4bb69ba49_1280.jpg" alt="Malaysian business professional" class="w-12 h-12 rounded-full object-cover" />
+                        <div class="ml-4">
+                            <h4 class="font-semibold" data-mock="true">Siti Nurhaliza</h4>
+                            <p class="text-sm text-muted-foreground" data-en="Founder, Haliza Beauty" data-ms="Pengasas, Haliza Beauty">Founder, Haliza Beauty</p>
+                        </div>
+                    </div>
+                    <p class="text-muted-foreground" data-en="Professional team, excellent results. Our e-commerce sales doubled within 6 months of working with Yokan Digital." data-ms="Pasukan profesional, keputusan cemerlang. Jualan e-dagang kami berganda dalam tempoh 6 bulan bekerja dengan Yokan Digital.">
+                        "Professional team, excellent results. Our e-commerce sales doubled within 6 months of working with Yokan Digital."
+                    </p>
+                </div>
+
+                <!-- Malaysian business executive in modern Malaysian office space -->
+                <div class="bg-card p-6 rounded-xl shadow-lg border border-border">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Malaysian business professional" class="w-12 h-12 rounded-full object-cover" />
+                        <div class="ml-4">
+                            <h4 class="font-semibold" data-mock="true">David Lim</h4>
+                            <p class="text-sm text-muted-foreground" data-en="Director, KL Logistics" data-ms="Pengarah, KL Logistics">Director, KL Logistics</p>
+                        </div>
+                    </div>
+                    <p class="text-muted-foreground" data-en="Their SEO expertise got us to page 1 of Google for our main keywords. Highly recommend for Malaysian businesses." data-ms="Kepakaran SEO mereka membawa kami ke halaman 1 Google untuk kata kunci utama kami. Sangat disyorkan untuk perniagaan Malaysia.">
+                        "Their SEO expertise got us to page 1 of Google for our main keywords. Highly recommend for Malaysian businesses."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Portfolio Section -->
+
+    <!-- @COMPONENT: CTA Section -->
+    <section class="py-20 gradient-hero">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-primary-foreground mb-6" data-en="Ready to Transform Your Digital Presence?" data-ms="Bersedia untuk Mengubah Kehadiran Digital Anda?">
+                Ready to Transform Your Digital Presence?
+            </h2>
+            <p class="text-xl text-primary-foreground/90 mb-8" data-en="Join hundreds of Malaysian businesses that trust Yokan Digital for their online growth. Start your journey today." data-ms="Sertai beratus-ratus perniagaan Malaysia yang mempercayai Yokan Digital untuk pertumbuhan online mereka. Mulakan perjalanan anda hari ini.">
+                Join hundreds of Malaysian businesses that trust Yokan Digital for their online growth. Start your journey today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent/90 transition-colors" data-en="Start Your Project" data-ms="Mulakan Projek Anda">
+                    Start Your Project
+                </button>
+                <button class="border border-primary-foreground/20 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/10 transition-colors" data-en="Schedule Consultation" data-ms="Jadualkan Perundingan">
+                    Schedule Consultation
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: CTA Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section id="contact" class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-en="Let's Discuss Your Project" data-ms="Mari Bincangkan Projek Anda">
+                        Let's Discuss Your Project
+                    </h2>
+                    <p class="text-xl text-muted-foreground mb-8" data-en="Ready to take your business to the next level? Contact our team for a free consultation and project quote." data-ms="Bersedia untuk membawa perniagaan anda ke tahap seterusnya? Hubungi pasukan kami untuk perundingan percuma dan sebut harga projek.">
+                        Ready to take your business to the next level? Contact our team for a free consultation and project quote.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold" data-en="Our Office" data-ms="Pejabat Kami">Our Office</h4>
+                                <p class="text-muted-foreground" data-mock="true">Kuala Lumpur, Malaysia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold" data-en="Phone" data-ms="Telefon">Phone</h4>
+                                <p class="text-muted-foreground" data-mock="true">+60 3-1234 5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-destructive/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-destructive"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold" data-en="Email" data-ms="Emel">Email</h4>
+                                <p class="text-muted-foreground" data-mock="true">hello@yokandigital.my</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card p-8 rounded-xl shadow-lg border border-border">
+                    <form class="space-y-6" data-implementation="Should handle form validation and submission">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-foreground mb-2" data-en="First Name" data-ms="Nama Pertama">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent" required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-foreground mb-2" data-en="Last Name" data-ms="Nama Akhir">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent" required />
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2" data-en="Email Address" data-ms="Alamat Emel">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent" required />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2" data-en="Company Name" data-ms="Nama Syarikat">Company Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2" data-en="Service Interest" data-ms="Minat Perkhidmatan">Service Interest</label>
+                            <select class="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent">
+                                <option data-en="Select a service" data-ms="Pilih perkhidmatan">Select a service</option>
+                                <option data-en="Web Design" data-ms="Reka Bentuk Web">Web Design</option>
+                                <option data-en="SEO Services" data-ms="Perkhidmatan SEO">SEO Services</option>
+                                <option data-en="Digital Marketing" data-ms="Pemasaran Digital">Digital Marketing</option>
+                                <option data-en="Complete Package" data-ms="Pakej Lengkap">Complete Package</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2" data-en="Project Details" data-ms="Butiran Projek">Project Details</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent" placeholder="Tell us about your project requirements..." data-placeholder-en="Tell us about your project requirements..." data-placeholder-ms="Beritahu kami tentang keperluan projek anda..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-primary-foreground py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors" data-en="Send Message" data-ms="Hantar Mesej">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-rocket text-primary-foreground"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Yokan Digital</h3>
+                            <p class="text-sm" data-en="Digital Growth Partner" data-ms="Rakan Pertumbuhan Digital">Digital Growth Partner</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 mb-6" data-en="Empowering Malaysian businesses with cutting-edge digital solutions since 2020." data-ms="Memperkasakan perniagaan Malaysia dengan penyelesaian digital terdepan sejak 2020.">
+                        Empowering Malaysian businesses with cutting-edge digital solutions since 2020.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6" data-en="Services" data-ms="Perkhidmatan">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="Web Design" data-ms="Reka Bentuk Web">Web Design</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="SEO Optimization" data-ms="Pengoptimuman SEO">SEO Optimization</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="Digital Marketing" data-ms="Pemasaran Digital">Digital Marketing</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="E-commerce Solutions" data-ms="Penyelesaian E-dagang">E-commerce Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6" data-en="Company" data-ms="Syarikat">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="About Us" data-ms="Tentang Kami">About Us</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="Our Team" data-ms="Pasukan Kami">Our Team</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="Case Studies" data-ms="Kajian Kes">Case Studies</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="Blog" data-ms="Blog">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6" data-en="Resources" data-ms="Sumber">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="Free SEO Audit" data-ms="Audit SEO Percuma">Free SEO Audit</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="Speed Test" data-ms="Ujian Kelajuan">Speed Test</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="Industry Reports" data-ms="Laporan Industri">Industry Reports</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-white transition-colors" data-en="Support" data-ms="Sokongan">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 text-sm" data-en="© 2024 Yokan Digital. All rights reserved." data-ms="© 2024 Yokan Digital. Hak cipta terpelihara.">
+                    © 2024 Yokan Digital. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-slate-400 hover:text-white text-sm transition-colors" data-en="Privacy Policy" data-ms="Polisi Privasi">Privacy Policy</a>
+                    <a href="#" class="text-slate-400 hover:text-white text-sm transition-colors" data-en="Terms of Service" data-ms="Terma Perkhidmatan">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            let currentLanguage = 'en';
+            
+            window.switchLanguage = function(lang) {
+                currentLanguage = lang;
+                
+                // Update language toggle buttons
+                const langButtons = document.querySelectorAll('#lang-en, #lang-ms');
+                langButtons.forEach(btn => {
+                    btn.classList.remove('bg-card', 'text-foreground', 'shadow-sm');
+                    btn.classList.add('text-muted-foreground');
+                });
+                
+                const activeBtn = document.getElementById(`lang-${lang}`);
+                activeBtn.classList.remove('text-muted-foreground');
+                activeBtn.classList.add('bg-card', 'text-foreground', 'shadow-sm');
+                
+                // Update all translatable elements
+                const elements = document.querySelectorAll('[data-en], [data-ms]');
+                elements.forEach(el => {
+                    if (el.hasAttribute(`data-${lang}`)) {
+                        el.textContent = el.getAttribute(`data-${lang}`);
+                    }
+                });
+                
+                // Update placeholders
+                const inputs = document.querySelectorAll('[data-placeholder-en], [data-placeholder-ms]');
+                inputs.forEach(input => {
+                    if (input.hasAttribute(`data-placeholder-${lang}`)) {
+                        input.placeholder = input.getAttribute(`data-placeholder-${lang}`);
+                    }
+                });
+                
+                // Update select options
+                const options = document.querySelectorAll('option[data-en], option[data-ms]');
+                options.forEach(option => {
+                    if (option.hasAttribute(`data-${lang}`)) {
+                        option.textContent = option.getAttribute(`data-${lang}`);
+                    }
+                });
+            };
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Form submission placeholder
+            document.querySelector('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert(currentLanguage === 'en' ? 'Thank you! We will contact you soon.' : 'Terima kasih! Kami akan menghubungi anda tidak lama lagi.');
+                // TODO: Implement actual form submission logic
+            });
+            
+            // Tool interactions
+            document.querySelectorAll('.tool-interactive button').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // TODO: Implement actual tool functionality
+                    alert(currentLanguage === 'en' ? 'Tool feature coming soon!' : 'Ciri alat akan datang tidak lama lagi!');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

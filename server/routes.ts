@@ -17,8 +17,7 @@ import blogRouter from "./routes/blog";
 import authRouter from "./routes/auth";
 import chatRouter from "./routes/chat";
 
-const sgMail = new MailService();
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+
 
 export async function registerRoutes(app: Express): Promise<Server> {
   
