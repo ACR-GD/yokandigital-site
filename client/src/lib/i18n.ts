@@ -15,6 +15,10 @@ export const translations: Translations = {
     en: "The System",
     fr: "Le système"
   },
+  "nav.creators": {
+    en: "AI for creators",
+    fr: "IA pour créateurs"
+  },
   "nav.about": {
     en: "About",
     fr: "À propos"
@@ -30,20 +34,20 @@ export const translations: Translations = {
 
   // Hero Section
   "hero.title": {
-    en: "Stop Guessing. Start Engineering Revenue.",
-    fr: "Arrêtez d'improviser. Architecturez votre revenu."
+    en: "I build AI systems that turn your traffic into revenue",
+    fr: "Je construis des systèmes IA qui transforment votre trafic en revenu"
   },
   "hero.subtitle": {
-    en: "We build Autonomous Acquisition Ecosystems powered by Data & AI. Replacing marketing magic with mathematical truth.",
-    fr: "Nous construisons des Écosystèmes d'Acquisition Autonomes propulsés par les data & l'IA. Remplacer la magie du marketing par la vérité mathématique."
+    en: "Most companies don’t need more leads. They need machines that turn existing traffic, content and ops into predictable revenue. I design and build those machines with data, automation and AI.",
+    fr: "La plupart des entreprises n’ont pas besoin de plus de leads. Elles ont besoin de machines qui transforment leur trafic, leur contenu et leurs opérations en revenu prévisible. Je conçois et construis ces machines avec la donnée, l’automatisation et l’IA."
   },
   "hero.cta.primary": {
-    en: "Book Architecture Review",
-    fr: "Réserver un audit de votre architecture"
+    en: "Ask for a revenue architecture audit",
+    fr: "Demander un audit de votre machine à revenu"
   },
   "hero.cta.secondary": {
-    en: "See The System",
-    fr: "Voir le système"
+    en: "See how the system works",
+    fr: "Voir comment le système fonctionne"
   },
 
   // Problem Section (The Chaos)
@@ -172,8 +176,8 @@ export const translations: Translations = {
     fr: "Prêt à arrêter d'improviser?"
   },
   "cta.subtitle": {
-    en: "Book a 30-minute architecture review. We'll audit your current stack and show you exactly where revenue is leaking.",
-    fr: "Réservez un audit de votre architecture de 30 minutes. Nous analyserons votre stack actuel et vous montrerons exactement où les revenus fuient."
+    en: "Book a 30-minute architecture review. We'll audit your current stack and show you exactly where revenue is leaking – and where automation and AI can realistically help.",
+    fr: "Réservez un audit de votre architecture de 30 minutes. Nous analyserons votre stack actuel et vous montrerons exactement où les revenus fuient – et où l’automatisation et l’IA peuvent vraiment aider."
   },
   "cta.button": {
     en: "Book Architecture Review",

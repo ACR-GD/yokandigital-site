@@ -63,6 +63,9 @@ export default function Home() {
               <a href="#system" className="text-sm text-gray-400 hover:text-white transition-colors" data-testid="nav-system">
                 {t("nav.system")}
               </a>
+              <a href="/automation-offer" className="text-sm text-gray-400 hover:text-white transition-colors">
+                {t("nav.creators")}
+              </a>
               <a href="#about" className="text-sm text-gray-400 hover:text-white transition-colors" data-testid="nav-about">
                 {t("nav.about")}
               </a>
@@ -145,6 +148,16 @@ export default function Home() {
                   >
                     {t("hero.cta.secondary")}
                     <ChevronRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </a>
+                <a href="/automation-offer">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-[#00ff88]/40 text-[#00ff88] hover:bg-[#00ff88]/10 font-semibold px-8 py-6 text-base"
+                  >
+                    {language === 'en' ? 'See the interview → deck offer' : 'Voir l’offre Interview → Deck'}
+                    <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </a>
               </div>
@@ -353,6 +366,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Who I work with */}
+      <section className="py-16 bg-[#050505]">
+        <div className="max-w-4xl mx-auto px-6 space-y-4">
+          <h2 className="text-2xl md:text-3xl font-bold">
+            {language === 'en' ? 'Who I work with' : 'Avec qui je travaille'}
+          </h2>
+          <p className="text-gray-400 text-sm md:text-base">
+            {language === 'en'
+              ? 'I’m a solo architect working with B2B companies, media teams and creators who want fewer manual processes and more predictable revenue.'
+              : 'Je suis un architecte solo qui travaille avec des entreprises B2B, des équipes média et des créateurs qui veulent moins de tâches manuelles et plus de revenu prévisible.'}
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-4 text-xs md:text-sm">
+            <div className="tech-card rounded-xl p-4">
+              <p className="font-semibold mb-1">B2B & SaaS</p>
+              <p className="text-gray-400">
+                {language === 'en'
+                  ? 'Lead routing, nurture, reporting and revenue dashboards that don’t lie.'
+                  : 'Routage de leads, nurturing, reporting et dashboards revenus qui ne mentent pas.'}
+              </p>
+            </div>
+            <div className="tech-card rounded-xl p-4">
+              <p className="font-semibold mb-1">
+                {language === 'en' ? 'Media & content teams' : 'Médias & équipes contenu'}
+              </p>
+              <p className="text-gray-400">
+                {language === 'en'
+                  ? 'From long-form content to briefs, decks and offers – automated.'
+                  : 'Du contenu long aux briefs, decks et offres – en automatique.'}
+              </p>
+            </div>
+            <div className="tech-card rounded-xl p-4">
+              <p className="font-semibold mb-1">
+                {language === 'en' ? 'Solo founders & creators' : 'Solos & créateurs'}
+              </p>
+              <p className="text-gray-400">
+                {language === 'en'
+                  ? 'Systems that let you sell and deliver without drowning in ops.'
+                  : 'Des systèmes qui vous laissent vendre et livrer sans vous noyer dans l’opérationnel.'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Tech Stack Showcase */}
       <section className="py-24 bg-[#050505] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
@@ -388,6 +446,47 @@ export default function Home() {
                   </div>
                 ))}
               </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Examples Section */}
+      <section className="py-16 bg-[#0A0A0A]">
+        <div className="max-w-4xl mx-auto px-6 space-y-4">
+          <h2 className="text-2xl md:text-3xl font-bold">
+            {language === 'en'
+              ? 'What this looks like in practice'
+              : 'À quoi ça ressemble en vrai'}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6 text-sm">
+            <div className="tech-card rounded-xl p-5">
+              <p className="font-mono text-xs text-[#00ff88] mb-1">
+                {language === 'en' ? 'Documentary director' : 'Réalisateur documentaire'}
+              </p>
+              <p className="font-semibold mb-2">
+                {language === 'en'
+                  ? 'Interview → Deck pipeline'
+                  : 'Pipeline Interview → Deck'}
+              </p>
+              <p className="text-gray-400">
+                {language === 'en'
+                  ? "Watch a Drive folder for new interviews, transcribe, analyse in the director’s style, and generate a visual one-pager with logline, themes, angles and quotes – automatically."
+                  : "Surveillance d’un dossier Drive pour les nouvelles interviews, transcription, analyse dans le style du réalisateur, et génération d’un one-pager visuel avec logline, thèmes, angles et citations – en automatique."}
+              </p>
+            </div>
+            <div className="tech-card rounded-xl p-5">
+              <p className="font-mono text-xs text-[#00ff88] mb-1">SmartRelocate</p>
+              <p className="font-semibold mb-2">
+                {language === 'en'
+                  ? 'Visa eligibility & monitoring'
+                  : 'Éligibilité visa & monitoring'}
+              </p>
+              <p className="text-gray-400">
+                {language === 'en'
+                  ? 'Eligibility logic, live monitoring of official portals and AI agents that turn messy rules into clear journeys for people moving to Malaysia.'
+                  : 'Logique d’éligibilité, veille en temps réel des portails officiels et agents IA qui transforment des règles bordéliques en parcours clairs pour s’installer en Malaisie.'}
+              </p>
             </div>
           </div>
         </div>
