@@ -304,10 +304,20 @@ export default function AutomationOfferPage() {
                 ? "If this sounds useful, send me a quick email describing your format, your current workflow and where your files live. I'll tell you honestly if a pipeline like this will actually save you time and money."
                 : "Si cela vous parle, envoyez-moi un court email décrivant votre format, votre flux actuel et où vivent vos fichiers. Je vous dirai honnêtement si un pipeline de ce type vous fera vraiment gagner du temps et de l'argent."}
             </p>
-            <div className="text-[11px] text-gray-400 font-mono">
+            <div className="text-[11px] text-gray-400 font-mono space-y-1">
               <p>Antoine Clerc-Renaud</p>
               <p>Yokan Digital</p>
-              <p>contact@yokan.digital</p>
+              <p>tony@yokandigital.com</p>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/antoineclercrenaud/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[#00ff88] hover:text-[#00ff88]/80"
+                >
+                  LinkedIn
+                </a>
+              </p>
             </div>
           </div>
         </div>
