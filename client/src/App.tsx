@@ -12,6 +12,7 @@ import AdminDashboard from "@/pages/admin-dashboard";
 import AdminLogin from "@/pages/admin-login";
 import PrivacyPolicyPage from "@/pages/privacy-policy";
 import SalesPage from "@/pages/sales";
+import AutomationOfferPage from "@/pages/automation-offer";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -25,6 +26,7 @@ function Router() {
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/privacy-policy" component={PrivacyPolicyPage} />
       <Route path="/sales" component={SalesPage} />
+      <Route path="/automation-offer" component={AutomationOfferPage} />
       <Route component={NotFound} />
     </Switch>
   );
